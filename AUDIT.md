@@ -39,8 +39,8 @@
 
 ## GitHub 部署与实际运行
 
-- 公开仓库：[Ethereal-09/AdBlock-DNS-Filters](https://github.com/Ethereal-09/AdBlock-DNS-Filters)，默认分支 `main`，Actions 已启用，更新工作流为 `active`。
-- [首次自动运行](https://github.com/Ethereal-09/AdBlock-DNS-Filters/actions/runs/36777499627) 已成功，触发方式为首次上传的 push。云端引擎编译、29 项 Python 测试、来源下载、30 个分类构建、全部产物审核、缓存保存、自动提交和日志附件均成功。
+- 公开仓库：[Ethereal-09/adguardhome-compiled-filters](https://github.com/Ethereal-09/adguardhome-compiled-filters)，默认分支 `main`，Actions 已启用，更新工作流为 `active`。
+- [首次自动运行](https://github.com/Ethereal-09/adguardhome-compiled-filters/actions/runs/36777499627) 已成功，触发方式为首次上传的 push。云端引擎编译、29 项 Python 测试、来源下载、30 个分类构建、全部产物审核、缓存保存、自动提交和日志附件均成功。
 - 本轮来源均为新下载，没有使用缓存。订阅内容与本地审计产物相同，机器人只新增每周成功记录；自动提交 SHA 为 `8f3e391d9ce01a3c7525436193c26ab1c33567b0`。
 - 运行附件 `dns-update-36777499627-1` 包含下载日志、来源状态和发布审核报告，保留 30 天。
 - 综合版、国内版和全量版的公开 raw 订阅地址已分别确认 HTTP 200，返回规则文本，无需登录。

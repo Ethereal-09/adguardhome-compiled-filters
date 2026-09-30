@@ -1,8 +1,8 @@
-<h1 align="center">AdBlock DNS Filters</h1>
+<h1 align="center">adguardhome-compiled-filters</h1>
 
 <p align="center">使用 Python 每天自动获取、分类、合并和优化上游 DNS 规则</p>
 
-[![每日更新](https://github.com/Ethereal-09/AdBlock-DNS-Filters/actions/workflows/update.yml/badge.svg)](https://github.com/Ethereal-09/AdBlock-DNS-Filters/actions/workflows/update.yml)
+[![每日更新](https://github.com/Ethereal-09/adguardhome-compiled-filters/actions/workflows/update.yml/badge.svg)](https://github.com/Ethereal-09/adguardhome-compiled-filters/actions/workflows/update.yml)
 
 ## 📔 说明
 
@@ -40,14 +40,14 @@
 在 AdGuard Home **过滤器 → DNS 黑名单** 添加以下订阅地址，按需选用：
 
 ```text
-https://raw.githubusercontent.com/Ethereal-09/AdBlock-DNS-Filters/main/dist/adguard.txt
-https://raw.githubusercontent.com/Ethereal-09/AdBlock-DNS-Filters/main/dist/china.txt
-https://raw.githubusercontent.com/Ethereal-09/AdBlock-DNS-Filters/main/dist/full.txt
+https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/adguard.txt
+https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/china.txt
+https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/full.txt
 ```
 
 独立放行组件添加到 **DNS 白名单**，不自动并入黑名单。黑名单文件已经携带所选来源自身的原生放行例外。
 
-其他分类使用同一地址下的对应文件名，见 [分类订阅索引](dist/README.md)。例如短链接白名单为 `https://raw.githubusercontent.com/Ethereal-09/AdBlock-DNS-Filters/main/dist/allow-shorteners.txt`。
+其他分类使用同一地址下的对应文件名，见 [分类订阅索引](dist/README.md)。例如短链接白名单为 `https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/allow-shorteners.txt`。
 
 ## 🛠️ 运行与每日自动更新
 
@@ -74,7 +74,7 @@ GitHub Actions 工作流在 [.github/workflows/update.yml](.github/workflows/upd
 
 本次代码和产物审计记录见 [AUDIT.md](AUDIT.md)。源配置不会每天自动发现新仓库或重新分级，新增来源仍需核验并修改配置。
 
-[首次云端自动运行](https://github.com/Ethereal-09/AdBlock-DNS-Filters/actions/runs/36777499627) 已通过测试、下载、30 个分类构建、全部产物审核、缓存保存及机器人自动提交。工作流处于启用状态，默认分支为 `main`。
+[首次云端自动运行](https://github.com/Ethereal-09/adguardhome-compiled-filters/actions/runs/36777499627) 已通过测试、下载、30 个分类构建、全部产物审核、缓存保存及机器人自动提交。工作流处于启用状态，默认分支为 `main`。
 
 ## 上游规则与署名
 

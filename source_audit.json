@@ -1,0 +1,144 @@
+[
+  {
+    "name": "AdGuard Base filter",
+    "url": "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt",
+    "finalUrl": "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt",
+    "status": "unverified",
+    "error": "HTML response"
+  },
+  {
+    "name": "AdGuard Chinese filter",
+    "url": "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_224_Chinese/filter.txt",
+    "finalUrl": "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_224_Chinese/filter.txt",
+    "exceptionRules": 1466,
+    "blockingHosts": 0,
+    "otherActiveLines": 19872,
+    "status": "checked"
+  },
+  {
+    "name": "AdGuard Mobile Ads filter",
+    "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/adservers.txt",
+    "finalUrl": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/adservers.txt",
+    "exceptionRules": 0,
+    "blockingHosts": 0,
+    "otherActiveLines": 992,
+    "status": "checked"
+  },
+  {
+    "name": "AdGuard DNS filter",
+    "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
+    "finalUrl": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
+    "exceptionRules": 210,
+    "blockingHosts": 0,
+    "otherActiveLines": 176771,
+    "status": "checked"
+  },
+  {
+    "name": "AdRules DNS List",
+    "url": "https://raw.githubusercontent.com/Cats-Team/AdRules/main/dns.txt",
+    "finalUrl": "https://raw.githubusercontent.com/Cats-Team/AdRules/main/dns.txt",
+    "exceptionRules": 0,
+    "blockingHosts": 0,
+    "otherActiveLines": 196370,
+    "status": "checked"
+  },
+  {
+    "name": "CJX's Annoyance List",
+    "url": "https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt",
+    "finalUrl": "https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt",
+    "exceptionRules": 6,
+    "blockingHosts": 0,
+    "otherActiveLines": 1812,
+    "status": "checked"
+  },
+  {
+    "name": "EasyList",
+    "url": "https://easylist-downloads.adblockplus.org/easylist.txt",
+    "finalUrl": "https://easylist-downloads.adblockplus.org/easylist.txt",
+    "exceptionRules": 1097,
+    "blockingHosts": 0,
+    "otherActiveLines": 63221,
+    "status": "checked"
+  },
+  {
+    "name": "EasyList China",
+    "url": "https://easylist-downloads.adblockplus.org/easylistchina.txt",
+    "finalUrl": "https://easylist-downloads.adblockplus.org/easylistchina.txt",
+    "exceptionRules": 1159,
+    "blockingHosts": 0,
+    "otherActiveLines": 16962,
+    "status": "checked"
+  },
+  {
+    "name": "EasyPrivacy",
+    "url": "https://easylist-downloads.adblockplus.org/easyprivacy.txt",
+    "finalUrl": "https://easylist-downloads.adblockplus.org/easyprivacy.txt",
+    "exceptionRules": 845,
+    "blockingHosts": 0,
+    "otherActiveLines": 52703,
+    "status": "checked"
+  },
+  {
+    "name": "xinggsf mv",
+    "url": "https://raw.githubusercontent.com/xinggsf/Adblock-Plus-Rule/master/mv.txt",
+    "finalUrl": "https://raw.githubusercontent.com/xinggsf/Adblock-Plus-Rule/master/mv.txt",
+    "exceptionRules": 4,
+    "blockingHosts": 0,
+    "otherActiveLines": 130,
+    "status": "checked"
+  },
+  {
+    "name": "jiekouAD",
+    "url": "https://raw.githubusercontent.com/damengzhu/banad/main/jiekouAD.txt",
+    "finalUrl": "https://raw.githubusercontent.com/damengzhu/banad/main/jiekouAD.txt",
+    "exceptionRules": 48,
+    "blockingHosts": 0,
+    "otherActiveLines": 5310,
+    "status": "checked"
+  },
+  {
+    "name": "AWAvenue Ads Rule",
+    "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt",
+    "finalUrl": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt",
+    "exceptionRules": 0,
+    "blockingHosts": 0,
+    "otherActiveLines": 965,
+    "status": "checked"
+  },
+  {
+    "name": "DNS-Blocklists PRO mini",
+    "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.mini.txt",
+    "finalUrl": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.mini.txt",
+    "exceptionRules": 0,
+    "blockingHosts": 0,
+    "otherActiveLines": 59779,
+    "status": "checked"
+  },
+  {
+    "name": "OISD Basic",
+    "url": "https://abp.oisd.nl/basic/",
+    "finalUrl": "https://abp.oisd.nl/basic/",
+    "exceptionRules": 0,
+    "blockingHosts": 0,
+    "otherActiveLines": 57152,
+    "status": "checked"
+  },
+  {
+    "name": "StevenBlack hosts",
+    "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
+    "finalUrl": "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
+    "exceptionRules": 0,
+    "blockingHosts": 74761,
+    "otherActiveLines": 13,
+    "status": "checked"
+  },
+  {
+    "name": "Pollock hosts",
+    "url": "https://someonewhocares.org/hosts/hosts",
+    "finalUrl": "https://someonewhocares.org/hosts/hosts",
+    "exceptionRules": 0,
+    "blockingHosts": 13084,
+    "otherActiveLines": 11,
+    "status": "checked"
+  }
+]

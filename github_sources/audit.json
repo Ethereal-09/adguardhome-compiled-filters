@@ -1,0 +1,939 @@
+{
+  "checkedUtc": "2026-09-30T16:52:34.202683+00:00",
+  "records": [
+    {
+      "names": [
+        "AdGuard Base filter"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt",
+      "status": "skipped",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/AdguardTeam/FiltersRegistry",
+          "canonicalRepository": "https://github.com/AdguardTeam/FiltersRegistry",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "reason": "Empty response or HTML instead of rules"
+    },
+    {
+      "names": [
+        "AdGuard Chinese filter"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_224_Chinese/filter.txt",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/AdguardTeam/FiltersRegistry",
+          "canonicalRepository": "https://github.com/AdguardTeam/FiltersRegistry",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "repository": "https://github.com/AdguardTeam/FiltersRegistry",
+      "subscriptionUrl": "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_224_Chinese/filter.txt",
+      "supportedRules": 5905,
+      "archived": false
+    },
+    {
+      "names": [
+        "AdGuard Mobile Ads filter"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/adservers.txt",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/AdguardTeam/AdguardFilters",
+          "canonicalRepository": "https://github.com/AdguardTeam/AdguardFilters",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "repository": "https://github.com/AdguardTeam/AdguardFilters",
+      "subscriptionUrl": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/adservers.txt",
+      "supportedRules": 899,
+      "archived": false
+    },
+    {
+      "names": [
+        "AdGuard DNS filter"
+      ],
+      "suppliedUrl": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
+      "status": "skipped",
+      "evidence": [],
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过"
+    },
+    {
+      "names": [
+        "AdRules DNS List"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/Cats-Team/AdRules/main/dns.txt",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/Cats-Team/AdRules",
+          "canonicalRepository": "https://github.com/Cats-Team/AdRules",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "repository": "https://github.com/Cats-Team/AdRules",
+      "subscriptionUrl": "https://raw.githubusercontent.com/Cats-Team/AdRules/main/dns.txt",
+      "supportedRules": 195932,
+      "archived": false
+    },
+    {
+      "names": [
+        "CJX's Annoyance List",
+        "CJX’s Annoyance List"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/cjx82630/cjxlist",
+          "canonicalRepository": "https://github.com/cjx82630/cjxlist",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "repository": "https://github.com/cjx82630/cjxlist",
+      "subscriptionUrl": "https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt",
+      "supportedRules": 115,
+      "archived": false
+    },
+    {
+      "names": [
+        "EasyList"
+      ],
+      "suppliedUrl": "https://easylist-downloads.adblockplus.org/easylist.txt",
+      "status": "skipped",
+      "evidence": [],
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过"
+    },
+    {
+      "names": [
+        "EasyList China",
+        "easylistchina"
+      ],
+      "suppliedUrl": "https://easylist-downloads.adblockplus.org/easylistchina.txt",
+      "status": "skipped",
+      "evidence": [],
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过"
+    },
+    {
+      "names": [
+        "EasyPrivacy"
+      ],
+      "suppliedUrl": "https://easylist-downloads.adblockplus.org/easyprivacy.txt",
+      "status": "skipped",
+      "evidence": [],
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过"
+    },
+    {
+      "names": [
+        "xinggsf mv"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/xinggsf/Adblock-Plus-Rule/master/mv.txt",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/xinggsf/Adblock-Plus-Rule",
+          "canonicalRepository": "https://github.com/xinggsf/Adblock-Plus-Rule",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "repository": "https://github.com/xinggsf/Adblock-Plus-Rule",
+      "subscriptionUrl": "https://raw.githubusercontent.com/xinggsf/Adblock-Plus-Rule/master/mv.txt",
+      "supportedRules": 27,
+      "archived": false
+    },
+    {
+      "names": [
+        "jiekouAD"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/damengzhu/banad/main/jiekouAD.txt",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/damengzhu/banad",
+          "canonicalRepository": "https://github.com/damengzhu/banad",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "repository": "https://github.com/damengzhu/banad",
+      "subscriptionUrl": "https://raw.githubusercontent.com/damengzhu/banad/main/jiekouAD.txt",
+      "supportedRules": 4512,
+      "archived": false
+    },
+    {
+      "names": [
+        "AWAvenue Ads Rule"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/TG-Twilight/AWAvenue-Ads-Rule",
+          "canonicalRepository": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "repository": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule",
+      "subscriptionUrl": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt",
+      "supportedRules": 958,
+      "archived": false
+    },
+    {
+      "names": [
+        "DNS-Blocklists PRO mini"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.mini.txt",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/hagezi/dns-blocklists",
+          "canonicalRepository": "https://github.com/hagezi/dns-blocklists",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "repository": "https://github.com/hagezi/dns-blocklists",
+      "subscriptionUrl": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.mini.txt",
+      "supportedRules": 59779,
+      "archived": false
+    },
+    {
+      "names": [
+        "OISD Basic"
+      ],
+      "suppliedUrl": "https://abp.oisd.nl/basic/",
+      "status": "skipped",
+      "evidence": [],
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过"
+    },
+    {
+      "names": [
+        "StevenBlack hosts"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/StevenBlack/hosts",
+          "canonicalRepository": "https://github.com/StevenBlack/hosts",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "repository": "https://github.com/StevenBlack/hosts",
+      "subscriptionUrl": "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
+      "supportedRules": 74759,
+      "archived": false
+    },
+    {
+      "names": [
+        "Pollock hosts"
+      ],
+      "suppliedUrl": "https://someonewhocares.org/hosts/hosts",
+      "status": "skipped",
+      "evidence": [],
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过"
+    },
+    {
+      "names": [
+        "Connershua"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/DivineEngine/AdGuardFilter/master/filter.txt",
+      "status": "skipped",
+      "evidence": [],
+      "reason": "仓库核验失败：HTTP Error 404: Not Found"
+    },
+    {
+      "names": [
+        "ADgk"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/banbendalao/ADgk/master/ADgk.txt",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/banbendalao/ADgk",
+          "canonicalRepository": "https://github.com/banbendalao/ADgk",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "repository": "https://github.com/banbendalao/ADgk",
+      "subscriptionUrl": "https://raw.githubusercontent.com/banbendalao/ADgk/master/ADgk.txt",
+      "supportedRules": 3059,
+      "archived": false
+    },
+    {
+      "names": [
+        "大圣净化"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/jdlingyu/ad-wars",
+          "canonicalRepository": "https://github.com/jdlingyu/ad-wars",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "repository": "https://github.com/jdlingyu/ad-wars",
+      "subscriptionUrl": "https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts",
+      "supportedRules": 1645,
+      "archived": false
+    },
+    {
+      "names": [
+        "乘风广告过滤规则"
+      ],
+      "suppliedUrl": "https://gitee.com/xinggsf/Adblock-Rule/raw/master/rule.txt",
+      "status": "skipped",
+      "evidence": [],
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过"
+    },
+    {
+      "names": [
+        "乘风视频广告过滤"
+      ],
+      "suppliedUrl": "https://gitee.com/xinggsf/Adblock-Rule/raw/master/mv.txt",
+      "status": "skipped",
+      "evidence": [],
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过"
+    },
+    {
+      "names": [
+        "AdAway default blocklist"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/AdAway/adaway.github.io",
+          "canonicalRepository": "https://github.com/AdAway/adaway.github.io",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "repository": "https://github.com/AdAway/adaway.github.io",
+      "subscriptionUrl": "https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt",
+      "supportedRules": 6540,
+      "archived": false
+    },
+    {
+      "names": [
+        "easylist"
+      ],
+      "suppliedUrl": "https://easylist.to/easylist/easylist.txt",
+      "status": "skipped",
+      "evidence": [],
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过"
+    },
+    {
+      "names": [
+        "easyprivacy"
+      ],
+      "suppliedUrl": "https://easylist.to/easylist/easyprivacy.txt",
+      "status": "skipped",
+      "evidence": [],
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过"
+    },
+    {
+      "names": [
+        "fanboy-annoyance"
+      ],
+      "suppliedUrl": "https://easylist.to/easylist/fanboy-annoyance.txt",
+      "status": "skipped",
+      "evidence": [],
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过"
+    },
+    {
+      "names": [
+        "alexa"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/nextdns/metadata/master/privacy/native/alexa",
+      "status": "skipped",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/nextdns/metadata",
+          "canonicalRepository": "https://github.com/nextdns/metadata",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "names": [
+        "apple"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/nextdns/metadata/master/privacy/native/apple",
+      "status": "skipped",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/nextdns/metadata",
+          "canonicalRepository": "https://github.com/nextdns/metadata",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "names": [
+        "huawei"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/nextdns/metadata/master/privacy/native/huawei",
+      "status": "skipped",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/nextdns/metadata",
+          "canonicalRepository": "https://github.com/nextdns/metadata",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "names": [
+        "roku"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/nextdns/metadata/master/privacy/native/roku",
+      "status": "skipped",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/nextdns/metadata",
+          "canonicalRepository": "https://github.com/nextdns/metadata",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "names": [
+        "samsung"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/nextdns/metadata/master/privacy/native/samsung",
+      "status": "skipped",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/nextdns/metadata",
+          "canonicalRepository": "https://github.com/nextdns/metadata",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "names": [
+        "sonos"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/nextdns/metadata/master/privacy/native/sonos",
+      "status": "skipped",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/nextdns/metadata",
+          "canonicalRepository": "https://github.com/nextdns/metadata",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "names": [
+        "windows"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/nextdns/metadata/master/privacy/native/windows",
+      "status": "skipped",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/nextdns/metadata",
+          "canonicalRepository": "https://github.com/nextdns/metadata",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "names": [
+        "xiaomi"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/nextdns/metadata/master/privacy/native/xiaomi",
+      "status": "skipped",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/nextdns/metadata",
+          "canonicalRepository": "https://github.com/nextdns/metadata",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "reason": "HTTP Error 404: Not Found"
+    },
+    {
+      "names": [
+        "Adblock Warning Removal List"
+      ],
+      "suppliedUrl": "https://easylist-downloads.adblockplus.org/antiadblockfilters.txt",
+      "status": "skipped",
+      "evidence": [],
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过"
+    },
+    {
+      "names": [
+        "I don't care about cookies"
+      ],
+      "suppliedUrl": "https://www.i-dont-care-about-cookies.eu/abp/",
+      "status": "skipped",
+      "evidence": [],
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过"
+    },
+    {
+      "names": [
+        "Perflyst and Dandelion Sprout's Smart-TV Blocklist"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV-AGH.txt",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/Perflyst/PiHoleBlocklist",
+          "canonicalRepository": "https://github.com/Perflyst/PiHoleBlocklist",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "repository": "https://github.com/Perflyst/PiHoleBlocklist",
+      "subscriptionUrl": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV-AGH.txt",
+      "supportedRules": 149,
+      "archived": false
+    },
+    {
+      "names": [
+        "Dan Pollock's List"
+      ],
+      "suppliedUrl": "https://someonewhocares.org/hosts/zero/hosts",
+      "status": "skipped",
+      "evidence": [],
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过"
+    },
+    {
+      "names": [
+        "Scam Blocklist by DurableNapkin"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/durablenapkin/scamblocklist",
+          "canonicalRepository": "https://github.com/durablenapkin/scamblocklist",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "repository": "https://github.com/durablenapkin/scamblocklist",
+      "subscriptionUrl": "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt",
+      "supportedRules": 941,
+      "archived": false
+    },
+    {
+      "names": [
+        "Game Console Adblock List"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GameConsoleAdblockList.txt",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/DandelionSprout/adfilt",
+          "canonicalRepository": "https://github.com/DandelionSprout/adfilt",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "repository": "https://github.com/DandelionSprout/adfilt",
+      "subscriptionUrl": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GameConsoleAdblockList.txt",
+      "supportedRules": 9,
+      "archived": false
+    },
+    {
+      "names": [
+        "Peter Lowe's List"
+      ],
+      "suppliedUrl": "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblockplus&showintro=1&mimetype=plaintext",
+      "status": "skipped",
+      "evidence": [],
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过"
+    },
+    {
+      "names": [
+        "NoCoin Filter List"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/nocoin.txt",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/hoshsadiq/adblock-nocoin-list",
+          "canonicalRepository": "https://github.com/hoshsadiq/adblock-nocoin-list",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "repository": "https://github.com/hoshsadiq/adblock-nocoin-list",
+      "subscriptionUrl": "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/nocoin.txt",
+      "supportedRules": 47,
+      "archived": false
+    },
+    {
+      "names": [
+        "Spam404"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/Spam404/lists",
+          "canonicalRepository": "https://github.com/Spam404/lists",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "repository": "https://github.com/Spam404/lists",
+      "subscriptionUrl": "https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt",
+      "supportedRules": 8140,
+      "archived": false
+    },
+    {
+      "names": [
+        "The Big List of Hacked Malware Web Sites"
+      ],
+      "suppliedUrl": "https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites",
+          "canonicalRepository": "https://github.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "repository": "https://github.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites",
+      "subscriptionUrl": "https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list",
+      "supportedRules": 9,
+      "archived": false
+    },
+    {
+      "names": [
+        "HaGeZi Ultimate"
+      ],
+      "suppliedUrl": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/ultimate.txt",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/hagezi/dns-blocklists",
+          "canonicalRepository": "https://github.com/hagezi/dns-blocklists",
+          "fork": false,
+          "archived": false
+        },
+        {
+          "resolution": "使用 GitHub API 返回的默认分支，并验证相同文件路径",
+          "branch": "main"
+        }
+      ],
+      "repository": "https://github.com/hagezi/dns-blocklists",
+      "subscriptionUrl": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/ultimate.txt",
+      "supportedRules": 287467,
+      "archived": false
+    },
+    {
+      "names": [
+        "AdGuard DNS"
+      ],
+      "suppliedUrl": "https://filters.adtidy.org/android/filters/15_optimized.txt",
+      "status": "skipped",
+      "evidence": [],
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过"
+    },
+    {
+      "names": [
+        "AdGuard DNS"
+      ],
+      "suppliedUrl": "https://cdn.jsdelivr.net/gh/AdguardTeam/HostlistsRegistry@main/filters/general/filter_1_DnsFilter/filter.txt",
+      "status": "skipped",
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/main/filters/general/filter_1_DnsFilter/configuration.json",
+          "upstreamUrl": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt"
+        }
+      ],
+      "reason": "仓库记录的上游不是 GitHub 原始链接，按要求跳过"
+    },
+    {
+      "names": [
+        "HaGeZi Pro++"
+      ],
+      "suppliedUrl": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.plus.txt",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/hagezi/dns-blocklists",
+          "canonicalRepository": "https://github.com/hagezi/dns-blocklists",
+          "fork": false,
+          "archived": false
+        },
+        {
+          "resolution": "使用 GitHub API 返回的默认分支，并验证相同文件路径",
+          "branch": "main"
+        }
+      ],
+      "repository": "https://github.com/hagezi/dns-blocklists",
+      "subscriptionUrl": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.plus.txt",
+      "supportedRules": 251638,
+      "archived": false
+    },
+    {
+      "names": [
+        "HaGeZi Pro"
+      ],
+      "suppliedUrl": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.txt",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/hagezi/dns-blocklists",
+          "canonicalRepository": "https://github.com/hagezi/dns-blocklists",
+          "fork": false,
+          "archived": false
+        },
+        {
+          "resolution": "使用 GitHub API 返回的默认分支，并验证相同文件路径",
+          "branch": "main"
+        }
+      ],
+      "repository": "https://github.com/hagezi/dns-blocklists",
+      "subscriptionUrl": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt",
+      "supportedRules": 230960,
+      "archived": false
+    },
+    {
+      "names": [
+        "HaGeZi Normal"
+      ],
+      "suppliedUrl": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/multi.txt",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/hagezi/dns-blocklists",
+          "canonicalRepository": "https://github.com/hagezi/dns-blocklists",
+          "fork": false,
+          "archived": false
+        },
+        {
+          "resolution": "使用 GitHub API 返回的默认分支，并验证相同文件路径",
+          "branch": "main"
+        }
+      ],
+      "repository": "https://github.com/hagezi/dns-blocklists",
+      "subscriptionUrl": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/multi.txt",
+      "supportedRules": 200319,
+      "archived": false
+    },
+    {
+      "names": [
+        "Anti-AD"
+      ],
+      "suppliedUrl": "https://anti-ad.net/easylist.txt",
+      "status": "skipped",
+      "evidence": [],
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过"
+    },
+    {
+      "names": [
+        "AWAvenue Ads Rule"
+      ],
+      "suppliedUrl": "https://cdn.jsdelivr.net/gh/AdguardTeam/HostlistsRegistry@main/filters/general/filter_53_AWAvenueAdsRule/filter.txt",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/main/filters/general/filter_53_AWAvenueAdsRule/configuration.json",
+          "upstreamUrl": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt"
+        },
+        {
+          "url": "https://api.github.com/repos/TG-Twilight/AWAvenue-Ads-Rule",
+          "canonicalRepository": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "repository": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule",
+      "subscriptionUrl": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt",
+      "supportedRules": 958,
+      "archived": false
+    },
+    {
+      "names": [
+        "HaGeZi Threat Intelligence Feeds"
+      ],
+      "suppliedUrl": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/tif.txt",
+      "status": "skipped",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/hagezi/dns-blocklists",
+          "canonicalRepository": "https://github.com/hagezi/dns-blocklists",
+          "fork": false,
+          "archived": false
+        },
+        {
+          "resolution": "使用 GitHub API 返回的默认分支，并验证相同文件路径",
+          "branch": "main"
+        }
+      ],
+      "reason": "Source exceeds 32 MiB limit"
+    },
+    {
+      "names": [
+        "HaGeZi Badware Hoster"
+      ],
+      "suppliedUrl": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/hoster.txt",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/hagezi/dns-blocklists",
+          "canonicalRepository": "https://github.com/hagezi/dns-blocklists",
+          "fork": false,
+          "archived": false
+        },
+        {
+          "resolution": "使用 GitHub API 返回的默认分支，并验证相同文件路径",
+          "branch": "main"
+        }
+      ],
+      "repository": "https://github.com/hagezi/dns-blocklists",
+      "subscriptionUrl": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/hoster.txt",
+      "supportedRules": 1238,
+      "archived": false
+    },
+    {
+      "names": [
+        "HaGeZi DynDNS"
+      ],
+      "suppliedUrl": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/dyndns.txt",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/hagezi/dns-blocklists",
+          "canonicalRepository": "https://github.com/hagezi/dns-blocklists",
+          "fork": false,
+          "archived": false
+        },
+        {
+          "resolution": "使用 GitHub API 返回的默认分支，并验证相同文件路径",
+          "branch": "main"
+        }
+      ],
+      "repository": "https://github.com/hagezi/dns-blocklists",
+      "subscriptionUrl": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/dyndns.txt",
+      "supportedRules": 1538,
+      "archived": false
+    },
+    {
+      "names": [
+        "HaGeZi URL Shortener"
+      ],
+      "suppliedUrl": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/urlshortener.txt",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/hagezi/dns-blocklists",
+          "canonicalRepository": "https://github.com/hagezi/dns-blocklists",
+          "fork": false,
+          "archived": false
+        },
+        {
+          "resolution": "使用 GitHub API 返回的默认分支，并验证相同文件路径",
+          "branch": "main"
+        }
+      ],
+      "repository": "https://github.com/hagezi/dns-blocklists",
+      "subscriptionUrl": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/urlshortener.txt",
+      "supportedRules": 9982,
+      "archived": false
+    },
+    {
+      "names": [
+        "HaGeZi Most Abused TLDs"
+      ],
+      "suppliedUrl": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/spam-tlds.txt",
+      "status": "skipped",
+      "evidence": [
+        {
+          "url": "https://api.github.com/repos/hagezi/dns-blocklists",
+          "canonicalRepository": "https://github.com/hagezi/dns-blocklists",
+          "fork": false,
+          "archived": false
+        },
+        {
+          "resolution": "使用 GitHub API 返回的默认分支，并验证相同文件路径",
+          "branch": "main"
+        }
+      ],
+      "reason": "文件可下载，但没有当前程序支持的 DNS 规则"
+    },
+    {
+      "names": [
+        "1Hosts Lite"
+      ],
+      "suppliedUrl": "https://cdn.jsdelivr.net/gh/AdguardTeam/HostlistsRegistry@main/filters/general/filter_24_1Hosts_Lite/filter.txt",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/main/filters/general/filter_24_1Hosts_Lite/configuration.json",
+          "upstreamUrl": "https://cdn.jsdelivr.net/gh/badmojr/1Hosts@master/Lite/adblock.txt"
+        },
+        {
+          "url": "https://api.github.com/repos/badmojr/1Hosts",
+          "canonicalRepository": "https://github.com/badmojr/1Hosts",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "repository": "https://github.com/badmojr/1Hosts",
+      "subscriptionUrl": "https://raw.githubusercontent.com/badmojr/1Hosts/master/Lite/adblock.txt",
+      "supportedRules": 102241,
+      "archived": false
+    },
+    {
+      "names": [
+        "1Hosts Xtra"
+      ],
+      "suppliedUrl": "https://cdn.jsdelivr.net/gh/AdguardTeam/HostlistsRegistry@main/filters/general/filter_70_1Hosts_Xtra/filter.txt",
+      "status": "verified",
+      "evidence": [
+        {
+          "url": "https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/main/filters/general/filter_70_1Hosts_Xtra/configuration.json",
+          "upstreamUrl": "https://cdn.jsdelivr.net/gh/badmojr/1Hosts@master/Xtra/adblock.txt"
+        },
+        {
+          "url": "https://api.github.com/repos/badmojr/1Hosts",
+          "canonicalRepository": "https://github.com/badmojr/1Hosts",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "repository": "https://github.com/badmojr/1Hosts",
+      "subscriptionUrl": "https://raw.githubusercontent.com/badmojr/1Hosts/master/Xtra/adblock.txt",
+      "supportedRules": 786132,
+      "archived": false
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+{
+  "title": "My AdGuard DNS Rules",
+  "timeoutSeconds": 60,
+  "retries": 3,
+  "maxDropFraction": 0.3,
+  "sources": [
+    {
+      "name": "AdGuard Chinese filter",
+      "url": "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_224_Chinese/filter.txt",
+      "enabled": true,
+      "minimumRules": 2952,
+      "repository": "https://github.com/AdguardTeam/FiltersRegistry"
+    },
+    {
+      "name": "AdGuard Mobile Ads filter",
+      "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/adservers.txt",
+      "enabled": true,
+      "minimumRules": 449,
+      "repository": "https://github.com/AdguardTeam/AdguardFilters"
+    },
+    {
+      "name": "AdRules DNS List",
+      "url": "https://raw.githubusercontent.com/Cats-Team/AdRules/main/dns.txt",
+      "enabled": true,
+      "minimumRules": 97966,
+      "repository": "https://github.com/Cats-Team/AdRules"
+    },
+    {
+      "name": "CJX's Annoyance List",
+      "url": "https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt",
+      "enabled": true,
+      "minimumRules": 57,
+      "repository": "https://github.com/cjx82630/cjxlist"
+    },
+    {
+      "name": "xinggsf mv",
+      "url": "https://raw.githubusercontent.com/xinggsf/Adblock-Plus-Rule/master/mv.txt",
+      "enabled": true,
+      "minimumRules": 13,
+      "repository": "https://github.com/xinggsf/Adblock-Plus-Rule"
+    },
+    {
+      "name": "jiekouAD",
+      "url": "https://raw.githubusercontent.com/damengzhu/banad/main/jiekouAD.txt",
+      "enabled": true,
+      "minimumRules": 2256,
+      "repository": "https://github.com/damengzhu/banad"
+    },
+    {
+      "name": "AWAvenue Ads Rule",
+      "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt",
+      "enabled": true,
+      "minimumRules": 479,
+      "repository": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule"
+    },
+    {
+      "name": "DNS-Blocklists PRO mini",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.mini.txt",
+      "enabled": true,
+      "minimumRules": 29889,
+      "repository": "https://github.com/hagezi/dns-blocklists"
+    },
+    {
+      "name": "StevenBlack hosts",
+      "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
+      "enabled": true,
+      "minimumRules": 37379,
+      "repository": "https://github.com/StevenBlack/hosts"
+    },
+    {
+      "name": "ADgk",
+      "url": "https://raw.githubusercontent.com/banbendalao/ADgk/master/ADgk.txt",
+      "enabled": true,
+      "minimumRules": 1529,
+      "repository": "https://github.com/banbendalao/ADgk"
+    },
+    {
+      "name": "大圣净化",
+      "url": "https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts",
+      "enabled": true,
+      "minimumRules": 822,
+      "repository": "https://github.com/jdlingyu/ad-wars"
+    },
+    {
+      "name": "AdAway default blocklist",
+      "url": "https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt",
+      "enabled": true,
+      "minimumRules": 3270,
+      "repository": "https://github.com/AdAway/adaway.github.io"
+    },
+    {
+      "name": "Perflyst and Dandelion Sprout's Smart-TV Blocklist",
+      "url": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV-AGH.txt",
+      "enabled": true,
+      "minimumRules": 74,
+      "repository": "https://github.com/Perflyst/PiHoleBlocklist"
+    },
+    {
+      "name": "Scam Blocklist by DurableNapkin",
+      "url": "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt",
+      "enabled": true,
+      "minimumRules": 470,
+      "repository": "https://github.com/durablenapkin/scamblocklist"
+    },
+    {
+      "name": "Game Console Adblock List",
+      "url": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GameConsoleAdblockList.txt",
+      "enabled": true,
+      "minimumRules": 4,
+      "repository": "https://github.com/DandelionSprout/adfilt"
+    },
+    {
+      "name": "NoCoin Filter List",
+      "url": "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/nocoin.txt",
+      "enabled": true,
+      "minimumRules": 23,
+      "repository": "https://github.com/hoshsadiq/adblock-nocoin-list"
+    },
+    {
+      "name": "Spam404",
+      "url": "https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt",
+      "enabled": true,
+      "minimumRules": 4070,
+      "repository": "https://github.com/Spam404/lists"
+    },
+    {
+      "name": "The Big List of Hacked Malware Web Sites",
+      "url": "https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list",
+      "enabled": true,
+      "minimumRules": 4,
+      "repository": "https://github.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites"
+    },
+    {
+      "name": "HaGeZi Ultimate",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/ultimate.txt",
+      "enabled": true,
+      "minimumRules": 143733,
+      "repository": "https://github.com/hagezi/dns-blocklists"
+    },
+    {
+      "name": "HaGeZi Pro++",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.plus.txt",
+      "enabled": true,
+      "minimumRules": 125819,
+      "repository": "https://github.com/hagezi/dns-blocklists"
+    },
+    {
+      "name": "HaGeZi Pro",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt",
+      "enabled": true,
+      "minimumRules": 115480,
+      "repository": "https://github.com/hagezi/dns-blocklists"
+    },
+    {
+      "name": "HaGeZi Normal",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/multi.txt",
+      "enabled": true,
+      "minimumRules": 100159,
+      "repository": "https://github.com/hagezi/dns-blocklists"
+    },
+    {
+      "name": "HaGeZi Badware Hoster",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/hoster.txt",
+      "enabled": true,
+      "minimumRules": 619,
+      "repository": "https://github.com/hagezi/dns-blocklists"
+    },
+    {
+      "name": "HaGeZi DynDNS",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/dyndns.txt",
+      "enabled": true,
+      "minimumRules": 769,
+      "repository": "https://github.com/hagezi/dns-blocklists"
+    },
+    {
+      "name": "HaGeZi URL Shortener",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/urlshortener.txt",
+      "enabled": true,
+      "minimumRules": 4991,
+      "repository": "https://github.com/hagezi/dns-blocklists"
+    },
+    {
+      "name": "1Hosts Lite",
+      "url": "https://raw.githubusercontent.com/badmojr/1Hosts/master/Lite/adblock.txt",
+      "enabled": true,
+      "minimumRules": 51120,
+      "repository": "https://github.com/badmojr/1Hosts"
+    },
+    {
+      "name": "1Hosts Xtra",
+      "url": "https://raw.githubusercontent.com/badmojr/1Hosts/master/Xtra/adblock.txt",
+      "enabled": true,
+      "minimumRules": 393066,
+      "repository": "https://github.com/badmojr/1Hosts"
+    }
+  ]
+}

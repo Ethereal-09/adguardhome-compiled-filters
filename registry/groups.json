@@ -1,0 +1,382 @@
+{
+  "schemaVersion": 1,
+  "groups": [
+    {
+      "id": "type-ads",
+      "name": "广告",
+      "axis": "type",
+      "sourceIds": [
+        "adguardteam-filtersregistry-filters-filter-224-chinese-filter-txt-4987b98a",
+        "adguardteam-adguardfilters-mobilefilter-sections-adservers-txt-81ac67be",
+        "cats-team-adrules-dns-txt-35998f0f",
+        "damengzhu-banad-jiekouad-txt-91a5eb50",
+        "tg-twilight-awavenue-ads-rule-awavenue-ads-rule-txt-594187e3",
+        "hagezi-dns-blocklists-adblock-pro-mini-txt-20bb6b45",
+        "stevenblack-hosts-hosts-603e776c",
+        "banbendalao-adgk-adgk-txt-c99347f4",
+        "jdlingyu-ad-wars-hosts-eb100586",
+        "adaway-adaway-github-io-hosts-txt-66566edd",
+        "hagezi-dns-blocklists-adblock-ultimate-txt-bc290ebd",
+        "hagezi-dns-blocklists-adblock-pro-plus-txt-7a87ce26",
+        "hagezi-dns-blocklists-adblock-pro-txt-65c8e043",
+        "hagezi-dns-blocklists-adblock-multi-txt-ce9f678a",
+        "badmojr-1hosts-lite-adblock-txt-6a71fde5",
+        "badmojr-1hosts-xtra-adblock-txt-ec275c9c",
+        "blocklistproject-lists-adguard-ads-ags-txt-21a38910",
+        "anudeepnd-blacklist-adservers-txt-e413d034",
+        "jerryn70-goodbyeads-hosts-goodbyeads-txt-882683a5",
+        "jerryn70-goodbyeads-formats-goodbyeads-adblock-filter-txt-d11c0acd"
+      ],
+      "status": "catalog_only",
+      "strengthGuaranteed": false
+    },
+    {
+      "id": "type-tracking",
+      "name": "跟踪/遥测",
+      "axis": "type",
+      "sourceIds": [
+        "cats-team-adrules-dns-txt-35998f0f",
+        "tg-twilight-awavenue-ads-rule-awavenue-ads-rule-txt-594187e3",
+        "hagezi-dns-blocklists-adblock-pro-mini-txt-20bb6b45",
+        "stevenblack-hosts-hosts-603e776c",
+        "hagezi-dns-blocklists-adblock-ultimate-txt-bc290ebd",
+        "hagezi-dns-blocklists-adblock-pro-plus-txt-7a87ce26",
+        "hagezi-dns-blocklists-adblock-pro-txt-65c8e043",
+        "hagezi-dns-blocklists-adblock-multi-txt-ce9f678a",
+        "badmojr-1hosts-lite-adblock-txt-6a71fde5",
+        "badmojr-1hosts-xtra-adblock-txt-ec275c9c",
+        "blocklistproject-lists-adguard-tracking-ags-txt-06c487dc",
+        "anudeepnd-blacklist-adservers-txt-e413d034",
+        "crazy-max-windowsspyblocker-data-hosts-spy-txt-a41d8da9",
+        "jerryn70-goodbyeads-hosts-goodbyeads-txt-882683a5",
+        "jerryn70-goodbyeads-formats-goodbyeads-adblock-filter-txt-d11c0acd"
+      ],
+      "status": "catalog_only",
+      "strengthGuaranteed": false
+    },
+    {
+      "id": "type-security",
+      "name": "安全综合",
+      "axis": "type",
+      "sourceIds": [
+        "cats-team-adrules-dns-txt-35998f0f",
+        "hagezi-dns-blocklists-adblock-pro-mini-txt-20bb6b45",
+        "stevenblack-hosts-hosts-603e776c",
+        "spam404-lists-main-blacklist-txt-694a44a4",
+        "hagezi-dns-blocklists-adblock-ultimate-txt-bc290ebd",
+        "hagezi-dns-blocklists-adblock-pro-plus-txt-7a87ce26",
+        "hagezi-dns-blocklists-adblock-pro-txt-65c8e043",
+        "hagezi-dns-blocklists-adblock-multi-txt-ce9f678a",
+        "badmojr-1hosts-lite-adblock-txt-6a71fde5",
+        "badmojr-1hosts-xtra-adblock-txt-ec275c9c",
+        "blocklistproject-lists-adguard-abuse-ags-txt-69397c3c",
+        "blocklistproject-lists-adguard-redirect-ags-txt-6ece472c",
+        "anudeepnd-blacklist-adservers-txt-e413d034",
+        "jerryn70-goodbyeads-hosts-goodbyeads-txt-882683a5",
+        "jerryn70-goodbyeads-formats-goodbyeads-adblock-filter-txt-d11c0acd"
+      ],
+      "status": "catalog_only",
+      "strengthGuaranteed": false
+    },
+    {
+      "id": "type-malware",
+      "name": "恶意软件",
+      "axis": "type",
+      "sourceIds": [
+        "mitchellkrogza-the-big-list-of-hacked-malware-web-sites-hacked-domains-list-5df168a2"
+      ],
+      "status": "catalog_only",
+      "strengthGuaranteed": false
+    },
+    {
+      "id": "type-scam",
+      "name": "诈骗",
+      "axis": "type",
+      "sourceIds": [
+        "durablenapkin-scamblocklist-adguard-txt-f27041d5",
+        "blocklistproject-lists-adguard-scam-ags-txt-521f7b7c"
+      ],
+      "status": "catalog_only",
+      "strengthGuaranteed": false
+    },
+    {
+      "id": "type-ransomware",
+      "name": "勒索软件",
+      "axis": "type",
+      "sourceIds": [
+        "blocklistproject-lists-adguard-ransomware-ags-txt-8f253932"
+      ],
+      "status": "catalog_only",
+      "strengthGuaranteed": false
+    },
+    {
+      "id": "type-mining",
+      "name": "挖矿",
+      "axis": "type",
+      "sourceIds": [
+        "hoshsadiq-adblock-nocoin-list-nocoin-txt-1aa9d130",
+        "blocklistproject-lists-adguard-crypto-ags-txt-722f85ae"
+      ],
+      "status": "catalog_only",
+      "strengthGuaranteed": false
+    },
+    {
+      "id": "type-annoyance",
+      "name": "网页干扰",
+      "axis": "type",
+      "sourceIds": [
+        "cjx82630-cjxlist-cjx-annoyance-txt-d2386b6d"
+      ],
+      "status": "catalog_only",
+      "strengthGuaranteed": false
+    },
+    {
+      "id": "type-video",
+      "name": "视频场景",
+      "axis": "type",
+      "sourceIds": [
+        "xinggsf-adblock-plus-rule-mv-txt-b8142164"
+      ],
+      "status": "catalog_only",
+      "strengthGuaranteed": false
+    },
+    {
+      "id": "type-smart_tv",
+      "name": "电视",
+      "axis": "type",
+      "sourceIds": [
+        "perflyst-piholeblocklist-smarttv-agh-txt-f3772bac",
+        "blocklistproject-lists-adguard-smart-tv-ags-txt-92f6ccb6"
+      ],
+      "status": "catalog_only",
+      "strengthGuaranteed": false
+    },
+    {
+      "id": "type-game_console",
+      "name": "游戏机",
+      "axis": "type",
+      "sourceIds": [
+        "dandelionsprout-adfilt-gameconsoleadblocklist-txt-2fd8cf2e"
+      ],
+      "status": "catalog_only",
+      "strengthGuaranteed": false
+    },
+    {
+      "id": "type-windows",
+      "name": "Windows",
+      "axis": "type",
+      "sourceIds": [
+        "crazy-max-windowsspyblocker-data-hosts-spy-txt-a41d8da9"
+      ],
+      "status": "catalog_only",
+      "strengthGuaranteed": false
+    },
+    {
+      "id": "type-xiaomi",
+      "name": "小米",
+      "axis": "type",
+      "sourceIds": [
+        "jerryn70-goodbyeads-extension-goodbyeads-xiaomi-extension-txt-2ab84d66"
+      ],
+      "status": "catalog_only",
+      "strengthGuaranteed": false
+    },
+    {
+      "id": "type-samsung",
+      "name": "三星",
+      "axis": "type",
+      "sourceIds": [
+        "jerryn70-goodbyeads-extension-goodbyeads-samsung-adblock-txt-10d171b5"
+      ],
+      "status": "catalog_only",
+      "strengthGuaranteed": false
+    },
+    {
+      "id": "type-spotify",
+      "name": "Spotify",
+      "axis": "type",
+      "sourceIds": [
+        "jerryn70-goodbyeads-extension-goodbyeads-spotify-adblock-txt-4a00db86"
+      ],
+      "status": "catalog_only",
+      "strengthGuaranteed": false
+    },
+    {
+      "id": "type-youtube",
+      "name": "YouTube",
+      "axis": "type",
+      "sourceIds": [
+        "jerryn70-goodbyeads-extension-goodbyeads-youtube-adblock-txt-84c5ae17",
+        "jerryn70-goodbyeads-formats-goodbyeads-youtube-adblock-filter-txt-992d6a26"
+      ],
+      "status": "catalog_only",
+      "strengthGuaranteed": false
+    },
+    {
+      "id": "type-social_blocking",
+      "name": "社交平台整站限制",
+      "axis": "type",
+      "sourceIds": [
+        "anudeepnd-blacklist-facebook-txt-32006df0"
+      ],
+      "status": "catalog_only",
+      "strengthGuaranteed": false
+    },
+    {
+      "id": "type-shortener_blocking",
+      "name": "短链接服务限制",
+      "axis": "type",
+      "sourceIds": [
+        "hagezi-dns-blocklists-adblock-urlshortener-txt-25500e57"
+      ],
+      "status": "catalog_only",
+      "strengthGuaranteed": false
+    },
+    {
+      "id": "type-dyndns_blocking",
+      "name": "动态 DNS 服务限制",
+      "axis": "type",
+      "sourceIds": [
+        "hagezi-dns-blocklists-adblock-dyndns-txt-1d5b17bf"
+      ],
+      "status": "catalog_only",
+      "strengthGuaranteed": false
+    },
+    {
+      "id": "type-hosting_blocking",
+      "name": "托管服务限制",
+      "axis": "type",
+      "sourceIds": [
+        "hagezi-dns-blocklists-adblock-hoster-txt-15f0d4a7"
+      ],
+      "status": "catalog_only",
+      "strengthGuaranteed": false
+    },
+    {
+      "id": "type-referral_allow",
+      "name": "推广/跳转链接放行",
+      "axis": "type",
+      "sourceIds": [
+        "hagezi-dns-blocklists-adblock-whitelist-referral-txt-da8500f6",
+        "hagezi-dns-blocklists-adblock-whitelist-referral-native-txt-69481aca"
+      ],
+      "status": "catalog_only",
+      "strengthGuaranteed": false
+    },
+    {
+      "id": "type-shortener_allow",
+      "name": "短链接放行",
+      "axis": "type",
+      "sourceIds": [
+        "hagezi-dns-blocklists-adblock-whitelist-urlshortener-txt-c2ee3e5c"
+      ],
+      "status": "catalog_only",
+      "strengthGuaranteed": false
+    },
+    {
+      "id": "strength-balanced",
+      "name": "均衡",
+      "axis": "strength",
+      "sourceIds": [
+        "hagezi-dns-blocklists-adblock-multi-txt-ce9f678a",
+        "badmojr-1hosts-lite-adblock-txt-6a71fde5"
+      ],
+      "status": "catalog_only"
+    },
+    {
+      "id": "strength-extended",
+      "name": "扩展",
+      "axis": "strength",
+      "sourceIds": [
+        "hagezi-dns-blocklists-adblock-pro-mini-txt-20bb6b45",
+        "hagezi-dns-blocklists-adblock-pro-txt-65c8e043"
+      ],
+      "status": "catalog_only"
+    },
+    {
+      "id": "strength-aggressive",
+      "name": "激进",
+      "axis": "strength",
+      "sourceIds": [
+        "hagezi-dns-blocklists-adblock-pro-plus-txt-7a87ce26",
+        "badmojr-1hosts-xtra-adblock-txt-ec275c9c"
+      ],
+      "status": "catalog_only"
+    },
+    {
+      "id": "strength-maximum",
+      "name": "最强",
+      "axis": "strength",
+      "sourceIds": [
+        "hagezi-dns-blocklists-adblock-ultimate-txt-bc290ebd"
+      ],
+      "status": "catalog_only"
+    },
+    {
+      "id": "strength-unknown",
+      "name": "上游未明确分级",
+      "axis": "strength",
+      "sourceIds": [
+        "adguardteam-filtersregistry-filters-filter-224-chinese-filter-txt-4987b98a",
+        "adguardteam-adguardfilters-mobilefilter-sections-adservers-txt-81ac67be",
+        "cats-team-adrules-dns-txt-35998f0f",
+        "cjx82630-cjxlist-cjx-annoyance-txt-d2386b6d",
+        "xinggsf-adblock-plus-rule-mv-txt-b8142164",
+        "damengzhu-banad-jiekouad-txt-91a5eb50",
+        "tg-twilight-awavenue-ads-rule-awavenue-ads-rule-txt-594187e3",
+        "stevenblack-hosts-hosts-603e776c",
+        "banbendalao-adgk-adgk-txt-c99347f4",
+        "jdlingyu-ad-wars-hosts-eb100586",
+        "adaway-adaway-github-io-hosts-txt-66566edd",
+        "perflyst-piholeblocklist-smarttv-agh-txt-f3772bac",
+        "durablenapkin-scamblocklist-adguard-txt-f27041d5",
+        "dandelionsprout-adfilt-gameconsoleadblocklist-txt-2fd8cf2e",
+        "hoshsadiq-adblock-nocoin-list-nocoin-txt-1aa9d130",
+        "spam404-lists-main-blacklist-txt-694a44a4",
+        "mitchellkrogza-the-big-list-of-hacked-malware-web-sites-hacked-domains-list-5df168a2",
+        "blocklistproject-lists-adguard-abuse-ags-txt-69397c3c",
+        "blocklistproject-lists-adguard-ads-ags-txt-21a38910",
+        "blocklistproject-lists-adguard-crypto-ags-txt-722f85ae",
+        "blocklistproject-lists-adguard-ransomware-ags-txt-8f253932",
+        "blocklistproject-lists-adguard-redirect-ags-txt-6ece472c",
+        "blocklistproject-lists-adguard-scam-ags-txt-521f7b7c",
+        "blocklistproject-lists-adguard-smart-tv-ags-txt-92f6ccb6",
+        "blocklistproject-lists-adguard-tracking-ags-txt-06c487dc",
+        "anudeepnd-blacklist-adservers-txt-e413d034",
+        "anudeepnd-blacklist-facebook-txt-32006df0",
+        "crazy-max-windowsspyblocker-data-hosts-spy-txt-a41d8da9",
+        "jerryn70-goodbyeads-hosts-goodbyeads-txt-882683a5",
+        "jerryn70-goodbyeads-formats-goodbyeads-adblock-filter-txt-d11c0acd",
+        "jerryn70-goodbyeads-extension-goodbyeads-xiaomi-extension-txt-2ab84d66",
+        "jerryn70-goodbyeads-extension-goodbyeads-samsung-adblock-txt-10d171b5",
+        "jerryn70-goodbyeads-extension-goodbyeads-spotify-adblock-txt-4a00db86",
+        "jerryn70-goodbyeads-extension-goodbyeads-youtube-adblock-txt-84c5ae17",
+        "jerryn70-goodbyeads-formats-goodbyeads-youtube-adblock-filter-txt-992d6a26"
+      ],
+      "status": "catalog_only"
+    },
+    {
+      "id": "region-china-optimized",
+      "name": "中国国内优化（黑名单）",
+      "axis": "region",
+      "sourceIds": [
+        "cats-team-adrules-dns-txt-35998f0f"
+      ],
+      "status": "catalog_only",
+      "strengthGuaranteed": false,
+      "scope": "面向中国使用环境的 DNS 拦截来源，不按 .cn 后缀或 IP 所在地筛选。",
+      "exceptionPolicy": "随所选来源携带其原生 DNS 放行例外，不套用全部独立白名单。"
+    }
+  ],
+  "publicationStatus": "not_published",
+  "compositionRules": [
+    "同一 variantFamily 的版本择一，例如 HaGeZi Multi 和 1Hosts。",
+    "同一 representationGroup 的格式择一；格式可改变匹配范围，不能直接视为规则语义相同。",
+    "选择来源时携带该来源的放行例外，保留修饰符，不统一提升 important。",
+    "独立白名单为可选组件，不能默认跨来源覆盖，尤其是推广和短链接放行。",
+    "未分级来源不能直接归入均衡或低误杀档位；小体积不代表低强度。",
+    "用途标签属于整个来源，不是每条域名的类别；综合列表不能按标签切成纯广告列表。",
+    "地域分类与拦截强度独立；中国国内优化只纳入上游明确说明地区用途的 DNS 来源。",
+    "下载失败来源不进入本次可用分类；黑白规则冲突交由 AdGuard 语法优先级处理。"
+  ]
+}

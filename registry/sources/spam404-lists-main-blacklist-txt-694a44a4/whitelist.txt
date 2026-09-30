@@ -1,0 +1,3 @@
+! Source: https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt
+! Repository: https://github.com/Spam404/lists
+! DNS subset only; original modifiers and source scope are preserved.

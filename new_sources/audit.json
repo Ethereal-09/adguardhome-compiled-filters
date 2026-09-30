@@ -1,0 +1,408 @@
+{
+  "checkedUtc": "2026-09-30T17:00:15.331218+00:00",
+  "results": [
+    {
+      "name": "blocklistproject/Lists / abuse-ags.txt",
+      "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/abuse-ags.txt",
+      "repository": "https://github.com/blocklistproject/Lists",
+      "evidence": "https://api.github.com/repos/blocklistproject/Lists/contents/adguard?ref=main",
+      "repositoryUpdated": "2026-09-30T08:23:13Z",
+      "status": "verified",
+      "supportedRules": 435051,
+      "exceptionRules": 0,
+      "unsupported": 68
+    },
+    {
+      "name": "blocklistproject/Lists / ads-ags.txt",
+      "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/ads-ags.txt",
+      "repository": "https://github.com/blocklistproject/Lists",
+      "evidence": "https://api.github.com/repos/blocklistproject/Lists/contents/adguard?ref=main",
+      "repositoryUpdated": "2026-09-30T08:23:13Z",
+      "status": "verified",
+      "supportedRules": 233991,
+      "exceptionRules": 0,
+      "unsupported": 34
+    },
+    {
+      "name": "blocklistproject/Lists / crypto-ags.txt",
+      "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/crypto-ags.txt",
+      "repository": "https://github.com/blocklistproject/Lists",
+      "evidence": "https://api.github.com/repos/blocklistproject/Lists/contents/adguard?ref=main",
+      "repositoryUpdated": "2026-09-30T08:23:13Z",
+      "status": "verified",
+      "supportedRules": 1272,
+      "exceptionRules": 0,
+      "unsupported": 0
+    },
+    {
+      "name": "blocklistproject/Lists / fraud-ags.txt",
+      "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/fraud-ags.txt",
+      "repository": "https://github.com/blocklistproject/Lists",
+      "evidence": "https://api.github.com/repos/blocklistproject/Lists/contents/adguard?ref=main",
+      "repositoryUpdated": "2026-09-30T08:23:13Z",
+      "status": "verified",
+      "supportedRules": 256184,
+      "exceptionRules": 0,
+      "unsupported": 84
+    },
+    {
+      "name": "blocklistproject/Lists / malware-ags.txt",
+      "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/malware-ags.txt",
+      "repository": "https://github.com/blocklistproject/Lists",
+      "evidence": "https://api.github.com/repos/blocklistproject/Lists/contents/adguard?ref=main",
+      "repositoryUpdated": "2026-09-30T08:23:13Z",
+      "status": "skipped",
+      "reason": "Source exceeds 32 MiB limit"
+    },
+    {
+      "name": "blocklistproject/Lists / phishing-ags.txt",
+      "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/phishing-ags.txt",
+      "repository": "https://github.com/blocklistproject/Lists",
+      "evidence": "https://api.github.com/repos/blocklistproject/Lists/contents/adguard?ref=main",
+      "repositoryUpdated": "2026-09-30T08:23:13Z",
+      "status": "verified",
+      "supportedRules": 190191,
+      "exceptionRules": 0,
+      "unsupported": 24
+    },
+    {
+      "name": "blocklistproject/Lists / ransomware-ags.txt",
+      "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/ransomware-ags.txt",
+      "repository": "https://github.com/blocklistproject/Lists",
+      "evidence": "https://api.github.com/repos/blocklistproject/Lists/contents/adguard?ref=main",
+      "repositoryUpdated": "2026-09-30T08:23:13Z",
+      "status": "verified",
+      "supportedRules": 1904,
+      "exceptionRules": 0,
+      "unsupported": 0
+    },
+    {
+      "name": "blocklistproject/Lists / redirect-ags.txt",
+      "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/redirect-ags.txt",
+      "repository": "https://github.com/blocklistproject/Lists",
+      "evidence": "https://api.github.com/repos/blocklistproject/Lists/contents/adguard?ref=main",
+      "repositoryUpdated": "2026-09-30T08:23:13Z",
+      "status": "verified",
+      "supportedRules": 108682,
+      "exceptionRules": 0,
+      "unsupported": 3
+    },
+    {
+      "name": "blocklistproject/Lists / scam-ags.txt",
+      "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/scam-ags.txt",
+      "repository": "https://github.com/blocklistproject/Lists",
+      "evidence": "https://api.github.com/repos/blocklistproject/Lists/contents/adguard?ref=main",
+      "repositoryUpdated": "2026-09-30T08:23:13Z",
+      "status": "verified",
+      "supportedRules": 8527,
+      "exceptionRules": 0,
+      "unsupported": 0
+    },
+    {
+      "name": "blocklistproject/Lists / smart-tv-ags.txt",
+      "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/smart-tv-ags.txt",
+      "repository": "https://github.com/blocklistproject/Lists",
+      "evidence": "https://api.github.com/repos/blocklistproject/Lists/contents/adguard?ref=main",
+      "repositoryUpdated": "2026-09-30T08:23:13Z",
+      "status": "verified",
+      "supportedRules": 77,
+      "exceptionRules": 0,
+      "unsupported": 0
+    },
+    {
+      "name": "blocklistproject/Lists / tracking-ags.txt",
+      "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/tracking-ags.txt",
+      "repository": "https://github.com/blocklistproject/Lists",
+      "evidence": "https://api.github.com/repos/blocklistproject/Lists/contents/adguard?ref=main",
+      "repositoryUpdated": "2026-09-30T08:23:13Z",
+      "status": "verified",
+      "supportedRules": 143866,
+      "exceptionRules": 0,
+      "unsupported": 10
+    },
+    {
+      "name": "anudeepND/blacklist / blacklist-logo.png",
+      "url": "https://raw.githubusercontent.com/anudeepND/blacklist/master/images/blacklist-logo.png",
+      "repository": "https://github.com/anudeepND/blacklist",
+      "evidence": "https://github.com/anudeepND/blacklist/blob/master/README.md",
+      "repositoryUpdated": "2025-12-27T06:09:55Z",
+      "status": "skipped",
+      "reason": "'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte"
+    },
+    {
+      "name": "anudeepND/blacklist / adservers.txt",
+      "url": "https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt",
+      "repository": "https://github.com/anudeepND/blacklist",
+      "evidence": "https://github.com/anudeepND/blacklist/blob/master/README.md",
+      "repositoryUpdated": "2025-12-27T06:09:55Z",
+      "status": "verified",
+      "supportedRules": 42343,
+      "exceptionRules": 0,
+      "unsupported": 15
+    },
+    {
+      "name": "anudeepND/blacklist / facebook.txt",
+      "url": "https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt",
+      "repository": "https://github.com/anudeepND/blacklist",
+      "evidence": "https://github.com/anudeepND/blacklist/blob/master/README.md",
+      "repositoryUpdated": "2025-12-27T06:09:55Z",
+      "status": "verified",
+      "supportedRules": 3995,
+      "exceptionRules": 0,
+      "unsupported": 1
+    },
+    {
+      "name": "anudeepND/blacklist / CoinMiner.txt",
+      "url": "https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt",
+      "repository": "https://github.com/anudeepND/blacklist",
+      "evidence": "https://github.com/anudeepND/blacklist/blob/master/README.md",
+      "repositoryUpdated": "2025-12-27T06:09:55Z",
+      "status": "verified",
+      "supportedRules": 5830,
+      "exceptionRules": 0,
+      "unsupported": 0
+    },
+    {
+      "name": "anudeepND/blacklist / nextdns-logo.png",
+      "url": "https://raw.githubusercontent.com/anudeepND/blacklist/master/images/nextdns-logo.png",
+      "repository": "https://github.com/anudeepND/blacklist",
+      "evidence": "https://github.com/anudeepND/blacklist/blob/master/README.md",
+      "repositoryUpdated": "2025-12-27T06:09:55Z",
+      "status": "skipped",
+      "reason": "'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte"
+    },
+    {
+      "name": "anudeepND/blacklist / hblock-logo.png",
+      "url": "https://raw.githubusercontent.com/anudeepND/blacklist/master/images/hblock-logo.png",
+      "repository": "https://github.com/anudeepND/blacklist",
+      "evidence": "https://github.com/anudeepND/blacklist/blob/master/README.md",
+      "repositoryUpdated": "2025-12-27T06:09:55Z",
+      "status": "skipped",
+      "reason": "'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte"
+    },
+    {
+      "name": "anudeepND/blacklist / filterlists-logo.png",
+      "url": "https://raw.githubusercontent.com/anudeepND/blacklist/master/images/filterlists-logo.png",
+      "repository": "https://github.com/anudeepND/blacklist",
+      "evidence": "https://github.com/anudeepND/blacklist/blob/master/README.md",
+      "repositoryUpdated": "2025-12-27T06:09:55Z",
+      "status": "skipped",
+      "reason": "'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte"
+    },
+    {
+      "name": "anudeepND/blacklist / oisd.nl-logo.png",
+      "url": "https://raw.githubusercontent.com/anudeepND/blacklist/master/images/oisd.nl-logo.png",
+      "repository": "https://github.com/anudeepND/blacklist",
+      "evidence": "https://github.com/anudeepND/blacklist/blob/master/README.md",
+      "repositoryUpdated": "2025-12-27T06:09:55Z",
+      "status": "skipped",
+      "reason": "'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte"
+    },
+    {
+      "name": "anudeepND/blacklist / energized-protection-logo.png",
+      "url": "https://raw.githubusercontent.com/anudeepND/blacklist/master/images/energized-protection-logo.png",
+      "repository": "https://github.com/anudeepND/blacklist",
+      "evidence": "https://github.com/anudeepND/blacklist/blob/master/README.md",
+      "repositoryUpdated": "2025-12-27T06:09:55Z",
+      "status": "skipped",
+      "reason": "'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte"
+    },
+    {
+      "name": "anudeepND/blacklist / blokada-logo.png",
+      "url": "https://raw.githubusercontent.com/anudeepND/blacklist/master/images/blokada-logo.png",
+      "repository": "https://github.com/anudeepND/blacklist",
+      "evidence": "https://github.com/anudeepND/blacklist/blob/master/README.md",
+      "repositoryUpdated": "2025-12-27T06:09:55Z",
+      "status": "skipped",
+      "reason": "'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte"
+    },
+    {
+      "name": "anudeepND/blacklist / paypal.png",
+      "url": "https://raw.githubusercontent.com/anudeepND/blacklist/master/images/paypal.png",
+      "repository": "https://github.com/anudeepND/blacklist",
+      "evidence": "https://github.com/anudeepND/blacklist/blob/master/README.md",
+      "repositoryUpdated": "2025-12-27T06:09:55Z",
+      "status": "skipped",
+      "reason": "'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte"
+    },
+    {
+      "name": "anudeepND/blacklist / upi.png",
+      "url": "https://raw.githubusercontent.com/anudeepND/blacklist/master/images/upi.png",
+      "repository": "https://github.com/anudeepND/blacklist",
+      "evidence": "https://github.com/anudeepND/blacklist/blob/master/README.md",
+      "repositoryUpdated": "2025-12-27T06:09:55Z",
+      "status": "skipped",
+      "reason": "'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte"
+    },
+    {
+      "name": "crazy-max/WindowsSpyBlocker / spy.txt",
+      "url": "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt",
+      "repository": "https://github.com/crazy-max/WindowsSpyBlocker",
+      "evidence": "https://api.github.com/repos/crazy-max/WindowsSpyBlocker/contents/data/hosts?ref=master",
+      "repositoryUpdated": "2026-09-09T02:22:15Z",
+      "status": "verified",
+      "supportedRules": 347,
+      "exceptionRules": 0,
+      "unsupported": 0
+    },
+    {
+      "name": "jerryn70/GoodbyeAds / GoodbyeAds_New_logo_Trans.png",
+      "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Images/GoodbyeAds_New_logo_Trans.png",
+      "repository": "https://github.com/jerryn70/GoodbyeAds",
+      "evidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/README.md",
+      "repositoryUpdated": "2024-11-22T07:43:23Z",
+      "status": "skipped",
+      "reason": "'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte"
+    },
+    {
+      "name": "jerryn70/GoodbyeAds / GoodbyeAds.txt",
+      "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt",
+      "repository": "https://github.com/jerryn70/GoodbyeAds",
+      "evidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/README.md",
+      "repositoryUpdated": "2024-11-22T07:43:23Z",
+      "status": "verified",
+      "supportedRules": 277744,
+      "exceptionRules": 0,
+      "unsupported": 98
+    },
+    {
+      "name": "jerryn70/GoodbyeAds / GoodbyeAds-AdBlock-Filter.txt",
+      "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Formats/GoodbyeAds-AdBlock-Filter.txt",
+      "repository": "https://github.com/jerryn70/GoodbyeAds",
+      "evidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/README.md",
+      "repositoryUpdated": "2024-11-22T07:43:23Z",
+      "status": "verified",
+      "supportedRules": 277714,
+      "exceptionRules": 0,
+      "unsupported": 117
+    },
+    {
+      "name": "jerryn70/GoodbyeAds / GoodbyeAds-Xiaomi-Extension.txt",
+      "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Xiaomi-Extension.txt",
+      "repository": "https://github.com/jerryn70/GoodbyeAds",
+      "evidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/README.md",
+      "repositoryUpdated": "2024-11-22T07:43:23Z",
+      "status": "verified",
+      "supportedRules": 278,
+      "exceptionRules": 0,
+      "unsupported": 0
+    },
+    {
+      "name": "jerryn70/GoodbyeAds / GoodbyeAds-Samsung-AdBlock.txt",
+      "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Samsung-AdBlock.txt",
+      "repository": "https://github.com/jerryn70/GoodbyeAds",
+      "evidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/README.md",
+      "repositoryUpdated": "2024-11-22T07:43:23Z",
+      "status": "verified",
+      "supportedRules": 101,
+      "exceptionRules": 0,
+      "unsupported": 0
+    },
+    {
+      "name": "jerryn70/GoodbyeAds / GoodbyeAds-Spotify-AdBlock.txt",
+      "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Spotify-AdBlock.txt",
+      "repository": "https://github.com/jerryn70/GoodbyeAds",
+      "evidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/README.md",
+      "repositoryUpdated": "2024-11-22T07:43:23Z",
+      "status": "verified",
+      "supportedRules": 3780,
+      "exceptionRules": 0,
+      "unsupported": 0
+    },
+    {
+      "name": "jerryn70/GoodbyeAds / GoodbyeAds-YouTube-AdBlock.txt",
+      "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-YouTube-AdBlock.txt",
+      "repository": "https://github.com/jerryn70/GoodbyeAds",
+      "evidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/README.md",
+      "repositoryUpdated": "2024-11-22T07:43:23Z",
+      "status": "verified",
+      "supportedRules": 97645,
+      "exceptionRules": 0,
+      "unsupported": 0
+    },
+    {
+      "name": "jerryn70/GoodbyeAds / GoodbyeAds-YouTube-AdBlock-Filter.txt",
+      "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Formats/GoodbyeAds-YouTube-AdBlock-Filter.txt",
+      "repository": "https://github.com/jerryn70/GoodbyeAds",
+      "evidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/README.md",
+      "repositoryUpdated": "2024-11-22T07:43:23Z",
+      "status": "verified",
+      "supportedRules": 97645,
+      "exceptionRules": 0,
+      "unsupported": 0
+    },
+    {
+      "name": "jerryn70/GoodbyeAds / nextdns-logo.png",
+      "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Images/nextdns-logo.png",
+      "repository": "https://github.com/jerryn70/GoodbyeAds",
+      "evidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/README.md",
+      "repositoryUpdated": "2024-11-22T07:43:23Z",
+      "status": "skipped",
+      "reason": "'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte"
+    },
+    {
+      "name": "jerryn70/GoodbyeAds / ControlD.jpeg",
+      "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Images/ControlD.jpeg",
+      "repository": "https://github.com/jerryn70/GoodbyeAds",
+      "evidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/README.md",
+      "repositoryUpdated": "2024-11-22T07:43:23Z",
+      "status": "skipped",
+      "reason": "'utf-8' codec can't decode byte 0xff in position 0: invalid start byte"
+    },
+    {
+      "name": "jerryn70/GoodbyeAds / AhaDNS.jpeg",
+      "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Images/AhaDNS.jpeg",
+      "repository": "https://github.com/jerryn70/GoodbyeAds",
+      "evidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/README.md",
+      "repositoryUpdated": "2024-11-22T07:43:23Z",
+      "status": "skipped",
+      "reason": "'utf-8' codec can't decode byte 0xff in position 0: invalid start byte"
+    },
+    {
+      "name": "jerryn70/GoodbyeAds / PersonalDNSfilter.jpeg",
+      "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Images/PersonalDNSfilter.jpeg",
+      "repository": "https://github.com/jerryn70/GoodbyeAds",
+      "evidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/README.md",
+      "repositoryUpdated": "2024-11-22T07:43:23Z",
+      "status": "skipped",
+      "reason": "'utf-8' codec can't decode byte 0xff in position 0: invalid start byte"
+    },
+    {
+      "name": "jerryn70/GoodbyeAds / keweon.png",
+      "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Images/keweon.png",
+      "repository": "https://github.com/jerryn70/GoodbyeAds",
+      "evidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/README.md",
+      "repositoryUpdated": "2024-11-22T07:43:23Z",
+      "status": "skipped",
+      "reason": "'utf-8' codec can't decode byte 0xf8 in position 16: invalid start byte"
+    },
+    {
+      "name": "jerryn70/GoodbyeAds / RethinkDNS.jpeg",
+      "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Images/RethinkDNS.jpeg",
+      "repository": "https://github.com/jerryn70/GoodbyeAds",
+      "evidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/README.md",
+      "repositoryUpdated": "2024-11-22T07:43:23Z",
+      "status": "skipped",
+      "reason": "'utf-8' codec can't decode byte 0xff in position 0: invalid start byte"
+    },
+    {
+      "name": "jerryn70/GoodbyeAds / blokada-logo.png",
+      "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Images/blokada-logo.png",
+      "repository": "https://github.com/jerryn70/GoodbyeAds",
+      "evidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/README.md",
+      "repositoryUpdated": "2024-11-22T07:43:23Z",
+      "status": "skipped",
+      "reason": "'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte"
+    },
+    {
+      "name": "jerryn70/GoodbyeAds / Paypal.png",
+      "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Images/Paypal.png",
+      "repository": "https://github.com/jerryn70/GoodbyeAds",
+      "evidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/README.md",
+      "repositoryUpdated": "2024-11-22T07:43:23Z",
+      "status": "skipped",
+      "reason": "'utf-8' codec can't decode byte 0x89 in position 0: invalid start byte"
+    }
+  ],
+  "skippedRepositories": []
+}

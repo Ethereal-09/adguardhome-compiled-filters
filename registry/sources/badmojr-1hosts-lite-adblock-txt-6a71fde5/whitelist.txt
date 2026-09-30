@@ -1,0 +1,3 @@
+! Source: https://raw.githubusercontent.com/badmojr/1Hosts/master/Lite/adblock.txt
+! Repository: https://github.com/badmojr/1Hosts
+! DNS subset only; original modifiers and source scope are preserved.

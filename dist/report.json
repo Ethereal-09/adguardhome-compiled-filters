@@ -1,0 +1,49 @@
+{
+  "updatedUtc": "2026-09-30T20:56:58+00:00",
+  "totalRules": 299222,
+  "defaultProfile": "combined",
+  "sources": [
+    {
+      "id": "hagezi-dns-blocklists-adblock-multi-txt-ce9f678a",
+      "name": "HaGeZi Normal",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/multi.txt",
+      "repository": "https://github.com/hagezi/dns-blocklists",
+      "repositoryAccount": "hagezi",
+      "downloadState": "fresh",
+      "accepted": 200319,
+      "parsedEntries": 200319,
+      "duplicates": 0,
+      "unsupported": 0,
+      "unsupportedExamples": [],
+      "validatedEngine": "AdguardTeam/urlfilter v0.23.4"
+    },
+    {
+      "id": "cats-team-adrules-dns-txt-35998f0f",
+      "name": "AdRules DNS List",
+      "url": "https://raw.githubusercontent.com/Cats-Team/AdRules/main/dns.txt",
+      "repository": "https://github.com/Cats-Team/AdRules",
+      "repositoryAccount": "Cats-Team",
+      "downloadState": "fresh",
+      "accepted": 196444,
+      "parsedEntries": 196444,
+      "duplicates": 0,
+      "unsupported": 0,
+      "unsupportedExamples": [],
+      "validatedEngine": "AdguardTeam/urlfilter v0.23.4"
+    },
+    {
+      "id": "tg-twilight-awavenue-ads-rule-awavenue-ads-rule-txt-594187e3",
+      "name": "AWAvenue Ads Rule",
+      "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt",
+      "repository": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule",
+      "repositoryAccount": "TG-Twilight",
+      "downloadState": "fresh",
+      "accepted": 962,
+      "parsedEntries": 965,
+      "duplicates": 3,
+      "unsupported": 0,
+      "unsupportedExamples": [],
+      "validatedEngine": "AdguardTeam/urlfilter v0.23.4"
+    }
+  ]
+}

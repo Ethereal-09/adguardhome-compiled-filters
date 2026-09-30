@@ -1,0 +1,3774 @@
+{
+  "schemaVersion": 1,
+  "generatedUtc": "2026-09-30T18:26:27.575375+00:00",
+  "summary": {
+    "repositories": 23,
+    "sources": 51,
+    "checked": 51,
+    "failed": 0,
+    "independentAllowlists": 3,
+    "mixedFilters": 7,
+    "blocklists": 41,
+    "needsReview": 3,
+    "sourceRuleTotals": {
+      "black": 4079726,
+      "white": 12504
+    },
+    "knownRepositoriesIncludingReferences": 29
+  },
+  "sources": [
+    {
+      "id": "adguardteam-filtersregistry-filters-filter-224-chinese-filter-txt-4987b98a",
+      "name": "AdGuard Chinese filter",
+      "repository": "https://github.com/AdguardTeam/FiltersRegistry",
+      "repositoryAccount": "AdguardTeam",
+      "ref": "master",
+      "path": "filters/filter_224_Chinese/filter.txt",
+      "url": "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_224_Chinese/filter.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": true,
+      "subscriptionEvidence": [
+        {
+          "url": "https://api.github.com/repos/AdguardTeam/FiltersRegistry",
+          "canonicalRepository": "https://github.com/AdguardTeam/FiltersRegistry",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00",
+      "categories": [
+        "ads"
+      ],
+      "categoryBasis": "source_name_inference",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/AdguardTeam/FiltersRegistry/blob/master/filters/filter_224_Chinese/filter.txt",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:16:40.079532+00:00",
+      "bodySha256": "6db1de11e36ab3e2a9d7dd07ddc1b5288c5798481d1227ddeb803f841f1e024e",
+      "rawCounts": {
+        "blockingOrOtherLines": 20854,
+        "adblockLines": 12083,
+        "otherLines": 10239,
+        "exceptionLines": 1468
+      },
+      "dnsBlocks": 5894,
+      "dnsExceptions": 11,
+      "unsupported": 16417,
+      "unsupportedExamples": [
+        "||aa67678156.com^$third-party",
+        "||onemob.mobi^$third-party",
+        "||tw-726620180914.*.run.app^"
+      ],
+      "outputs": {
+        "blacklist": "sources/adguardteam-filtersregistry-filters-filter-224-chinese-filter-txt-4987b98a/blacklist.txt",
+        "whitelist": "sources/adguardteam-filtersregistry-filters-filter-224-chinese-filter-txt-4987b98a/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "mixed_filter",
+      "previousSupportedRules": 5905,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      }
+    },
+    {
+      "id": "adguardteam-adguardfilters-mobilefilter-sections-adservers-txt-81ac67be",
+      "name": "AdGuard Mobile Ads filter",
+      "repository": "https://github.com/AdguardTeam/AdguardFilters",
+      "repositoryAccount": "AdguardTeam",
+      "ref": "master",
+      "path": "MobileFilter/sections/adservers.txt",
+      "url": "https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/adservers.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": true,
+      "subscriptionEvidence": [
+        {
+          "url": "https://api.github.com/repos/AdguardTeam/AdguardFilters",
+          "canonicalRepository": "https://github.com/AdguardTeam/AdguardFilters",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00",
+      "categories": [
+        "ads"
+      ],
+      "categoryBasis": "source_name_inference",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/AdguardTeam/AdguardFilters/blob/master/MobileFilter/sections/adservers.txt",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:16:39.862405+00:00",
+      "bodySha256": "4b5fd9c1a31bedf693226b6151bb539065f5fb9b88fd1298cf065f9f28a4e744",
+      "rawCounts": {
+        "blockingOrOtherLines": 992,
+        "adblockLines": 987,
+        "otherLines": 5
+      },
+      "dnsBlocks": 899,
+      "dnsExceptions": 0,
+      "unsupported": 93,
+      "unsupportedExamples": [
+        "||m.yap.yahoo.com^$domain=~not.dns",
+        "||adv0*.msa.cdn.mediaset.net^",
+        "/^https:\\/\\/(a|c)\\.[0-9a-f]{56}\\.com$/"
+      ],
+      "outputs": {
+        "blacklist": "sources/adguardteam-adguardfilters-mobilefilter-sections-adservers-txt-81ac67be/blacklist.txt",
+        "whitelist": "sources/adguardteam-adguardfilters-mobilefilter-sections-adservers-txt-81ac67be/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "blocklist",
+      "previousSupportedRules": 899,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+      "licenseSnapshot": "upstream/AdguardTeam--AdguardFilters--LICENSE"
+    },
+    {
+      "id": "cats-team-adrules-dns-txt-35998f0f",
+      "name": "AdRules DNS List",
+      "repository": "https://github.com/Cats-Team/AdRules",
+      "repositoryAccount": "Cats-Team",
+      "ref": "main",
+      "path": "dns.txt",
+      "url": "https://raw.githubusercontent.com/Cats-Team/AdRules/main/dns.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": true,
+      "subscriptionEvidence": [
+        {
+          "url": "https://api.github.com/repos/Cats-Team/AdRules",
+          "canonicalRepository": "https://github.com/Cats-Team/AdRules",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00",
+      "categories": [
+        "ads",
+        "tracking",
+        "security"
+      ],
+      "categoryBasis": "repository_documentation",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [
+        "国内优化描述使用环境；不按 .cn 后缀或域名解析 IP 所在地筛选，不代表低误杀或特定拦截强度。"
+      ],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/Cats-Team/AdRules#readme",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:16:43.432595+00:00",
+      "bodySha256": "e80bcc2c74d101360ee7f77323a44bb5272f066348d8ee4353d4d92d1bd9b139",
+      "rawCounts": {
+        "blockingOrOtherLines": 196370,
+        "otherLines": 27,
+        "adblockLines": 196343
+      },
+      "dnsBlocks": 195932,
+      "dnsExceptions": 0,
+      "unsupported": 438,
+      "unsupportedExamples": [
+        "/^.+stat\\.kugou\\.com/",
+        "/^admarvel\\./",
+        "/^admaster\\./"
+      ],
+      "outputs": {
+        "blacklist": "sources/cats-team-adrules-dns-txt-35998f0f/blacklist.txt",
+        "whitelist": "sources/cats-team-adrules-dns-txt-35998f0f/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "blocklist",
+      "previousSupportedRules": 195932,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "CN",
+        "basis": "repository_documentation",
+        "evidenceUrl": "https://github.com/Cats-Team/AdRules#readme",
+        "sourceEvidence": "https://github.com/Cats-Team/AdRules/blob/main/dns.txt",
+        "evidenceReviewedOn": "2026-10-01",
+        "scope": "dns",
+        "description": "上游明确面向中国地区，覆盖广告、跟踪、恶意软件、HTTPDNS 和 PCDN。"
+      },
+      "licenseEvidenceUrl": "https://github.com/Cats-Team/AdRules/blob/script/LICENSE",
+      "licenseSnapshot": "upstream/Cats-Team--AdRules--LICENSE"
+    },
+    {
+      "id": "cjx82630-cjxlist-cjx-annoyance-txt-d2386b6d",
+      "name": "CJX's Annoyance List",
+      "repository": "https://github.com/cjx82630/cjxlist",
+      "repositoryAccount": "cjx82630",
+      "ref": "master",
+      "path": "cjx-annoyance.txt",
+      "url": "https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": true,
+      "subscriptionEvidence": [
+        {
+          "url": "https://api.github.com/repos/cjx82630/cjxlist",
+          "canonicalRepository": "https://github.com/cjx82630/cjxlist",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00",
+      "categories": [
+        "annoyance"
+      ],
+      "categoryBasis": "source_name_inference",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/cjx82630/cjxlist/blob/master/cjx-annoyance.txt",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:16:41.453203+00:00",
+      "bodySha256": "e07fa5f05a8078dec3491c94a4a78156e3cbb9de10c27c7f112efbfa1c984efc",
+      "rawCounts": {
+        "blockingOrOtherLines": 1835,
+        "otherLines": 1139,
+        "adblockLines": 702,
+        "exceptionLines": 6
+      },
+      "dnsBlocks": 115,
+      "dnsExceptions": 0,
+      "unsupported": 1726,
+      "unsupportedExamples": [
+        "/wiseatom/banner/pack_",
+        "/npm/disable-devtool",
+        "/bbs/include/javascript/adblock."
+      ],
+      "outputs": {
+        "blacklist": "sources/cjx82630-cjxlist-cjx-annoyance-txt-d2386b6d/blacklist.txt",
+        "whitelist": "sources/cjx82630-cjxlist-cjx-annoyance-txt-d2386b6d/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "mixed_filter",
+      "previousSupportedRules": 115,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      }
+    },
+    {
+      "id": "xinggsf-adblock-plus-rule-mv-txt-b8142164",
+      "name": "xinggsf mv",
+      "repository": "https://github.com/xinggsf/Adblock-Plus-Rule",
+      "repositoryAccount": "xinggsf",
+      "ref": "master",
+      "path": "mv.txt",
+      "url": "https://raw.githubusercontent.com/xinggsf/Adblock-Plus-Rule/master/mv.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": true,
+      "subscriptionEvidence": [
+        {
+          "url": "https://api.github.com/repos/xinggsf/Adblock-Plus-Rule",
+          "canonicalRepository": "https://github.com/xinggsf/Adblock-Plus-Rule",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00",
+      "categories": [
+        "video"
+      ],
+      "categoryBasis": "source_name_inference",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/xinggsf/Adblock-Plus-Rule/blob/master/mv.txt",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:16:40.892455+00:00",
+      "bodySha256": "1165b91dd489b438c1d99de65c259d15cf5c406b2d8bfcebdb3aa794f129ebf8",
+      "rawCounts": {
+        "blockingOrOtherLines": 130,
+        "otherLines": 65,
+        "exceptionLines": 4,
+        "adblockLines": 69
+      },
+      "dnsBlocks": 27,
+      "dnsExceptions": 0,
+      "unsupported": 107,
+      "unsupportedExamples": [
+        "v.youku.com##.control-phonewatch,#right-title-ad-banner, .kui-watermark-0",
+        "@@||log.mmstat.com/eg.js^$script",
+        "||alicdn.com/*yksdk/*sdk.js$script,domain=youku.com"
+      ],
+      "outputs": {
+        "blacklist": "sources/xinggsf-adblock-plus-rule-mv-txt-b8142164/blacklist.txt",
+        "whitelist": "sources/xinggsf-adblock-plus-rule-mv-txt-b8142164/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "mixed_filter",
+      "previousSupportedRules": 27,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      }
+    },
+    {
+      "id": "damengzhu-banad-jiekouad-txt-91a5eb50",
+      "name": "jiekouAD",
+      "repository": "https://github.com/damengzhu/banad",
+      "repositoryAccount": "damengzhu",
+      "ref": "main",
+      "path": "jiekouAD.txt",
+      "url": "https://raw.githubusercontent.com/damengzhu/banad/main/jiekouAD.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": true,
+      "subscriptionEvidence": [
+        {
+          "url": "https://api.github.com/repos/damengzhu/banad",
+          "canonicalRepository": "https://github.com/damengzhu/banad",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00",
+      "categories": [
+        "ads"
+      ],
+      "categoryBasis": "source_name_inference",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/damengzhu/banad/blob/main/jiekouAD.txt",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:16:41.969706+00:00",
+      "bodySha256": "095e89227081b5028efc16dbe761291b0a5e4910cce7c95bf368c6a748ae25d0",
+      "rawCounts": {
+        "blockingOrOtherLines": 5845,
+        "adblockLines": 4769,
+        "exceptionLines": 48,
+        "otherLines": 1124
+      },
+      "dnsBlocks": 4508,
+      "dnsExceptions": 4,
+      "unsupported": 1379,
+      "unsupportedExamples": [
+        "||molpmh.xyz|",
+        "||at*.doubanio.com^",
+        "||wdadad.cn"
+      ],
+      "outputs": {
+        "blacklist": "sources/damengzhu-banad-jiekouad-txt-91a5eb50/blacklist.txt",
+        "whitelist": "sources/damengzhu-banad-jiekouad-txt-91a5eb50/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "mixed_filter",
+      "previousSupportedRules": 4512,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      }
+    },
+    {
+      "id": "tg-twilight-awavenue-ads-rule-awavenue-ads-rule-txt-594187e3",
+      "name": "AWAvenue Ads Rule",
+      "repository": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule",
+      "repositoryAccount": "TG-Twilight",
+      "ref": "main",
+      "path": "AWAvenue-Ads-Rule.txt",
+      "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": true,
+      "subscriptionEvidence": [
+        {
+          "url": "https://api.github.com/repos/TG-Twilight/AWAvenue-Ads-Rule",
+          "canonicalRepository": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00",
+      "categories": [
+        "ads",
+        "tracking"
+      ],
+      "categoryBasis": "source_name_inference",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/AWAvenue-Ads-Rule.txt",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:16:42.825877+00:00",
+      "bodySha256": "e63c0ba4d838883a683034f3cbcebe7e00c4d99fb6d10bb130b2283e819976e2",
+      "rawCounts": {
+        "blockingOrOtherLines": 965,
+        "adblockLines": 961,
+        "otherLines": 4
+      },
+      "dnsBlocks": 958,
+      "dnsExceptions": 0,
+      "unsupported": 4,
+      "unsupportedExamples": [
+        "*-ad.sm.cn*",
+        "*-ad.video.yximgs.com*",
+        "*-ad.wtzw.com*"
+      ],
+      "outputs": {
+        "blacklist": "sources/tg-twilight-awavenue-ads-rule-awavenue-ads-rule-txt-594187e3/blacklist.txt",
+        "whitelist": "sources/tg-twilight-awavenue-ads-rule-awavenue-ads-rule-txt-594187e3/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "blocklist",
+      "previousSupportedRules": 958,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE",
+      "licenseSnapshot": "upstream/TG-Twilight--AWAvenue-Ads-Rule--LICENSE"
+    },
+    {
+      "id": "hagezi-dns-blocklists-adblock-pro-mini-txt-20bb6b45",
+      "name": "DNS-Blocklists PRO mini",
+      "repository": "https://github.com/hagezi/dns-blocklists",
+      "repositoryAccount": "hagezi",
+      "ref": "main",
+      "path": "adblock/pro.mini.txt",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.mini.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": true,
+      "subscriptionEvidence": [
+        {
+          "url": "https://api.github.com/repos/hagezi/dns-blocklists",
+          "canonicalRepository": "https://github.com/hagezi/dns-blocklists",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00",
+      "categories": [
+        "ads",
+        "tracking",
+        "security"
+      ],
+      "categoryBasis": "repository_documentation",
+      "strength": {
+        "value": "extended",
+        "basis": "upstream_tier",
+        "evidenceUrl": "https://github.com/hagezi/dns-blocklists#readme"
+      },
+      "variantFamily": "hagezi-multi",
+      "representationGroup": null,
+      "notes": [
+        "Pro 的体积优化版本，不将 Mini 名称当作低强度证据。"
+      ],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/hagezi/dns-blocklists#readme",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:16:43.923431+00:00",
+      "bodySha256": "0b7ed6315922a2810ebb0efdcc82ba525a75ec1ee4d31bd521829c03af3c6240",
+      "rawCounts": {
+        "blockingOrOtherLines": 59779,
+        "adblockLines": 59779
+      },
+      "dnsBlocks": 59779,
+      "dnsExceptions": 0,
+      "unsupported": 0,
+      "unsupportedExamples": [],
+      "outputs": {
+        "blacklist": "sources/hagezi-dns-blocklists-adblock-pro-mini-txt-20bb6b45/blacklist.txt",
+        "whitelist": "sources/hagezi-dns-blocklists-adblock-pro-mini-txt-20bb6b45/whitelist.txt"
+      },
+      "compatibility": "supported_dns_syntax",
+      "kind": "blocklist",
+      "previousSupportedRules": 59779,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
+      "licenseSnapshot": "upstream/hagezi--dns-blocklists--LICENSE"
+    },
+    {
+      "id": "stevenblack-hosts-hosts-603e776c",
+      "name": "StevenBlack hosts",
+      "repository": "https://github.com/StevenBlack/hosts",
+      "repositoryAccount": "StevenBlack",
+      "ref": "master",
+      "path": "hosts",
+      "url": "https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts",
+      "role": "filter",
+      "enabledInCurrentConfig": true,
+      "subscriptionEvidence": [
+        {
+          "url": "https://api.github.com/repos/StevenBlack/hosts",
+          "canonicalRepository": "https://github.com/StevenBlack/hosts",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00",
+      "categories": [
+        "ads",
+        "tracking",
+        "security"
+      ],
+      "categoryBasis": "source_name_inference",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/StevenBlack/hosts/blob/master/hosts",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:16:45.107630+00:00",
+      "bodySha256": "50c0c1b40ea81969b76487ce553adf64a61cc14d66c2e072cf0fe7a6ef277897",
+      "rawCounts": {
+        "blockingOrOtherLines": 74782,
+        "hostsLines": 74767,
+        "otherLines": 15
+      },
+      "dnsBlocks": 74759,
+      "dnsExceptions": 0,
+      "unsupported": 23,
+      "unsupportedExamples": [
+        "127.0.0.1 localhost",
+        "127.0.0.1 localhost.localdomain",
+        "127.0.0.1 local"
+      ],
+      "outputs": {
+        "blacklist": "sources/stevenblack-hosts-hosts-603e776c/blacklist.txt",
+        "whitelist": "sources/stevenblack-hosts-hosts-603e776c/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "blocklist",
+      "previousSupportedRules": 74759,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/StevenBlack/hosts/blob/master/license.txt",
+      "licenseSnapshot": "upstream/StevenBlack--hosts--license.txt"
+    },
+    {
+      "id": "banbendalao-adgk-adgk-txt-c99347f4",
+      "name": "ADgk",
+      "repository": "https://github.com/banbendalao/ADgk",
+      "repositoryAccount": "banbendalao",
+      "ref": "master",
+      "path": "ADgk.txt",
+      "url": "https://raw.githubusercontent.com/banbendalao/ADgk/master/ADgk.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": true,
+      "subscriptionEvidence": [
+        {
+          "url": "https://api.github.com/repos/banbendalao/ADgk",
+          "canonicalRepository": "https://github.com/banbendalao/ADgk",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00",
+      "categories": [
+        "ads"
+      ],
+      "categoryBasis": "source_name_inference",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/banbendalao/ADgk/blob/master/ADgk.txt",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:16:45.071673+00:00",
+      "bodySha256": "4f638ae80d54a062c01275c972f8a4cbc5ab83084acccd9e28f249fdb89d72e8",
+      "rawCounts": {
+        "blockingOrOtherLines": 8981,
+        "otherLines": 3954,
+        "adblockLines": 5199,
+        "exceptionLines": 172
+      },
+      "dnsBlocks": 3030,
+      "dnsExceptions": 29,
+      "unsupported": 6094,
+      "unsupportedExamples": [
+        "/killcovid2021\\.com/\\d\\.mp4/$mp4",
+        "dmhy.org###pkpk",
+        "dmhy.org##div[id*=\"_ad\"]"
+      ],
+      "outputs": {
+        "blacklist": "sources/banbendalao-adgk-adgk-txt-c99347f4/blacklist.txt",
+        "whitelist": "sources/banbendalao-adgk-adgk-txt-c99347f4/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "mixed_filter",
+      "previousSupportedRules": 3059,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      }
+    },
+    {
+      "id": "jdlingyu-ad-wars-hosts-eb100586",
+      "name": "大圣净化",
+      "repository": "https://github.com/jdlingyu/ad-wars",
+      "repositoryAccount": "jdlingyu",
+      "ref": "master",
+      "path": "hosts",
+      "url": "https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts",
+      "role": "filter",
+      "enabledInCurrentConfig": true,
+      "subscriptionEvidence": [
+        {
+          "url": "https://api.github.com/repos/jdlingyu/ad-wars",
+          "canonicalRepository": "https://github.com/jdlingyu/ad-wars",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00",
+      "categories": [
+        "ads"
+      ],
+      "categoryBasis": "source_name_inference",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/jdlingyu/ad-wars/blob/master/hosts",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:16:45.296385+00:00",
+      "bodySha256": "061f79539890ca296f6492a0687b4b6eca780544da9b437756e881291214788e",
+      "rawCounts": {
+        "blockingOrOtherLines": 1709,
+        "hostsLines": 1709
+      },
+      "dnsBlocks": 1645,
+      "dnsExceptions": 0,
+      "unsupported": 2,
+      "unsupportedExamples": [
+        "127.0.0.1 localhost",
+        "::1 localhost"
+      ],
+      "outputs": {
+        "blacklist": "sources/jdlingyu-ad-wars-hosts-eb100586/blacklist.txt",
+        "whitelist": "sources/jdlingyu-ad-wars-hosts-eb100586/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "blocklist",
+      "previousSupportedRules": 1645,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/jdlingyu/ad-wars/blob/master/README.md",
+      "licenseSnapshot": "upstream/jdlingyu--ad-wars--README.md"
+    },
+    {
+      "id": "adaway-adaway-github-io-hosts-txt-66566edd",
+      "name": "AdAway default blocklist",
+      "repository": "https://github.com/AdAway/adaway.github.io",
+      "repositoryAccount": "AdAway",
+      "ref": "master",
+      "path": "hosts.txt",
+      "url": "https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": true,
+      "subscriptionEvidence": [
+        {
+          "url": "https://api.github.com/repos/AdAway/adaway.github.io",
+          "canonicalRepository": "https://github.com/AdAway/adaway.github.io",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00",
+      "categories": [
+        "ads"
+      ],
+      "categoryBasis": "source_name_inference",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/AdAway/adaway.github.io/blob/master/hosts.txt",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:16:46.161700+00:00",
+      "bodySha256": "8c925c37a5eaa5e1c582c76e12301797861addee5ad0fa0e6e46c9dd0136fe55",
+      "rawCounts": {
+        "blockingOrOtherLines": 6542,
+        "hostsLines": 6542
+      },
+      "dnsBlocks": 6540,
+      "dnsExceptions": 0,
+      "unsupported": 2,
+      "unsupportedExamples": [
+        "127.0.0.1  localhost",
+        "::1  localhost"
+      ],
+      "outputs": {
+        "blacklist": "sources/adaway-adaway-github-io-hosts-txt-66566edd/blacklist.txt",
+        "whitelist": "sources/adaway-adaway-github-io-hosts-txt-66566edd/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "blocklist",
+      "previousSupportedRules": 6540,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/AdAway/adaway.github.io/blob/master/LICENSE.md",
+      "licenseSnapshot": "upstream/AdAway--adaway.github.io--LICENSE.md"
+    },
+    {
+      "id": "perflyst-piholeblocklist-smarttv-agh-txt-f3772bac",
+      "name": "Perflyst and Dandelion Sprout's Smart-TV Blocklist",
+      "repository": "https://github.com/Perflyst/PiHoleBlocklist",
+      "repositoryAccount": "Perflyst",
+      "ref": "master",
+      "path": "SmartTV-AGH.txt",
+      "url": "https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV-AGH.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": true,
+      "subscriptionEvidence": [
+        {
+          "url": "https://api.github.com/repos/Perflyst/PiHoleBlocklist",
+          "canonicalRepository": "https://github.com/Perflyst/PiHoleBlocklist",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00",
+      "categories": [
+        "smart_tv"
+      ],
+      "categoryBasis": "source_name_inference",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/Perflyst/PiHoleBlocklist/blob/master/SmartTV-AGH.txt",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:16:47.117076+00:00",
+      "bodySha256": "1421ff3469dc48ee250048660495e7b2e5cf689da8b0de47c32cf8faea7ffdbb",
+      "rawCounts": {
+        "blockingOrOtherLines": 154,
+        "adblockLines": 159,
+        "exceptionLines": 9,
+        "otherLines": 4
+      },
+      "dnsBlocks": 140,
+      "dnsExceptions": 9,
+      "unsupported": 14,
+      "unsupportedExamples": [
+        "|lgtvsdp.com^",
+        "||fkp.samsungcloudsolution.",
+        "||oempprd.samsungcloudsolution."
+      ],
+      "outputs": {
+        "blacklist": "sources/perflyst-piholeblocklist-smarttv-agh-txt-f3772bac/blacklist.txt",
+        "whitelist": "sources/perflyst-piholeblocklist-smarttv-agh-txt-f3772bac/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "mixed_filter",
+      "previousSupportedRules": 149,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/Perflyst/PiHoleBlocklist/blob/master/LICENSE",
+      "licenseSnapshot": "upstream/Perflyst--PiHoleBlocklist--LICENSE"
+    },
+    {
+      "id": "durablenapkin-scamblocklist-adguard-txt-f27041d5",
+      "name": "Scam Blocklist by DurableNapkin",
+      "repository": "https://github.com/durablenapkin/scamblocklist",
+      "repositoryAccount": "durablenapkin",
+      "ref": "master",
+      "path": "adguard.txt",
+      "url": "https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": true,
+      "subscriptionEvidence": [
+        {
+          "url": "https://api.github.com/repos/durablenapkin/scamblocklist",
+          "canonicalRepository": "https://github.com/durablenapkin/scamblocklist",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00",
+      "categories": [
+        "scam"
+      ],
+      "categoryBasis": "source_name_inference",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/durablenapkin/scamblocklist/blob/master/adguard.txt",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:16:45.945425+00:00",
+      "bodySha256": "73de1d733cdb63ab12159f03f86e87e42c1469ef8b805c39155ee3f4afb30af1",
+      "rawCounts": {
+        "blockingOrOtherLines": 951,
+        "adblockLines": 948,
+        "otherLines": 3
+      },
+      "dnsBlocks": 941,
+      "dnsExceptions": 0,
+      "unsupported": 10,
+      "unsupportedExamples": [
+        "||avito.avito.avito.",
+        ".com-id*.info^",
+        ".com-id*.com^"
+      ],
+      "outputs": {
+        "blacklist": "sources/durablenapkin-scamblocklist-adguard-txt-f27041d5/blacklist.txt",
+        "whitelist": "sources/durablenapkin-scamblocklist-adguard-txt-f27041d5/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "blocklist",
+      "previousSupportedRules": 941,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/durablenapkin/scamblocklist/blob/master/LICENSE",
+      "licenseSnapshot": "upstream/durablenapkin--scamblocklist--LICENSE"
+    },
+    {
+      "id": "dandelionsprout-adfilt-gameconsoleadblocklist-txt-2fd8cf2e",
+      "name": "Game Console Adblock List",
+      "repository": "https://github.com/DandelionSprout/adfilt",
+      "repositoryAccount": "DandelionSprout",
+      "ref": "master",
+      "path": "GameConsoleAdblockList.txt",
+      "url": "https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GameConsoleAdblockList.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": true,
+      "subscriptionEvidence": [
+        {
+          "url": "https://api.github.com/repos/DandelionSprout/adfilt",
+          "canonicalRepository": "https://github.com/DandelionSprout/adfilt",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00",
+      "categories": [
+        "game_console"
+      ],
+      "categoryBasis": "source_name_inference",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/DandelionSprout/adfilt/blob/master/GameConsoleAdblockList.txt",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:16:46.808532+00:00",
+      "bodySha256": "3a626348972de9b1b936b00574a03e105f353eec23967906766d599d17530866",
+      "rawCounts": {
+        "blockingOrOtherLines": 15,
+        "adblockLines": 14,
+        "otherLines": 1
+      },
+      "dnsBlocks": 9,
+      "dnsExceptions": 0,
+      "unsupported": 6,
+      "unsupportedExamples": [
+        "||arc.msn.com^$ctag=~device_pc|~os_windows",
+        "||receive-lp1.dg.srv.nintendo.net",
+        "||realtime-receive-lp1.dg.srv.nintendo.net"
+      ],
+      "outputs": {
+        "blacklist": "sources/dandelionsprout-adfilt-gameconsoleadblocklist-txt-2fd8cf2e/blacklist.txt",
+        "whitelist": "sources/dandelionsprout-adfilt-gameconsoleadblocklist-txt-2fd8cf2e/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "blocklist",
+      "previousSupportedRules": 9,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md",
+      "licenseSnapshot": "upstream/DandelionSprout--adfilt--LICENSE.md"
+    },
+    {
+      "id": "hoshsadiq-adblock-nocoin-list-nocoin-txt-1aa9d130",
+      "name": "NoCoin Filter List",
+      "repository": "https://github.com/hoshsadiq/adblock-nocoin-list",
+      "repositoryAccount": "hoshsadiq",
+      "ref": "master",
+      "path": "nocoin.txt",
+      "url": "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/nocoin.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": true,
+      "subscriptionEvidence": [
+        {
+          "url": "https://api.github.com/repos/hoshsadiq/adblock-nocoin-list",
+          "canonicalRepository": "https://github.com/hoshsadiq/adblock-nocoin-list",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00",
+      "categories": [
+        "mining"
+      ],
+      "categoryBasis": "source_name_inference",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/hoshsadiq/adblock-nocoin-list/blob/master/nocoin.txt",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:16:47.515088+00:00",
+      "bodySha256": "72fd0dda718ffcfd8fab8b416290c7feb8bd65efe060b17d30265a57cb51a649",
+      "rawCounts": {
+        "blockingOrOtherLines": 308,
+        "adblockLines": 219,
+        "otherLines": 97,
+        "exceptionLines": 8
+      },
+      "dnsBlocks": 47,
+      "dnsExceptions": 0,
+      "unsupported": 269,
+      "unsupportedExamples": [
+        "||23.83.114.131^$third-party",
+        "||2miners.com^$third-party",
+        "||35.194.26.233^$third-party"
+      ],
+      "outputs": {
+        "blacklist": "sources/hoshsadiq-adblock-nocoin-list-nocoin-txt-1aa9d130/blacklist.txt",
+        "whitelist": "sources/hoshsadiq-adblock-nocoin-list-nocoin-txt-1aa9d130/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "mixed_filter",
+      "previousSupportedRules": 47,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      }
+    },
+    {
+      "id": "spam404-lists-main-blacklist-txt-694a44a4",
+      "name": "Spam404",
+      "repository": "https://github.com/Spam404/lists",
+      "repositoryAccount": "Spam404",
+      "ref": "master",
+      "path": "main-blacklist.txt",
+      "url": "https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": true,
+      "subscriptionEvidence": [
+        {
+          "url": "https://api.github.com/repos/Spam404/lists",
+          "canonicalRepository": "https://github.com/Spam404/lists",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00",
+      "categories": [
+        "security"
+      ],
+      "categoryBasis": "source_name_inference",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/Spam404/lists/blob/master/main-blacklist.txt",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:16:47.798776+00:00",
+      "bodySha256": "99c65c4a7bcbab03cb82b1068d39a3e43dd65b51ce7b089929261a818b520960",
+      "rawCounts": {
+        "blockingOrOtherLines": 8140,
+        "otherLines": 8140
+      },
+      "dnsBlocks": 8140,
+      "dnsExceptions": 0,
+      "unsupported": 0,
+      "unsupportedExamples": [],
+      "outputs": {
+        "blacklist": "sources/spam404-lists-main-blacklist-txt-694a44a4/blacklist.txt",
+        "whitelist": "sources/spam404-lists-main-blacklist-txt-694a44a4/whitelist.txt"
+      },
+      "compatibility": "supported_dns_syntax",
+      "kind": "blocklist",
+      "previousSupportedRules": 8140,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/Spam404/lists/blob/master/LICENSE.md/LICENSE.md",
+      "licenseSnapshot": "upstream/Spam404--lists--LICENSE.md--LICENSE.md"
+    },
+    {
+      "id": "mitchellkrogza-the-big-list-of-hacked-malware-web-sites-hacked-domains-list-5df168a2",
+      "name": "The Big List of Hacked Malware Web Sites",
+      "repository": "https://github.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites",
+      "repositoryAccount": "mitchellkrogza",
+      "ref": "master",
+      "path": "hacked-domains.list",
+      "url": "https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list",
+      "role": "filter",
+      "enabledInCurrentConfig": true,
+      "subscriptionEvidence": [
+        {
+          "url": "https://api.github.com/repos/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites",
+          "canonicalRepository": "https://github.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00",
+      "categories": [
+        "malware"
+      ],
+      "categoryBasis": "source_name_inference",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/blob/master/hacked-domains.list",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:16:48.452508+00:00",
+      "bodySha256": "8f3d096acd78f383d63cca0e976bbbaf3731aa9a42032d0511b950c3b09053f4",
+      "rawCounts": {
+        "blockingOrOtherLines": 9,
+        "otherLines": 9
+      },
+      "dnsBlocks": 9,
+      "dnsExceptions": 0,
+      "unsupported": 0,
+      "unsupportedExamples": [],
+      "outputs": {
+        "blacklist": "sources/mitchellkrogza-the-big-list-of-hacked-malware-web-sites-hacked-domains-list-5df168a2/blacklist.txt",
+        "whitelist": "sources/mitchellkrogza-the-big-list-of-hacked-malware-web-sites-hacked-domains-list-5df168a2/whitelist.txt"
+      },
+      "compatibility": "supported_dns_syntax",
+      "kind": "blocklist",
+      "previousSupportedRules": 9,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/blob/master/LICENSE.md",
+      "licenseSnapshot": "upstream/mitchellkrogza--The-Big-List-of-Hacked-Malware-Web-Sites--LICENSE.md"
+    },
+    {
+      "id": "hagezi-dns-blocklists-adblock-ultimate-txt-bc290ebd",
+      "name": "HaGeZi Ultimate",
+      "repository": "https://github.com/hagezi/dns-blocklists",
+      "repositoryAccount": "hagezi",
+      "ref": "main",
+      "path": "adblock/ultimate.txt",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/ultimate.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": true,
+      "subscriptionEvidence": [
+        {
+          "url": "https://api.github.com/repos/hagezi/dns-blocklists",
+          "canonicalRepository": "https://github.com/hagezi/dns-blocklists",
+          "fork": false,
+          "archived": false
+        },
+        {
+          "resolution": "使用 GitHub API 返回的默认分支，并验证相同文件路径",
+          "branch": "main"
+        }
+      ],
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00",
+      "categories": [
+        "ads",
+        "tracking",
+        "security"
+      ],
+      "categoryBasis": "repository_documentation",
+      "strength": {
+        "value": "maximum",
+        "basis": "upstream_tier",
+        "evidenceUrl": "https://github.com/hagezi/dns-blocklists#readme"
+      },
+      "variantFamily": "hagezi-multi",
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/hagezi/dns-blocklists#readme",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:16:55.658366+00:00",
+      "bodySha256": "d02e60dbe8f93a8fb9f11b23fbfad30e44bb26f8dc970e16da69f58f31dab87f",
+      "rawCounts": {
+        "blockingOrOtherLines": 287467,
+        "adblockLines": 287467
+      },
+      "dnsBlocks": 287467,
+      "dnsExceptions": 0,
+      "unsupported": 0,
+      "unsupportedExamples": [],
+      "outputs": {
+        "blacklist": "sources/hagezi-dns-blocklists-adblock-ultimate-txt-bc290ebd/blacklist.txt",
+        "whitelist": "sources/hagezi-dns-blocklists-adblock-ultimate-txt-bc290ebd/whitelist.txt"
+      },
+      "compatibility": "supported_dns_syntax",
+      "kind": "blocklist",
+      "previousSupportedRules": 287467,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
+      "licenseSnapshot": "upstream/hagezi--dns-blocklists--LICENSE"
+    },
+    {
+      "id": "hagezi-dns-blocklists-adblock-pro-plus-txt-7a87ce26",
+      "name": "HaGeZi Pro++",
+      "repository": "https://github.com/hagezi/dns-blocklists",
+      "repositoryAccount": "hagezi",
+      "ref": "main",
+      "path": "adblock/pro.plus.txt",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.plus.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": true,
+      "subscriptionEvidence": [
+        {
+          "url": "https://api.github.com/repos/hagezi/dns-blocklists",
+          "canonicalRepository": "https://github.com/hagezi/dns-blocklists",
+          "fork": false,
+          "archived": false
+        },
+        {
+          "resolution": "使用 GitHub API 返回的默认分支，并验证相同文件路径",
+          "branch": "main"
+        }
+      ],
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00",
+      "categories": [
+        "ads",
+        "tracking",
+        "security"
+      ],
+      "categoryBasis": "repository_documentation",
+      "strength": {
+        "value": "aggressive",
+        "basis": "upstream_tier",
+        "evidenceUrl": "https://github.com/hagezi/dns-blocklists#readme"
+      },
+      "variantFamily": "hagezi-multi",
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/hagezi/dns-blocklists#readme",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:16:52.396616+00:00",
+      "bodySha256": "f6a86fcbe43350a9909168c9a82668e4dd1bf46f0bedd21ba0377f23251e9efa",
+      "rawCounts": {
+        "blockingOrOtherLines": 251638,
+        "adblockLines": 251638
+      },
+      "dnsBlocks": 251638,
+      "dnsExceptions": 0,
+      "unsupported": 0,
+      "unsupportedExamples": [],
+      "outputs": {
+        "blacklist": "sources/hagezi-dns-blocklists-adblock-pro-plus-txt-7a87ce26/blacklist.txt",
+        "whitelist": "sources/hagezi-dns-blocklists-adblock-pro-plus-txt-7a87ce26/whitelist.txt"
+      },
+      "compatibility": "supported_dns_syntax",
+      "kind": "blocklist",
+      "previousSupportedRules": 251638,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
+      "licenseSnapshot": "upstream/hagezi--dns-blocklists--LICENSE"
+    },
+    {
+      "id": "hagezi-dns-blocklists-adblock-pro-txt-65c8e043",
+      "name": "HaGeZi Pro",
+      "repository": "https://github.com/hagezi/dns-blocklists",
+      "repositoryAccount": "hagezi",
+      "ref": "main",
+      "path": "adblock/pro.txt",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": true,
+      "subscriptionEvidence": [
+        {
+          "url": "https://api.github.com/repos/hagezi/dns-blocklists",
+          "canonicalRepository": "https://github.com/hagezi/dns-blocklists",
+          "fork": false,
+          "archived": false
+        },
+        {
+          "resolution": "使用 GitHub API 返回的默认分支，并验证相同文件路径",
+          "branch": "main"
+        }
+      ],
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00",
+      "categories": [
+        "ads",
+        "tracking",
+        "security"
+      ],
+      "categoryBasis": "repository_documentation",
+      "strength": {
+        "value": "extended",
+        "basis": "upstream_tier",
+        "evidenceUrl": "https://github.com/hagezi/dns-blocklists#readme"
+      },
+      "variantFamily": "hagezi-multi",
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/hagezi/dns-blocklists#readme",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:16:54.657615+00:00",
+      "bodySha256": "2f1d468c110bece4c82dd74bad8337a225c89a7954b80f1fbac52b187128f611",
+      "rawCounts": {
+        "blockingOrOtherLines": 230960,
+        "adblockLines": 230960
+      },
+      "dnsBlocks": 230960,
+      "dnsExceptions": 0,
+      "unsupported": 0,
+      "unsupportedExamples": [],
+      "outputs": {
+        "blacklist": "sources/hagezi-dns-blocklists-adblock-pro-txt-65c8e043/blacklist.txt",
+        "whitelist": "sources/hagezi-dns-blocklists-adblock-pro-txt-65c8e043/whitelist.txt"
+      },
+      "compatibility": "supported_dns_syntax",
+      "kind": "blocklist",
+      "previousSupportedRules": 230960,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
+      "licenseSnapshot": "upstream/hagezi--dns-blocklists--LICENSE"
+    },
+    {
+      "id": "hagezi-dns-blocklists-adblock-multi-txt-ce9f678a",
+      "name": "HaGeZi Normal",
+      "repository": "https://github.com/hagezi/dns-blocklists",
+      "repositoryAccount": "hagezi",
+      "ref": "main",
+      "path": "adblock/multi.txt",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/multi.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": true,
+      "subscriptionEvidence": [
+        {
+          "url": "https://api.github.com/repos/hagezi/dns-blocklists",
+          "canonicalRepository": "https://github.com/hagezi/dns-blocklists",
+          "fork": false,
+          "archived": false
+        },
+        {
+          "resolution": "使用 GitHub API 返回的默认分支，并验证相同文件路径",
+          "branch": "main"
+        }
+      ],
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00",
+      "categories": [
+        "ads",
+        "tracking",
+        "security"
+      ],
+      "categoryBasis": "repository_documentation",
+      "strength": {
+        "value": "balanced",
+        "basis": "upstream_tier",
+        "evidenceUrl": "https://github.com/hagezi/dns-blocklists#readme"
+      },
+      "variantFamily": "hagezi-multi",
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/hagezi/dns-blocklists#readme",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:16:57.029783+00:00",
+      "bodySha256": "a7a34b67877652b8b99fec61a2bf950b561cdcbb9e4103f9b77013aa681bd4f7",
+      "rawCounts": {
+        "blockingOrOtherLines": 200319,
+        "adblockLines": 200319
+      },
+      "dnsBlocks": 200319,
+      "dnsExceptions": 0,
+      "unsupported": 0,
+      "unsupportedExamples": [],
+      "outputs": {
+        "blacklist": "sources/hagezi-dns-blocklists-adblock-multi-txt-ce9f678a/blacklist.txt",
+        "whitelist": "sources/hagezi-dns-blocklists-adblock-multi-txt-ce9f678a/whitelist.txt"
+      },
+      "compatibility": "supported_dns_syntax",
+      "kind": "blocklist",
+      "previousSupportedRules": 200319,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
+      "licenseSnapshot": "upstream/hagezi--dns-blocklists--LICENSE"
+    },
+    {
+      "id": "hagezi-dns-blocklists-adblock-hoster-txt-15f0d4a7",
+      "name": "HaGeZi Badware Hoster",
+      "repository": "https://github.com/hagezi/dns-blocklists",
+      "repositoryAccount": "hagezi",
+      "ref": "main",
+      "path": "adblock/hoster.txt",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/hoster.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": true,
+      "subscriptionEvidence": [
+        {
+          "url": "https://api.github.com/repos/hagezi/dns-blocklists",
+          "canonicalRepository": "https://github.com/hagezi/dns-blocklists",
+          "fork": false,
+          "archived": false
+        },
+        {
+          "resolution": "使用 GitHub API 返回的默认分支，并验证相同文件路径",
+          "branch": "main"
+        }
+      ],
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00",
+      "categories": [
+        "hosting_blocking"
+      ],
+      "categoryBasis": "repository_documentation",
+      "strength": {
+        "value": "specialized",
+        "basis": "upstream_scope",
+        "evidenceUrl": "https://github.com/hagezi/dns-blocklists#readme"
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [
+        "服务类别拦截组件，应与通用广告过滤分开。"
+      ],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/hagezi/dns-blocklists#readme",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:16:56.541202+00:00",
+      "bodySha256": "bb752a4919e1cde9b9bb7e04d45f4464d507f6884f16b460bd882f02e845fab0",
+      "rawCounts": {
+        "blockingOrOtherLines": 1238,
+        "adblockLines": 1238
+      },
+      "dnsBlocks": 1238,
+      "dnsExceptions": 0,
+      "unsupported": 0,
+      "unsupportedExamples": [],
+      "outputs": {
+        "blacklist": "sources/hagezi-dns-blocklists-adblock-hoster-txt-15f0d4a7/blacklist.txt",
+        "whitelist": "sources/hagezi-dns-blocklists-adblock-hoster-txt-15f0d4a7/whitelist.txt"
+      },
+      "compatibility": "supported_dns_syntax",
+      "kind": "blocklist",
+      "previousSupportedRules": 1238,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
+      "licenseSnapshot": "upstream/hagezi--dns-blocklists--LICENSE"
+    },
+    {
+      "id": "hagezi-dns-blocklists-adblock-dyndns-txt-1d5b17bf",
+      "name": "HaGeZi DynDNS",
+      "repository": "https://github.com/hagezi/dns-blocklists",
+      "repositoryAccount": "hagezi",
+      "ref": "main",
+      "path": "adblock/dyndns.txt",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/dyndns.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": true,
+      "subscriptionEvidence": [
+        {
+          "url": "https://api.github.com/repos/hagezi/dns-blocklists",
+          "canonicalRepository": "https://github.com/hagezi/dns-blocklists",
+          "fork": false,
+          "archived": false
+        },
+        {
+          "resolution": "使用 GitHub API 返回的默认分支，并验证相同文件路径",
+          "branch": "main"
+        }
+      ],
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00",
+      "categories": [
+        "dyndns_blocking"
+      ],
+      "categoryBasis": "repository_documentation",
+      "strength": {
+        "value": "specialized",
+        "basis": "upstream_scope",
+        "evidenceUrl": "https://github.com/hagezi/dns-blocklists#readme"
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [
+        "服务类别拦截组件，应与通用广告过滤分开。"
+      ],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/hagezi/dns-blocklists#readme",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:16:56.651071+00:00",
+      "bodySha256": "0a53959de60845ecf0b1047a7c08a95619b2ce347c59f85ea818afc72cf3b17d",
+      "rawCounts": {
+        "blockingOrOtherLines": 1538,
+        "adblockLines": 1538
+      },
+      "dnsBlocks": 1538,
+      "dnsExceptions": 0,
+      "unsupported": 0,
+      "unsupportedExamples": [],
+      "outputs": {
+        "blacklist": "sources/hagezi-dns-blocklists-adblock-dyndns-txt-1d5b17bf/blacklist.txt",
+        "whitelist": "sources/hagezi-dns-blocklists-adblock-dyndns-txt-1d5b17bf/whitelist.txt"
+      },
+      "compatibility": "supported_dns_syntax",
+      "kind": "blocklist",
+      "previousSupportedRules": 1538,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
+      "licenseSnapshot": "upstream/hagezi--dns-blocklists--LICENSE"
+    },
+    {
+      "id": "hagezi-dns-blocklists-adblock-urlshortener-txt-25500e57",
+      "name": "HaGeZi URL Shortener",
+      "repository": "https://github.com/hagezi/dns-blocklists",
+      "repositoryAccount": "hagezi",
+      "ref": "main",
+      "path": "adblock/urlshortener.txt",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/urlshortener.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": true,
+      "subscriptionEvidence": [
+        {
+          "url": "https://api.github.com/repos/hagezi/dns-blocklists",
+          "canonicalRepository": "https://github.com/hagezi/dns-blocklists",
+          "fork": false,
+          "archived": false
+        },
+        {
+          "resolution": "使用 GitHub API 返回的默认分支，并验证相同文件路径",
+          "branch": "main"
+        }
+      ],
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00",
+      "categories": [
+        "shortener_blocking"
+      ],
+      "categoryBasis": "repository_documentation",
+      "strength": {
+        "value": "specialized",
+        "basis": "upstream_scope",
+        "evidenceUrl": "https://github.com/hagezi/dns-blocklists#readme"
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [
+        "服务类别拦截组件，应与通用广告过滤分开。"
+      ],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/hagezi/dns-blocklists#readme",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:16:57.901697+00:00",
+      "bodySha256": "92362aaecc9794e89fbf0eb3990a68fb86b6afe2df442b19458b5d9c81182258",
+      "rawCounts": {
+        "blockingOrOtherLines": 9982,
+        "adblockLines": 9982
+      },
+      "dnsBlocks": 9982,
+      "dnsExceptions": 0,
+      "unsupported": 0,
+      "unsupportedExamples": [],
+      "outputs": {
+        "blacklist": "sources/hagezi-dns-blocklists-adblock-urlshortener-txt-25500e57/blacklist.txt",
+        "whitelist": "sources/hagezi-dns-blocklists-adblock-urlshortener-txt-25500e57/whitelist.txt"
+      },
+      "compatibility": "supported_dns_syntax",
+      "kind": "blocklist",
+      "previousSupportedRules": 9982,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
+      "licenseSnapshot": "upstream/hagezi--dns-blocklists--LICENSE"
+    },
+    {
+      "id": "badmojr-1hosts-lite-adblock-txt-6a71fde5",
+      "name": "1Hosts Lite",
+      "repository": "https://github.com/badmojr/1Hosts",
+      "repositoryAccount": "badmojr",
+      "ref": "master",
+      "path": "Lite/adblock.txt",
+      "url": "https://raw.githubusercontent.com/badmojr/1Hosts/master/Lite/adblock.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": true,
+      "subscriptionEvidence": [
+        {
+          "url": "https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/main/filters/general/filter_24_1Hosts_Lite/configuration.json",
+          "upstreamUrl": "https://cdn.jsdelivr.net/gh/badmojr/1Hosts@master/Lite/adblock.txt"
+        },
+        {
+          "url": "https://api.github.com/repos/badmojr/1Hosts",
+          "canonicalRepository": "https://github.com/badmojr/1Hosts",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00",
+      "categories": [
+        "ads",
+        "tracking",
+        "security"
+      ],
+      "categoryBasis": "repository_documentation",
+      "strength": {
+        "value": "balanced",
+        "basis": "upstream_tier",
+        "evidenceUrl": "https://github.com/badmojr/1Hosts#readme"
+      },
+      "variantFamily": "1hosts",
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/badmojr/1Hosts#readme",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:16:58.715850+00:00",
+      "bodySha256": "f2d89a0f4b60d420a852419352473c2d3bde02b4a9772dd2cc7eb448200bd070",
+      "rawCounts": {
+        "blockingOrOtherLines": 102259,
+        "adblockLines": 102259
+      },
+      "dnsBlocks": 102241,
+      "dnsExceptions": 0,
+      "unsupported": 18,
+      "unsupportedExamples": [
+        "||09_19.supfree.net^",
+        "||10dkim1._domainkey.business.grab.com^",
+        "||10dkim1._domainkey.chfsmail.ky.gov^"
+      ],
+      "outputs": {
+        "blacklist": "sources/badmojr-1hosts-lite-adblock-txt-6a71fde5/blacklist.txt",
+        "whitelist": "sources/badmojr-1hosts-lite-adblock-txt-6a71fde5/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "blocklist",
+      "previousSupportedRules": 102241,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/badmojr/1Hosts/blob/master/LICENSE",
+      "licenseSnapshot": "upstream/badmojr--1Hosts--LICENSE"
+    },
+    {
+      "id": "badmojr-1hosts-xtra-adblock-txt-ec275c9c",
+      "name": "1Hosts Xtra",
+      "repository": "https://github.com/badmojr/1Hosts",
+      "repositoryAccount": "badmojr",
+      "ref": "master",
+      "path": "Xtra/adblock.txt",
+      "url": "https://raw.githubusercontent.com/badmojr/1Hosts/master/Xtra/adblock.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": true,
+      "subscriptionEvidence": [
+        {
+          "url": "https://raw.githubusercontent.com/AdguardTeam/HostlistsRegistry/main/filters/general/filter_70_1Hosts_Xtra/configuration.json",
+          "upstreamUrl": "https://cdn.jsdelivr.net/gh/badmojr/1Hosts@master/Xtra/adblock.txt"
+        },
+        {
+          "url": "https://api.github.com/repos/badmojr/1Hosts",
+          "canonicalRepository": "https://github.com/badmojr/1Hosts",
+          "fork": false,
+          "archived": false
+        }
+      ],
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00",
+      "categories": [
+        "ads",
+        "tracking",
+        "security"
+      ],
+      "categoryBasis": "repository_documentation",
+      "strength": {
+        "value": "aggressive",
+        "basis": "upstream_tier",
+        "evidenceUrl": "https://github.com/badmojr/1Hosts#readme"
+      },
+      "variantFamily": "1hosts",
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/badmojr/1Hosts#readme",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:17:11.377581+00:00",
+      "bodySha256": "200ee8a0e20d708b731c44e8c5cd8d219b927db6525f77a4341e8aa9c8678bf1",
+      "rawCounts": {
+        "blockingOrOtherLines": 786172,
+        "adblockLines": 786172
+      },
+      "dnsBlocks": 786132,
+      "dnsExceptions": 0,
+      "unsupported": 40,
+      "unsupportedExamples": [
+        "||0-apac.-dox.realmebbs.com^",
+        "||09_19.supfree.net^",
+        "||10dkim1._domainkey.business.grab.com^"
+      ],
+      "outputs": {
+        "blacklist": "sources/badmojr-1hosts-xtra-adblock-txt-ec275c9c/blacklist.txt",
+        "whitelist": "sources/badmojr-1hosts-xtra-adblock-txt-ec275c9c/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "blocklist",
+      "previousSupportedRules": 786132,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/badmojr/1Hosts/blob/master/LICENSE",
+      "licenseSnapshot": "upstream/badmojr--1Hosts--LICENSE"
+    },
+    {
+      "id": "blocklistproject-lists-adguard-abuse-ags-txt-69397c3c",
+      "name": "blocklistproject/Lists / abuse-ags.txt",
+      "repository": "https://github.com/blocklistproject/Lists",
+      "repositoryAccount": "blocklistproject",
+      "ref": "main",
+      "path": "adguard/abuse-ags.txt",
+      "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/abuse-ags.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": false,
+      "subscriptionEvidence": "https://api.github.com/repos/blocklistproject/Lists/contents/adguard?ref=main",
+      "previousCheckedUtc": "2026-09-30T17:00:15.331218+00:00",
+      "categories": [
+        "security"
+      ],
+      "categoryBasis": "repository_documentation",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/blocklistproject/Lists#readme",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:17:11.679968+00:00",
+      "bodySha256": "2c57ca589c067cd1d15636bd4886cdebf898db6c4ccab9c28654b7bdd77cffed",
+      "rawCounts": {
+        "blockingOrOtherLines": 435119,
+        "adblockLines": 435119
+      },
+      "dnsBlocks": 435051,
+      "dnsExceptions": 0,
+      "unsupported": 68,
+      "unsupportedExamples": [
+        "||119_51377620.ampnetwork.net^",
+        "||126419-deu-storno-sicherheit-konto_identity.sicherheitssystem-sicherheitshilfe.ga^",
+        "||156166-de-storno-sicherheit-konto_identity.vorbeugung-sicher.gq^"
+      ],
+      "outputs": {
+        "blacklist": "sources/blocklistproject-lists-adguard-abuse-ags-txt-69397c3c/blacklist.txt",
+        "whitelist": "sources/blocklistproject-lists-adguard-abuse-ags-txt-69397c3c/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "blocklist",
+      "previousSupportedRules": 435051,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/blocklistproject/Lists/blob/main/LICENSE",
+      "licenseSnapshot": "upstream/blocklistproject--Lists--LICENSE"
+    },
+    {
+      "id": "blocklistproject-lists-adguard-ads-ags-txt-21a38910",
+      "name": "blocklistproject/Lists / ads-ags.txt",
+      "repository": "https://github.com/blocklistproject/Lists",
+      "repositoryAccount": "blocklistproject",
+      "ref": "main",
+      "path": "adguard/ads-ags.txt",
+      "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/ads-ags.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": false,
+      "subscriptionEvidence": "https://api.github.com/repos/blocklistproject/Lists/contents/adguard?ref=main",
+      "previousCheckedUtc": "2026-09-30T17:00:15.331218+00:00",
+      "categories": [
+        "ads"
+      ],
+      "categoryBasis": "repository_documentation",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/blocklistproject/Lists#readme",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:17:06.528660+00:00",
+      "bodySha256": "ed8d3120d14153befc4b55fb9512828f4c254247183cad38d485567867edc5cf",
+      "rawCounts": {
+        "blockingOrOtherLines": 234025,
+        "adblockLines": 234025
+      },
+      "dnsBlocks": 233991,
+      "dnsExceptions": 0,
+      "unsupported": 34,
+      "unsupportedExamples": [
+        "||222-33544_999.pub.adfirmative.com^",
+        "||_thums.ero-advertising.com^",
+        "||adman_test.go2cloud.org^"
+      ],
+      "outputs": {
+        "blacklist": "sources/blocklistproject-lists-adguard-ads-ags-txt-21a38910/blacklist.txt",
+        "whitelist": "sources/blocklistproject-lists-adguard-ads-ags-txt-21a38910/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "blocklist",
+      "previousSupportedRules": 233991,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/blocklistproject/Lists/blob/main/LICENSE",
+      "licenseSnapshot": "upstream/blocklistproject--Lists--LICENSE"
+    },
+    {
+      "id": "blocklistproject-lists-adguard-crypto-ags-txt-722f85ae",
+      "name": "blocklistproject/Lists / crypto-ags.txt",
+      "repository": "https://github.com/blocklistproject/Lists",
+      "repositoryAccount": "blocklistproject",
+      "ref": "main",
+      "path": "adguard/crypto-ags.txt",
+      "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/crypto-ags.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": false,
+      "subscriptionEvidence": "https://api.github.com/repos/blocklistproject/Lists/contents/adguard?ref=main",
+      "previousCheckedUtc": "2026-09-30T17:00:15.331218+00:00",
+      "categories": [
+        "mining"
+      ],
+      "categoryBasis": "repository_documentation",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/blocklistproject/Lists#readme",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:17:09.587014+00:00",
+      "bodySha256": "592136d0914555ba7afdc82ad868f315de40c5aadf647f4e36313d54ddf1bbc3",
+      "rawCounts": {
+        "blockingOrOtherLines": 1272,
+        "adblockLines": 1272
+      },
+      "dnsBlocks": 1272,
+      "dnsExceptions": 0,
+      "unsupported": 0,
+      "unsupportedExamples": [],
+      "outputs": {
+        "blacklist": "sources/blocklistproject-lists-adguard-crypto-ags-txt-722f85ae/blacklist.txt",
+        "whitelist": "sources/blocklistproject-lists-adguard-crypto-ags-txt-722f85ae/whitelist.txt"
+      },
+      "compatibility": "supported_dns_syntax",
+      "kind": "blocklist",
+      "previousSupportedRules": 1272,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/blocklistproject/Lists/blob/main/LICENSE",
+      "licenseSnapshot": "upstream/blocklistproject--Lists--LICENSE"
+    },
+    {
+      "id": "blocklistproject-lists-adguard-fraud-ags-txt-859f4062",
+      "name": "blocklistproject/Lists / fraud-ags.txt",
+      "repository": "https://github.com/blocklistproject/Lists",
+      "repositoryAccount": "blocklistproject",
+      "ref": "main",
+      "path": "adguard/fraud-ags.txt",
+      "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/fraud-ags.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": false,
+      "subscriptionEvidence": "https://api.github.com/repos/blocklistproject/Lists/contents/adguard?ref=main",
+      "previousCheckedUtc": "2026-09-30T17:00:15.331218+00:00",
+      "categories": [
+        "scam"
+      ],
+      "categoryBasis": "repository_documentation",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/blocklistproject/Lists#readme",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:17:30.404062+00:00",
+      "bodySha256": "1e09f33479f833bd73918605d4dc36363af394c779967a7a31128ecef145f340",
+      "rawCounts": {
+        "blockingOrOtherLines": 697,
+        "adblockLines": 697
+      },
+      "dnsBlocks": 696,
+      "dnsExceptions": 0,
+      "unsupported": 1,
+      "unsupportedExamples": [
+        "||1lkmc"
+      ],
+      "outputs": {
+        "blacklist": "sources/blocklistproject-lists-adguard-fraud-ags-txt-859f4062/blacklist.txt",
+        "whitelist": "sources/blocklistproject-lists-adguard-fraud-ags-txt-859f4062/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "blocklist",
+      "previousSupportedRules": 256184,
+      "eligibleForSubscription": false,
+      "reviewReason": "支持条目从此前 256184 降为 696，下降超过 30%，暂不进入分类候选。",
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/blocklistproject/Lists/blob/main/LICENSE",
+      "licenseSnapshot": "upstream/blocklistproject--Lists--LICENSE"
+    },
+    {
+      "id": "blocklistproject-lists-adguard-phishing-ags-txt-6ab23539",
+      "name": "blocklistproject/Lists / phishing-ags.txt",
+      "repository": "https://github.com/blocklistproject/Lists",
+      "repositoryAccount": "blocklistproject",
+      "ref": "main",
+      "path": "adguard/phishing-ags.txt",
+      "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/phishing-ags.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": false,
+      "subscriptionEvidence": "https://api.github.com/repos/blocklistproject/Lists/contents/adguard?ref=main",
+      "previousCheckedUtc": "2026-09-30T17:00:15.331218+00:00",
+      "categories": [
+        "phishing"
+      ],
+      "categoryBasis": "repository_documentation",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/blocklistproject/Lists#readme",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:21:59.826117+00:00",
+      "bodySha256": "e7068468d4516b855d0a723b3d4526343548401e9d4dc3627528992ac05aea1c",
+      "rawCounts": {
+        "blockingOrOtherLines": 103365,
+        "adblockLines": 103365
+      },
+      "dnsBlocks": 103351,
+      "dnsExceptions": 0,
+      "unsupported": 14,
+      "unsupportedExamples": [
+        "||324814-de-nutzung-angabe-konto_identity.transaktionssicherheit.bid^",
+        "||574835-de-prob-kenntnis-konto_identity.hilfeservice-personal.cf^",
+        "||bancoestado.cl.imagene.comun2008_nuevo.paglg.pers.wpks.xyz^"
+      ],
+      "outputs": {
+        "blacklist": "sources/blocklistproject-lists-adguard-phishing-ags-txt-6ab23539/blacklist.txt",
+        "whitelist": "sources/blocklistproject-lists-adguard-phishing-ags-txt-6ab23539/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "blocklist",
+      "previousSupportedRules": 190191,
+      "eligibleForSubscription": false,
+      "reviewReason": "支持条目从此前 190191 降为 103351，下降超过 30%，暂不进入分类候选。",
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/blocklistproject/Lists/blob/main/LICENSE",
+      "licenseSnapshot": "upstream/blocklistproject--Lists--LICENSE"
+    },
+    {
+      "id": "blocklistproject-lists-adguard-ransomware-ags-txt-8f253932",
+      "name": "blocklistproject/Lists / ransomware-ags.txt",
+      "repository": "https://github.com/blocklistproject/Lists",
+      "repositoryAccount": "blocklistproject",
+      "ref": "main",
+      "path": "adguard/ransomware-ags.txt",
+      "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/ransomware-ags.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": false,
+      "subscriptionEvidence": "https://api.github.com/repos/blocklistproject/Lists/contents/adguard?ref=main",
+      "previousCheckedUtc": "2026-09-30T17:00:15.331218+00:00",
+      "categories": [
+        "ransomware"
+      ],
+      "categoryBasis": "repository_documentation",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/blocklistproject/Lists#readme",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:17:25.503481+00:00",
+      "bodySha256": "4fe3ce09fa78515728bd4754fb499b2c59034f2359ae146191adccebb21dde34",
+      "rawCounts": {
+        "blockingOrOtherLines": 1904,
+        "adblockLines": 1904
+      },
+      "dnsBlocks": 1904,
+      "dnsExceptions": 0,
+      "unsupported": 0,
+      "unsupportedExamples": [],
+      "outputs": {
+        "blacklist": "sources/blocklistproject-lists-adguard-ransomware-ags-txt-8f253932/blacklist.txt",
+        "whitelist": "sources/blocklistproject-lists-adguard-ransomware-ags-txt-8f253932/whitelist.txt"
+      },
+      "compatibility": "supported_dns_syntax",
+      "kind": "blocklist",
+      "previousSupportedRules": 1904,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/blocklistproject/Lists/blob/main/LICENSE",
+      "licenseSnapshot": "upstream/blocklistproject--Lists--LICENSE"
+    },
+    {
+      "id": "blocklistproject-lists-adguard-redirect-ags-txt-6ece472c",
+      "name": "blocklistproject/Lists / redirect-ags.txt",
+      "repository": "https://github.com/blocklistproject/Lists",
+      "repositoryAccount": "blocklistproject",
+      "ref": "main",
+      "path": "adguard/redirect-ags.txt",
+      "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/redirect-ags.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": false,
+      "subscriptionEvidence": "https://api.github.com/repos/blocklistproject/Lists/contents/adguard?ref=main",
+      "previousCheckedUtc": "2026-09-30T17:00:15.331218+00:00",
+      "categories": [
+        "security"
+      ],
+      "categoryBasis": "repository_documentation",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/blocklistproject/Lists#readme",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:21:06.555276+00:00",
+      "bodySha256": "85ae597e134ffb7e3a261b6f39f05307f48b84fc69db90b60805a5183f0ca32f",
+      "rawCounts": {
+        "blockingOrOtherLines": 108685,
+        "adblockLines": 108685
+      },
+      "dnsBlocks": 108682,
+      "dnsExceptions": 0,
+      "unsupported": 3,
+      "unsupportedExamples": [
+        "||amir_mountains.persianblog.ir^",
+        "||falling_from_brlow.info^",
+        "||kral_oyun_kraloyun.sitemynet.com^"
+      ],
+      "outputs": {
+        "blacklist": "sources/blocklistproject-lists-adguard-redirect-ags-txt-6ece472c/blacklist.txt",
+        "whitelist": "sources/blocklistproject-lists-adguard-redirect-ags-txt-6ece472c/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "blocklist",
+      "previousSupportedRules": 108682,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/blocklistproject/Lists/blob/main/LICENSE",
+      "licenseSnapshot": "upstream/blocklistproject--Lists--LICENSE"
+    },
+    {
+      "id": "blocklistproject-lists-adguard-scam-ags-txt-521f7b7c",
+      "name": "blocklistproject/Lists / scam-ags.txt",
+      "repository": "https://github.com/blocklistproject/Lists",
+      "repositoryAccount": "blocklistproject",
+      "ref": "main",
+      "path": "adguard/scam-ags.txt",
+      "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/scam-ags.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": false,
+      "subscriptionEvidence": "https://api.github.com/repos/blocklistproject/Lists/contents/adguard?ref=main",
+      "previousCheckedUtc": "2026-09-30T17:00:15.331218+00:00",
+      "categories": [
+        "scam"
+      ],
+      "categoryBasis": "repository_documentation",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/blocklistproject/Lists#readme",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:17:48.744248+00:00",
+      "bodySha256": "228c5161df1b596325575d683772bf7f6124996891fdafebabb4c45dc08617ad",
+      "rawCounts": {
+        "blockingOrOtherLines": 8527,
+        "adblockLines": 8527
+      },
+      "dnsBlocks": 8527,
+      "dnsExceptions": 0,
+      "unsupported": 0,
+      "unsupportedExamples": [],
+      "outputs": {
+        "blacklist": "sources/blocklistproject-lists-adguard-scam-ags-txt-521f7b7c/blacklist.txt",
+        "whitelist": "sources/blocklistproject-lists-adguard-scam-ags-txt-521f7b7c/whitelist.txt"
+      },
+      "compatibility": "supported_dns_syntax",
+      "kind": "blocklist",
+      "previousSupportedRules": 8527,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/blocklistproject/Lists/blob/main/LICENSE",
+      "licenseSnapshot": "upstream/blocklistproject--Lists--LICENSE"
+    },
+    {
+      "id": "blocklistproject-lists-adguard-smart-tv-ags-txt-92f6ccb6",
+      "name": "blocklistproject/Lists / smart-tv-ags.txt",
+      "repository": "https://github.com/blocklistproject/Lists",
+      "repositoryAccount": "blocklistproject",
+      "ref": "main",
+      "path": "adguard/smart-tv-ags.txt",
+      "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/smart-tv-ags.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": false,
+      "subscriptionEvidence": "https://api.github.com/repos/blocklistproject/Lists/contents/adguard?ref=main",
+      "previousCheckedUtc": "2026-09-30T17:00:15.331218+00:00",
+      "categories": [
+        "smart_tv"
+      ],
+      "categoryBasis": "repository_documentation",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/blocklistproject/Lists#readme",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:17:49.481046+00:00",
+      "bodySha256": "0f2d715ac5a95fbae1dab7c699d11df5aad79aa5e261812bdbec42b41ee5dadc",
+      "rawCounts": {
+        "blockingOrOtherLines": 77,
+        "adblockLines": 77
+      },
+      "dnsBlocks": 77,
+      "dnsExceptions": 0,
+      "unsupported": 0,
+      "unsupportedExamples": [],
+      "outputs": {
+        "blacklist": "sources/blocklistproject-lists-adguard-smart-tv-ags-txt-92f6ccb6/blacklist.txt",
+        "whitelist": "sources/blocklistproject-lists-adguard-smart-tv-ags-txt-92f6ccb6/whitelist.txt"
+      },
+      "compatibility": "supported_dns_syntax",
+      "kind": "blocklist",
+      "previousSupportedRules": 77,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/blocklistproject/Lists/blob/main/LICENSE",
+      "licenseSnapshot": "upstream/blocklistproject--Lists--LICENSE"
+    },
+    {
+      "id": "blocklistproject-lists-adguard-tracking-ags-txt-06c487dc",
+      "name": "blocklistproject/Lists / tracking-ags.txt",
+      "repository": "https://github.com/blocklistproject/Lists",
+      "repositoryAccount": "blocklistproject",
+      "ref": "main",
+      "path": "adguard/tracking-ags.txt",
+      "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/tracking-ags.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": false,
+      "subscriptionEvidence": "https://api.github.com/repos/blocklistproject/Lists/contents/adguard?ref=main",
+      "previousCheckedUtc": "2026-09-30T17:00:15.331218+00:00",
+      "categories": [
+        "tracking"
+      ],
+      "categoryBasis": "repository_documentation",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/blocklistproject/Lists#readme",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:17:52.009942+00:00",
+      "bodySha256": "9bf064e472765ed90f53f4fd9335d47b1c1d3e1fded5a2abf55d56f5f2095696",
+      "rawCounts": {
+        "blockingOrOtherLines": 143876,
+        "adblockLines": 143876
+      },
+      "dnsBlocks": 143866,
+      "dnsExceptions": 0,
+      "unsupported": 10,
+      "unsupportedExamples": [
+        "||_analytics.synonym.to^",
+        "||email_tracking.actforsport.eu^",
+        "||email_tracking.nowlvble.com^"
+      ],
+      "outputs": {
+        "blacklist": "sources/blocklistproject-lists-adguard-tracking-ags-txt-06c487dc/blacklist.txt",
+        "whitelist": "sources/blocklistproject-lists-adguard-tracking-ags-txt-06c487dc/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "blocklist",
+      "previousSupportedRules": 143866,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/blocklistproject/Lists/blob/main/LICENSE",
+      "licenseSnapshot": "upstream/blocklistproject--Lists--LICENSE"
+    },
+    {
+      "id": "anudeepnd-blacklist-adservers-txt-e413d034",
+      "name": "anudeepND/blacklist / adservers.txt",
+      "repository": "https://github.com/anudeepND/blacklist",
+      "repositoryAccount": "anudeepND",
+      "ref": "master",
+      "path": "adservers.txt",
+      "url": "https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": false,
+      "subscriptionEvidence": "https://github.com/anudeepND/blacklist/blob/master/README.md",
+      "previousCheckedUtc": "2026-09-30T17:00:15.331218+00:00",
+      "categories": [
+        "ads",
+        "tracking",
+        "security"
+      ],
+      "categoryBasis": "repository_documentation",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/anudeepND/blacklist#readme",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:17:53.646274+00:00",
+      "bodySha256": "4cbe4ca57d726b9964f5b782cc7c211243cd7f7fa4b5947af3a2b3ec3560477e",
+      "rawCounts": {
+        "blockingOrOtherLines": 42531,
+        "hostsLines": 42531
+      },
+      "dnsBlocks": 42343,
+      "dnsExceptions": 0,
+      "unsupported": 15,
+      "unsupportedExamples": [
+        "0.0.0.0 chicago_cbslocal.us.intellitxt.com",
+        "0.0.0.0 dmol_mn.adk2x.com",
+        "0.0.0.0 es-sunicontent_test.videoplaza.tv"
+      ],
+      "outputs": {
+        "blacklist": "sources/anudeepnd-blacklist-adservers-txt-e413d034/blacklist.txt",
+        "whitelist": "sources/anudeepnd-blacklist-adservers-txt-e413d034/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "blocklist",
+      "previousSupportedRules": 42343,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/anudeepND/blacklist/blob/master/LICENSE",
+      "licenseSnapshot": "upstream/anudeepND--blacklist--LICENSE"
+    },
+    {
+      "id": "anudeepnd-blacklist-facebook-txt-32006df0",
+      "name": "anudeepND/blacklist / facebook.txt",
+      "repository": "https://github.com/anudeepND/blacklist",
+      "repositoryAccount": "anudeepND",
+      "ref": "master",
+      "path": "facebook.txt",
+      "url": "https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": false,
+      "subscriptionEvidence": "https://github.com/anudeepND/blacklist/blob/master/README.md",
+      "previousCheckedUtc": "2026-09-30T17:00:15.331218+00:00",
+      "categories": [
+        "social_blocking"
+      ],
+      "categoryBasis": "repository_documentation",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [
+        "Facebook 相关域名的整站限制，不作为普通跟踪过滤。"
+      ],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/anudeepND/blacklist#readme",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:17:54.722547+00:00",
+      "bodySha256": "c8176f2e6c5e2f3e2e15e6441517d4619eaddbc5d5e1dcd17864668ee7a3cff2",
+      "rawCounts": {
+        "blockingOrOtherLines": 3997,
+        "hostsLines": 3997
+      },
+      "dnsBlocks": 3995,
+      "dnsExceptions": 0,
+      "unsupported": 1,
+      "unsupportedExamples": [
+        "0.0.0.0 proxygen_verifier.facebook.com"
+      ],
+      "outputs": {
+        "blacklist": "sources/anudeepnd-blacklist-facebook-txt-32006df0/blacklist.txt",
+        "whitelist": "sources/anudeepnd-blacklist-facebook-txt-32006df0/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "blocklist",
+      "previousSupportedRules": 3995,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/anudeepND/blacklist/blob/master/LICENSE",
+      "licenseSnapshot": "upstream/anudeepND--blacklist--LICENSE"
+    },
+    {
+      "id": "anudeepnd-blacklist-coinminer-txt-61cc5905",
+      "name": "anudeepND/blacklist / CoinMiner.txt",
+      "repository": "https://github.com/anudeepND/blacklist",
+      "repositoryAccount": "anudeepND",
+      "ref": "master",
+      "path": "CoinMiner.txt",
+      "url": "https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": false,
+      "subscriptionEvidence": "https://github.com/anudeepND/blacklist/blob/master/README.md",
+      "previousCheckedUtc": "2026-09-30T17:00:15.331218+00:00",
+      "categories": [
+        "mining"
+      ],
+      "categoryBasis": "repository_documentation",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [
+        "上游 README 标注该文件停止更新；可下载不等于持续维护。"
+      ],
+      "lifecycle": "discontinued_by_upstream",
+      "categoryEvidence": "https://github.com/anudeepND/blacklist#readme",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:18:10.547557+00:00",
+      "bodySha256": "809b37362a7d82f55fe611148d3dc02c498637519a518c63b4fbef38fde775b8",
+      "rawCounts": {
+        "blockingOrOtherLines": 5939,
+        "hostsLines": 5939
+      },
+      "dnsBlocks": 5830,
+      "dnsExceptions": 0,
+      "unsupported": 0,
+      "unsupportedExamples": [],
+      "outputs": {
+        "blacklist": "sources/anudeepnd-blacklist-coinminer-txt-61cc5905/blacklist.txt",
+        "whitelist": "sources/anudeepnd-blacklist-coinminer-txt-61cc5905/whitelist.txt"
+      },
+      "compatibility": "supported_dns_syntax",
+      "kind": "blocklist",
+      "previousSupportedRules": 5830,
+      "eligibleForSubscription": false,
+      "reviewReason": "上游明确停止更新，保留历史整理，但默认不进入分类候选。",
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/anudeepND/blacklist/blob/master/LICENSE",
+      "licenseSnapshot": "upstream/anudeepND--blacklist--LICENSE"
+    },
+    {
+      "id": "crazy-max-windowsspyblocker-data-hosts-spy-txt-a41d8da9",
+      "name": "crazy-max/WindowsSpyBlocker / spy.txt",
+      "repository": "https://github.com/crazy-max/WindowsSpyBlocker",
+      "repositoryAccount": "crazy-max",
+      "ref": "master",
+      "path": "data/hosts/spy.txt",
+      "url": "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": false,
+      "subscriptionEvidence": "https://api.github.com/repos/crazy-max/WindowsSpyBlocker/contents/data/hosts?ref=master",
+      "previousCheckedUtc": "2026-09-30T17:00:15.331218+00:00",
+      "categories": [
+        "windows",
+        "tracking"
+      ],
+      "categoryBasis": "source_name_inference",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/crazy-max/WindowsSpyBlocker/blob/master/data/hosts/spy.txt",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:18:11.350127+00:00",
+      "bodySha256": "709c00d24f5a50dab46ce18d8b1cd175db4593dc7f65623ed89070075a85a3a0",
+      "rawCounts": {
+        "blockingOrOtherLines": 352,
+        "otherLines": 5,
+        "hostsLines": 347
+      },
+      "dnsBlocks": 347,
+      "dnsExceptions": 0,
+      "unsupported": 5,
+      "unsupportedExamples": [
+        "### WindowsSpyBlocker - Hosts spy rules",
+        "### License: MIT",
+        "### Updated: 2022-05-16T13:25:00Z02:12"
+      ],
+      "outputs": {
+        "blacklist": "sources/crazy-max-windowsspyblocker-data-hosts-spy-txt-a41d8da9/blacklist.txt",
+        "whitelist": "sources/crazy-max-windowsspyblocker-data-hosts-spy-txt-a41d8da9/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "blocklist",
+      "previousSupportedRules": 347,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/crazy-max/WindowsSpyBlocker/blob/master/LICENSE",
+      "licenseSnapshot": "upstream/crazy-max--WindowsSpyBlocker--LICENSE"
+    },
+    {
+      "id": "jerryn70-goodbyeads-hosts-goodbyeads-txt-882683a5",
+      "name": "jerryn70/GoodbyeAds / GoodbyeAds.txt",
+      "repository": "https://github.com/jerryn70/GoodbyeAds",
+      "repositoryAccount": "jerryn70",
+      "ref": "master",
+      "path": "Hosts/GoodbyeAds.txt",
+      "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": false,
+      "subscriptionEvidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/README.md",
+      "previousCheckedUtc": "2026-09-30T17:00:15.331218+00:00",
+      "categories": [
+        "ads",
+        "tracking",
+        "security"
+      ],
+      "categoryBasis": "repository_documentation",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": "goodbyeads-main",
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/jerryn70/GoodbyeAds#readme",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:18:15.383027+00:00",
+      "bodySha256": "7dfc7f6e007eaf514c8ff20c462dfdd76e4b8926defdecc66d62ca747d1537c2",
+      "rawCounts": {
+        "blockingOrOtherLines": 277845,
+        "hostsLines": 277838,
+        "otherLines": 7
+      },
+      "dnsBlocks": 277744,
+      "dnsExceptions": 0,
+      "unsupported": 101,
+      "unsupportedExamples": [
+        "127.0.0.1 localhost",
+        "127.0.0.1 localhost.localdomain",
+        "127.0.0.1 local"
+      ],
+      "outputs": {
+        "blacklist": "sources/jerryn70-goodbyeads-hosts-goodbyeads-txt-882683a5/blacklist.txt",
+        "whitelist": "sources/jerryn70-goodbyeads-hosts-goodbyeads-txt-882683a5/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "blocklist",
+      "previousSupportedRules": 277744,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/jerryn70/GoodbyeAds/blob/master/LICENSE",
+      "licenseSnapshot": "upstream/jerryn70--GoodbyeAds--LICENSE"
+    },
+    {
+      "id": "jerryn70-goodbyeads-formats-goodbyeads-adblock-filter-txt-d11c0acd",
+      "name": "jerryn70/GoodbyeAds / GoodbyeAds-AdBlock-Filter.txt",
+      "repository": "https://github.com/jerryn70/GoodbyeAds",
+      "repositoryAccount": "jerryn70",
+      "ref": "master",
+      "path": "Formats/GoodbyeAds-AdBlock-Filter.txt",
+      "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Formats/GoodbyeAds-AdBlock-Filter.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": false,
+      "subscriptionEvidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/README.md",
+      "previousCheckedUtc": "2026-09-30T17:00:15.331218+00:00",
+      "categories": [
+        "ads",
+        "tracking",
+        "security"
+      ],
+      "categoryBasis": "repository_documentation",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": "goodbyeads-main",
+      "notes": [],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/jerryn70/GoodbyeAds#readme",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:18:19.316421+00:00",
+      "bodySha256": "57fd1711c1e160520c96bb6ea5573950431e41db0b4d23fe15ba3aec70224d8c",
+      "rawCounts": {
+        "blockingOrOtherLines": 277831,
+        "adblockLines": 277801,
+        "hostsLines": 30
+      },
+      "dnsBlocks": 277714,
+      "dnsExceptions": 0,
+      "unsupported": 117,
+      "unsupportedExamples": [
+        "||109.123.233.251^",
+        "||10dkim1._domainkey.e-mail.harley-davidson.com^",
+        "||110.93.143.144^"
+      ],
+      "outputs": {
+        "blacklist": "sources/jerryn70-goodbyeads-formats-goodbyeads-adblock-filter-txt-d11c0acd/blacklist.txt",
+        "whitelist": "sources/jerryn70-goodbyeads-formats-goodbyeads-adblock-filter-txt-d11c0acd/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "blocklist",
+      "previousSupportedRules": 277714,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/jerryn70/GoodbyeAds/blob/master/LICENSE",
+      "licenseSnapshot": "upstream/jerryn70--GoodbyeAds--LICENSE"
+    },
+    {
+      "id": "jerryn70-goodbyeads-extension-goodbyeads-xiaomi-extension-txt-2ab84d66",
+      "name": "jerryn70/GoodbyeAds / GoodbyeAds-Xiaomi-Extension.txt",
+      "repository": "https://github.com/jerryn70/GoodbyeAds",
+      "repositoryAccount": "jerryn70",
+      "ref": "master",
+      "path": "Extension/GoodbyeAds-Xiaomi-Extension.txt",
+      "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Xiaomi-Extension.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": false,
+      "subscriptionEvidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/README.md",
+      "previousCheckedUtc": "2026-09-30T17:00:15.331218+00:00",
+      "categories": [
+        "xiaomi"
+      ],
+      "categoryBasis": "filename_inference",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [
+        "用途按上游文件名识别；下载成功不证明应用去广告有效。"
+      ],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/Extension/GoodbyeAds-Xiaomi-Extension.txt",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:18:20.029428+00:00",
+      "bodySha256": "92e7eb9880839e3526a76fea72977ee32168255aa288dc7bbdd4b53f353ce338",
+      "rawCounts": {
+        "blockingOrOtherLines": 278,
+        "hostsLines": 278
+      },
+      "dnsBlocks": 278,
+      "dnsExceptions": 0,
+      "unsupported": 0,
+      "unsupportedExamples": [],
+      "outputs": {
+        "blacklist": "sources/jerryn70-goodbyeads-extension-goodbyeads-xiaomi-extension-txt-2ab84d66/blacklist.txt",
+        "whitelist": "sources/jerryn70-goodbyeads-extension-goodbyeads-xiaomi-extension-txt-2ab84d66/whitelist.txt"
+      },
+      "compatibility": "supported_dns_syntax",
+      "kind": "blocklist",
+      "previousSupportedRules": 278,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/jerryn70/GoodbyeAds/blob/master/LICENSE",
+      "licenseSnapshot": "upstream/jerryn70--GoodbyeAds--LICENSE"
+    },
+    {
+      "id": "jerryn70-goodbyeads-extension-goodbyeads-samsung-adblock-txt-10d171b5",
+      "name": "jerryn70/GoodbyeAds / GoodbyeAds-Samsung-AdBlock.txt",
+      "repository": "https://github.com/jerryn70/GoodbyeAds",
+      "repositoryAccount": "jerryn70",
+      "ref": "master",
+      "path": "Extension/GoodbyeAds-Samsung-AdBlock.txt",
+      "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Samsung-AdBlock.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": false,
+      "subscriptionEvidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/README.md",
+      "previousCheckedUtc": "2026-09-30T17:00:15.331218+00:00",
+      "categories": [
+        "samsung"
+      ],
+      "categoryBasis": "filename_inference",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [
+        "用途按上游文件名识别；下载成功不证明应用去广告有效。"
+      ],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/Extension/GoodbyeAds-Samsung-AdBlock.txt",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:18:20.831748+00:00",
+      "bodySha256": "e82b11007928d64f82519b580c8bd0dccec7ee4e46072fb04dc99ad7b8fdf62f",
+      "rawCounts": {
+        "blockingOrOtherLines": 101,
+        "hostsLines": 101
+      },
+      "dnsBlocks": 101,
+      "dnsExceptions": 0,
+      "unsupported": 0,
+      "unsupportedExamples": [],
+      "outputs": {
+        "blacklist": "sources/jerryn70-goodbyeads-extension-goodbyeads-samsung-adblock-txt-10d171b5/blacklist.txt",
+        "whitelist": "sources/jerryn70-goodbyeads-extension-goodbyeads-samsung-adblock-txt-10d171b5/whitelist.txt"
+      },
+      "compatibility": "supported_dns_syntax",
+      "kind": "blocklist",
+      "previousSupportedRules": 101,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/jerryn70/GoodbyeAds/blob/master/LICENSE",
+      "licenseSnapshot": "upstream/jerryn70--GoodbyeAds--LICENSE"
+    },
+    {
+      "id": "jerryn70-goodbyeads-extension-goodbyeads-spotify-adblock-txt-4a00db86",
+      "name": "jerryn70/GoodbyeAds / GoodbyeAds-Spotify-AdBlock.txt",
+      "repository": "https://github.com/jerryn70/GoodbyeAds",
+      "repositoryAccount": "jerryn70",
+      "ref": "master",
+      "path": "Extension/GoodbyeAds-Spotify-AdBlock.txt",
+      "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Spotify-AdBlock.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": false,
+      "subscriptionEvidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/README.md",
+      "previousCheckedUtc": "2026-09-30T17:00:15.331218+00:00",
+      "categories": [
+        "spotify"
+      ],
+      "categoryBasis": "filename_inference",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [
+        "用途按上游文件名识别；下载成功不证明应用去广告有效。"
+      ],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/Extension/GoodbyeAds-Spotify-AdBlock.txt",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:18:21.848773+00:00",
+      "bodySha256": "300943661520266ec311dba5e5c99b55ddade8dd6b49aef0426f01d153a62314",
+      "rawCounts": {
+        "blockingOrOtherLines": 3780,
+        "hostsLines": 3780
+      },
+      "dnsBlocks": 3780,
+      "dnsExceptions": 0,
+      "unsupported": 0,
+      "unsupportedExamples": [],
+      "outputs": {
+        "blacklist": "sources/jerryn70-goodbyeads-extension-goodbyeads-spotify-adblock-txt-4a00db86/blacklist.txt",
+        "whitelist": "sources/jerryn70-goodbyeads-extension-goodbyeads-spotify-adblock-txt-4a00db86/whitelist.txt"
+      },
+      "compatibility": "supported_dns_syntax",
+      "kind": "blocklist",
+      "previousSupportedRules": 3780,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/jerryn70/GoodbyeAds/blob/master/LICENSE",
+      "licenseSnapshot": "upstream/jerryn70--GoodbyeAds--LICENSE"
+    },
+    {
+      "id": "jerryn70-goodbyeads-extension-goodbyeads-youtube-adblock-txt-84c5ae17",
+      "name": "jerryn70/GoodbyeAds / GoodbyeAds-YouTube-AdBlock.txt",
+      "repository": "https://github.com/jerryn70/GoodbyeAds",
+      "repositoryAccount": "jerryn70",
+      "ref": "master",
+      "path": "Extension/GoodbyeAds-YouTube-AdBlock.txt",
+      "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-YouTube-AdBlock.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": false,
+      "subscriptionEvidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/README.md",
+      "previousCheckedUtc": "2026-09-30T17:00:15.331218+00:00",
+      "categories": [
+        "youtube"
+      ],
+      "categoryBasis": "filename_inference",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": "goodbyeads-youtube",
+      "notes": [
+        "用途按上游文件名识别；下载成功不证明应用去广告有效。"
+      ],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/Extension/GoodbyeAds-YouTube-AdBlock.txt",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:18:25.683546+00:00",
+      "bodySha256": "fe3aa4b3c31370d41f8d5721acd55ee0c20a78ba848fc8b3d8661460564aa7c6",
+      "rawCounts": {
+        "blockingOrOtherLines": 97645,
+        "hostsLines": 97645
+      },
+      "dnsBlocks": 97645,
+      "dnsExceptions": 0,
+      "unsupported": 0,
+      "unsupportedExamples": [],
+      "outputs": {
+        "blacklist": "sources/jerryn70-goodbyeads-extension-goodbyeads-youtube-adblock-txt-84c5ae17/blacklist.txt",
+        "whitelist": "sources/jerryn70-goodbyeads-extension-goodbyeads-youtube-adblock-txt-84c5ae17/whitelist.txt"
+      },
+      "compatibility": "supported_dns_syntax",
+      "kind": "blocklist",
+      "previousSupportedRules": 97645,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/jerryn70/GoodbyeAds/blob/master/LICENSE",
+      "licenseSnapshot": "upstream/jerryn70--GoodbyeAds--LICENSE"
+    },
+    {
+      "id": "jerryn70-goodbyeads-formats-goodbyeads-youtube-adblock-filter-txt-992d6a26",
+      "name": "jerryn70/GoodbyeAds / GoodbyeAds-YouTube-AdBlock-Filter.txt",
+      "repository": "https://github.com/jerryn70/GoodbyeAds",
+      "repositoryAccount": "jerryn70",
+      "ref": "master",
+      "path": "Formats/GoodbyeAds-YouTube-AdBlock-Filter.txt",
+      "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Formats/GoodbyeAds-YouTube-AdBlock-Filter.txt",
+      "role": "filter",
+      "enabledInCurrentConfig": false,
+      "subscriptionEvidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/README.md",
+      "previousCheckedUtc": "2026-09-30T17:00:15.331218+00:00",
+      "categories": [
+        "youtube"
+      ],
+      "categoryBasis": "filename_inference",
+      "strength": {
+        "value": "unknown",
+        "basis": "not_declared",
+        "evidenceUrl": null
+      },
+      "variantFamily": null,
+      "representationGroup": "goodbyeads-youtube",
+      "notes": [
+        "用途按上游文件名识别；下载成功不证明应用去广告有效。"
+      ],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/jerryn70/GoodbyeAds/blob/master/Formats/GoodbyeAds-YouTube-AdBlock-Filter.txt",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:18:27.979288+00:00",
+      "bodySha256": "26015b2c6eab650969f5f4a632042f72b7006a0e996765080fc4254c7108ff26",
+      "rawCounts": {
+        "blockingOrOtherLines": 97645,
+        "adblockLines": 97645
+      },
+      "dnsBlocks": 97645,
+      "dnsExceptions": 0,
+      "unsupported": 0,
+      "unsupportedExamples": [],
+      "outputs": {
+        "blacklist": "sources/jerryn70-goodbyeads-formats-goodbyeads-youtube-adblock-filter-txt-992d6a26/blacklist.txt",
+        "whitelist": "sources/jerryn70-goodbyeads-formats-goodbyeads-youtube-adblock-filter-txt-992d6a26/whitelist.txt"
+      },
+      "compatibility": "supported_dns_syntax",
+      "kind": "blocklist",
+      "previousSupportedRules": 97645,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/jerryn70/GoodbyeAds/blob/master/LICENSE",
+      "licenseSnapshot": "upstream/jerryn70--GoodbyeAds--LICENSE"
+    },
+    {
+      "id": "hagezi-dns-blocklists-adblock-whitelist-referral-txt-da8500f6",
+      "name": "HaGeZi / whitelist-referral.txt",
+      "repository": "https://github.com/hagezi/dns-blocklists",
+      "repositoryAccount": "hagezi",
+      "ref": "main",
+      "path": "adblock/whitelist-referral.txt",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/whitelist-referral.txt",
+      "role": "independent_allowlist",
+      "enabledInCurrentConfig": false,
+      "subscriptionEvidence": "https://api.github.com/repos/hagezi/dns-blocklists/git/trees/main?recursive=1",
+      "categories": [
+        "referral_allow"
+      ],
+      "categoryBasis": "source_header",
+      "strength": {
+        "value": "allow_only",
+        "basis": "source_header",
+        "evidenceUrl": "https://github.com/hagezi/dns-blocklists/blob/main/adblock/whitelist-referral.txt"
+      },
+      "variantFamily": "hagezi-referral-allow",
+      "representationGroup": null,
+      "notes": [
+        "独立放行组件，按需求选择；与拦截档位分开配置。"
+      ],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/hagezi/dns-blocklists/blob/main/adblock/whitelist-referral.txt",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:18:28.740036+00:00",
+      "bodySha256": "81374c6af5f1786e1da28115eb2efd5ccf4ab6a40efdc2912355df92cd06a548",
+      "rawCounts": {
+        "exceptionLines": 936,
+        "adblockLines": 936
+      },
+      "dnsBlocks": 0,
+      "dnsExceptions": 867,
+      "unsupported": 69,
+      "unsupportedExamples": [
+        "@@||*-go.kelkoogroup.net^",
+        "@@||*cdn.exponea.com^",
+        "@@||*tagm.tchibo.de^"
+      ],
+      "outputs": {
+        "blacklist": "sources/hagezi-dns-blocklists-adblock-whitelist-referral-txt-da8500f6/blacklist.txt",
+        "whitelist": "sources/hagezi-dns-blocklists-adblock-whitelist-referral-txt-da8500f6/whitelist.txt"
+      },
+      "compatibility": "dns_subset",
+      "kind": "independent_allowlist",
+      "previousSupportedRules": null,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
+      "licenseSnapshot": "upstream/hagezi--dns-blocklists--LICENSE"
+    },
+    {
+      "id": "hagezi-dns-blocklists-adblock-whitelist-referral-native-txt-69481aca",
+      "name": "HaGeZi / whitelist-referral-native.txt",
+      "repository": "https://github.com/hagezi/dns-blocklists",
+      "repositoryAccount": "hagezi",
+      "ref": "main",
+      "path": "adblock/whitelist-referral-native.txt",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/whitelist-referral-native.txt",
+      "role": "independent_allowlist",
+      "enabledInCurrentConfig": false,
+      "subscriptionEvidence": "https://api.github.com/repos/hagezi/dns-blocklists/git/trees/main?recursive=1",
+      "categories": [
+        "referral_allow"
+      ],
+      "categoryBasis": "source_header",
+      "strength": {
+        "value": "allow_only",
+        "basis": "source_header",
+        "evidenceUrl": "https://github.com/hagezi/dns-blocklists/blob/main/adblock/whitelist-referral-native.txt"
+      },
+      "variantFamily": "hagezi-referral-allow",
+      "representationGroup": null,
+      "notes": [
+        "独立放行组件，按需求选择；与拦截档位分开配置。"
+      ],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/hagezi/dns-blocklists/blob/main/adblock/whitelist-referral-native.txt",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:18:29.590437+00:00",
+      "bodySha256": "7306aeceaa419f482832b8a35811a420ba9d13c06ae7a53316be731ad2fb22c2",
+      "rawCounts": {
+        "exceptionLines": 1609,
+        "adblockLines": 1609
+      },
+      "dnsBlocks": 0,
+      "dnsExceptions": 1609,
+      "unsupported": 0,
+      "unsupportedExamples": [],
+      "outputs": {
+        "blacklist": "sources/hagezi-dns-blocklists-adblock-whitelist-referral-native-txt-69481aca/blacklist.txt",
+        "whitelist": "sources/hagezi-dns-blocklists-adblock-whitelist-referral-native-txt-69481aca/whitelist.txt"
+      },
+      "compatibility": "supported_dns_syntax",
+      "kind": "independent_allowlist",
+      "previousSupportedRules": null,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
+      "licenseSnapshot": "upstream/hagezi--dns-blocklists--LICENSE"
+    },
+    {
+      "id": "hagezi-dns-blocklists-adblock-whitelist-urlshortener-txt-c2ee3e5c",
+      "name": "HaGeZi / whitelist-urlshortener.txt",
+      "repository": "https://github.com/hagezi/dns-blocklists",
+      "repositoryAccount": "hagezi",
+      "ref": "main",
+      "path": "adblock/whitelist-urlshortener.txt",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/whitelist-urlshortener.txt",
+      "role": "independent_allowlist",
+      "enabledInCurrentConfig": false,
+      "subscriptionEvidence": "https://api.github.com/repos/hagezi/dns-blocklists/git/trees/main?recursive=1",
+      "categories": [
+        "shortener_allow"
+      ],
+      "categoryBasis": "source_header",
+      "strength": {
+        "value": "allow_only",
+        "basis": "source_header",
+        "evidenceUrl": "https://github.com/hagezi/dns-blocklists/blob/main/adblock/whitelist-urlshortener.txt"
+      },
+      "variantFamily": null,
+      "representationGroup": null,
+      "notes": [
+        "独立放行组件，按需求选择；与拦截档位分开配置。"
+      ],
+      "lifecycle": "not_assessed",
+      "categoryEvidence": "https://github.com/hagezi/dns-blocklists/blob/main/adblock/whitelist-urlshortener.txt",
+      "status": "checked",
+      "checkedUtc": "2026-09-30T17:18:30.663678+00:00",
+      "bodySha256": "3b555ecee510199b002dc1b294c4a3b27e33305eddd5f5e2dc290641e8072029",
+      "rawCounts": {
+        "exceptionLines": 9975,
+        "adblockLines": 9975
+      },
+      "dnsBlocks": 0,
+      "dnsExceptions": 9975,
+      "unsupported": 0,
+      "unsupportedExamples": [],
+      "outputs": {
+        "blacklist": "sources/hagezi-dns-blocklists-adblock-whitelist-urlshortener-txt-c2ee3e5c/blacklist.txt",
+        "whitelist": "sources/hagezi-dns-blocklists-adblock-whitelist-urlshortener-txt-c2ee3e5c/whitelist.txt"
+      },
+      "compatibility": "supported_dns_syntax",
+      "kind": "independent_allowlist",
+      "previousSupportedRules": null,
+      "eligibleForSubscription": true,
+      "regionalFocus": {
+        "value": "unknown",
+        "basis": "not_assessed",
+        "evidenceUrl": null
+      },
+      "licenseEvidenceUrl": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
+      "licenseSnapshot": "upstream/hagezi--dns-blocklists--LICENSE"
+    }
+  ],
+  "allowlistDiscovery": [
+    {
+      "repository": "https://github.com/AdguardTeam/FiltersRegistry",
+      "evidence": "https://api.github.com/repos/AdguardTeam/FiltersRegistry/git/trees/master?recursive=1",
+      "status": "checked",
+      "complete": false,
+      "candidatePaths": [],
+      "interpretation": "候选路径不自动等于独立白名单，内部代码/样例不作为订阅。"
+    },
+    {
+      "repository": "https://github.com/AdguardTeam/AdguardFilters",
+      "evidence": "https://api.github.com/repos/AdguardTeam/AdguardFilters/git/trees/master?recursive=1",
+      "status": "checked",
+      "complete": true,
+      "candidatePaths": [
+        "AnnoyancesFilter/Cookies/sections/cookies_allowlist.txt",
+        "AnnoyancesFilter/MobileApp/sections/mobile-app_allowlist.txt",
+        "AnnoyancesFilter/Popups/sections/popups_allowlist.txt",
+        "AnnoyancesFilter/Popups/sections/push-notifications_allowlist.txt",
+        "AnnoyancesFilter/Popups/sections/subscriptions_allowlist.txt",
+        "BaseFilter/sections/allowlist.txt",
+        "BaseFilter/sections/allowlist_stealth.txt",
+        "ChineseFilter/sections/allowlist.txt",
+        "CyrillicFilters/RussianFilter/sections/allowlist.txt",
+        "CyrillicFilters/UkrainianFilter/sections/allowlist.txt",
+        "CyrillicFilters/common-sections/allowlist.txt",
+        "DutchFilter/sections/allowlist.txt",
+        "ExperimentalFilter/sections/English/allowlist.txt",
+        "ExperimentalFilter/sections/Russian/allowlist.txt",
+        "FrenchFilter/sections/allowlist.txt",
+        "GermanFilter/sections/allowlist.txt",
+        "ItalianFilter/sections/allowlist.txt",
+        "JapaneseFilter/sections/allowlist.txt",
+        "MailTrackingFilter/sections/allowlist.txt",
+        "MobileFilter/sections/allowlist_app.txt",
+        "MobileFilter/sections/allowlist_web.txt",
+        "PolishFilter/sections/allowlist.txt",
+        "SocialFilter/sections/allowlist.txt",
+        "SpanishFilter/sections/allowlist.txt",
+        "SpywareFilter/sections/allowlist.txt",
+        "SpywareFilter/sections/cookies_allowlist.txt",
+        "SpywareFilter/sections/mobile_allowlist.txt",
+        "TrackParamFilter/sections/allowlist.txt",
+        "TurkishFilter/sections/allowlist.txt"
+      ],
+      "interpretation": "候选路径不自动等于独立白名单，内部代码/样例不作为订阅。"
+    },
+    {
+      "repository": "https://github.com/Cats-Team/AdRules",
+      "evidence": "https://api.github.com/repos/Cats-Team/AdRules/git/trees/main?recursive=1",
+      "status": "checked",
+      "complete": true,
+      "candidatePaths": [
+        "mod/rules/dns-allowlist.txt"
+      ],
+      "interpretation": "候选路径不自动等于独立白名单，内部代码/样例不作为订阅。"
+    },
+    {
+      "repository": "https://github.com/cjx82630/cjxlist",
+      "evidence": "https://api.github.com/repos/cjx82630/cjxlist/git/trees/master?recursive=1",
+      "status": "checked",
+      "complete": true,
+      "candidatePaths": [],
+      "interpretation": "候选路径不自动等于独立白名单，内部代码/样例不作为订阅。"
+    },
+    {
+      "repository": "https://github.com/xinggsf/Adblock-Plus-Rule",
+      "evidence": "https://api.github.com/repos/xinggsf/Adblock-Plus-Rule/git/trees/master?recursive=1",
+      "status": "checked",
+      "complete": true,
+      "candidatePaths": [],
+      "interpretation": "候选路径不自动等于独立白名单，内部代码/样例不作为订阅。"
+    },
+    {
+      "repository": "https://github.com/damengzhu/banad",
+      "evidence": "https://api.github.com/repos/damengzhu/banad/git/trees/main?recursive=1",
+      "status": "checked",
+      "complete": true,
+      "candidatePaths": [],
+      "interpretation": "候选路径不自动等于独立白名单，内部代码/样例不作为订阅。"
+    },
+    {
+      "repository": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule",
+      "evidence": "https://api.github.com/repos/TG-Twilight/AWAvenue-Ads-Rule/git/trees/main?recursive=1",
+      "status": "checked",
+      "complete": true,
+      "candidatePaths": [],
+      "interpretation": "候选路径不自动等于独立白名单，内部代码/样例不作为订阅。"
+    },
+    {
+      "repository": "https://github.com/hagezi/dns-blocklists",
+      "evidence": "https://api.github.com/repos/hagezi/dns-blocklists/git/trees/main?recursive=1",
+      "status": "checked",
+      "complete": true,
+      "candidatePaths": [
+        "adblock/whitelist-referral-native.txt",
+        "adblock/whitelist-referral.txt",
+        "adblock/whitelist-urlshortener.txt",
+        "wildcard/whitelist-referral-onlydomains.txt"
+      ],
+      "interpretation": "候选路径不自动等于独立白名单，内部代码/样例不作为订阅。"
+    },
+    {
+      "repository": "https://github.com/StevenBlack/hosts",
+      "evidence": "https://api.github.com/repos/StevenBlack/hosts/git/trees/master?recursive=1",
+      "status": "checked",
+      "complete": true,
+      "candidatePaths": [
+        "whitelist.example"
+      ],
+      "interpretation": "候选路径不自动等于独立白名单，内部代码/样例不作为订阅。"
+    },
+    {
+      "repository": "https://github.com/banbendalao/ADgk",
+      "evidence": "https://api.github.com/repos/banbendalao/ADgk/git/trees/master?recursive=1",
+      "status": "checked",
+      "complete": true,
+      "candidatePaths": [],
+      "interpretation": "候选路径不自动等于独立白名单，内部代码/样例不作为订阅。"
+    },
+    {
+      "repository": "https://github.com/jdlingyu/ad-wars",
+      "evidence": "https://api.github.com/repos/jdlingyu/ad-wars/git/trees/master?recursive=1",
+      "status": "checked",
+      "complete": true,
+      "candidatePaths": [],
+      "interpretation": "候选路径不自动等于独立白名单，内部代码/样例不作为订阅。"
+    },
+    {
+      "repository": "https://github.com/AdAway/adaway.github.io",
+      "evidence": "https://api.github.com/repos/AdAway/adaway.github.io/git/trees/master?recursive=1",
+      "status": "checked",
+      "complete": true,
+      "candidatePaths": [],
+      "interpretation": "候选路径不自动等于独立白名单，内部代码/样例不作为订阅。"
+    },
+    {
+      "repository": "https://github.com/Perflyst/PiHoleBlocklist",
+      "evidence": "https://api.github.com/repos/Perflyst/PiHoleBlocklist/git/trees/master?recursive=1",
+      "status": "checked",
+      "complete": true,
+      "candidatePaths": [],
+      "interpretation": "候选路径不自动等于独立白名单，内部代码/样例不作为订阅。"
+    },
+    {
+      "repository": "https://github.com/durablenapkin/scamblocklist",
+      "evidence": "https://api.github.com/repos/durablenapkin/scamblocklist/git/trees/master?recursive=1",
+      "status": "failed",
+      "error": "HTTP Error 403: rate limit exceeded"
+    },
+    {
+      "repository": "https://github.com/DandelionSprout/adfilt",
+      "evidence": "https://api.github.com/repos/DandelionSprout/adfilt/git/trees/master?recursive=1",
+      "status": "failed",
+      "error": "HTTP Error 403: rate limit exceeded"
+    },
+    {
+      "repository": "https://github.com/hoshsadiq/adblock-nocoin-list",
+      "evidence": "https://api.github.com/repos/hoshsadiq/adblock-nocoin-list/git/trees/master?recursive=1",
+      "status": "failed",
+      "error": "HTTP Error 403: rate limit exceeded"
+    },
+    {
+      "repository": "https://github.com/Spam404/lists",
+      "evidence": "https://api.github.com/repos/Spam404/lists/git/trees/master?recursive=1",
+      "status": "failed",
+      "error": "HTTP Error 403: rate limit exceeded"
+    },
+    {
+      "repository": "https://github.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites",
+      "evidence": "https://api.github.com/repos/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/git/trees/master?recursive=1",
+      "status": "failed",
+      "error": "HTTP Error 403: rate limit exceeded"
+    },
+    {
+      "repository": "https://github.com/badmojr/1Hosts",
+      "evidence": "https://api.github.com/repos/badmojr/1Hosts/git/trees/master?recursive=1",
+      "status": "failed",
+      "error": "HTTP Error 403: rate limit exceeded"
+    },
+    {
+      "repository": "https://github.com/blocklistproject/Lists",
+      "evidence": "https://api.github.com/repos/blocklistproject/Lists/git/trees/main?recursive=1",
+      "status": "failed",
+      "error": "HTTP Error 403: rate limit exceeded"
+    },
+    {
+      "repository": "https://github.com/anudeepND/blacklist",
+      "evidence": "https://api.github.com/repos/anudeepND/blacklist/git/trees/master?recursive=1",
+      "status": "failed",
+      "error": "HTTP Error 403: rate limit exceeded"
+    },
+    {
+      "repository": "https://github.com/crazy-max/WindowsSpyBlocker",
+      "evidence": "https://api.github.com/repos/crazy-max/WindowsSpyBlocker/git/trees/master?recursive=1",
+      "status": "failed",
+      "error": "HTTP Error 403: rate limit exceeded"
+    },
+    {
+      "repository": "https://github.com/jerryn70/GoodbyeAds",
+      "evidence": "https://api.github.com/repos/jerryn70/GoodbyeAds/git/trees/master?recursive=1",
+      "status": "failed",
+      "error": "HTTP Error 403: rate limit exceeded"
+    }
+  ],
+  "excludedSources": [
+    {
+      "name": "AdGuard Base filter",
+      "url": "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_2_Base/filter.txt",
+      "reason": "Empty response or HTML instead of rules",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "AdGuard DNS filter",
+      "url": "https://adguardteam.github.io/AdGuardSDNSFilter/Filters/filter.txt",
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "EasyList",
+      "url": "https://easylist-downloads.adblockplus.org/easylist.txt",
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "EasyList China / easylistchina",
+      "url": "https://easylist-downloads.adblockplus.org/easylistchina.txt",
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "EasyPrivacy",
+      "url": "https://easylist-downloads.adblockplus.org/easyprivacy.txt",
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "OISD Basic",
+      "url": "https://abp.oisd.nl/basic/",
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "Pollock hosts",
+      "url": "https://someonewhocares.org/hosts/hosts",
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "Connershua",
+      "url": "https://raw.githubusercontent.com/DivineEngine/AdGuardFilter/master/filter.txt",
+      "reason": "仓库核验失败：HTTP Error 404: Not Found",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "乘风广告过滤规则",
+      "url": "https://gitee.com/xinggsf/Adblock-Rule/raw/master/rule.txt",
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "乘风视频广告过滤",
+      "url": "https://gitee.com/xinggsf/Adblock-Rule/raw/master/mv.txt",
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "easylist",
+      "url": "https://easylist.to/easylist/easylist.txt",
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "easyprivacy",
+      "url": "https://easylist.to/easylist/easyprivacy.txt",
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "fanboy-annoyance",
+      "url": "https://easylist.to/easylist/fanboy-annoyance.txt",
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "alexa",
+      "url": "https://raw.githubusercontent.com/nextdns/metadata/master/privacy/native/alexa",
+      "reason": "HTTP Error 404: Not Found",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "apple",
+      "url": "https://raw.githubusercontent.com/nextdns/metadata/master/privacy/native/apple",
+      "reason": "HTTP Error 404: Not Found",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "huawei",
+      "url": "https://raw.githubusercontent.com/nextdns/metadata/master/privacy/native/huawei",
+      "reason": "HTTP Error 404: Not Found",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "roku",
+      "url": "https://raw.githubusercontent.com/nextdns/metadata/master/privacy/native/roku",
+      "reason": "HTTP Error 404: Not Found",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "samsung",
+      "url": "https://raw.githubusercontent.com/nextdns/metadata/master/privacy/native/samsung",
+      "reason": "HTTP Error 404: Not Found",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "sonos",
+      "url": "https://raw.githubusercontent.com/nextdns/metadata/master/privacy/native/sonos",
+      "reason": "HTTP Error 404: Not Found",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "windows",
+      "url": "https://raw.githubusercontent.com/nextdns/metadata/master/privacy/native/windows",
+      "reason": "HTTP Error 404: Not Found",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "xiaomi",
+      "url": "https://raw.githubusercontent.com/nextdns/metadata/master/privacy/native/xiaomi",
+      "reason": "HTTP Error 404: Not Found",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "Adblock Warning Removal List",
+      "url": "https://easylist-downloads.adblockplus.org/antiadblockfilters.txt",
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "I don't care about cookies",
+      "url": "https://www.i-dont-care-about-cookies.eu/abp/",
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "Dan Pollock's List",
+      "url": "https://someonewhocares.org/hosts/zero/hosts",
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "Peter Lowe's List",
+      "url": "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblockplus&showintro=1&mimetype=plaintext",
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "AdGuard DNS",
+      "url": "https://filters.adtidy.org/android/filters/15_optimized.txt",
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "AdGuard DNS",
+      "url": "https://cdn.jsdelivr.net/gh/AdguardTeam/HostlistsRegistry@main/filters/general/filter_1_DnsFilter/filter.txt",
+      "reason": "仓库记录的上游不是 GitHub 原始链接，按要求跳过",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "Anti-AD",
+      "url": "https://anti-ad.net/easylist.txt",
+      "reason": "非 GitHub 原始链接或明确的 GitHub CDN 链接，按要求跳过",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "HaGeZi Threat Intelligence Feeds",
+      "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/tif.txt",
+      "reason": "Source exceeds 32 MiB limit",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "HaGeZi Most Abused TLDs",
+      "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/spam-tlds.txt",
+      "reason": "文件可下载，但没有当前程序支持的 DNS 规则",
+      "previousCheckedUtc": "2026-09-30T16:52:34.202683+00:00"
+    },
+    {
+      "name": "blocklistproject/Lists / malware-ags.txt",
+      "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/malware-ags.txt",
+      "reason": "Source exceeds 32 MiB limit",
+      "previousCheckedUtc": "2026-09-30T17:00:15.331218+00:00"
+    }
+  ],
+  "repositoryInventory": [
+    {
+      "repository": "https://github.com/AdguardTeam/FiltersRegistry",
+      "role": "rule_source",
+      "sourceIds": [
+        "adguardteam-filtersregistry-filters-filter-224-chinese-filter-txt-4987b98a"
+      ],
+      "checkedSources": 1
+    },
+    {
+      "repository": "https://github.com/AdguardTeam/AdguardFilters",
+      "role": "rule_source",
+      "sourceIds": [
+        "adguardteam-adguardfilters-mobilefilter-sections-adservers-txt-81ac67be"
+      ],
+      "checkedSources": 1
+    },
+    {
+      "repository": "https://github.com/Cats-Team/AdRules",
+      "role": "rule_source",
+      "sourceIds": [
+        "cats-team-adrules-dns-txt-35998f0f"
+      ],
+      "checkedSources": 1
+    },
+    {
+      "repository": "https://github.com/cjx82630/cjxlist",
+      "role": "rule_source",
+      "sourceIds": [
+        "cjx82630-cjxlist-cjx-annoyance-txt-d2386b6d"
+      ],
+      "checkedSources": 1
+    },
+    {
+      "repository": "https://github.com/xinggsf/Adblock-Plus-Rule",
+      "role": "rule_source",
+      "sourceIds": [
+        "xinggsf-adblock-plus-rule-mv-txt-b8142164"
+      ],
+      "checkedSources": 1
+    },
+    {
+      "repository": "https://github.com/damengzhu/banad",
+      "role": "rule_source",
+      "sourceIds": [
+        "damengzhu-banad-jiekouad-txt-91a5eb50"
+      ],
+      "checkedSources": 1
+    },
+    {
+      "repository": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule",
+      "role": "rule_source",
+      "sourceIds": [
+        "tg-twilight-awavenue-ads-rule-awavenue-ads-rule-txt-594187e3"
+      ],
+      "checkedSources": 1
+    },
+    {
+      "repository": "https://github.com/hagezi/dns-blocklists",
+      "role": "rule_source",
+      "sourceIds": [
+        "hagezi-dns-blocklists-adblock-pro-mini-txt-20bb6b45",
+        "hagezi-dns-blocklists-adblock-ultimate-txt-bc290ebd",
+        "hagezi-dns-blocklists-adblock-pro-plus-txt-7a87ce26",
+        "hagezi-dns-blocklists-adblock-pro-txt-65c8e043",
+        "hagezi-dns-blocklists-adblock-multi-txt-ce9f678a",
+        "hagezi-dns-blocklists-adblock-hoster-txt-15f0d4a7",
+        "hagezi-dns-blocklists-adblock-dyndns-txt-1d5b17bf",
+        "hagezi-dns-blocklists-adblock-urlshortener-txt-25500e57",
+        "hagezi-dns-blocklists-adblock-whitelist-referral-txt-da8500f6",
+        "hagezi-dns-blocklists-adblock-whitelist-referral-native-txt-69481aca",
+        "hagezi-dns-blocklists-adblock-whitelist-urlshortener-txt-c2ee3e5c"
+      ],
+      "checkedSources": 11
+    },
+    {
+      "repository": "https://github.com/StevenBlack/hosts",
+      "role": "rule_source",
+      "sourceIds": [
+        "stevenblack-hosts-hosts-603e776c"
+      ],
+      "checkedSources": 1
+    },
+    {
+      "repository": "https://github.com/banbendalao/ADgk",
+      "role": "rule_source",
+      "sourceIds": [
+        "banbendalao-adgk-adgk-txt-c99347f4"
+      ],
+      "checkedSources": 1
+    },
+    {
+      "repository": "https://github.com/jdlingyu/ad-wars",
+      "role": "rule_source",
+      "sourceIds": [
+        "jdlingyu-ad-wars-hosts-eb100586"
+      ],
+      "checkedSources": 1
+    },
+    {
+      "repository": "https://github.com/AdAway/adaway.github.io",
+      "role": "rule_source",
+      "sourceIds": [
+        "adaway-adaway-github-io-hosts-txt-66566edd"
+      ],
+      "checkedSources": 1
+    },
+    {
+      "repository": "https://github.com/Perflyst/PiHoleBlocklist",
+      "role": "rule_source",
+      "sourceIds": [
+        "perflyst-piholeblocklist-smarttv-agh-txt-f3772bac"
+      ],
+      "checkedSources": 1
+    },
+    {
+      "repository": "https://github.com/durablenapkin/scamblocklist",
+      "role": "rule_source",
+      "sourceIds": [
+        "durablenapkin-scamblocklist-adguard-txt-f27041d5"
+      ],
+      "checkedSources": 1
+    },
+    {
+      "repository": "https://github.com/DandelionSprout/adfilt",
+      "role": "rule_source",
+      "sourceIds": [
+        "dandelionsprout-adfilt-gameconsoleadblocklist-txt-2fd8cf2e"
+      ],
+      "checkedSources": 1
+    },
+    {
+      "repository": "https://github.com/hoshsadiq/adblock-nocoin-list",
+      "role": "rule_source",
+      "sourceIds": [
+        "hoshsadiq-adblock-nocoin-list-nocoin-txt-1aa9d130"
+      ],
+      "checkedSources": 1
+    },
+    {
+      "repository": "https://github.com/Spam404/lists",
+      "role": "rule_source",
+      "sourceIds": [
+        "spam404-lists-main-blacklist-txt-694a44a4"
+      ],
+      "checkedSources": 1
+    },
+    {
+      "repository": "https://github.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites",
+      "role": "rule_source",
+      "sourceIds": [
+        "mitchellkrogza-the-big-list-of-hacked-malware-web-sites-hacked-domains-list-5df168a2"
+      ],
+      "checkedSources": 1
+    },
+    {
+      "repository": "https://github.com/badmojr/1Hosts",
+      "role": "rule_source",
+      "sourceIds": [
+        "badmojr-1hosts-lite-adblock-txt-6a71fde5",
+        "badmojr-1hosts-xtra-adblock-txt-ec275c9c"
+      ],
+      "checkedSources": 2
+    },
+    {
+      "repository": "https://github.com/blocklistproject/Lists",
+      "role": "rule_source",
+      "sourceIds": [
+        "blocklistproject-lists-adguard-abuse-ags-txt-69397c3c",
+        "blocklistproject-lists-adguard-ads-ags-txt-21a38910",
+        "blocklistproject-lists-adguard-crypto-ags-txt-722f85ae",
+        "blocklistproject-lists-adguard-fraud-ags-txt-859f4062",
+        "blocklistproject-lists-adguard-phishing-ags-txt-6ab23539",
+        "blocklistproject-lists-adguard-ransomware-ags-txt-8f253932",
+        "blocklistproject-lists-adguard-redirect-ags-txt-6ece472c",
+        "blocklistproject-lists-adguard-scam-ags-txt-521f7b7c",
+        "blocklistproject-lists-adguard-smart-tv-ags-txt-92f6ccb6",
+        "blocklistproject-lists-adguard-tracking-ags-txt-06c487dc"
+      ],
+      "checkedSources": 10
+    },
+    {
+      "repository": "https://github.com/anudeepND/blacklist",
+      "role": "rule_source",
+      "sourceIds": [
+        "anudeepnd-blacklist-adservers-txt-e413d034",
+        "anudeepnd-blacklist-facebook-txt-32006df0",
+        "anudeepnd-blacklist-coinminer-txt-61cc5905"
+      ],
+      "checkedSources": 3
+    },
+    {
+      "repository": "https://github.com/crazy-max/WindowsSpyBlocker",
+      "role": "rule_source",
+      "sourceIds": [
+        "crazy-max-windowsspyblocker-data-hosts-spy-txt-a41d8da9"
+      ],
+      "checkedSources": 1
+    },
+    {
+      "repository": "https://github.com/jerryn70/GoodbyeAds",
+      "role": "rule_source",
+      "sourceIds": [
+        "jerryn70-goodbyeads-hosts-goodbyeads-txt-882683a5",
+        "jerryn70-goodbyeads-formats-goodbyeads-adblock-filter-txt-d11c0acd",
+        "jerryn70-goodbyeads-extension-goodbyeads-xiaomi-extension-txt-2ab84d66",
+        "jerryn70-goodbyeads-extension-goodbyeads-samsung-adblock-txt-10d171b5",
+        "jerryn70-goodbyeads-extension-goodbyeads-spotify-adblock-txt-4a00db86",
+        "jerryn70-goodbyeads-extension-goodbyeads-youtube-adblock-txt-84c5ae17",
+        "jerryn70-goodbyeads-formats-goodbyeads-youtube-adblock-filter-txt-992d6a26"
+      ],
+      "checkedSources": 7
+    },
+    {
+      "repository": "https://github.com/DivineEngine/AdGuardFilter",
+      "role": "unresolved_source",
+      "sourceIds": [],
+      "checkedSources": 0
+    },
+    {
+      "repository": "https://github.com/nextdns/metadata",
+      "role": "unresolved_source",
+      "sourceIds": [],
+      "checkedSources": 0
+    },
+    {
+      "repository": "https://github.com/AdguardTeam/HostlistsRegistry",
+      "role": "unresolved_source",
+      "sourceIds": [],
+      "checkedSources": 0
+    },
+    {
+      "repository": "https://github.com/217heidai/adblockfilters",
+      "role": "reference_merger",
+      "sourceIds": [],
+      "checkedSources": 0
+    },
+    {
+      "repository": "https://github.com/zhuanshenlikaini/AdguardHome-Rules",
+      "role": "reference_merger",
+      "sourceIds": [],
+      "checkedSources": 0
+    },
+    {
+      "repository": "https://github.com/hululu1068/AdGuard-Rule",
+      "role": "reference_merger",
+      "sourceIds": [],
+      "checkedSources": 0
+    }
+  ],
+  "countNote": "规则数量为逐来源相加，含跨源重叠，不是全局去重计数。"
+}

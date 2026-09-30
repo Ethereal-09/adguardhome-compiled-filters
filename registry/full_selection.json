@@ -1,0 +1,392 @@
+{
+  "schemaVersion": 1,
+  "checkedUtc": "2026-09-30T19:07:21+00:00",
+  "candidateCount": 38,
+  "selectedSourceIds": [
+    "adguardteam-adguardfilters-mobilefilter-sections-adservers-txt-81ac67be",
+    "cats-team-adrules-dns-txt-35998f0f",
+    "tg-twilight-awavenue-ads-rule-awavenue-ads-rule-txt-594187e3",
+    "stevenblack-hosts-hosts-603e776c",
+    "jdlingyu-ad-wars-hosts-eb100586",
+    "adaway-adaway-github-io-hosts-txt-66566edd",
+    "perflyst-piholeblocklist-smarttv-agh-txt-f3772bac",
+    "durablenapkin-scamblocklist-adguard-txt-f27041d5",
+    "dandelionsprout-adfilt-gameconsoleadblocklist-txt-2fd8cf2e",
+    "spam404-lists-main-blacklist-txt-694a44a4",
+    "mitchellkrogza-the-big-list-of-hacked-malware-web-sites-hacked-domains-list-5df168a2",
+    "hagezi-dns-blocklists-adblock-ultimate-txt-bc290ebd",
+    "hagezi-dns-blocklists-adblock-hoster-txt-15f0d4a7",
+    "hagezi-dns-blocklists-adblock-dyndns-txt-1d5b17bf",
+    "hagezi-dns-blocklists-adblock-urlshortener-txt-25500e57",
+    "badmojr-1hosts-xtra-adblock-txt-ec275c9c",
+    "blocklistproject-lists-adguard-abuse-ags-txt-69397c3c",
+    "blocklistproject-lists-adguard-ads-ags-txt-21a38910",
+    "blocklistproject-lists-adguard-crypto-ags-txt-722f85ae",
+    "blocklistproject-lists-adguard-ransomware-ags-txt-8f253932",
+    "blocklistproject-lists-adguard-redirect-ags-txt-6ece472c",
+    "blocklistproject-lists-adguard-scam-ags-txt-521f7b7c",
+    "blocklistproject-lists-adguard-smart-tv-ags-txt-92f6ccb6",
+    "blocklistproject-lists-adguard-tracking-ags-txt-06c487dc",
+    "anudeepnd-blacklist-adservers-txt-e413d034",
+    "anudeepnd-blacklist-facebook-txt-32006df0",
+    "crazy-max-windowsspyblocker-data-hosts-spy-txt-a41d8da9",
+    "jerryn70-goodbyeads-formats-goodbyeads-adblock-filter-txt-d11c0acd",
+    "jerryn70-goodbyeads-extension-goodbyeads-xiaomi-extension-txt-2ab84d66",
+    "jerryn70-goodbyeads-extension-goodbyeads-samsung-adblock-txt-10d171b5",
+    "jerryn70-goodbyeads-extension-goodbyeads-spotify-adblock-txt-4a00db86",
+    "jerryn70-goodbyeads-formats-goodbyeads-youtube-adblock-filter-txt-992d6a26"
+  ],
+  "excludedSources": [
+    {
+      "id": "blocklistproject-lists-adguard-fraud-ags-txt-859f4062",
+      "name": "blocklistproject/Lists / fraud-ags.txt",
+      "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/fraud-ags.txt",
+      "reason": "支持条目从此前 256184 降为 696，下降超过 30%，暂不进入分类候选。"
+    },
+    {
+      "id": "blocklistproject-lists-adguard-phishing-ags-txt-6ab23539",
+      "name": "blocklistproject/Lists / phishing-ags.txt",
+      "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/phishing-ags.txt",
+      "reason": "支持条目从此前 190191 降为 103351，下降超过 30%，暂不进入分类候选。"
+    },
+    {
+      "id": "anudeepnd-blacklist-coinminer-txt-61cc5905",
+      "name": "anudeepND/blacklist / CoinMiner.txt",
+      "url": "https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt",
+      "reason": "上游明确停止更新，保留历史整理，但默认不进入分类候选。"
+    },
+    {
+      "id": "hagezi-dns-blocklists-adblock-whitelist-referral-txt-da8500f6",
+      "name": "HaGeZi / whitelist-referral.txt",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/whitelist-referral.txt",
+      "reason": "independent_allowlist"
+    },
+    {
+      "id": "hagezi-dns-blocklists-adblock-whitelist-referral-native-txt-69481aca",
+      "name": "HaGeZi / whitelist-referral-native.txt",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/whitelist-referral-native.txt",
+      "reason": "independent_allowlist"
+    },
+    {
+      "id": "hagezi-dns-blocklists-adblock-whitelist-urlshortener-txt-c2ee3e5c",
+      "name": "HaGeZi / whitelist-urlshortener.txt",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/whitelist-urlshortener.txt",
+      "reason": "independent_allowlist"
+    },
+    {
+      "id": "hagezi-dns-blocklists-adblock-pro-mini-txt-20bb6b45",
+      "name": "DNS-Blocklists PRO mini",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.mini.txt",
+      "reason": "variantFamily_choose_one",
+      "selectedInstead": "hagezi-dns-blocklists-adblock-ultimate-txt-bc290ebd"
+    },
+    {
+      "id": "hagezi-dns-blocklists-adblock-pro-plus-txt-7a87ce26",
+      "name": "HaGeZi Pro++",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.plus.txt",
+      "reason": "variantFamily_choose_one",
+      "selectedInstead": "hagezi-dns-blocklists-adblock-ultimate-txt-bc290ebd"
+    },
+    {
+      "id": "hagezi-dns-blocklists-adblock-pro-txt-65c8e043",
+      "name": "HaGeZi Pro",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt",
+      "reason": "variantFamily_choose_one",
+      "selectedInstead": "hagezi-dns-blocklists-adblock-ultimate-txt-bc290ebd"
+    },
+    {
+      "id": "hagezi-dns-blocklists-adblock-multi-txt-ce9f678a",
+      "name": "HaGeZi Normal",
+      "url": "https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/multi.txt",
+      "reason": "variantFamily_choose_one",
+      "selectedInstead": "hagezi-dns-blocklists-adblock-ultimate-txt-bc290ebd"
+    },
+    {
+      "id": "badmojr-1hosts-lite-adblock-txt-6a71fde5",
+      "name": "1Hosts Lite",
+      "url": "https://raw.githubusercontent.com/badmojr/1Hosts/master/Lite/adblock.txt",
+      "reason": "variantFamily_choose_one",
+      "selectedInstead": "badmojr-1hosts-xtra-adblock-txt-ec275c9c"
+    },
+    {
+      "id": "jerryn70-goodbyeads-hosts-goodbyeads-txt-882683a5",
+      "name": "jerryn70/GoodbyeAds / GoodbyeAds.txt",
+      "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt",
+      "reason": "representationGroup_choose_one",
+      "selectedInstead": "jerryn70-goodbyeads-formats-goodbyeads-adblock-filter-txt-d11c0acd"
+    },
+    {
+      "id": "jerryn70-goodbyeads-extension-goodbyeads-youtube-adblock-txt-84c5ae17",
+      "name": "jerryn70/GoodbyeAds / GoodbyeAds-YouTube-AdBlock.txt",
+      "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-YouTube-AdBlock.txt",
+      "reason": "representationGroup_choose_one",
+      "selectedInstead": "jerryn70-goodbyeads-formats-goodbyeads-youtube-adblock-filter-txt-992d6a26"
+    },
+    {
+      "id": "adguardteam-filtersregistry-filters-filter-224-chinese-filter-txt-4987b98a",
+      "name": "AdGuard Chinese filter",
+      "url": "https://raw.githubusercontent.com/AdguardTeam/FiltersRegistry/master/filters/filter_224_Chinese/filter.txt",
+      "reason": "Unsupported exception; source rejected instead of dropping it: @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=soft8ware.com"
+    },
+    {
+      "id": "cjx82630-cjxlist-cjx-annoyance-txt-d2386b6d",
+      "name": "CJX's Annoyance List",
+      "url": "https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt",
+      "reason": "Unsupported exception; source rejected instead of dropping it: @@||th7.cn/sanda2015/css/ads.js"
+    },
+    {
+      "id": "xinggsf-adblock-plus-rule-mv-txt-b8142164",
+      "name": "xinggsf mv",
+      "url": "https://raw.githubusercontent.com/xinggsf/Adblock-Plus-Rule/master/mv.txt",
+      "reason": "Unsupported exception; source rejected instead of dropping it: @@||log.mmstat.com/eg.js^$script"
+    },
+    {
+      "id": "damengzhu-banad-jiekouad-txt-91a5eb50",
+      "name": "jiekouAD",
+      "url": "https://raw.githubusercontent.com/damengzhu/banad/main/jiekouAD.txt",
+      "reason": "Unsupported exception; source rejected instead of dropping it: @@||themoviedb.org/assets/"
+    },
+    {
+      "id": "banbendalao-adgk-adgk-txt-c99347f4",
+      "name": "ADgk",
+      "url": "https://raw.githubusercontent.com/banbendalao/ADgk/master/ADgk.txt",
+      "reason": "Unsupported exception; source rejected instead of dropping it: @@||mirror*.mangafunc.fun/comic/"
+    },
+    {
+      "id": "hoshsadiq-adblock-nocoin-list-nocoin-txt-1aa9d130",
+      "name": "NoCoin Filter List",
+      "url": "https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/nocoin.txt",
+      "reason": "Unsupported exception; source rejected instead of dropping it: @@||api.nyda.pro^$websocket"
+    }
+  ],
+  "compatibility": {
+    "cats-team-adrules-dns-txt-35998f0f": {
+      "status": "compatible",
+      "accepted": 196444,
+      "unsupported": 0,
+      "evidence": "current_validated_build"
+    },
+    "tg-twilight-awavenue-ads-rule-awavenue-ads-rule-txt-594187e3": {
+      "status": "compatible",
+      "accepted": 962,
+      "unsupported": 0,
+      "evidence": "current_validated_build"
+    },
+    "adaway-adaway-github-io-hosts-txt-66566edd": {
+      "status": "compatible",
+      "accepted": 6540,
+      "unsupported": 0,
+      "evidence": "current_validated_build"
+    },
+    "perflyst-piholeblocklist-smarttv-agh-txt-f3772bac": {
+      "status": "compatible",
+      "accepted": 154,
+      "unsupported": 9,
+      "evidence": "current_validated_build"
+    },
+    "durablenapkin-scamblocklist-adguard-txt-f27041d5": {
+      "status": "compatible",
+      "accepted": 950,
+      "unsupported": 1,
+      "evidence": "current_validated_build"
+    },
+    "dandelionsprout-adfilt-gameconsoleadblocklist-txt-2fd8cf2e": {
+      "status": "compatible",
+      "accepted": 14,
+      "unsupported": 1,
+      "evidence": "current_validated_build"
+    },
+    "spam404-lists-main-blacklist-txt-694a44a4": {
+      "status": "compatible",
+      "accepted": 8140,
+      "unsupported": 0,
+      "evidence": "current_validated_build"
+    },
+    "mitchellkrogza-the-big-list-of-hacked-malware-web-sites-hacked-domains-list-5df168a2": {
+      "status": "compatible",
+      "accepted": 9,
+      "unsupported": 0,
+      "evidence": "current_validated_build"
+    },
+    "hagezi-dns-blocklists-adblock-ultimate-txt-bc290ebd": {
+      "status": "compatible",
+      "accepted": 287467,
+      "unsupported": 0,
+      "evidence": "current_validated_build"
+    },
+    "hagezi-dns-blocklists-adblock-hoster-txt-15f0d4a7": {
+      "status": "compatible",
+      "accepted": 1238,
+      "unsupported": 0,
+      "evidence": "current_validated_build"
+    },
+    "hagezi-dns-blocklists-adblock-dyndns-txt-1d5b17bf": {
+      "status": "compatible",
+      "accepted": 1538,
+      "unsupported": 0,
+      "evidence": "current_validated_build"
+    },
+    "hagezi-dns-blocklists-adblock-urlshortener-txt-25500e57": {
+      "status": "compatible",
+      "accepted": 9982,
+      "unsupported": 0,
+      "evidence": "current_validated_build"
+    },
+    "badmojr-1hosts-xtra-adblock-txt-ec275c9c": {
+      "status": "compatible",
+      "accepted": 786132,
+      "unsupported": 40,
+      "evidence": "current_validated_build"
+    },
+    "blocklistproject-lists-adguard-abuse-ags-txt-69397c3c": {
+      "status": "compatible",
+      "accepted": 435051,
+      "unsupported": 68,
+      "evidence": "current_validated_build"
+    },
+    "blocklistproject-lists-adguard-ads-ags-txt-21a38910": {
+      "status": "compatible",
+      "accepted": 233991,
+      "unsupported": 34,
+      "evidence": "current_validated_build"
+    },
+    "blocklistproject-lists-adguard-crypto-ags-txt-722f85ae": {
+      "status": "compatible",
+      "accepted": 1272,
+      "unsupported": 0,
+      "evidence": "current_validated_build"
+    },
+    "blocklistproject-lists-adguard-ransomware-ags-txt-8f253932": {
+      "status": "compatible",
+      "accepted": 1904,
+      "unsupported": 0,
+      "evidence": "current_validated_build"
+    },
+    "blocklistproject-lists-adguard-redirect-ags-txt-6ece472c": {
+      "status": "compatible",
+      "accepted": 108682,
+      "unsupported": 3,
+      "evidence": "current_validated_build"
+    },
+    "blocklistproject-lists-adguard-scam-ags-txt-521f7b7c": {
+      "status": "compatible",
+      "accepted": 8527,
+      "unsupported": 0,
+      "evidence": "current_validated_build"
+    },
+    "blocklistproject-lists-adguard-smart-tv-ags-txt-92f6ccb6": {
+      "status": "compatible",
+      "accepted": 77,
+      "unsupported": 0,
+      "evidence": "current_validated_build"
+    },
+    "blocklistproject-lists-adguard-tracking-ags-txt-06c487dc": {
+      "status": "compatible",
+      "accepted": 143866,
+      "unsupported": 10,
+      "evidence": "current_validated_build"
+    },
+    "anudeepnd-blacklist-facebook-txt-32006df0": {
+      "status": "compatible",
+      "accepted": 3995,
+      "unsupported": 1,
+      "evidence": "current_validated_build"
+    },
+    "crazy-max-windowsspyblocker-data-hosts-spy-txt-a41d8da9": {
+      "status": "compatible",
+      "accepted": 347,
+      "unsupported": 0,
+      "evidence": "current_validated_build"
+    },
+    "jerryn70-goodbyeads-extension-goodbyeads-xiaomi-extension-txt-2ab84d66": {
+      "status": "compatible",
+      "accepted": 278,
+      "unsupported": 0,
+      "evidence": "current_validated_build"
+    },
+    "jerryn70-goodbyeads-extension-goodbyeads-samsung-adblock-txt-10d171b5": {
+      "status": "compatible",
+      "accepted": 101,
+      "unsupported": 0,
+      "evidence": "current_validated_build"
+    },
+    "jerryn70-goodbyeads-extension-goodbyeads-spotify-adblock-txt-4a00db86": {
+      "status": "compatible",
+      "accepted": 3780,
+      "unsupported": 0,
+      "evidence": "current_validated_build"
+    },
+    "jerryn70-goodbyeads-formats-goodbyeads-youtube-adblock-filter-txt-992d6a26": {
+      "status": "compatible",
+      "accepted": 97645,
+      "unsupported": 0,
+      "evidence": "current_validated_build"
+    },
+    "xinggsf-adblock-plus-rule-mv-txt-b8142164": {
+      "status": "incompatible_or_failed",
+      "error": "Unsupported exception; source rejected instead of dropping it: @@||log.mmstat.com/eg.js^$script"
+    },
+    "adguardteam-adguardfilters-mobilefilter-sections-adservers-txt-81ac67be": {
+      "status": "compatible",
+      "accepted": 951,
+      "unsupported": 41,
+      "evidence": "download_and_strict_parse",
+      "checkedUtc": "2026-09-30T19:07:16+00:00"
+    },
+    "cjx82630-cjxlist-cjx-annoyance-txt-d2386b6d": {
+      "status": "incompatible_or_failed",
+      "error": "Unsupported exception; source rejected instead of dropping it: @@||th7.cn/sanda2015/css/ads.js"
+    },
+    "adguardteam-filtersregistry-filters-filter-224-chinese-filter-txt-4987b98a": {
+      "status": "incompatible_or_failed",
+      "error": "Unsupported exception; source rejected instead of dropping it: @@||pagead2.googlesyndication.com/pagead/js/adsbygoogle.js$domain=soft8ware.com"
+    },
+    "damengzhu-banad-jiekouad-txt-91a5eb50": {
+      "status": "incompatible_or_failed",
+      "error": "Unsupported exception; source rejected instead of dropping it: @@||themoviedb.org/assets/"
+    },
+    "banbendalao-adgk-adgk-txt-c99347f4": {
+      "status": "incompatible_or_failed",
+      "error": "Unsupported exception; source rejected instead of dropping it: @@||mirror*.mangafunc.fun/comic/"
+    },
+    "jdlingyu-ad-wars-hosts-eb100586": {
+      "status": "compatible",
+      "accepted": 1645,
+      "unsupported": 0,
+      "evidence": "download_and_strict_parse",
+      "checkedUtc": "2026-09-30T19:07:17+00:00"
+    },
+    "stevenblack-hosts-hosts-603e776c": {
+      "status": "compatible",
+      "accepted": 74759,
+      "unsupported": 12,
+      "evidence": "download_and_strict_parse",
+      "checkedUtc": "2026-09-30T19:07:17+00:00"
+    },
+    "hoshsadiq-adblock-nocoin-list-nocoin-txt-1aa9d130": {
+      "status": "incompatible_or_failed",
+      "error": "Unsupported exception; source rejected instead of dropping it: @@||api.nyda.pro^$websocket"
+    },
+    "anudeepnd-blacklist-adservers-txt-e413d034": {
+      "status": "compatible",
+      "accepted": 42343,
+      "unsupported": 15,
+      "evidence": "download_and_strict_parse",
+      "checkedUtc": "2026-09-30T19:07:18+00:00"
+    },
+    "jerryn70-goodbyeads-formats-goodbyeads-adblock-filter-txt-d11c0acd": {
+      "status": "compatible",
+      "accepted": 277714,
+      "unsupported": 117,
+      "evidence": "download_and_strict_parse",
+      "checkedUtc": "2026-09-30T19:07:19+00:00"
+    }
+  },
+  "policy": [
+    "Verified GitHub DNS subsets only",
+    "Strongest declared tier per variantFamily",
+    "Adblock representation preferred per representationGroup",
+    "Native source exceptions preserved",
+    "Independent allowlists and review-required sources excluded"
+  ]
+}

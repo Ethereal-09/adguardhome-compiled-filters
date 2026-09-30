@@ -1,0 +1,111 @@
+! Title: 三星组件
+! Updated: 2026-09-30T20:58:04+00:00
+! Expires: 1 day
+! Rules: 101
+! Maintainer merges only; upstream rules belong to their authors.
+! DNS masks/regex preserved; exact Hosts scope and source exception priority retained.
+! Upstream licenses and notices: ../upstream/README.md (in the original repository).
+! Source: jerryn70/GoodbyeAds / GoodbyeAds-Samsung-AdBlock.txt | https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Samsung-AdBlock.txt
+! Repository: https://github.com/jerryn70/GoodbyeAds | Account: jerryn70
+! Upstream license: https://github.com/jerryn70/GoodbyeAds/blob/master/LICENSE
+|a460.cell.phone.ringtone.samsung.sms13.de|
+|abtauthprd.samsungcloudsolution.com|
+|acr0.samsungcloudsolution.com|
+|ad.samsungadhub.com|
+|ad.samsungads.com|
+|ads.samsungads.com|
+|akcjasamsung.e-kei.pl|
+|amauthprd.samsungcloudsolution.com|
+|analytics-api.samsunghealthcn.com|
+|analytics.samsungknox.com|
+|api-hub.samsungyosemite.com|
+|apu.samsungelectronics.com|
+|az43064.vo.msecnd.net|
+|bigdata.ssp.samsung.com|
+|bpu.samsungelectronics.com|
+|config.samsungads.com|
+|connecttv.pelmorex.com|
+|coordinator-production-28516768.us-east-1.elb.amazonaws.com|
+|cpu.samsungelectronics.com|
+|d179kwmlpc4o47.cloudfront.net|
+|d1oxlq5h9kq8q5.cloudfront.net|
+|d2tnx644ijgq6i.cloudfront.net|
+|d3mjsomixevyw7.cloudfront.net|
+|events.samsungads.com|
+|fkp.samsungcloudsolution.com|
+|fkp.samsungcloudsolution.net|
+|game.internetat.tv|
+|gld.samsungosp.com|
+|gpm.samsungqbe.com|
+|infolink.pavv.co.kr|
+|insights.samsung.com|
+|invitation.samsungiotcloud.com|
+|kpu.samsungelectronics.com|
+|lcprd1.samsungcloudsolution.net|
+|lcprd2.samsungcloudsolution.net|
+|lockersamsungs8.r.xoxknct.com|
+|lockersamsungs8.s.xoxknct.com|
+|log-1.samsungacr.com|
+|log-2.samsungacr.com|
+|log-3.samsungacr.com|
+|log-4.adclerks.com|
+|log-config.samsungacr.com|
+|log-ingestion-eu.samsungacr.com|
+|log-ingestion.samsungacr.com|
+|log.internetat.tv|
+|musicid.samsungcloudsolution.com|
+|nmetrics.samsung.com|
+|noticecdn.samsungcloudsolution.com|
+|noticefile.samsungcloudsolution.com|
+|ns11.whois.co.kr|
+|oempprd.samsungcloudsolution.com|
+|openapi.samsung.com|
+|osb-krsvc.samsungqbe.com|
+|osb-ussvc.samsungqbe.com|
+|osb.samsungqbe.com|
+|otn.samsungcloudcdn.com|
+|pipeaota.com|
+|premium-videos.telly.com|
+|rd.samsungadhub.com|
+|s.w-x.co|
+|s3-config.samsungacr.com|
+|samsung-akcja.e-kei.pl|
+|samsung-com.112.2o7.net|
+|samsung-germany.demdex.net|
+|samsung-klimatyzacja.pl|
+|samsung-produkcja.24.eu|
+|samsung-stop.24.eu|
+|samsung.24.eu|
+|samsung.apps.linkpc.net|
+|samsung.demdex.net|
+|samsung.yaload.ru|
+|samsung3.solution.weborama.fr|
+|samsungacr.com|
+|samsungadhub.com|
+|samsungads.com|
+|samsungeurope.eu.qualtrics.com|
+|samsungindiaelectronics.demdex.net|
+|samsungmsc.d1.sc.omtrdc.net|
+|samsungtvads.com|
+|samsungus.btttag.com|
+|sca.samsung.com|
+|smetrics.samsung.com|
+|sso.internetat.tv|
+|syncplusconfig.s3.amazonaws.com|
+|t.email1.samsung.ca|
+|targeted-config-test.samsungacr.com|
+|test.samsungrm.net|
+|upu.samsungelectronics.com|
+|vd.contents.prod.eu.s3.amazonaws.com|
+|vd.emp.prd.s3.amazonaws.com|
+|vdterms.samsungcloudsolution.com|
+|www.akcja-samsung.h2g.pl|
+|www.akcjasamsung.e-kei.pl|
+|www.samsungotn.net|
+|www.samsungrm.net|
+|xpu.samsungelectronics.com|
+|ypu.samsungelectronics.com|
+|zn3xeosihqjqivq8l-samsungeurope.siteintercept.qualtrics.com|
+|zn6lro0hnnzevxtpz-samsungeurope.siteintercept.qualtrics.com|
+|zn8a1gd8ckeekprrz-samsunggdc.siteintercept.qualtrics.com|
+|zpu.samsungelectronics.com|

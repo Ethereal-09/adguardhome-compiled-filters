@@ -1,0 +1,32 @@
+! Source: https://raw.githubusercontent.com/banbendalao/ADgk/master/ADgk.txt
+! Repository: https://github.com/banbendalao/ADgk
+! DNS subset only; original modifiers and source scope are preserved.
+@@||17173im.allyes.com^
+@@||ad-gone.com^
+@@||ad.azure.com^
+@@||ad.ext.azure.com^
+@@||battle.net^
+@@||beta.bugly.qq.com^
+@@||bnet.163.com^
+@@||browser.cloud.ucweb.com^
+@@||chinatelecom.com.cn^
+@@||download.jumpw.com^
+@@||ecitic.com^
+@@||feed.mix.sina.com.cn^
+@@||front-go.lemall.com^
+@@||g.tbcdn.cn^
+@@||gotunnel.org^
+@@||image.coolapk.com^
+@@||lemon.baidu.com^
+@@||ltzn.9377.com^
+@@||mi.cn^
+@@||minigame.qq.com^
+@@||msn.wrating.com^
+@@||phs.tanx.com^
+@@||speedtest.net^
+@@||swjoy.com^
+@@||tuhu.cn^
+@@||vd.l.qq.com^
+@@||www.gsxt.gov.cn^
+@@||xmxing.net^
+@@||zbj.com^

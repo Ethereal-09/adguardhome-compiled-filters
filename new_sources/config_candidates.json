@@ -1,0 +1,149 @@
+[
+  {
+    "name": "blocklistproject/Lists / abuse-ags.txt",
+    "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/abuse-ags.txt",
+    "enabled": false,
+    "minimumRules": 217525,
+    "repository": "https://github.com/blocklistproject/Lists"
+  },
+  {
+    "name": "blocklistproject/Lists / ads-ags.txt",
+    "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/ads-ags.txt",
+    "enabled": false,
+    "minimumRules": 116995,
+    "repository": "https://github.com/blocklistproject/Lists"
+  },
+  {
+    "name": "blocklistproject/Lists / crypto-ags.txt",
+    "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/crypto-ags.txt",
+    "enabled": false,
+    "minimumRules": 636,
+    "repository": "https://github.com/blocklistproject/Lists"
+  },
+  {
+    "name": "blocklistproject/Lists / fraud-ags.txt",
+    "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/fraud-ags.txt",
+    "enabled": false,
+    "minimumRules": 128092,
+    "repository": "https://github.com/blocklistproject/Lists"
+  },
+  {
+    "name": "blocklistproject/Lists / phishing-ags.txt",
+    "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/phishing-ags.txt",
+    "enabled": false,
+    "minimumRules": 95095,
+    "repository": "https://github.com/blocklistproject/Lists"
+  },
+  {
+    "name": "blocklistproject/Lists / ransomware-ags.txt",
+    "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/ransomware-ags.txt",
+    "enabled": false,
+    "minimumRules": 952,
+    "repository": "https://github.com/blocklistproject/Lists"
+  },
+  {
+    "name": "blocklistproject/Lists / redirect-ags.txt",
+    "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/redirect-ags.txt",
+    "enabled": false,
+    "minimumRules": 54341,
+    "repository": "https://github.com/blocklistproject/Lists"
+  },
+  {
+    "name": "blocklistproject/Lists / scam-ags.txt",
+    "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/scam-ags.txt",
+    "enabled": false,
+    "minimumRules": 4263,
+    "repository": "https://github.com/blocklistproject/Lists"
+  },
+  {
+    "name": "blocklistproject/Lists / smart-tv-ags.txt",
+    "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/smart-tv-ags.txt",
+    "enabled": false,
+    "minimumRules": 38,
+    "repository": "https://github.com/blocklistproject/Lists"
+  },
+  {
+    "name": "blocklistproject/Lists / tracking-ags.txt",
+    "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/tracking-ags.txt",
+    "enabled": false,
+    "minimumRules": 71933,
+    "repository": "https://github.com/blocklistproject/Lists"
+  },
+  {
+    "name": "anudeepND/blacklist / adservers.txt",
+    "url": "https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt",
+    "enabled": false,
+    "minimumRules": 21171,
+    "repository": "https://github.com/anudeepND/blacklist"
+  },
+  {
+    "name": "anudeepND/blacklist / facebook.txt",
+    "url": "https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt",
+    "enabled": false,
+    "minimumRules": 1997,
+    "repository": "https://github.com/anudeepND/blacklist"
+  },
+  {
+    "name": "anudeepND/blacklist / CoinMiner.txt",
+    "url": "https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt",
+    "enabled": false,
+    "minimumRules": 2915,
+    "repository": "https://github.com/anudeepND/blacklist"
+  },
+  {
+    "name": "crazy-max/WindowsSpyBlocker / spy.txt",
+    "url": "https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt",
+    "enabled": false,
+    "minimumRules": 173,
+    "repository": "https://github.com/crazy-max/WindowsSpyBlocker"
+  },
+  {
+    "name": "jerryn70/GoodbyeAds / GoodbyeAds.txt",
+    "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Hosts/GoodbyeAds.txt",
+    "enabled": false,
+    "minimumRules": 138872,
+    "repository": "https://github.com/jerryn70/GoodbyeAds"
+  },
+  {
+    "name": "jerryn70/GoodbyeAds / GoodbyeAds-AdBlock-Filter.txt",
+    "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Formats/GoodbyeAds-AdBlock-Filter.txt",
+    "enabled": false,
+    "minimumRules": 138857,
+    "repository": "https://github.com/jerryn70/GoodbyeAds"
+  },
+  {
+    "name": "jerryn70/GoodbyeAds / GoodbyeAds-Xiaomi-Extension.txt",
+    "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Xiaomi-Extension.txt",
+    "enabled": false,
+    "minimumRules": 139,
+    "repository": "https://github.com/jerryn70/GoodbyeAds"
+  },
+  {
+    "name": "jerryn70/GoodbyeAds / GoodbyeAds-Samsung-AdBlock.txt",
+    "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Samsung-AdBlock.txt",
+    "enabled": false,
+    "minimumRules": 50,
+    "repository": "https://github.com/jerryn70/GoodbyeAds"
+  },
+  {
+    "name": "jerryn70/GoodbyeAds / GoodbyeAds-Spotify-AdBlock.txt",
+    "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Spotify-AdBlock.txt",
+    "enabled": false,
+    "minimumRules": 1890,
+    "repository": "https://github.com/jerryn70/GoodbyeAds"
+  },
+  {
+    "name": "jerryn70/GoodbyeAds / GoodbyeAds-YouTube-AdBlock.txt",
+    "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-YouTube-AdBlock.txt",
+    "enabled": false,
+    "minimumRules": 48822,
+    "repository": "https://github.com/jerryn70/GoodbyeAds"
+  },
+  {
+    "name": "jerryn70/GoodbyeAds / GoodbyeAds-YouTube-AdBlock-Filter.txt",
+    "url": "https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Formats/GoodbyeAds-YouTube-AdBlock-Filter.txt",
+    "enabled": false,
+    "minimumRules": 48822,
+    "repository": "https://github.com/jerryn70/GoodbyeAds"
+  }
+]

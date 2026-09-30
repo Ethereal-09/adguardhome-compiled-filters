@@ -1,0 +1,3 @@
+! Source: https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt
+! Repository: https://github.com/AdAway/adaway.github.io
+! DNS subset only; original modifiers and source scope are preserved.

@@ -1,0 +1,172 @@
+[
+  {
+    "repository": "AdAway/adaway.github.io",
+    "status": "found",
+    "license": "NOASSERTION",
+    "path": "LICENSE.md",
+    "url": "https://github.com/AdAway/adaway.github.io/blob/master/LICENSE.md",
+    "snapshotPath": "upstream/AdAway--adaway.github.io--LICENSE.md",
+    "blobSha": "84015c0af4bdac64c13b493da28aec29053fa023",
+    "checkedUtc": "2026-09-30T20:55:48+00:00"
+  },
+  {
+    "repository": "AdguardTeam/AdguardFilters",
+    "status": "found",
+    "license": "GPL-3.0",
+    "path": "LICENSE",
+    "url": "https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE",
+    "snapshotPath": "upstream/AdguardTeam--AdguardFilters--LICENSE",
+    "blobSha": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+    "checkedUtc": "2026-09-30T20:55:48+00:00"
+  },
+  {
+    "repository": "Cats-Team/AdRules",
+    "status": "found",
+    "license": "0BSD",
+    "path": "LICENSE",
+    "url": "https://github.com/Cats-Team/AdRules/blob/script/LICENSE",
+    "snapshotPath": "upstream/Cats-Team--AdRules--LICENSE",
+    "blobSha": "52fcf2e236367058336ab33ff102b34e64559fce",
+    "checkedUtc": "2026-09-30T20:55:47+00:00"
+  },
+  {
+    "repository": "DandelionSprout/adfilt",
+    "status": "found",
+    "license": "NOASSERTION",
+    "path": "LICENSE.md",
+    "url": "https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md",
+    "snapshotPath": "upstream/DandelionSprout--adfilt--LICENSE.md",
+    "blobSha": "b4fe0829b8db7917ed2d2fa48f625a8e8f48d035",
+    "checkedUtc": "2026-09-30T20:55:47+00:00"
+  },
+  {
+    "repository": "Perflyst/PiHoleBlocklist",
+    "status": "found",
+    "license": "MIT",
+    "path": "LICENSE",
+    "url": "https://github.com/Perflyst/PiHoleBlocklist/blob/master/LICENSE",
+    "snapshotPath": "upstream/Perflyst--PiHoleBlocklist--LICENSE",
+    "blobSha": "718358ed467e3a998ebc944bb38e89c18f5d928a",
+    "checkedUtc": "2026-09-30T20:55:48+00:00"
+  },
+  {
+    "repository": "Spam404/lists",
+    "status": "found",
+    "path": "LICENSE.md/LICENSE.md",
+    "license": "see_original",
+    "url": "https://github.com/Spam404/lists/blob/master/LICENSE.md/LICENSE.md",
+    "snapshotPath": "upstream/Spam404--lists--LICENSE.md--LICENSE.md",
+    "blobSha": "dd0aa07d16112b1695459050b43f650520be5428",
+    "checkedUtc": "2026-09-30T20:55:48+00:00"
+  },
+  {
+    "repository": "StevenBlack/hosts",
+    "status": "found",
+    "license": "MIT",
+    "path": "license.txt",
+    "url": "https://github.com/StevenBlack/hosts/blob/master/license.txt",
+    "snapshotPath": "upstream/StevenBlack--hosts--license.txt",
+    "blobSha": "8745f2465a57787a849937aeda8d3e04c0b17274",
+    "checkedUtc": "2026-09-30T20:55:49+00:00"
+  },
+  {
+    "repository": "TG-Twilight/AWAvenue-Ads-Rule",
+    "status": "found",
+    "license": "GPL-3.0",
+    "path": "LICENSE",
+    "url": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE",
+    "snapshotPath": "upstream/TG-Twilight--AWAvenue-Ads-Rule--LICENSE",
+    "blobSha": "9cecc1d4669ee8af2ca727a5d8cde10cd8b2d7cc",
+    "checkedUtc": "2026-09-30T20:55:49+00:00"
+  },
+  {
+    "repository": "anudeepND/blacklist",
+    "status": "found",
+    "license": "MIT",
+    "path": "LICENSE",
+    "url": "https://github.com/anudeepND/blacklist/blob/master/LICENSE",
+    "snapshotPath": "upstream/anudeepND--blacklist--LICENSE",
+    "blobSha": "b121191c93842b05fb8552fe0ef4e0fdf62df7b9",
+    "checkedUtc": "2026-09-30T20:55:49+00:00"
+  },
+  {
+    "repository": "badmojr/1Hosts",
+    "status": "found",
+    "license": "MPL-2.0",
+    "path": "LICENSE",
+    "url": "https://github.com/badmojr/1Hosts/blob/master/LICENSE",
+    "snapshotPath": "upstream/badmojr--1Hosts--LICENSE",
+    "blobSha": "a612ad9813b006ce81d1ee438dd784da99a54007",
+    "checkedUtc": "2026-09-30T20:55:49+00:00"
+  },
+  {
+    "repository": "blocklistproject/Lists",
+    "status": "found",
+    "license": "Unlicense",
+    "path": "LICENSE",
+    "url": "https://github.com/blocklistproject/Lists/blob/main/LICENSE",
+    "snapshotPath": "upstream/blocklistproject--Lists--LICENSE",
+    "blobSha": "fdddb29aa445bf3d6a5d843d6dd77e10a9f99657",
+    "checkedUtc": "2026-09-30T20:55:49+00:00"
+  },
+  {
+    "repository": "crazy-max/WindowsSpyBlocker",
+    "status": "found",
+    "license": "MIT",
+    "path": "LICENSE",
+    "url": "https://github.com/crazy-max/WindowsSpyBlocker/blob/master/LICENSE",
+    "snapshotPath": "upstream/crazy-max--WindowsSpyBlocker--LICENSE",
+    "blobSha": "1753438ff09d45e47d28e49eb79f9a9e4e85f6c6",
+    "checkedUtc": "2026-09-30T20:55:50+00:00"
+  },
+  {
+    "repository": "durablenapkin/scamblocklist",
+    "status": "found",
+    "license": "MIT",
+    "path": "LICENSE",
+    "url": "https://github.com/durablenapkin/scamblocklist/blob/master/LICENSE",
+    "snapshotPath": "upstream/durablenapkin--scamblocklist--LICENSE",
+    "blobSha": "ad555131de4ac12ef03e7a346f05d755897b4bc7",
+    "checkedUtc": "2026-09-30T20:55:50+00:00"
+  },
+  {
+    "repository": "hagezi/dns-blocklists",
+    "status": "found",
+    "license": "GPL-3.0",
+    "path": "LICENSE",
+    "url": "https://github.com/hagezi/dns-blocklists/blob/main/LICENSE",
+    "snapshotPath": "upstream/hagezi--dns-blocklists--LICENSE",
+    "blobSha": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+    "checkedUtc": "2026-09-30T20:55:50+00:00"
+  },
+  {
+    "repository": "jdlingyu/ad-wars",
+    "status": "found",
+    "path": "README.md",
+    "license": "MIT (declared in README)",
+    "url": "https://github.com/jdlingyu/ad-wars/blob/master/README.md",
+    "snapshotPath": "upstream/jdlingyu--ad-wars--README.md",
+    "blobSha": "088182089c4ad84e19e28c19e10d950c663a62f2",
+    "checkedUtc": "2026-09-30T20:55:50+00:00"
+  },
+  {
+    "repository": "jerryn70/GoodbyeAds",
+    "status": "found",
+    "license": "MIT",
+    "path": "LICENSE",
+    "url": "https://github.com/jerryn70/GoodbyeAds/blob/master/LICENSE",
+    "snapshotPath": "upstream/jerryn70--GoodbyeAds--LICENSE",
+    "blobSha": "30057b01b10c429f424c9ac42b0cc9e43a6044c8",
+    "checkedUtc": "2026-09-30T20:55:50+00:00"
+  },
+  {
+    "repository": "mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites",
+    "status": "found",
+    "license": "NOASSERTION",
+    "path": "LICENSE.md",
+    "url": "https://github.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/blob/master/LICENSE.md",
+    "snapshotPath": "upstream/mitchellkrogza--The-Big-List-of-Hacked-Malware-Web-Sites--LICENSE.md",
+    "blobSha": "bf620907705cb08544ce5500b82796dbfc98b719",
+    "checkedUtc": "2026-09-30T20:55:51+00:00"
+  }
+]

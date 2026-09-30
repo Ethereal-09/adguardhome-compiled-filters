@@ -1,0 +1,78 @@
+{
+  "sourcePage": "https://adguardfilters-chinese.pages.dev/",
+  "section": "DNS过滤器",
+  "sources": [
+    {
+      "name": "HaGeZi Ultimate",
+      "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/ultimate.txt",
+      "backupUrls": []
+    },
+    {
+      "name": "AdGuard DNS",
+      "url": "https://filters.adtidy.org/android/filters/15_optimized.txt",
+      "backupUrls": [
+        "https://cdn.jsdelivr.net/gh/AdguardTeam/HostlistsRegistry@main/filters/general/filter_1_DnsFilter/filter.txt"
+      ]
+    },
+    {
+      "name": "HaGeZi Pro++",
+      "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.plus.txt",
+      "backupUrls": []
+    },
+    {
+      "name": "HaGeZi Pro",
+      "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/pro.txt",
+      "backupUrls": []
+    },
+    {
+      "name": "HaGeZi Normal",
+      "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/multi.txt",
+      "backupUrls": []
+    },
+    {
+      "name": "Anti-AD",
+      "url": "https://anti-ad.net/easylist.txt",
+      "backupUrls": []
+    },
+    {
+      "name": "AWAvenue Ads Rule",
+      "url": "https://cdn.jsdelivr.net/gh/AdguardTeam/HostlistsRegistry@main/filters/general/filter_53_AWAvenueAdsRule/filter.txt",
+      "backupUrls": []
+    },
+    {
+      "name": "HaGeZi Threat Intelligence Feeds",
+      "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/tif.txt",
+      "backupUrls": []
+    },
+    {
+      "name": "HaGeZi Badware Hoster",
+      "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/hoster.txt",
+      "backupUrls": []
+    },
+    {
+      "name": "HaGeZi DynDNS",
+      "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/dyndns.txt",
+      "backupUrls": []
+    },
+    {
+      "name": "HaGeZi URL Shortener",
+      "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/urlshortener.txt",
+      "backupUrls": []
+    },
+    {
+      "name": "HaGeZi Most Abused TLDs",
+      "url": "https://cdn.jsdelivr.net/gh/hagezi/dns-blocklists@latest/adblock/spam-tlds.txt",
+      "backupUrls": []
+    },
+    {
+      "name": "1Hosts Lite",
+      "url": "https://cdn.jsdelivr.net/gh/AdguardTeam/HostlistsRegistry@main/filters/general/filter_24_1Hosts_Lite/filter.txt",
+      "backupUrls": []
+    },
+    {
+      "name": "1Hosts Xtra",
+      "url": "https://cdn.jsdelivr.net/gh/AdguardTeam/HostlistsRegistry@main/filters/general/filter_70_1Hosts_Xtra/filter.txt",
+      "backupUrls": []
+    }
+  ]
+}

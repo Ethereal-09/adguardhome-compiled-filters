@@ -1,0 +1,3 @@
+! Source: https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+! Repository: https://github.com/StevenBlack/hosts
+! DNS subset only; original modifiers and source scope are preserved.

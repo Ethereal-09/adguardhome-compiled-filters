@@ -1,0 +1,101 @@
+name: Update DNS rules
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 20 * * *'
+  push:
+    branches: [main]
+    paths:
+      - profiles.json
+      - config.json
+      - registry/sources.json
+      - upstream/**
+      - github_sources/audit.json
+      - new_sources/audit.json
+      - custom/**
+      - build_filters.py
+      - validate_subscriptions.py
+      - workflow_status.py
+      - tools/engine/**
+      - update_rules.py
+      - verify_github_sources.py
+      - organize_repository_rules.py
+      - tests/**
+      - .github/workflows/update.yml
+permissions:
+  contents: write
+concurrency:
+  group: dns-rules-update
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      PYTHONUTF8: '1'
+      DNS_RULE_VALIDATOR: ${{ github.workspace }}/.cache/dns-rule-validator
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-go@40f1582b2485089dde7abd97c1529aa768e1baff # v5
+        with:
+          go-version: '1.27.1'
+          cache-dependency-path: tools/engine/go.sum
+      - name: Build and test the pinned AdGuard DNS engine validator
+        working-directory: tools/engine
+        run: |
+          go test ./...
+          go build -o ../../.cache/dns-rule-validator .
+      - name: Test
+        run: python -m unittest discover -s tests -p 'test_*.py'
+      - name: Restore validated source cache
+        uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        with:
+          path: .cache/sources
+          key: dns-sources-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: dns-sources-
+      - name: Build and validate classified subscriptions
+        id: build
+        continue-on-error: true
+        run: python build_filters.py 2>&1 | tee .cache/build.log
+      - name: Audit every generated subscription before publication
+        id: audit
+        if: steps.build.outcome == 'success'
+        continue-on-error: true
+        run: python validate_subscriptions.py --validator "$DNS_RULE_VALIDATOR"
+      - name: Save validated source cache
+        if: always() && steps.build.outcome != 'skipped' && hashFiles('.cache/sources/*.json') != ''
+        uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
+        with:
+          path: .cache/sources
+          key: dns-sources-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Commit generated rules
+        if: steps.build.outcome == 'success' && steps.audit.outcome == 'success'
+        shell: bash
+        run: |
+          python workflow_status.py --heartbeat .github/update-heartbeat.json
+          git add dist/ .github/update-heartbeat.json
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git commit -m 'Update DNS rules'
+          git push
+      - name: Write run summary
+        if: always()
+        run: python workflow_status.py --summary "$GITHUB_STEP_SUMMARY"
+      - name: Save audit and download logs
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        with:
+          name: dns-update-${{ github.run_id }}-${{ github.run_attempt }}
+          path: |
+            .cache/last-run.json
+            .cache/publish-audit.json
+            .cache/build.log
+          if-no-files-found: ignore
+          retention-days: 30
+      - name: Report build or audit failure
+        if: always() && (steps.build.outcome == 'failure' || steps.audit.outcome == 'failure')
+        run: exit 1

@@ -74,6 +74,8 @@ GitHub Actions 工作流在 [.github/workflows/update.yml](.github/workflows/upd
 
 本次代码和产物审计记录见 [AUDIT.md](AUDIT.md)。源配置不会每天自动发现新仓库或重新分级，新增来源仍需核验并修改配置。
 
+[首次云端自动运行](https://github.com/Ethereal-09/AdBlock-DNS-Filters/actions/runs/36777499627) 已通过测试、下载、30 个分类构建、全部产物审核、缓存保存及机器人自动提交。工作流处于启用状态，默认分支为 `main`。
+
 ## 上游规则与署名
 
 <details>

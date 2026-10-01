@@ -6,6 +6,7 @@ on:
   push:
     branches: [main]
     paths:
+      - README.md
       - profiles.json
       - config.json
       - registry/sources.json
@@ -71,16 +72,29 @@ jobs:
         with:
           path: .cache/sources
           key: dns-sources-${{ github.run_id }}-${{ github.run_attempt }}
-      - name: Commit generated rules
-        if: steps.build.outcome == 'success' && steps.audit.outcome == 'success'
+      - name: Update README build time and status
+        id: readme
+        if: always() && (steps.build.outcome == 'success' || steps.build.outcome == 'failure')
+        env:
+          BUILD_OUTCOME: ${{ steps.build.outcome }}
+          AUDIT_OUTCOME: ${{ steps.audit.outcome }}
+        run: python workflow_status.py --readme README.md --build-outcome "$BUILD_OUTCOME" --audit-outcome "$AUDIT_OUTCOME"
+      - name: Commit build status and verified subscriptions
+        if: always() && steps.readme.outcome == 'success'
         shell: bash
+        env:
+          BUILD_OUTCOME: ${{ steps.build.outcome }}
+          AUDIT_OUTCOME: ${{ steps.audit.outcome }}
         run: |
-          python workflow_status.py --heartbeat .github/update-heartbeat.json
-          git add dist/ .github/update-heartbeat.json
+          git add README.md
+          if [ "$BUILD_OUTCOME" = success ] && [ "$AUDIT_OUTCOME" = success ]; then
+            python workflow_status.py --heartbeat .github/update-heartbeat.json
+            git add dist/ .github/update-heartbeat.json
+          fi
           if git diff --cached --quiet; then exit 0; fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'Update DNS rules'
+          git commit -m 'Update build status and verified DNS rules'
           git push
       - name: Write run summary
         if: always()

@@ -15,6 +15,7 @@ import sys
 
 from update_rules import ROOT, UNSUPPORTED, atomic_write, domain, fetch, parse_line
 from verify_github_sources import decode_github
+from workflow_status import update_readme
 
 
 def utcnow():
@@ -320,9 +321,20 @@ def index_content(profiles, published, default):
     return '\n'.join(rows) + '\n'
 
 
-def build(config_path, registry_path, output, custom, cache, allow_large_drop=False, validator=None):
+def build(config_path, registry_path, output, custom, cache, allow_large_drop=False, validator=None, readme=None):
     with build_lock(cache):
-        return _build(config_path, registry_path, output, custom, cache, allow_large_drop, validator)
+        try:
+            result = _build(config_path, registry_path, output, custom, cache, allow_large_drop, validator)
+        except Exception as error:
+            run = dict(checkedUtc=utcnow(), status='failed', error=str(error), sources={},
+                       changedProfiles=[], failedProfiles=[], cacheSources=[])
+            write_if_changed(cache / 'last-run.json', json_text(run))
+            if readme is not None:
+                update_readme(readme, run)
+            raise
+        if readme is not None:
+            update_readme(readme, read_json(cache / 'last-run.json'))
+        return result
 
 
 def _build(config_path, registry_path, output, custom, cache, allow_large_drop, validator):
@@ -415,7 +427,8 @@ def _build(config_path, registry_path, output, custom, cache, allow_large_drop, 
         summary = dict(updatedUtc=published[default]['updatedUtc'], totalRules=published[default]['totalRules'],
                        defaultProfile=default, sources=[public_sources[sid] for sid in published[default]['sourceIds']])
         write_if_changed(output / 'report.json', json_text(summary))
-    run = dict(checkedUtc=utcnow(), sources=runtime, changedProfiles=changed, failedProfiles=failed,
+    run = dict(checkedUtc=utcnow(), status='failed' if failed else 'success', profileCount=len(profiles),
+               sources=runtime, changedProfiles=changed, failedProfiles=failed,
                cacheSources=[sid for sid, item in runtime.items() if item['status'] == 'cached'])
     write_if_changed(cache / 'last-run.json', json_text(run))
     print(f'Completed: {len(profiles)-len(failed)} ready, {len(failed)} failed/retained, {len(changed)} changed', flush=True)
@@ -429,12 +442,14 @@ def main():
     parser.add_argument('--output', type=Path, default=ROOT / 'dist')
     parser.add_argument('--custom', type=Path, default=ROOT / 'custom')
     parser.add_argument('--cache', type=Path, default=ROOT / '.cache')
+    parser.add_argument('--readme', type=Path, default=ROOT / 'README.md', help='Update the marked README build-status block')
     parser.add_argument('--allow-large-drop', action='store_true', help='Use only after reviewing an upstream count decrease')
     parser.add_argument('--validator', type=Path, default=os.environ.get('DNS_RULE_VALIDATOR'),
                         help='Path to the pinned AdGuard DNS rule validator (mandatory in CI)')
     args = parser.parse_args()
     try:
-        return build(args.config, args.registry, args.output, args.custom, args.cache, args.allow_large_drop, args.validator)
+        return build(args.config, args.registry, args.output, args.custom, args.cache,
+                     args.allow_large_drop, args.validator, args.readme)
     except KeyboardInterrupt:
         print('Stopped by user; completed outputs remain available.', file=sys.stderr)
         return 130

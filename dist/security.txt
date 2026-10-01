@@ -1,7 +1,7 @@
 ! Title: 安全分类（威胁与诈骗等）
-! Updated: 2026-10-01T01:10:54+00:00
+! Updated: 2026-10-01T07:47:25+00:00
 ! Expires: 1 day
-! Rules: 654793
+! Rules: 654800
 ! Maintainer merges only; upstream rules belong to their authors.
 ! DNS masks/regex preserved; exact Hosts scope and source exception priority retained.
 ! Upstream licenses and notices: ../upstream/README.md (in the original repository).
@@ -11869,6 +11869,7 @@
 ||1blox.info^
 ||1bluemountain.com^
 ||1bm0-verified-identity8910.com^
+||1bmo-reactivemyaccount0.com^
 ||1bmo-security-alert.com^
 ||1browse.cn^
 ||1browse.info^
@@ -31261,6 +31262,7 @@
 ||a6shbjls2t.neliver.com^
 ||a6shd.perfectcleanredir.com^
 ||a6tw86ggaz.neliver.com^
+||a6u.uk^
 ||a6xqm5su8u.neliver.com^
 ||a6zkstvfgp.neliver.com^
 ||a71.info^
@@ -31833,6 +31835,7 @@
 ||aadil.000webhostapp.com^
 ||aadils.com^
 ||aadiproperties.co.in^
+||aadirone.cc^
 ||aadisol.in^
 ||aaditya.tech^
 ||aadityainc.com^
@@ -34668,6 +34671,7 @@
 ||accesttpayment.biz^
 ||accesweb-account-intl.com^
 ||accfb.000webhostapp.com^
+||accfiverif.com^
 ||accformacion.com^
 ||accgendexbplacey.bplaced.net^
 ||acchelp-support.biz^
@@ -57520,6 +57524,7 @@
 ||alphatech.tel^
 ||alphatech365.com^
 ||alphatoastmasters.org.au^
+||alphatowercompany.in^
 ||alphatradings.co.uk^
 ||alphatrize-software.com^
 ||alphatronic.ie^
@@ -92167,6 +92172,7 @@
 ||bestpricedirectory.com.au^
 ||bestpriceinternational.com^
 ||bestpricemagic.com^
+||bestpriceonline.store^
 ||bestpricerealestate.com.au^
 ||bestpricewala.com^
 ||bestprintertechsupport.com^
@@ -96447,6 +96453,7 @@
 ||binomo.com^
 ||binomo.in^
 ||binomo.info^
+||binomo.vip^
 ||binomo1.com^
 ||binomo2.zendesk.com^
 ||binomoidr.com^
@@ -162015,6 +162022,7 @@
 ||danafoundations.org^
 ||danagloverinteriors.com^
 ||danahoresovska.eu^
+||danainstan.xyz^
 ||danalexintl.com^
 ||danalterman.com^
 ||danangcuisine.com^
@@ -164191,7 +164199,6 @@
 ||dbhalignilde.tw.ma^
 ||dbhddjobs.com^
 ||dbhiebvgeologers.review^
-||dbhmnp.shop^
 ||dbhms.in^
 ||dbimbem.axfree.com^
 ||dbinario.com^
@@ -216906,6 +216913,7 @@
 ||faze77.com^
 ||faze8.com^
 ||faze9.com^
+||faze91.com^
 ||fazecrew.tk^
 ||fazedo.com^
 ||fazeebook.com^
@@ -326048,6 +326056,7 @@
 ||ledforest.com^
 ||ledgerbalance.com^
 ||ledgerone.stream^
+||ledgerslive.org^
 ||ledgerwalletfirmwareupdate.com^
 ||ledgerwalletupdates.com^
 ||ledgiest.pw^
@@ -342198,7 +342207,6 @@
 ||m.chwkj.top^
 ||m.claim-direct.uk^
 ||m.cnhuaya.com^
-||m.coinexeu.vip^
 ||m.commercekinetics.com^
 ||m.css2.com^
 ||m.cuisines-aviva.com^
@@ -379767,6 +379775,7 @@
 ||navi7.com^
 ||navi72.com^
 ||navi72.ru^
+||navi74.ru^
 ||navi77.com^
 ||navi78.ru^
 ||navi8.com^
@@ -399135,7 +399144,6 @@
 ||ojknews.com^
 ||ojlaw.co.za^
 ||ojlhltmbtxug.cpcbroker.com^
-||ojlkimed.vip^
 ||ojme.net^
 ||ojmekzw4mujvqeju.bioserv.at^
 ||ojmekzw4mujvqeju.dreamtest.at^
@@ -516471,7 +516479,6 @@
 ||stream5.info^
 ||stream55.info^
 ||stream8forexcards.tk^
-||streamabie.com^
 ||streamadj.cyou^
 ||streamagain.tk^
 ||streamango.club^

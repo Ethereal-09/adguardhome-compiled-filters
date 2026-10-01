@@ -1,6 +1,6 @@
 {
-  "updatedUtc": "2026-10-01T00:36:23+00:00",
-  "totalRules": 299283,
+  "updatedUtc": "2026-10-01T07:45:38+00:00",
+  "totalRules": 299376,
   "defaultProfile": "combined",
   "sources": [
     {
@@ -24,8 +24,8 @@
       "repository": "https://github.com/Cats-Team/AdRules",
       "repositoryAccount": "Cats-Team",
       "downloadState": "fresh",
-      "accepted": 196505,
-      "parsedEntries": 196505,
+      "accepted": 196600,
+      "parsedEntries": 196600,
       "duplicates": 0,
       "unsupported": 0,
       "unsupportedExamples": [],

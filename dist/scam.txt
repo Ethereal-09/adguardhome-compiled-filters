@@ -1,7 +1,7 @@
 ! Title: 诈骗分类
-! Updated: 2026-10-01T01:10:57+00:00
+! Updated: 2026-10-01T07:47:30+00:00
 ! Expires: 1 day
-! Rules: 157602
+! Rules: 157609
 ! Maintainer merges only; upstream rules belong to their authors.
 ! DNS masks/regex preserved; exact Hosts scope and source exception priority retained.
 ! Upstream licenses and notices: ../upstream/README.md (in the original repository).
@@ -568,6 +568,7 @@
 ||1ayss8.rockt.es^
 ||1beb2a44.space^
 ||1bit1.com^
+||1bmo-reactivemyaccount0.com^
 ||1busine55-communication.tk^
 ||1c-helper.ru^
 ||1c-support.net^
@@ -3186,6 +3187,7 @@
 ||a470q.tk^
 ||a5-tech.com^
 ||a6shd.perfectcleanredir.com^
+||a6u.uk^
 ||a8556kiraev2fx2e12rasa4m80.hop.clickbank.net^
 ||a86ea.simpotica.com^
 ||a88.bulehero.in^
@@ -3210,6 +3212,7 @@
 ||aaccount-security.com^
 ||aacipt.com^
 ||aadatasoft.com^
+||aadirone.cc^
 ||aadvocatecloudsupport.com^
 ||aaelectrician.com^
 ||aafoundz.com^
@@ -3709,6 +3712,7 @@
 ||accesssupportcentre.com^
 ||accesssupportinkent.com^
 ||accesstoworksupport.com^
+||accfiverif.com^
 ||acchelp-support.biz^
 ||acchelp-support.club^
 ||acchelp-support.info^
@@ -10468,6 +10472,7 @@
 ||alphatech-live.com^
 ||alphatech.tel^
 ||alphatech365.com^
+||alphatowercompany.in^
 ||alphatrize-software.com^
 ||alphawealthalliance.com^
 ||alphawellness.com.sg^
@@ -17290,6 +17295,7 @@
 ||bestplaywins.com^
 ||bestpool.me^
 ||bestpoolminer.cc^
+||bestpriceonline.store^
 ||bestprintertechsupport.com^
 ||bestprizeland.daqix.xyz^
 ||bestprizes4you2.info^
@@ -17919,6 +17925,7 @@
 ||binomo.com^
 ||binomo.in^
 ||binomo.info^
+||binomo.vip^
 ||binomo1.com^
 ||binomo2.zendesk.com^
 ||binomoidr.com^
@@ -35420,6 +35427,7 @@
 ||dampozyczke.pl^
 ||damskiegrono.pl^
 ||damuswealth.com^
+||danainstan.xyz^
 ||danceart.shop^
 ||dancewithdream.com^
 ||dancing-froyo-1eba9c.netlify.app^
@@ -35889,7 +35897,6 @@
 ||dbdndssvyxaltf.bid^
 ||dben1m8w02ceo.cloudfront.net^
 ||dbesyixn.bid^
-||dbhmnp.shop^
 ||dbixmine.pro^
 ||dbjcbnlwchgu.com^
 ||dblnptdnyt.bid^
@@ -49326,6 +49333,7 @@
 ||faze77.com^
 ||faze8.com^
 ||faze9.com^
+||faze91.com^
 ||fazendachia.com.br^
 ||fazendachia.pt^
 ||fazhost.cloud^
@@ -72159,6 +72167,7 @@
 ||ledaabute.tk^
 ||ledchannel.com.br^
 ||ledgerone.stream^
+||ledgerslive.org^
 ||ledgerwalletfirmwareupdate.com^
 ||ledgerwalletupdates.com^
 ||ledgiest.pw^
@@ -77184,7 +77193,6 @@
 ||m-tech-1.com^
 ||m-ticket-pl.eu^
 ||m.claim-direct.uk^
-||m.coinexeu.vip^
 ||m.commercekinetics.com^
 ||m.fjhan.club^
 ||m.gardenmobile.bid^
@@ -86545,6 +86553,7 @@
 ||navi7.com^
 ||navi72.com^
 ||navi72.ru^
+||navi74.ru^
 ||navi77.com^
 ||navi78.ru^
 ||navi8.com^
@@ -90872,7 +90881,6 @@
 ||ojalerts.com^
 ||ojjrwqxsdd.club^
 ||ojlhltmbtxug.cpcbroker.com^
-||ojlkimed.vip^
 ||ojngisbfwwyp.com^
 ||ojtcgnyikbtg.bid^
 ||ojvwpiqnmecd.com^
@@ -117223,7 +117231,6 @@
 ||stream-code.com^
 ||stream-livefull.com^
 ||stream-movies.net^
-||streamabie.com^
 ||streamadj.cyou^
 ||streamango.club^
 ||streamboo.com^

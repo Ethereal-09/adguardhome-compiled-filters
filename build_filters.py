@@ -1,4 +1,4 @@
-"""Download verified GitHub sources, build DNS subscriptions, and preserve failed outputs."""
+"""Download verified original sources, build DNS subscriptions, and preserve failed outputs."""
 from __future__ import annotations
 
 import argparse
@@ -12,6 +12,7 @@ from pathlib import Path
 import re
 import subprocess
 import sys
+from urllib.parse import urlsplit
 
 from update_rules import ROOT, UNSUPPORTED, atomic_write, domain, fetch, parse_line
 from verify_github_sources import decode_github
@@ -171,6 +172,25 @@ def optimize_rules(rules):
     return kept, len(unique)-len(kept)
 
 
+def validate_source_origin(source):
+    """Accept original GitHub files or an explicitly reviewed official website URL."""
+    url = source['url']
+    decoded = decode_github(url)
+    if url.startswith('https://raw.githubusercontent.com/'):
+        if not decoded or source['repository'] != 'https://github.com/' + decoded[0]:
+            raise ValueError('Unverified raw GitHub provenance: ' + source['id'])
+        return
+    proof = source.get('provenance', {})
+    website, evidence, subscription = (urlsplit(value) for value in
+        (source['repository'], proof.get('evidenceUrl', ''), url))
+    if (proof.get('kind') != 'official_website' or proof.get('status') != 'verified'
+            or proof.get('subscriptionUrl') != url or not proof.get('checkedUtc')
+            or any(p.scheme != 'https' or not p.hostname or p.username or p.password
+                   for p in (website, evidence, subscription))
+            or website.hostname != subscription.hostname or evidence.hostname != website.hostname):
+        raise ValueError('Unverified official website provenance: ' + source['id'])
+
+
 def load_plan(config_path, registry_path):
     config, registry = read_json(config_path), read_json(registry_path)
     if config.get('schemaVersion') != 1:
@@ -202,10 +222,7 @@ def load_plan(config_path, registry_path):
             if sid not in sources:
                 raise ValueError('Unknown source: ' + sid)
             source = sources[sid]
-            decoded = decode_github(source['url'])
-            if (not source['url'].startswith('https://raw.githubusercontent.com/') or not decoded
-                    or source['repository'] != 'https://github.com/' + decoded[0]):
-                raise ValueError('Unverified raw GitHub provenance: ' + sid)
+            validate_source_origin(source)
             if not source.get('eligibleForSubscription') or source['status'] != 'checked':
                 raise ValueError('Source needs review before selection: ' + sid)
             if (source['role'] == 'independent_allowlist') != (profile['kind'] == 'allowlist'):

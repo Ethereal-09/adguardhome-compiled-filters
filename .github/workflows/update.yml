@@ -10,6 +10,7 @@ on:
       - profiles.json
       - config.json
       - registry/sources.json
+      - registry/reviewed_sources.json
       - upstream/**
       - github_sources/audit.json
       - new_sources/audit.json
@@ -21,6 +22,7 @@ on:
       - update_rules.py
       - verify_github_sources.py
       - organize_repository_rules.py
+      - refresh_source_registry.py
       - tests/**
       - .github/workflows/update.yml
 permissions:

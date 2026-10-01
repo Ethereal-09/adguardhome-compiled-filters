@@ -64,7 +64,7 @@ def publication_blocks(config, manifest, registry, repository):
     rows = ['## 规则订阅', '',
             '数量为最近一次通过发布校验的文件条目数，含原生放行例外；每个订阅独立去重，分类之间的数量不能直接相加。', '']
     notes = {'基础订阅': '添加到 **DNS 黑名单**。综合版与全量版选其一，国内优化可单独使用。',
-             '强度档位': '按需求选一个档位；1Hosts 为替代基础。综合版采用 HaGeZi Normal，并叠加 AdRules DNS 与 AWAvenue。',
+             '强度档位': '按需求选一个档位；1Hosts 为替代基础。综合版以 HaGeZi Normal 为基础，叠加已核验的通用与国内 DNS 来源。',
              '用途分类': '添加到 **DNS 黑名单**，可按用途单独订阅或搭配基础订阅。',
              '设备与服务限制': '添加到 **DNS 黑名单**，按需启用；整站或服务限制可能影响正常功能。',
              '独立白名单': '添加到 **DNS 白名单**。各文件按用途选用，不自动并入黑名单。'}
@@ -79,18 +79,24 @@ def publication_blocks(config, manifest, registry, repository):
                  *(row for _, row in entries), '']
         if group == '基础订阅' and any(pid == 'full' for pid, _ in entries):
             rows += [f"全量版合并 {len(manifest['profiles']['full']['sourceIds'])} 个兼容来源，含最高档位、设备与服务限制；各来源原生例外和个人规则保留。", '']
+        if group == '基础订阅' and any(pid == 'china' for pid, _ in entries):
+            names = '、'.join(sources[sid]['name'] for sid in manifest['profiles']['china']['sourceIds'])
+            rows += ['国内优化来源：' + names + '。地域依据上游说明，规则文件独立合并与去重。', '']
 
     repositories = {sources[sid]['repository'] for sid in selected}
-    upstream = [f'当前选用 **{len(selected)} 个来源文件**，来自 **{len(repositories)} 个 GitHub 原仓库**。', '',
+    github = sum(repo.startswith('https://github.com/') for repo in repositories)
+    external = len(repositories) - github
+    origins = f'**{github} 个 GitHub 原仓库**' + (f'及 **{external} 个官方站点**' if external else '')
+    upstream = [f'当前选用 **{len(selected)} 个来源文件**，来自 {origins}。', '',
                 '<details>', '<summary>查看来源维护账号、原始订阅与规则数量</summary>', '',
                 '下表使用本次发布所选来源的支持条目数，含来源自身的放行例外，尚未做跨来源合并。仓库所属账号不代表全部原创作者，原作者及间接来源以各上游说明为准。', '',
-                '| 维护账号 / 原仓库 | 原始规则文件 | 支持规则数 |', '| --- | --- | ---: |']
+                '| 维护账号 / 原始项目 | 原始规则文件 | 支持规则数 |', '| --- | --- | ---: |']
     for sid in sorted(selected, key=lambda sid: (sources[sid]['repository'].lower(), sources[sid]['path'])):
         source, stats = sources[sid], manifest['sources'][sid]
         if stats.get('url') != source['url'] or type(stats.get('accepted')) is not int or stats['accepted'] < 1:
             raise ValueError('Invalid README upstream count or identity: ' + sid)
         repo = source['repository']
-        name = repo.removeprefix('https://github.com/')
+        name = repo.removeprefix('https://github.com/') if repo.startswith('https://github.com/') else source['repositoryAccount']
         filename = source['path'].replace('|', r'\|')
         upstream.append(f"| [{name}]({repo}) | [{filename}]({source['url']}) | {stats['accepted']:,} |")
     upstream += ['', '</details>', '',

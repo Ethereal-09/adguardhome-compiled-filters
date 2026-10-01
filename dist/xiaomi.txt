@@ -1,5 +1,5 @@
 ! Title: 小米组件
-! Updated: 2026-09-30T20:58:04+00:00
+! Updated: 2026-10-01T14:04:07+00:00
 ! Expires: 1 day
 ! Rules: 278
 ! Maintainer merges only; upstream rules belong to their authors.
@@ -8,6 +8,8 @@
 ! Source: jerryn70/GoodbyeAds / GoodbyeAds-Xiaomi-Extension.txt | https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Xiaomi-Extension.txt
 ! Repository: https://github.com/jerryn70/GoodbyeAds | Account: jerryn70
 ! Upstream license: https://github.com/jerryn70/GoodbyeAds/blob/master/LICENSE
+! Source: xiaomi | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/xiaomi
+! Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
 |a.hl.mi.com|
 |a.stat.xiaomi.com|
 |a.union.mi.com|

@@ -83,6 +83,25 @@ class BuilderTests(unittest.TestCase):
         allows, _ = app.parse_source('@@||*-go.example^\n@@||safe.example^', 'independent_allowlist')
         self.assertTrue(all(rule.startswith('@@') for rule in allows))
 
+    def test_official_website_requires_exact_reviewed_subscription_and_same_origin(self):
+        source = dict(id='official', repository='https://lists.example/hosts/',
+                      url='https://lists.example/hosts/hosts')
+        with self.assertRaisesRegex(ValueError, 'Unverified official'):
+            app.validate_source_origin(source)
+        source['provenance'] = dict(kind='official_website', status='verified',
+            subscriptionUrl=source['url'], evidenceUrl='https://lists.example/hosts/',
+            checkedUtc='2026-10-01T00:00:00Z')
+        app.validate_source_origin(source)
+        for key, value in [('subscriptionUrl', 'https://lists.example/other'),
+                           ('evidenceUrl', 'https://other.example/'), ('status', 'inferred')]:
+            changed = dict(source, provenance=dict(source['provenance'], **{key: value}))
+            with self.subTest(key=key), self.assertRaisesRegex(ValueError, 'Unverified official'):
+                app.validate_source_origin(changed)
+        source['url'] = 'http://lists.example/hosts/hosts'
+        source['provenance']['subscriptionUrl'] = source['url']
+        with self.assertRaisesRegex(ValueError, 'Unverified official'):
+            app.validate_source_origin(source)
+
     def test_one_download_per_source_and_no_timestamp_only_output_changes(self):
         with tempfile.TemporaryDirectory() as folder:
             _, _, args = self.setup_project(Path(folder))

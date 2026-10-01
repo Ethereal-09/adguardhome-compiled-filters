@@ -168,5 +168,99 @@
     "snapshotPath": "upstream/mitchellkrogza--The-Big-List-of-Hacked-Malware-Web-Sites--LICENSE.md",
     "blobSha": "bf620907705cb08544ce5500b82796dbfc98b719",
     "checkedUtc": "2026-09-30T20:55:51+00:00"
+  },
+  {
+    "repository": "217heidai/adblockfilters",
+    "status": "found",
+    "license": "GPL-3.0",
+    "path": "LICENSE",
+    "url": "https://github.com/217heidai/adblockfilters/blob/main/LICENSE",
+    "snapshotPath": "upstream/217heidai--adblockfilters--LICENSE",
+    "blobSha": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7",
+    "checkedUtc": "2026-10-01T14:03:26.717706+00:00"
+  },
+  {
+    "repository": "8680/GOODBYEADS",
+    "status": "found",
+    "license": "MIT",
+    "path": "LICENSE",
+    "url": "https://github.com/8680/GOODBYEADS/blob/master/LICENSE",
+    "snapshotPath": "upstream/8680--GOODBYEADS--LICENSE",
+    "blobSha": "8bbd140be61c6ec6ce9ae79e673e2fcede7e30d1",
+    "checkedUtc": "2026-10-01T14:03:40.854363+00:00"
+  },
+  {
+    "repository": "blackmatrix7/ios_rule_script",
+    "status": "found",
+    "license": "GPL-2.0",
+    "path": "LICENSE",
+    "url": "https://github.com/blackmatrix7/ios_rule_script/blob/master/LICENSE",
+    "snapshotPath": "upstream/blackmatrix7--ios_rule_script--LICENSE",
+    "blobSha": "d159169d1050894d3ea3b98e1c965c4058208fe1",
+    "checkedUtc": "2026-10-01T14:03:27.025425+00:00"
+  },
+  {
+    "repository": "hoshsadiq/adblock-nocoin-list",
+    "status": "found",
+    "license": "MIT",
+    "path": "LICENSE",
+    "url": "https://github.com/hoshsadiq/adblock-nocoin-list/blob/master/LICENSE",
+    "snapshotPath": "upstream/hoshsadiq--adblock-nocoin-list--LICENSE",
+    "blobSha": "10b6990cd8a5001fa16d1d118d038c34168a6326",
+    "checkedUtc": "2026-10-01T14:03:27.356412+00:00"
+  },
+  {
+    "repository": "nextdns/native-tracking-domains",
+    "status": "found",
+    "license": "MIT",
+    "path": "LICENSE",
+    "url": "https://github.com/nextdns/native-tracking-domains/blob/main/LICENSE",
+    "snapshotPath": "upstream/nextdns--native-tracking-domains--LICENSE",
+    "blobSha": "bc8ccd3bca0d739ea015972e63d9e11fd30200bc",
+    "checkedUtc": "2026-10-01T14:03:42.990449+00:00"
+  },
+  {
+    "repository": "privacy-protection-tools/anti-AD",
+    "status": "found",
+    "license": "MIT",
+    "path": "LICENSE",
+    "url": "https://github.com/privacy-protection-tools/anti-AD/blob/master/LICENSE",
+    "snapshotPath": "upstream/privacy-protection-tools--anti-AD--LICENSE",
+    "blobSha": "c02c8faea3869a2229df6a5122d41cd2cd6316fa",
+    "checkedUtc": "2026-10-01T14:03:28.455041+00:00"
+  },
+  {
+    "repository": "sjhgvr/oisd",
+    "status": "found",
+    "url": "https://github.com/sjhgvr/oisd/blob/main/LICENSE",
+    "checkedUtc": "2026-10-01T14:07:01.689544+00:00",
+    "license": "NOASSERTION",
+    "path": "LICENSE",
+    "snapshotPath": "upstream/sjhgvr--oisd--LICENSE",
+    "blobSha": "f288702d2fa16d3cdf0035b15a9fcbc552cd88e7"
+  },
+  {
+    "repository": "uBlockOrigin/uAssets",
+    "status": "found",
+    "license": "GPL-3.0",
+    "path": "LICENSE",
+    "url": "https://github.com/uBlockOrigin/uAssets/blob/master/LICENSE",
+    "snapshotPath": "upstream/uBlockOrigin--uAssets--LICENSE",
+    "blobSha": "9cecc1d4669ee8af2ca727a5d8cde10cd8b2d7cc",
+    "checkedUtc": "2026-10-01T14:03:56.990789+00:00"
+  },
+  {
+    "repository": "https://someonewhocares.org/hosts/",
+    "status": "source_notice",
+    "url": "https://someonewhocares.org/hosts/zero/hosts",
+    "snapshotPath": "upstream/Dan-Pollock--NOTICE.txt",
+    "checkedUtc": "2026-10-01T14:03:56.993063+00:00"
+  },
+  {
+    "repository": "https://pgl.yoyo.org/adservers/",
+    "status": "source_notice",
+    "url": "https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblockplus&showintro=1&mimetype=plaintext",
+    "snapshotPath": "upstream/Peter-Lowe--NOTICE.txt",
+    "checkedUtc": "2026-10-01T14:03:56.994062+00:00"
   }
 ]

@@ -29,7 +29,13 @@ HaGeZi Normal、Pro、Pro++、Ultimate 可对应均衡、扩展、激进、最�
 
 ## 中国国内优化黑名单
 
-分组标识为 `region-china-optimized`，分类维度为 `region`。首版采用 [Cats-Team / AdRules](https://github.com/Cats-Team/AdRules) 的 [DNS 原始订阅](https://raw.githubusercontent.com/Cats-Team/AdRules/main/dns.txt)。2026-10-01 核实其 README 明确说明面向中国地区，覆盖广告、跟踪、恶意软件、HTTPDNS、PCDN；上游同时单独列出了 DNS 规则，地域依据记录在 `regionalFocus`。
+分组标识为 `region-china-optimized`，分类维度为 `region`。当前独立合并以下三个来源，地域依据和原始文件记录在 `regionalFocus`：
+
+| 来源 | 上游依据 | DNS 原始文件 |
+| --- | --- | --- |
+| [AdRules](https://github.com/Cats-Team/AdRules) | 明确面向中国使用环境 | [dns.txt](https://raw.githubusercontent.com/Cats-Team/AdRules/main/dns.txt) |
+| [anti-AD](https://github.com/privacy-protection-tools/anti-AD) | 明确面向中文区，提供 AdGuard Home 格式 | [anti-ad-easylist.txt](https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-easylist.txt) |
+| [217heidai Lite](https://github.com/217heidai/adblockfilters) | README 声明 Lite 版本针对国内域名 | [adblockdnslite.txt](https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt) |
 
 “国内优化”描述中国使用环境，不按 `.cn` 后缀筛选，也不按解析 IP 的国家归类；国内应用使用的 `.com` 等域名仍保留。仅有中文名称、中文 README 或中国账号的仓库不自动加入。浏览器中文过滤列表不能据此成为完整 DNS 订阅。
 
@@ -51,7 +57,7 @@ HaGeZi Normal、Pro、Pro++、Ultimate 可对应均衡、扩展、激进、最�
 
 | 分类 | 选源方式 | 当前状态 |
 | --- | --- | --- |
-| 全量版 | 34 个可兼容 DNS 拦截来源；同系列最高强度、同源格式择一，原生例外及个人规则保留，独立白名单分开 | 已接入构建，full.txt |
+| 全量版 | 52 个可兼容 DNS 拦截来源；同系列最高强度、同源格式择一，原生例外及个人规则保留，独立白名单分开 | 已接入构建，full.txt |
 | 均衡版 | HaGeZi Normal，1Hosts Lite 另作替代文件 | 已接入构建 |
 | 扩展版 | HaGeZi Pro；不叠加所有系列版本 | 已接入构建 |
 | 激进版 | HaGeZi Pro++，1Hosts Xtra 另作替代文件 | 已接入构建 |
@@ -60,9 +66,22 @@ HaGeZi Normal、Pro、Pro++、Ultimate 可对应均衡、扩展、激进、最�
 | 跟踪分类 | 跟踪、遥测、Windows 等相应用途组件 | 已接入构建 |
 | 安全分类 | 诈骗、钓鱼、恶意网站、勒索软件等来源 | 已接入构建 |
 | 设备分类 | 电视、游戏机、小米、三星等 | 已接入构建，按需订阅 |
-| 中国国内优化黑名单 | AdRules DNS，保留其原生放行例外 | 已接入构建 |
+| 中国国内优化黑名单 | AdRules DNS、anti-AD、217heidai 国内 Lite，保留各自原生放行例外 | 已接入构建 |
+| 设备原生遥测 | NextDNS 已迁移的 8 个设备原始列表；保留其历史更新时间事实 | 已接入构建，native-tracking.txt |
+| 顶级域名限制 | HaGeZi 高滥用 TLD 列表，作为服务限制组件 | 已接入构建，tld-restrictions.txt |
+| 钓鱼网站 | Blocklist Project 的 phishing 原始分类 | 已接入构建，phishing.txt |
 | 兼容性放行 | 三个独立白名单分开输出，按用途选择 | 已接入构建，可选组件 |
 
 选源清单由 profiles.json 明确记录。同系列版本与格式组重复、地域或强度依据不匹配会在下载前报错。优化只在相同行为与优先级内删除被覆盖的简单条目，正则与通配符保持原样；来源或优化后分类比上一版减少超过 30% 时保留旧版。仍需检查真实应用误杀；下载、构建和程序测试不证明低误杀或应用去广告效果。
 
 全量版的调查范围为 sources.json 中登记的全部来源，并非 GitHub 上全部项目。已排除独立白名单、停更/数量异常来源、被更高档位或另一格式替代的版本，以及含不支持的浏览器放行例外的来源。逐项依据见 [full_selection.json](full_selection.json)。每日构建按 profiles.json 的明确选源重下载，来源失败时保留全量版旧文件；新来源需核验后加入配置。
+
+## 来源重整与兼容性边界
+
+2026-10-01 根据用户提供的链接、已核实原仓库 DNS 发布文件和此前维护来源，共完整检查 93 个候选文件。65 个通过当前解析器及 AdGuard 官方 DNS 引擎检查；最终选用 60 个来源生成 33 个独立订阅。代理地址与原地址不重复入源，Dan Pollock 的两种 hosts 版本择一。
+
+`reviewed_sources.json` 保存人工核实的来源与用途，`refresh_source_registry.py` 使用与每日构建相同的下载完整性检查、例外处理与官方引擎重新核验，避免调查目录与实际构建采用不同的兼容标准。
+
+乘风、ADgk、EasyList 等浏览器列表含无法在 DNS 中保留的网络放行条件，整份排除；AdGuard DNS 源的 badfilter 暂未实现安全组合，也保留排除记录。HaGeZi TIF 超过当前单来源 32 MiB 上限。完整失败原因见 [来源登记](README.md)，这些排除不表示上游规则本身无效。
+
+GOODBYEADS DNS 和 blackmatrix7 Advertising 等来源纳入全量版；中文 README 本身不作为国内优化依据。hululu1068 的 mylist 虽可解析，但属于内部混合修正组件，没有作为通用黑名单或纯白名单自动叠加。

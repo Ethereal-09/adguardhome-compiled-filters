@@ -1,7 +1,7 @@
 ! Title: 推广跳转放行（Native）
-! Updated: 2026-09-30T20:58:06+00:00
+! Updated: 2026-10-01T14:04:10+00:00
 ! Expires: 1 day
-! Rules: 1609
+! Rules: 1611
 ! Maintainer merges only; upstream rules belong to their authors.
 ! DNS masks/regex preserved; exact Hosts scope and source exception priority retained.
 ! Upstream licenses and notices: ../upstream/README.md (in the original repository).
@@ -739,6 +739,7 @@
 @@||m-fucdf.custobar.com^
 @@||m-gs5w6.custobar.com^
 @@||m-gzmk5.custobar.com^
+@@||m-hbr.custobar.com^
 @@||m-hju7x.custobar.com^
 @@||m-htgjb.custobar.com^
 @@||m-irfsz.custobar.com^
@@ -880,6 +881,7 @@
 @@||mkto-ab480166.com^
 @@||mkto-ab500022.com^
 @@||mkto-ab520004.com^
+@@||mkto-ab530057.com^
 @@||mkto-ab530192.com^
 @@||mkto-ab540143.com^
 @@||mkto-ab550041.com^
@@ -1072,6 +1074,7 @@
 @@||myplumber.co^
 @@||n.rich^
 @@||ndirect.ppro.de^
+@@||neoengage-va-cdn.exponea.com^
 @@||netbet.gr^
 @@||netbet.livepartners.com^
 @@||netbetfr.livepartners.com^
@@ -1239,7 +1242,6 @@
 @@||shopnearme.us^
 @@||short.cm^
 @@||short.io^
-@@||sites.hscoscdn-ap1.net^
 @@||sites.hscoscdn-eu1.net^
 @@||sites.hscoscdn-na2.net^
 @@||sites.hscoscdn00.net^

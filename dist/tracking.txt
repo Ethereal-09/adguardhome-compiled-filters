@@ -1,7 +1,7 @@
 ! Title: 跟踪与遥测分类
-! Updated: 2026-09-30T20:57:57+00:00
+! Updated: 2026-10-01T14:03:46+00:00
 ! Expires: 1 day
-! Rules: 133806
+! Rules: 133812
 ! Maintainer merges only; upstream rules belong to their authors.
 ! DNS masks/regex preserved; exact Hosts scope and source exception priority retained.
 ! Upstream licenses and notices: ../upstream/README.md (in the original repository).
@@ -11,6 +11,22 @@
 ! Source: crazy-max/WindowsSpyBlocker / spy.txt | https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt
 ! Repository: https://github.com/crazy-max/WindowsSpyBlocker | Account: crazy-max
 ! Upstream license: https://github.com/crazy-max/WindowsSpyBlocker/blob/master/LICENSE
+! Source: alexa | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/alexa
+! Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+! Source: apple | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/apple
+! Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+! Source: huawei | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/huawei
+! Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+! Source: roku | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/roku
+! Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+! Source: samsung | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/samsung
+! Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+! Source: sonos | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/sonos
+! Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+! Source: windows | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/windows
+! Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+! Source: xiaomi | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/xiaomi
+! Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
 |1oavsblobprodcus350.blob.core.windows.net|
 |37bvsblobprodcus311.blob.core.windows.net|
 |a.rad.msn.com|
@@ -159,6 +175,7 @@
 |cds857.lon.llnw.net|
 |cds868.lon.llnw.net|
 |cds869.lon.llnw.net|
+|choice.microsoft.com|
 |compatexchange1.trafficmanager.net|
 |corp.sts.microsoft.com|
 |corpext.msitadfs.glbdns2.microsoft.com|
@@ -252,12 +269,16 @@
 |ieonlinews.microsoft.com|
 |ieonlinews.trafficmanager.net|
 |insideruser.trafficmanager.net|
+|insights.samsung.com|
 |lb1.www.ms.akadns.net|
 |modern.watson.data.microsoft.com.akadns.net|
+|msmetrics-test.ws.sonos.com|
 |par02p.wns.windows.com|
 |presence.teams.live.com|
+|prod.nexusrules.live.com.akadns.net|
 |rad.msn.com|
 |romeccs.microsoft.com|
+|sa.api.intl.miui.com|
 |schemas.microsoft.akadns.net|
 |settings-sandbox.data.microsoft.com|
 |settings-win-ppe.data.microsoft.com|
@@ -271,6 +292,7 @@
 |uks.b.prd.ags.trafficmanager.net|
 |v10-win.vortex.data.microsoft.com.akadns.net|
 |vortex.data.glbdns2.microsoft.com|
+|vortex.data.microsoft.com.akadns.net|
 |win10.ipv6.microsoft.com|
 |win1710.ipv6.microsoft.com|
 |win8.ipv6.microsoft.com|

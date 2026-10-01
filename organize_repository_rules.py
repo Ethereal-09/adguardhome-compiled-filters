@@ -25,6 +25,8 @@ CATEGORIES = {
     'shortener_blocking': '短链接服务限制', 'dyndns_blocking': '动态 DNS 服务限制',
     'hosting_blocking': '托管服务限制', 'referral_allow': '推广/跳转链接放行',
     'shortener_allow': '短链接放行', 'unknown': '未明确用途',
+    'tld_blocking': '高滥用顶级域名限制', 'native_tracking': '设备原生遥测',
+    'compatibility': '浏览器兼容修复', 'compatibility_allow': '兼容放行',
 }
 STRENGTHS = {
     'unknown': '上游未明确分级', 'balanced': '均衡', 'extended': '扩展',
@@ -142,6 +144,10 @@ def describe(repo, path, evidence):
 
 
 def load_sources():
+    reviewed_path = ROOT / 'registry/reviewed_sources.json'
+    if reviewed_path.exists():
+        reviewed = json.loads(reviewed_path.read_text(encoding='utf-8'))
+        return reviewed['sources'], reviewed.get('unresolvedLinks', [])
     config = read('config.json')
     enabled = {s['url']: s.get('enabled', False) for s in config['sources']}
     items = {}
@@ -453,6 +459,10 @@ def write_reports(sources, findings, skipped):
 
 
 def main():
+    if (ROOT / 'registry/reviewed_sources.json').exists():
+        from refresh_source_registry import main as refresh_main
+        refresh_main()
+        return
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--skip-tree-scan', action='store_true', help='Reuse previous allowlist directory scan')
     args = parser.parse_args()

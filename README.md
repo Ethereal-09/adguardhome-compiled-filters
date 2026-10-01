@@ -9,9 +9,9 @@
 本项目仅获取、合并与去重上游规则，**规则由原作者及贡献者维护**。每天北京时间 **04:23** 自动构建，无需本机开机。
 
 <!-- build-status:start -->
-> 最近构建：**2026-10-01 15:47:33（北京时间）**
+> 最近构建：**2026-10-01 22:04:19（北京时间）**
 >
-> 状态：**成功，已通过发布校验** · 分类 30/30 · 来源：新下载 41，缓存 0，失败 0
+> 状态：**成功，已通过发布校验** · 分类 33/33 · 来源：新下载 60，缓存 0，失败 0
 <!-- build-status:end -->
 
 在 AdGuard Home 的 **过滤器** 中添加下方订阅。黑名单与白名单分别添加到对应页面；已有订阅会继续使用相同地址。
@@ -27,22 +27,24 @@
 
 | 规则 | 规则数 | 订阅 |
 | --- | ---: | --- |
-| 综合版 | 299,376 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/adguard.txt) |
-| 国内优化 | 196,600 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/china.txt) |
-| 全量版 | 1,960,684 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/full.txt) |
+| 综合版 | 308,701 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/adguard.txt) |
+| 国内优化 | 210,674 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/china.txt) |
+| 全量版 | 2,005,873 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/full.txt) |
 
-全量版合并 34 个兼容来源，含最高档位、设备与服务限制；各来源原生例外和个人规则保留。
+全量版合并 52 个兼容来源，含最高档位、设备与服务限制；各来源原生例外和个人规则保留。
+
+国内优化来源：AdRules DNS List、Anti-AD、adblockfilters / rules/adblockdnslite.txt。地域依据上游说明，规则文件独立合并与去重。
 
 ### 强度档位
 
-按需求选一个档位；1Hosts 为替代基础。综合版采用 HaGeZi Normal，并叠加 AdRules DNS 与 AWAvenue。
+按需求选一个档位；1Hosts 为替代基础。综合版以 HaGeZi Normal 为基础，叠加已核验的通用与国内 DNS 来源。
 
 | 规则 | 规则数 | 订阅 |
 | --- | ---: | --- |
-| HaGeZi 均衡 · Normal | 200,319 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/balanced.txt) |
-| HaGeZi 扩展 · Pro | 230,960 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/extended.txt) |
-| HaGeZi 激进 · Pro++ | 251,638 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/aggressive.txt) |
-| HaGeZi 最强 · Ultimate | 287,467 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/maximum.txt) |
+| HaGeZi 均衡 · Normal | 200,656 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/balanced.txt) |
+| HaGeZi 扩展 · Pro | 231,053 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/extended.txt) |
+| HaGeZi 激进 · Pro++ | 251,762 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/aggressive.txt) |
+| HaGeZi 最强 · Ultimate | 287,640 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/maximum.txt) |
 | 1Hosts 均衡 · Lite | 102,241 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/balanced-1hosts.txt) |
 | 1Hosts 激进 · Xtra | 786,132 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/aggressive-1hosts.txt) |
 
@@ -53,15 +55,17 @@
 | 规则 | 规则数 | 订阅 |
 | --- | ---: | --- |
 | 广告分类 | 143,763 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/ads.txt) |
-| 跟踪与遥测分类 | 133,806 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/tracking.txt) |
+| 跟踪与遥测分类 | 133,812 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/tracking.txt) |
 | 安全分类（威胁与诈骗等） | 654,800 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/security.txt) |
 | 恶意网站分类 | 9 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/malware.txt) |
 | 诈骗分类 | 157,609 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/scam.txt) |
 | 勒索软件分类 | 1,903 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/ransomware.txt) |
-| 挖矿分类 | 1,268 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mining.txt) |
+| 挖矿分类 | 1,524 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mining.txt) |
 | 电视分类 | 160 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/smart-tv.txt) |
 | 游戏机分类 | 14 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/game-console.txt) |
-| Windows 遥测组件 | 347 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/windows.txt) |
+| Windows 遥测组件 | 355 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/windows.txt) |
+| 设备原生遥测 | 98 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/native-tracking.txt) |
+| 钓鱼网站分类 | 118,066 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/phishing.txt) |
 
 ### 设备与服务限制
 
@@ -74,9 +78,10 @@
 | Spotify 域名拦截组件 | 3,780 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/spotify.txt) |
 | YouTube 域名拦截组件 | 97,591 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/youtube.txt) |
 | 社交平台限制组件 | 3,995 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/social.txt) |
-| 短链接服务限制组件 | 9,982 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/shorteners.txt) |
+| 短链接服务限制组件 | 9,981 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/shorteners.txt) |
 | 动态 DNS 服务限制组件 | 1,538 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/dyndns.txt) |
 | 托管服务限制组件 | 1,238 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/hosting.txt) |
+| 高滥用顶级域名限制 | 281 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/tld-restrictions.txt) |
 
 ### 独立白名单
 
@@ -85,8 +90,8 @@
 | 规则 | 规则数 | 订阅 |
 | --- | ---: | --- |
 | 推广跳转放行 | 930 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/allow-referral.txt) |
-| 推广跳转放行（Native） | 1,609 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/allow-referral-native.txt) |
-| 短链接放行 | 9,975 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/allow-shorteners.txt) |
+| 推广跳转放行（Native） | 1,611 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/allow-referral-native.txt) |
+| 短链接放行 | 9,974 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/allow-shorteners.txt) |
 <!-- subscriptions:end -->
 
 DNS 过滤无法区分同一域名内的广告与正常内容，实际误杀需根据使用情况调整。
@@ -94,21 +99,25 @@ DNS 过滤无法区分同一域名内的广告与正常内容，实际误杀需�
 ## 上游来源与署名
 
 <!-- upstream:start -->
-当前选用 **41 个来源文件**，来自 **17 个 GitHub 原仓库**。
+当前选用 **60 个来源文件**，来自 **25 个 GitHub 原仓库**及 **2 个官方站点**。
 
 <details>
 <summary>查看来源维护账号、原始订阅与规则数量</summary>
 
 下表使用本次发布所选来源的支持条目数，含来源自身的放行例外，尚未做跨来源合并。仓库所属账号不代表全部原创作者，原作者及间接来源以各上游说明为准。
 
-| 维护账号 / 原仓库 | 原始规则文件 | 支持规则数 |
+| 维护账号 / 原始项目 | 原始规则文件 | 支持规则数 |
 | --- | --- | ---: |
+| [217heidai/adblockfilters](https://github.com/217heidai/adblockfilters) | [rules/adblockdns.txt](https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdns.txt) | 216,067 |
+| [217heidai/adblockfilters](https://github.com/217heidai/adblockfilters) | [rules/adblockdnslite.txt](https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt) | 5,376 |
+| [8680/GOODBYEADS](https://github.com/8680/GOODBYEADS) | [data/rules/dns.txt](https://raw.githubusercontent.com/8680/GOODBYEADS/master/data/rules/dns.txt) | 113,593 |
 | [AdAway/adaway.github.io](https://github.com/AdAway/adaway.github.io) | [hosts.txt](https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt) | 6,540 |
 | [AdguardTeam/AdguardFilters](https://github.com/AdguardTeam/AdguardFilters) | [MobileFilter/sections/adservers.txt](https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/adservers.txt) | 951 |
 | [anudeepND/blacklist](https://github.com/anudeepND/blacklist) | [adservers.txt](https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt) | 42,343 |
 | [anudeepND/blacklist](https://github.com/anudeepND/blacklist) | [facebook.txt](https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt) | 3,995 |
 | [badmojr/1Hosts](https://github.com/badmojr/1Hosts) | [Lite/adblock.txt](https://raw.githubusercontent.com/badmojr/1Hosts/master/Lite/adblock.txt) | 102,241 |
 | [badmojr/1Hosts](https://github.com/badmojr/1Hosts) | [Xtra/adblock.txt](https://raw.githubusercontent.com/badmojr/1Hosts/master/Xtra/adblock.txt) | 786,132 |
+| [blackmatrix7/ios_rule_script](https://github.com/blackmatrix7/ios_rule_script) | [rule/AdGuard/Advertising/Advertising.txt](https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/AdGuard/Advertising/Advertising.txt) | 280,210 |
 | [blocklistproject/Lists](https://github.com/blocklistproject/Lists) | [adguard/abuse-ags.txt](https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/abuse-ags.txt) | 435,051 |
 | [blocklistproject/Lists](https://github.com/blocklistproject/Lists) | [adguard/ads-ags.txt](https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/ads-ags.txt) | 233,991 |
 | [blocklistproject/Lists](https://github.com/blocklistproject/Lists) | [adguard/crypto-ags.txt](https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/crypto-ags.txt) | 1,272 |
@@ -119,20 +128,22 @@ DNS 过滤无法区分同一域名内的广告与正常内容，实际误杀需�
 | [blocklistproject/Lists](https://github.com/blocklistproject/Lists) | [adguard/scam-ags.txt](https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/scam-ags.txt) | 8,527 |
 | [blocklistproject/Lists](https://github.com/blocklistproject/Lists) | [adguard/smart-tv-ags.txt](https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/smart-tv-ags.txt) | 77 |
 | [blocklistproject/Lists](https://github.com/blocklistproject/Lists) | [adguard/tracking-ags.txt](https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/tracking-ags.txt) | 143,866 |
-| [Cats-Team/AdRules](https://github.com/Cats-Team/AdRules) | [dns.txt](https://raw.githubusercontent.com/Cats-Team/AdRules/main/dns.txt) | 196,600 |
+| [Cats-Team/AdRules](https://github.com/Cats-Team/AdRules) | [dns.txt](https://raw.githubusercontent.com/Cats-Team/AdRules/main/dns.txt) | 196,737 |
 | [crazy-max/WindowsSpyBlocker](https://github.com/crazy-max/WindowsSpyBlocker) | [data/hosts/spy.txt](https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt) | 347 |
 | [DandelionSprout/adfilt](https://github.com/DandelionSprout/adfilt) | [GameConsoleAdblockList.txt](https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GameConsoleAdblockList.txt) | 14 |
 | [durablenapkin/scamblocklist](https://github.com/durablenapkin/scamblocklist) | [adguard.txt](https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt) | 957 |
 | [hagezi/dns-blocklists](https://github.com/hagezi/dns-blocklists) | [adblock/dyndns.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/dyndns.txt) | 1,538 |
 | [hagezi/dns-blocklists](https://github.com/hagezi/dns-blocklists) | [adblock/hoster.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/hoster.txt) | 1,238 |
-| [hagezi/dns-blocklists](https://github.com/hagezi/dns-blocklists) | [adblock/multi.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/multi.txt) | 200,319 |
-| [hagezi/dns-blocklists](https://github.com/hagezi/dns-blocklists) | [adblock/pro.plus.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.plus.txt) | 251,638 |
-| [hagezi/dns-blocklists](https://github.com/hagezi/dns-blocklists) | [adblock/pro.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt) | 230,960 |
-| [hagezi/dns-blocklists](https://github.com/hagezi/dns-blocklists) | [adblock/ultimate.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/ultimate.txt) | 287,467 |
-| [hagezi/dns-blocklists](https://github.com/hagezi/dns-blocklists) | [adblock/urlshortener.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/urlshortener.txt) | 9,982 |
-| [hagezi/dns-blocklists](https://github.com/hagezi/dns-blocklists) | [adblock/whitelist-referral-native.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/whitelist-referral-native.txt) | 1,609 |
+| [hagezi/dns-blocklists](https://github.com/hagezi/dns-blocklists) | [adblock/multi.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/multi.txt) | 200,656 |
+| [hagezi/dns-blocklists](https://github.com/hagezi/dns-blocklists) | [adblock/pro.plus.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.plus.txt) | 251,762 |
+| [hagezi/dns-blocklists](https://github.com/hagezi/dns-blocklists) | [adblock/pro.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/pro.txt) | 231,053 |
+| [hagezi/dns-blocklists](https://github.com/hagezi/dns-blocklists) | [adblock/spam-tlds.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/spam-tlds.txt) | 281 |
+| [hagezi/dns-blocklists](https://github.com/hagezi/dns-blocklists) | [adblock/ultimate.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/ultimate.txt) | 287,640 |
+| [hagezi/dns-blocklists](https://github.com/hagezi/dns-blocklists) | [adblock/urlshortener.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/urlshortener.txt) | 9,981 |
+| [hagezi/dns-blocklists](https://github.com/hagezi/dns-blocklists) | [adblock/whitelist-referral-native.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/whitelist-referral-native.txt) | 1,611 |
 | [hagezi/dns-blocklists](https://github.com/hagezi/dns-blocklists) | [adblock/whitelist-referral.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/whitelist-referral.txt) | 936 |
-| [hagezi/dns-blocklists](https://github.com/hagezi/dns-blocklists) | [adblock/whitelist-urlshortener.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/whitelist-urlshortener.txt) | 9,975 |
+| [hagezi/dns-blocklists](https://github.com/hagezi/dns-blocklists) | [adblock/whitelist-urlshortener.txt](https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/whitelist-urlshortener.txt) | 9,974 |
+| [hoshsadiq/adblock-nocoin-list](https://github.com/hoshsadiq/adblock-nocoin-list) | [hosts.txt](https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt) | 312 |
 | [jdlingyu/ad-wars](https://github.com/jdlingyu/ad-wars) | [hosts](https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts) | 1,645 |
 | [jerryn70/GoodbyeAds](https://github.com/jerryn70/GoodbyeAds) | [Extension/GoodbyeAds-Samsung-AdBlock.txt](https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Samsung-AdBlock.txt) | 101 |
 | [jerryn70/GoodbyeAds](https://github.com/jerryn70/GoodbyeAds) | [Extension/GoodbyeAds-Spotify-AdBlock.txt](https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Spotify-AdBlock.txt) | 3,780 |
@@ -140,10 +151,23 @@ DNS 过滤无法区分同一域名内的广告与正常内容，实际误杀需�
 | [jerryn70/GoodbyeAds](https://github.com/jerryn70/GoodbyeAds) | [Formats/GoodbyeAds-AdBlock-Filter.txt](https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Formats/GoodbyeAds-AdBlock-Filter.txt) | 277,714 |
 | [jerryn70/GoodbyeAds](https://github.com/jerryn70/GoodbyeAds) | [Formats/GoodbyeAds-YouTube-AdBlock-Filter.txt](https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Formats/GoodbyeAds-YouTube-AdBlock-Filter.txt) | 97,645 |
 | [mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites](https://github.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites) | [hacked-domains.list](https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list) | 9 |
+| [nextdns/native-tracking-domains](https://github.com/nextdns/native-tracking-domains) | [domains/alexa](https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/alexa) | 3 |
+| [nextdns/native-tracking-domains](https://github.com/nextdns/native-tracking-domains) | [domains/apple](https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/apple) | 19 |
+| [nextdns/native-tracking-domains](https://github.com/nextdns/native-tracking-domains) | [domains/huawei](https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/huawei) | 37 |
+| [nextdns/native-tracking-domains](https://github.com/nextdns/native-tracking-domains) | [domains/roku](https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/roku) | 1 |
+| [nextdns/native-tracking-domains](https://github.com/nextdns/native-tracking-domains) | [domains/samsung](https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/samsung) | 4 |
+| [nextdns/native-tracking-domains](https://github.com/nextdns/native-tracking-domains) | [domains/sonos](https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/sonos) | 2 |
+| [nextdns/native-tracking-domains](https://github.com/nextdns/native-tracking-domains) | [domains/windows](https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/windows) | 23 |
+| [nextdns/native-tracking-domains](https://github.com/nextdns/native-tracking-domains) | [domains/xiaomi](https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/xiaomi) | 9 |
 | [Perflyst/PiHoleBlocklist](https://github.com/Perflyst/PiHoleBlocklist) | [SmartTV-AGH.txt](https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV-AGH.txt) | 154 |
+| [privacy-protection-tools/anti-AD](https://github.com/privacy-protection-tools/anti-AD) | [anti-ad-easylist.txt](https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-easylist.txt) | 93,230 |
+| [sjhgvr/oisd](https://github.com/sjhgvr/oisd) | [abp_small.txt](https://raw.githubusercontent.com/sjhgvr/oisd/main/abp_small.txt) | 57,297 |
 | [Spam404/lists](https://github.com/Spam404/lists) | [main-blacklist.txt](https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt) | 8,140 |
 | [StevenBlack/hosts](https://github.com/StevenBlack/hosts) | [hosts](https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts) | 74,759 |
 | [TG-Twilight/AWAvenue-Ads-Rule](https://github.com/TG-Twilight/AWAvenue-Ads-Rule) | [AWAvenue-Ads-Rule.txt](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt) | 962 |
+| [uBlockOrigin/uAssets](https://github.com/uBlockOrigin/uAssets) | [filters/resource-abuse.txt](https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt) | 1 |
+| [Peter Lowe](https://pgl.yoyo.org/adservers/) | [adservers/serverlist.php](https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblockplus&showintro=1&mimetype=plaintext) | 3,552 |
+| [Dan Pollock](https://someonewhocares.org/hosts/) | [hosts/zero/hosts](https://someonewhocares.org/hosts/zero/hosts) | 13,082 |
 
 </details>
 
@@ -157,7 +181,7 @@ DNS 过滤无法区分同一域名内的广告与正常内容，实际误杀需�
 <details>
 <summary>配置、个人规则与本地运行</summary>
 
-- **选源与分类**：[profiles.json](profiles.json)；依据见 [分类说明](registry/CLASSIFICATION.md) 和 [全量选源清单](registry/full_selection.json)。新增来源须核实原仓库及真实文件路径。
+- **选源与分类**：[profiles.json](profiles.json)；依据见 [分类说明](registry/CLASSIFICATION.md) 和 [全量选源清单](registry/full_selection.json)。新增来源先登记到 [核实来源](registry/reviewed_sources.json)，再运行 `refresh_source_registry.py --validator <验证器路径>` 检查完整规则。
 - **个人规则**：[block.txt](custom/block.txt) / [allow.txt](custom/allow.txt)，默认作用于综合版、全量版；个人放行附加 `important`。
 - **合并与去重**：每个订阅独立处理，分类之间允许重复。只拦截子域名不会扩大到父域名；覆盖优化仅移除已被现有同动作、同优先级规则覆盖的条目，可用 `coverageOptimization: false` 关闭。
 - **原生例外**：黑名单携带所选上游自身的放行例外；合并后的例外可能影响其他来源。独立白名单仍按用途单独订阅。

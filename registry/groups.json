@@ -6,14 +6,11 @@
       "name": "广告",
       "axis": "type",
       "sourceIds": [
-        "adguardteam-filtersregistry-filters-filter-224-chinese-filter-txt-4987b98a",
         "adguardteam-adguardfilters-mobilefilter-sections-adservers-txt-81ac67be",
         "cats-team-adrules-dns-txt-35998f0f",
-        "damengzhu-banad-jiekouad-txt-91a5eb50",
         "tg-twilight-awavenue-ads-rule-awavenue-ads-rule-txt-594187e3",
         "hagezi-dns-blocklists-adblock-pro-mini-txt-20bb6b45",
         "stevenblack-hosts-hosts-603e776c",
-        "banbendalao-adgk-adgk-txt-c99347f4",
         "jdlingyu-ad-wars-hosts-eb100586",
         "adaway-adaway-github-io-hosts-txt-66566edd",
         "hagezi-dns-blocklists-adblock-ultimate-txt-bc290ebd",
@@ -25,7 +22,17 @@
         "blocklistproject-lists-adguard-ads-ags-txt-21a38910",
         "anudeepnd-blacklist-adservers-txt-e413d034",
         "jerryn70-goodbyeads-hosts-goodbyeads-txt-882683a5",
-        "jerryn70-goodbyeads-formats-goodbyeads-adblock-filter-txt-d11c0acd"
+        "jerryn70-goodbyeads-formats-goodbyeads-adblock-filter-txt-d11c0acd",
+        "sjhgvr-oisd-abp-small-txt-50559e3d",
+        "privacy-protection-tools-anti-ad-anti-ad-easylist-txt-9b62e65d",
+        "blackmatrix7-ios-rule-script-rule-adguard-advertising-advertising-txt-4e4d7892",
+        "8680-goodbyeads-data-rules-dns-txt-8e7fb833",
+        "217heidai-adblockfilters-rules-adblockdns-txt-69af1a63",
+        "217heidai-adblockfilters-rules-adblockdnslite-txt-99bc0b64",
+        "hululu1068-adguard-rule-rule-mylist-txt-6681e919",
+        "https-someonewhocares-org-hosts-hosts-hosts-66ec9626",
+        "https-someonewhocares-org-hosts-hosts-zero-hosts-dfd8da19",
+        "https-pgl-yoyo-org-adservers-adservers-serverlist-php-f785075c"
       ],
       "status": "catalog_only",
       "strengthGuaranteed": false
@@ -49,7 +56,25 @@
         "anudeepnd-blacklist-adservers-txt-e413d034",
         "crazy-max-windowsspyblocker-data-hosts-spy-txt-a41d8da9",
         "jerryn70-goodbyeads-hosts-goodbyeads-txt-882683a5",
-        "jerryn70-goodbyeads-formats-goodbyeads-adblock-filter-txt-d11c0acd"
+        "jerryn70-goodbyeads-formats-goodbyeads-adblock-filter-txt-d11c0acd",
+        "sjhgvr-oisd-abp-small-txt-50559e3d",
+        "nextdns-native-tracking-domains-domains-alexa-21182066",
+        "nextdns-native-tracking-domains-domains-apple-ba5b2dca",
+        "nextdns-native-tracking-domains-domains-huawei-45cc6eb5",
+        "nextdns-native-tracking-domains-domains-roku-6edd436b",
+        "nextdns-native-tracking-domains-domains-samsung-4cda1df6",
+        "nextdns-native-tracking-domains-domains-sonos-0c721de8",
+        "nextdns-native-tracking-domains-domains-windows-e8dcf707",
+        "nextdns-native-tracking-domains-domains-xiaomi-02950f11",
+        "privacy-protection-tools-anti-ad-anti-ad-easylist-txt-9b62e65d",
+        "blackmatrix7-ios-rule-script-rule-adguard-advertising-advertising-txt-4e4d7892",
+        "8680-goodbyeads-data-rules-dns-txt-8e7fb833",
+        "217heidai-adblockfilters-rules-adblockdns-txt-69af1a63",
+        "217heidai-adblockfilters-rules-adblockdnslite-txt-99bc0b64",
+        "hululu1068-adguard-rule-rule-mylist-txt-6681e919",
+        "https-someonewhocares-org-hosts-hosts-hosts-66ec9626",
+        "https-someonewhocares-org-hosts-hosts-zero-hosts-dfd8da19",
+        "https-pgl-yoyo-org-adservers-adservers-serverlist-php-f785075c"
       ],
       "status": "catalog_only",
       "strengthGuaranteed": false
@@ -63,6 +88,7 @@
         "hagezi-dns-blocklists-adblock-pro-mini-txt-20bb6b45",
         "stevenblack-hosts-hosts-603e776c",
         "spam404-lists-main-blacklist-txt-694a44a4",
+        "mitchellkrogza-the-big-list-of-hacked-malware-web-sites-hacked-domains-list-5df168a2",
         "hagezi-dns-blocklists-adblock-ultimate-txt-bc290ebd",
         "hagezi-dns-blocklists-adblock-pro-plus-txt-7a87ce26",
         "hagezi-dns-blocklists-adblock-pro-txt-65c8e043",
@@ -73,17 +99,9 @@
         "blocklistproject-lists-adguard-redirect-ags-txt-6ece472c",
         "anudeepnd-blacklist-adservers-txt-e413d034",
         "jerryn70-goodbyeads-hosts-goodbyeads-txt-882683a5",
-        "jerryn70-goodbyeads-formats-goodbyeads-adblock-filter-txt-d11c0acd"
-      ],
-      "status": "catalog_only",
-      "strengthGuaranteed": false
-    },
-    {
-      "id": "type-malware",
-      "name": "恶意软件",
-      "axis": "type",
-      "sourceIds": [
-        "mitchellkrogza-the-big-list-of-hacked-malware-web-sites-hacked-domains-list-5df168a2"
+        "jerryn70-goodbyeads-formats-goodbyeads-adblock-filter-txt-d11c0acd",
+        "https-someonewhocares-org-hosts-hosts-hosts-66ec9626",
+        "https-someonewhocares-org-hosts-hosts-zero-hosts-dfd8da19"
       ],
       "status": "catalog_only",
       "strengthGuaranteed": false
@@ -125,28 +143,9 @@
       "name": "挖矿",
       "axis": "type",
       "sourceIds": [
-        "hoshsadiq-adblock-nocoin-list-nocoin-txt-1aa9d130",
-        "blocklistproject-lists-adguard-crypto-ags-txt-722f85ae"
-      ],
-      "status": "catalog_only",
-      "strengthGuaranteed": false
-    },
-    {
-      "id": "type-annoyance",
-      "name": "网页干扰",
-      "axis": "type",
-      "sourceIds": [
-        "cjx82630-cjxlist-cjx-annoyance-txt-d2386b6d"
-      ],
-      "status": "catalog_only",
-      "strengthGuaranteed": false
-    },
-    {
-      "id": "type-video",
-      "name": "视频场景",
-      "axis": "type",
-      "sourceIds": [
-        "xinggsf-adblock-plus-rule-mv-txt-b8142164"
+        "blocklistproject-lists-adguard-crypto-ags-txt-722f85ae",
+        "hoshsadiq-adblock-nocoin-list-hosts-txt-35b3f66b",
+        "ublockorigin-uassets-filters-resource-abuse-txt-f20d5302"
       ],
       "status": "catalog_only",
       "strengthGuaranteed": false
@@ -168,16 +167,6 @@
       "axis": "type",
       "sourceIds": [
         "dandelionsprout-adfilt-gameconsoleadblocklist-txt-2fd8cf2e"
-      ],
-      "status": "catalog_only",
-      "strengthGuaranteed": false
-    },
-    {
-      "id": "type-windows",
-      "name": "Windows",
-      "axis": "type",
-      "sourceIds": [
-        "crazy-max-windowsspyblocker-data-hosts-spy-txt-a41d8da9"
       ],
       "status": "catalog_only",
       "strengthGuaranteed": false
@@ -328,21 +317,15 @@
       "name": "上游未明确分级",
       "axis": "strength",
       "sourceIds": [
-        "adguardteam-filtersregistry-filters-filter-224-chinese-filter-txt-4987b98a",
         "adguardteam-adguardfilters-mobilefilter-sections-adservers-txt-81ac67be",
         "cats-team-adrules-dns-txt-35998f0f",
-        "cjx82630-cjxlist-cjx-annoyance-txt-d2386b6d",
-        "xinggsf-adblock-plus-rule-mv-txt-b8142164",
-        "damengzhu-banad-jiekouad-txt-91a5eb50",
         "tg-twilight-awavenue-ads-rule-awavenue-ads-rule-txt-594187e3",
         "stevenblack-hosts-hosts-603e776c",
-        "banbendalao-adgk-adgk-txt-c99347f4",
         "jdlingyu-ad-wars-hosts-eb100586",
         "adaway-adaway-github-io-hosts-txt-66566edd",
         "perflyst-piholeblocklist-smarttv-agh-txt-f3772bac",
         "durablenapkin-scamblocklist-adguard-txt-f27041d5",
         "dandelionsprout-adfilt-gameconsoleadblocklist-txt-2fd8cf2e",
-        "hoshsadiq-adblock-nocoin-list-nocoin-txt-1aa9d130",
         "spam404-lists-main-blacklist-txt-694a44a4",
         "mitchellkrogza-the-big-list-of-hacked-malware-web-sites-hacked-domains-list-5df168a2",
         "blocklistproject-lists-adguard-abuse-ags-txt-69397c3c",
@@ -364,7 +347,28 @@
         "jerryn70-goodbyeads-extension-goodbyeads-samsung-adblock-txt-10d171b5",
         "jerryn70-goodbyeads-extension-goodbyeads-spotify-adblock-txt-4a00db86",
         "jerryn70-goodbyeads-extension-goodbyeads-youtube-adblock-txt-84c5ae17",
-        "jerryn70-goodbyeads-formats-goodbyeads-youtube-adblock-filter-txt-992d6a26"
+        "jerryn70-goodbyeads-formats-goodbyeads-youtube-adblock-filter-txt-992d6a26",
+        "sjhgvr-oisd-abp-small-txt-50559e3d",
+        "nextdns-native-tracking-domains-domains-alexa-21182066",
+        "nextdns-native-tracking-domains-domains-apple-ba5b2dca",
+        "nextdns-native-tracking-domains-domains-huawei-45cc6eb5",
+        "nextdns-native-tracking-domains-domains-roku-6edd436b",
+        "nextdns-native-tracking-domains-domains-samsung-4cda1df6",
+        "nextdns-native-tracking-domains-domains-sonos-0c721de8",
+        "nextdns-native-tracking-domains-domains-windows-e8dcf707",
+        "nextdns-native-tracking-domains-domains-xiaomi-02950f11",
+        "privacy-protection-tools-anti-ad-anti-ad-easylist-txt-9b62e65d",
+        "hagezi-dns-blocklists-adblock-spam-tlds-txt-ee73a7e1",
+        "hoshsadiq-adblock-nocoin-list-hosts-txt-35b3f66b",
+        "blackmatrix7-ios-rule-script-rule-adguard-advertising-advertising-txt-4e4d7892",
+        "ublockorigin-uassets-filters-resource-abuse-txt-f20d5302",
+        "8680-goodbyeads-data-rules-dns-txt-8e7fb833",
+        "217heidai-adblockfilters-rules-adblockdns-txt-69af1a63",
+        "217heidai-adblockfilters-rules-adblockdnslite-txt-99bc0b64",
+        "hululu1068-adguard-rule-rule-mylist-txt-6681e919",
+        "https-someonewhocares-org-hosts-hosts-hosts-66ec9626",
+        "https-someonewhocares-org-hosts-hosts-zero-hosts-dfd8da19",
+        "https-pgl-yoyo-org-adservers-adservers-serverlist-php-f785075c"
       ],
       "status": "catalog_only"
     },
@@ -373,7 +377,9 @@
       "name": "中国国内优化（黑名单）",
       "axis": "region",
       "sourceIds": [
-        "cats-team-adrules-dns-txt-35998f0f"
+        "cats-team-adrules-dns-txt-35998f0f",
+        "privacy-protection-tools-anti-ad-anti-ad-easylist-txt-9b62e65d",
+        "217heidai-adblockfilters-rules-adblockdnslite-txt-99bc0b64"
       ],
       "status": "catalog_only",
       "strengthGuaranteed": false,

@@ -58,6 +58,20 @@ class ReadmeStatusTests(unittest.TestCase):
             self.assertIn(' | 3,300 |', text)
             self.assertNotIn('| 全量版 | 1,200 |', text)
 
+    def test_official_website_attribution_is_not_counted_as_a_github_repository(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = self.write_readme(Path(folder), with_publication=True)
+            publication = self.publication_fixture()
+            source = publication['registry']['sources'][0]
+            source.update(repository='https://lists.example/hosts/', repositoryAccount='Original Author',
+                          url='https://lists.example/hosts/block.txt')
+            publication['manifest']['sources']['a']['url'] = source['url']
+            update_readme(path, dict(checkedUtc='2026-10-01T00:00:00Z',status='success'),
+                          'success','success',**publication)
+            content=path.read_text(encoding='utf-8')
+            self.assertIn('**1 个 GitHub 原仓库**及 **1 个官方站点**',content)
+            self.assertIn('[Original Author](https://lists.example/hosts/)',content)
+
     def test_build_or_audit_failure_preserves_published_counts(self):
         with tempfile.TemporaryDirectory() as folder:
             path = self.write_readme(Path(folder), with_publication=True)

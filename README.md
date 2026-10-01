@@ -5,7 +5,9 @@
 [![自动更新](https://github.com/Ethereal-09/adguardhome-compiled-filters/actions/workflows/update.yml/badge.svg)](https://github.com/Ethereal-09/adguardhome-compiled-filters/actions/workflows/update.yml)
 
 <!-- build-status:start -->
-> 最近构建：等待下一次构建自动填写（北京时间）
+> 最近构建：**2026-10-01 08:38:44（北京时间）**
+>
+> 状态：**成功，已通过发布校验** · 分类 30/30 · 来源：新下载 39，缓存 0，失败 0
 <!-- build-status:end -->
 
 本项目仅获取、合并和去重上游规则，**规则由原作者及贡献者维护**。每天北京时间 **04:23** 由 GitHub Actions 自动构建，无需本机开机。

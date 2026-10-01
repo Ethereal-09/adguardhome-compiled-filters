@@ -72,7 +72,7 @@ jobs:
         with:
           path: .cache/sources
           key: dns-sources-${{ github.run_id }}-${{ github.run_attempt }}
-      - name: Update README build time and status
+      - name: Update README build status and validated rule counts
         id: readme
         if: always() && (steps.build.outcome == 'success' || steps.build.outcome == 'failure')
         env:

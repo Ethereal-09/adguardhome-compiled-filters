@@ -78,6 +78,27 @@ class RuleTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'header declares'):
                 app.fetch(response.url, 1, 1)
 
+    def test_entries_header_detects_incomplete_source_even_with_matching_http_length(self):
+        response = MagicMock()
+        response.__enter__.return_value = response
+        response.url = 'https://test.example/rules'
+        response.getcode.return_value = 200
+        for newline in (b'\n', b'\r\n'):
+            with self.subTest(newline=newline):
+                body = newline.join((b'! Entries: 1,000', b'||ads.example^', b'||partial'))
+                response.headers.get.return_value = str(len(body))
+                response.read.return_value = body
+                with patch.object(app, 'urlopen', return_value=response):
+                    with self.assertRaisesRegex(ValueError, 'header declares 1000'):
+                        app.fetch(response.url, 1, 1)
+
+        # The header counts raw entries, including unsupported DNS syntax.
+        body = b'! Entries: 3\n||ads.example^\n||invalid_name.example^\n@@||safe.example^\n'
+        response.headers.get.return_value = str(len(body))
+        response.read.return_value = body
+        with patch.object(app, 'urlopen', return_value=response):
+            self.assertEqual(app.fetch(response.url, 1, 1), body.decode())
+
 
 if __name__ == '__main__':
     unittest.main()

@@ -3,7 +3,7 @@
 共 23 个已确认规则仓库、51 个来源/版本，本次成功检查 51 个，失败 0 个。
 成功来源包含 41 个拦截列表、7 个含放行例外的混合列表、3 个独立白名单。
 
-另有 3 个已下载来源因数量异常或停更标记需要复核，不进入 groups.json 的订阅候选。包含失效来源和参考合并项目，共登记 29 个已知仓库。
+另有 1 个已下载来源因数量异常或停更标记需要复核，不进入 groups.json 的订阅候选。包含失效来源和参考合并项目，共登记 29 个已知仓库。
 
 范围为此前核验的 27 个订阅和新增的 21 个订阅，按 URL 去重，再补充本次从原仓库确认的独立白名单。不是穷举 GitHub 上全部规则项目。非 GitHub、失败和未支持来源另列于清单中。
 
@@ -121,8 +121,8 @@
 | [blocklistproject/Lists / abuse-ags.txt](https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/abuse-ags.txt) | 安全综合 | 上游未明确分级 | 435051 | 0 | 仅支持的 DNS 子集 | 可选择，待组合验证 | [黑](sources/blocklistproject-lists-adguard-abuse-ags-txt-69397c3c/blacklist.txt) / [白](sources/blocklistproject-lists-adguard-abuse-ags-txt-69397c3c/whitelist.txt) |
 | [blocklistproject/Lists / ads-ags.txt](https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/ads-ags.txt) | 广告 | 上游未明确分级 | 233991 | 0 | 仅支持的 DNS 子集 | 可选择，待组合验证 | [黑](sources/blocklistproject-lists-adguard-ads-ags-txt-21a38910/blacklist.txt) / [白](sources/blocklistproject-lists-adguard-ads-ags-txt-21a38910/whitelist.txt) |
 | [blocklistproject/Lists / crypto-ags.txt](https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/crypto-ags.txt) | 挖矿 | 上游未明确分级 | 1272 | 0 | 当前 DNS 语法可提取 | 可选择，待组合验证 | [黑](sources/blocklistproject-lists-adguard-crypto-ags-txt-722f85ae/blacklist.txt) / [白](sources/blocklistproject-lists-adguard-crypto-ags-txt-722f85ae/whitelist.txt) |
-| [blocklistproject/Lists / fraud-ags.txt](https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/fraud-ags.txt) | 诈骗 | 上游未明确分级 | 696 | 0 | 仅支持的 DNS 子集 | 需复核 | [黑](sources/blocklistproject-lists-adguard-fraud-ags-txt-859f4062/blacklist.txt) / [白](sources/blocklistproject-lists-adguard-fraud-ags-txt-859f4062/whitelist.txt) |
-| [blocklistproject/Lists / phishing-ags.txt](https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/phishing-ags.txt) | 钓鱼 | 上游未明确分级 | 103351 | 0 | 仅支持的 DNS 子集 | 需复核 | [黑](sources/blocklistproject-lists-adguard-phishing-ags-txt-6ab23539/blacklist.txt) / [白](sources/blocklistproject-lists-adguard-phishing-ags-txt-6ab23539/whitelist.txt) |
+| [blocklistproject/Lists / fraud-ags.txt](https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/fraud-ags.txt) | 诈骗 | 上游未明确分级 | 256184 | 0 | 仅支持的 DNS 子集 | 可选择，待组合验证 | [黑](sources/blocklistproject-lists-adguard-fraud-ags-txt-859f4062/blacklist.txt) / [白](sources/blocklistproject-lists-adguard-fraud-ags-txt-859f4062/whitelist.txt) |
+| [blocklistproject/Lists / phishing-ags.txt](https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/phishing-ags.txt) | 钓鱼 | 上游未明确分级 | 190191 | 0 | 仅支持的 DNS 子集 | 可选择，待组合验证 | [黑](sources/blocklistproject-lists-adguard-phishing-ags-txt-6ab23539/blacklist.txt) / [白](sources/blocklistproject-lists-adguard-phishing-ags-txt-6ab23539/whitelist.txt) |
 | [blocklistproject/Lists / ransomware-ags.txt](https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/ransomware-ags.txt) | 勒索软件 | 上游未明确分级 | 1904 | 0 | 当前 DNS 语法可提取 | 可选择，待组合验证 | [黑](sources/blocklistproject-lists-adguard-ransomware-ags-txt-8f253932/blacklist.txt) / [白](sources/blocklistproject-lists-adguard-ransomware-ags-txt-8f253932/whitelist.txt) |
 | [blocklistproject/Lists / redirect-ags.txt](https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/redirect-ags.txt) | 安全综合 | 上游未明确分级 | 108682 | 0 | 仅支持的 DNS 子集 | 可选择，待组合验证 | [黑](sources/blocklistproject-lists-adguard-redirect-ags-txt-6ece472c/blacklist.txt) / [白](sources/blocklistproject-lists-adguard-redirect-ags-txt-6ece472c/whitelist.txt) |
 | [blocklistproject/Lists / scam-ags.txt](https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/scam-ags.txt) | 诈骗 | 上游未明确分级 | 8527 | 0 | 当前 DNS 语法可提取 | 可选择，待组合验证 | [黑](sources/blocklistproject-lists-adguard-scam-ags-txt-521f7b7c/blacklist.txt) / [白](sources/blocklistproject-lists-adguard-scam-ags-txt-521f7b7c/whitelist.txt) |
@@ -250,8 +250,6 @@
 
 ## 失败与排除
 
-- [blocklistproject/Lists / fraud-ags.txt](https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/fraud-ags.txt): 支持条目从此前 256184 降为 696，下降超过 30%，暂不进入分类候选。
-- [blocklistproject/Lists / phishing-ags.txt](https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/phishing-ags.txt): 支持条目从此前 190191 降为 103351，下降超过 30%，暂不进入分类候选。
 - [anudeepND/blacklist / CoinMiner.txt](https://raw.githubusercontent.com/anudeepND/blacklist/master/CoinMiner.txt): 上游明确停止更新，保留历史整理，但默认不进入分类候选。
 
 此前非 GitHub、404、超出大小上限等未通过来源，保留在 sources.json 的 excludedSources，未参与本次规则提取。

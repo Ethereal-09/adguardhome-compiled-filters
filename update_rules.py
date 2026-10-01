@@ -96,13 +96,16 @@ def fetch(url: str, timeout: int, retries: int) -> str:
                 body = raw.decode('utf-8-sig')
             if not body.strip() or re.search(r'<\s*(?:!doctype\s+html|html|head|body)\b', body, re.I):
                 raise ValueError('Empty response or HTML instead of rules')
-            count = re.search(r'(?im)^![^\n]*\bCount:\s*([\d,]+)\s+rules!?', body[:4096])
-            if count:
-                declared = int(count[1].replace(',', ''))
+            headers = body[:4096]
+            counts = re.findall(r'(?im)^![^\n]*\bCount:\s*([\d,]+)\s+rules!?', headers)
+            counts += re.findall(r'(?im)^![ \t]*Entries:[ \t]*([\d,]+)[ \t]*\r?$', headers)
+            if counts:
                 active = sum(bool(line.strip()) and not line.strip().startswith(('!', '#', '[Adblock'))
                              for line in body.splitlines())
-                if active < declared * .98:
-                    raise ValueError(f'Truncated rule source: header declares {declared}, received {active} lines')
+                for count in counts:
+                    declared = int(count.replace(',', ''))
+                    if active < declared * .98:
+                        raise ValueError(f'Truncated rule source: header declares {declared}, received {active} lines')
             return body
         except Exception:
             if attempt == retries:

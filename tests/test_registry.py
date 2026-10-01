@@ -87,6 +87,22 @@ class RegistryTests(unittest.TestCase):
         self.assertFalse(source['eligibleForSubscription'])
         self.assertFalse(make_groups([source])['groups'])
 
+    def test_recovered_counts_clear_old_review_reason_but_keep_discontinued_exclusion(self):
+        source = dict(id='recovered', status='checked', categories=['scam'], strength={'value':'unknown'},
+                      previousSupportedRules=1000, dnsBlocks=5, dnsExceptions=0)
+        mark_eligibility(source)
+        self.assertIn('reviewReason', source)
+        source['dnsBlocks'] = 1000
+        mark_eligibility(source)
+        self.assertTrue(source['eligibleForSubscription'])
+        self.assertNotIn('reviewReason', source)
+        self.assertTrue(make_groups([source])['groups'])
+
+        source['lifecycle'] = 'discontinued_by_upstream'
+        mark_eligibility(source)
+        self.assertFalse(source['eligibleForSubscription'])
+        self.assertIn('停止更新', source['reviewReason'])
+
 
 if __name__ == '__main__':
     unittest.main()

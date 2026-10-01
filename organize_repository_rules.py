@@ -325,6 +325,7 @@ def mark_eligibility(source):
     source['eligibleForSubscription'] = source['status'] == 'checked'
     if source['status'] != 'checked':
         return
+    source.pop('reviewReason', None)
     previous = source.get('previousSupportedRules')
     current = source['dnsBlocks'] + source['dnsExceptions']
     if previous and current < previous * .7:

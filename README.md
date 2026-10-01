@@ -5,9 +5,9 @@
 [![自动更新](https://github.com/Ethereal-09/adguardhome-compiled-filters/actions/workflows/update.yml/badge.svg)](https://github.com/Ethereal-09/adguardhome-compiled-filters/actions/workflows/update.yml)
 
 <!-- build-status:start -->
-> 最近构建：**2026-10-01 08:38:44（北京时间）**
+> 最近构建：**2026-10-01 09:10:59（北京时间）**
 >
-> 状态：**成功，已通过发布校验** · 分类 30/30 · 来源：新下载 39，缓存 0，失败 0
+> 状态：**成功，已通过发布校验** · 分类 30/30 · 来源：新下载 41，缓存 0，失败 0
 <!-- build-status:end -->
 
 本项目仅获取、合并和去重上游规则，**规则由原作者及贡献者维护**。每天北京时间 **04:23** 由 GitHub Actions 自动构建，无需本机开机。
@@ -20,7 +20,7 @@
 | --- | --- | --- |
 | 综合版 | HaGeZi Normal ＋ AdRules DNS ＋ AWAvenue | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/adguard.txt) |
 | 国内优化 | 面向中国使用环境的 AdRules DNS | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/china.txt) |
-| 全量版 | 32 个已核验兼容来源，含最高档位及专项限制规则 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/full.txt) |
+| 全量版 | 34 个已核验兼容来源，含最高档位及专项限制规则 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/full.txt) |
 | 均衡 | HaGeZi Normal | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/balanced.txt) |
 | 扩展 | HaGeZi Pro | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/extended.txt) |
 | 激进 | HaGeZi Pro++ | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/aggressive.txt) |
@@ -34,7 +34,7 @@
 
 ## 上游与署名
 
-当前选用 39 个来源文件，来自 17 个 GitHub 原仓库。原始订阅地址写在每个规则文件头部，完整登记见 [sources.json](registry/sources.json)，[许可原文](upstream/README.md) 保留各上游的许可与署名要求。
+当前选用 41 个来源文件，来自 17 个 GitHub 原仓库。原始订阅地址写在每个规则文件头部，完整登记见 [sources.json](registry/sources.json)，[许可原文](upstream/README.md) 保留各上游的许可与署名要求。
 
 <details>
 <summary>查看上游仓库与维护账号</summary>

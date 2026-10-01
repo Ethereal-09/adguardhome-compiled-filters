@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "checkedUtc": "2026-09-30T19:07:21+00:00",
-  "candidateCount": 38,
+  "checkedUtc": "2026-10-01T01:07:39.555920+00:00",
+  "candidateCount": 40,
   "selectedSourceIds": [
     "adguardteam-adguardfilters-mobilefilter-sections-adservers-txt-81ac67be",
     "cats-team-adrules-dns-txt-35998f0f",
@@ -34,21 +34,11 @@
     "jerryn70-goodbyeads-extension-goodbyeads-xiaomi-extension-txt-2ab84d66",
     "jerryn70-goodbyeads-extension-goodbyeads-samsung-adblock-txt-10d171b5",
     "jerryn70-goodbyeads-extension-goodbyeads-spotify-adblock-txt-4a00db86",
-    "jerryn70-goodbyeads-formats-goodbyeads-youtube-adblock-filter-txt-992d6a26"
+    "jerryn70-goodbyeads-formats-goodbyeads-youtube-adblock-filter-txt-992d6a26",
+    "blocklistproject-lists-adguard-fraud-ags-txt-859f4062",
+    "blocklistproject-lists-adguard-phishing-ags-txt-6ab23539"
   ],
   "excludedSources": [
-    {
-      "id": "blocklistproject-lists-adguard-fraud-ags-txt-859f4062",
-      "name": "blocklistproject/Lists / fraud-ags.txt",
-      "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/fraud-ags.txt",
-      "reason": "支持条目从此前 256184 降为 696，下降超过 30%，暂不进入分类候选。"
-    },
-    {
-      "id": "blocklistproject-lists-adguard-phishing-ags-txt-6ab23539",
-      "name": "blocklistproject/Lists / phishing-ags.txt",
-      "url": "https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/phishing-ags.txt",
-      "reason": "支持条目从此前 190191 降为 103351，下降超过 30%，暂不进入分类候选。"
-    },
     {
       "id": "anudeepnd-blacklist-coinminer-txt-61cc5905",
       "name": "anudeepND/blacklist / CoinMiner.txt",
@@ -380,6 +370,44 @@
       "unsupported": 117,
       "evidence": "download_and_strict_parse",
       "checkedUtc": "2026-09-30T19:07:19+00:00"
+    },
+    "blocklistproject-lists-adguard-fraud-ags-txt-859f4062": {
+      "status": "compatible",
+      "accepted": 256184,
+      "unsupported": 84,
+      "evidence": "download_git_blob_and_official_engine_validation",
+      "checkedUtc": "2026-10-01T01:07:33.661677+00:00",
+      "integrityVerification": {
+        "checkedUtc": "2026-10-01T01:07:33.661677+00:00",
+        "commit": "ee3bdbaddf49c756cf3340bb2e6a9dee5282d1c6",
+        "gitBlobSha": "a14f742f15877ec32e95a9dc218887caab92168b",
+        "bytes": 6426801,
+        "githubBytes": 6426801,
+        "bodySha256": "82eefd71f6b2b7e17be6a9816b180f0f77786b5c1f33fb995c43149de08e3932",
+        "evidenceUrl": "https://github.com/blocklistproject/Lists/blob/ee3bdbaddf49c756cf3340bb2e6a9dee5282d1c6/adguard/fraud-ags.txt",
+        "declaredEntries": 256268,
+        "previousIncompleteSupportedRules": 696,
+        "validatedEngine": "AdguardTeam/urlfilter v0.23.4"
+      }
+    },
+    "blocklistproject-lists-adguard-phishing-ags-txt-6ab23539": {
+      "status": "compatible",
+      "accepted": 190191,
+      "unsupported": 24,
+      "evidence": "download_git_blob_and_official_engine_validation",
+      "checkedUtc": "2026-10-01T01:07:38.287953+00:00",
+      "integrityVerification": {
+        "checkedUtc": "2026-10-01T01:07:38.287953+00:00",
+        "commit": "ee3bdbaddf49c756cf3340bb2e6a9dee5282d1c6",
+        "gitBlobSha": "012ba4519e03f2024bace17624531c46edc131d8",
+        "bytes": 4735063,
+        "githubBytes": 4735063,
+        "bodySha256": "6685471d19e17ede55bafa5184b8bb81eac09fdb6826f27dbaff736373dffdd4",
+        "evidenceUrl": "https://github.com/blocklistproject/Lists/blob/ee3bdbaddf49c756cf3340bb2e6a9dee5282d1c6/adguard/phishing-ags.txt",
+        "declaredEntries": 190215,
+        "previousIncompleteSupportedRules": 103351,
+        "validatedEngine": "AdguardTeam/urlfilter v0.23.4"
+      }
     }
   },
   "policy": [

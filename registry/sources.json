@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedUtc": "2026-09-30T18:26:27.575375+00:00",
+  "generatedUtc": "2026-10-01T01:07:39.544567+00:00",
   "summary": {
     "repositories": 23,
     "sources": 51,
@@ -9,9 +9,9 @@
     "independentAllowlists": 3,
     "mixedFilters": 7,
     "blocklists": 41,
-    "needsReview": 3,
+    "needsReview": 1,
     "sourceRuleTotals": {
-      "black": 4079726,
+      "black": 4422054,
       "white": 12504
     },
     "knownRepositoriesIncludingReferences": 29
@@ -1974,17 +1974,19 @@
       "lifecycle": "not_assessed",
       "categoryEvidence": "https://github.com/blocklistproject/Lists#readme",
       "status": "checked",
-      "checkedUtc": "2026-09-30T17:17:30.404062+00:00",
-      "bodySha256": "1e09f33479f833bd73918605d4dc36363af394c779967a7a31128ecef145f340",
+      "checkedUtc": "2026-10-01T01:07:33.661677+00:00",
+      "bodySha256": "82eefd71f6b2b7e17be6a9816b180f0f77786b5c1f33fb995c43149de08e3932",
       "rawCounts": {
-        "blockingOrOtherLines": 697,
-        "adblockLines": 697
+        "blockingOrOtherLines": 256268,
+        "adblockLines": 256268
       },
-      "dnsBlocks": 696,
+      "dnsBlocks": 256184,
       "dnsExceptions": 0,
-      "unsupported": 1,
+      "unsupported": 84,
       "unsupportedExamples": [
-        "||1lkmc"
+        "||sms_aktiv.deer.io^",
+        "||webui_34785312.hookupss.com^",
+        "||www.norma_jbaker.brands.brandcollections.ru^"
       ],
       "outputs": {
         "blacklist": "sources/blocklistproject-lists-adguard-fraud-ags-txt-859f4062/blacklist.txt",
@@ -1993,15 +1995,26 @@
       "compatibility": "dns_subset",
       "kind": "blocklist",
       "previousSupportedRules": 256184,
-      "eligibleForSubscription": false,
-      "reviewReason": "支持条目从此前 256184 降为 696，下降超过 30%，暂不进入分类候选。",
+      "eligibleForSubscription": true,
       "regionalFocus": {
         "value": "unknown",
         "basis": "not_assessed",
         "evidenceUrl": null
       },
       "licenseEvidenceUrl": "https://github.com/blocklistproject/Lists/blob/main/LICENSE",
-      "licenseSnapshot": "upstream/blocklistproject--Lists--LICENSE"
+      "licenseSnapshot": "upstream/blocklistproject--Lists--LICENSE",
+      "integrityVerification": {
+        "checkedUtc": "2026-10-01T01:07:33.661677+00:00",
+        "commit": "ee3bdbaddf49c756cf3340bb2e6a9dee5282d1c6",
+        "gitBlobSha": "a14f742f15877ec32e95a9dc218887caab92168b",
+        "bytes": 6426801,
+        "githubBytes": 6426801,
+        "bodySha256": "82eefd71f6b2b7e17be6a9816b180f0f77786b5c1f33fb995c43149de08e3932",
+        "evidenceUrl": "https://github.com/blocklistproject/Lists/blob/ee3bdbaddf49c756cf3340bb2e6a9dee5282d1c6/adguard/fraud-ags.txt",
+        "declaredEntries": 256268,
+        "previousIncompleteSupportedRules": 696,
+        "validatedEngine": "AdguardTeam/urlfilter v0.23.4"
+      }
     },
     {
       "id": "blocklistproject-lists-adguard-phishing-ags-txt-6ab23539",
@@ -2030,15 +2043,15 @@
       "lifecycle": "not_assessed",
       "categoryEvidence": "https://github.com/blocklistproject/Lists#readme",
       "status": "checked",
-      "checkedUtc": "2026-09-30T17:21:59.826117+00:00",
-      "bodySha256": "e7068468d4516b855d0a723b3d4526343548401e9d4dc3627528992ac05aea1c",
+      "checkedUtc": "2026-10-01T01:07:38.287953+00:00",
+      "bodySha256": "6685471d19e17ede55bafa5184b8bb81eac09fdb6826f27dbaff736373dffdd4",
       "rawCounts": {
-        "blockingOrOtherLines": 103365,
-        "adblockLines": 103365
+        "blockingOrOtherLines": 190215,
+        "adblockLines": 190215
       },
-      "dnsBlocks": 103351,
+      "dnsBlocks": 190191,
       "dnsExceptions": 0,
-      "unsupported": 14,
+      "unsupported": 24,
       "unsupportedExamples": [
         "||324814-de-nutzung-angabe-konto_identity.transaktionssicherheit.bid^",
         "||574835-de-prob-kenntnis-konto_identity.hilfeservice-personal.cf^",
@@ -2051,15 +2064,26 @@
       "compatibility": "dns_subset",
       "kind": "blocklist",
       "previousSupportedRules": 190191,
-      "eligibleForSubscription": false,
-      "reviewReason": "支持条目从此前 190191 降为 103351，下降超过 30%，暂不进入分类候选。",
+      "eligibleForSubscription": true,
       "regionalFocus": {
         "value": "unknown",
         "basis": "not_assessed",
         "evidenceUrl": null
       },
       "licenseEvidenceUrl": "https://github.com/blocklistproject/Lists/blob/main/LICENSE",
-      "licenseSnapshot": "upstream/blocklistproject--Lists--LICENSE"
+      "licenseSnapshot": "upstream/blocklistproject--Lists--LICENSE",
+      "integrityVerification": {
+        "checkedUtc": "2026-10-01T01:07:38.287953+00:00",
+        "commit": "ee3bdbaddf49c756cf3340bb2e6a9dee5282d1c6",
+        "gitBlobSha": "012ba4519e03f2024bace17624531c46edc131d8",
+        "bytes": 4735063,
+        "githubBytes": 4735063,
+        "bodySha256": "6685471d19e17ede55bafa5184b8bb81eac09fdb6826f27dbaff736373dffdd4",
+        "evidenceUrl": "https://github.com/blocklistproject/Lists/blob/ee3bdbaddf49c756cf3340bb2e6a9dee5282d1c6/adguard/phishing-ags.txt",
+        "declaredEntries": 190215,
+        "previousIncompleteSupportedRules": 103351,
+        "validatedEngine": "AdguardTeam/urlfilter v0.23.4"
+      }
     },
     {
       "id": "blocklistproject-lists-adguard-ransomware-ags-txt-8f253932",
@@ -2497,14 +2521,14 @@
       "kind": "blocklist",
       "previousSupportedRules": 5830,
       "eligibleForSubscription": false,
-      "reviewReason": "上游明确停止更新，保留历史整理，但默认不进入分类候选。",
       "regionalFocus": {
         "value": "unknown",
         "basis": "not_assessed",
         "evidenceUrl": null
       },
       "licenseEvidenceUrl": "https://github.com/anudeepND/blacklist/blob/master/LICENSE",
-      "licenseSnapshot": "upstream/anudeepND--blacklist--LICENSE"
+      "licenseSnapshot": "upstream/anudeepND--blacklist--LICENSE",
+      "reviewReason": "上游明确停止更新，保留历史整理，但默认不进入分类候选。"
     },
     {
       "id": "crazy-max-windowsspyblocker-data-hosts-spy-txt-a41d8da9",

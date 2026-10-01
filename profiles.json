@@ -62,7 +62,9 @@
         "jerryn70-goodbyeads-extension-goodbyeads-xiaomi-extension-txt-2ab84d66",
         "jerryn70-goodbyeads-extension-goodbyeads-samsung-adblock-txt-10d171b5",
         "jerryn70-goodbyeads-extension-goodbyeads-spotify-adblock-txt-4a00db86",
-        "jerryn70-goodbyeads-formats-goodbyeads-youtube-adblock-filter-txt-992d6a26"
+        "jerryn70-goodbyeads-formats-goodbyeads-youtube-adblock-filter-txt-992d6a26",
+        "blocklistproject-lists-adguard-fraud-ags-txt-859f4062",
+        "blocklistproject-lists-adguard-phishing-ags-txt-6ab23539"
       ],
       "includeCustom": true,
       "optionalComponent": true
@@ -182,7 +184,9 @@
         "blocklistproject-lists-adguard-scam-ags-txt-521f7b7c",
         "durablenapkin-scamblocklist-adguard-txt-f27041d5",
         "blocklistproject-lists-adguard-ransomware-ags-txt-8f253932",
-        "mitchellkrogza-the-big-list-of-hacked-malware-web-sites-hacked-domains-list-5df168a2"
+        "mitchellkrogza-the-big-list-of-hacked-malware-web-sites-hacked-domains-list-5df168a2",
+        "blocklistproject-lists-adguard-fraud-ags-txt-859f4062",
+        "blocklistproject-lists-adguard-phishing-ags-txt-6ab23539"
       ]
     },
     {
@@ -205,7 +209,8 @@
       "enabled": true,
       "sourceIds": [
         "blocklistproject-lists-adguard-scam-ags-txt-521f7b7c",
-        "durablenapkin-scamblocklist-adguard-txt-f27041d5"
+        "durablenapkin-scamblocklist-adguard-txt-f27041d5",
+        "blocklistproject-lists-adguard-fraud-ags-txt-859f4062"
       ]
     },
     {

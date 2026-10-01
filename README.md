@@ -1,12 +1,8 @@
-<h1 align="center">AdGuard Home 规则订阅</h1>
+# AdGuard Home 规则订阅
 
-<p align="center">adguardhome-compiled-filters · 自动合并 · 分类订阅 · 每日更新</p>
+[![自动构建](https://github.com/Ethereal-09/adguardhome-compiled-filters/actions/workflows/update.yml/badge.svg)](https://github.com/Ethereal-09/adguardhome-compiled-filters/actions/workflows/update.yml)
 
-<p align="center">
-  <a href="https://github.com/Ethereal-09/adguardhome-compiled-filters/actions/workflows/update.yml"><img src="https://github.com/Ethereal-09/adguardhome-compiled-filters/actions/workflows/update.yml/badge.svg" alt="每日自动构建"></a>
-</p>
-
-本项目仅获取、合并与去重上游规则，**规则由原作者及贡献者维护**。每天北京时间 **04:23** 自动构建，无需本机开机。
+合并、去重并分类上游 DNS 规则，**规则由上游原作者及贡献者维护**。每天北京时间 **04:23** 自动更新。
 
 <!-- build-status:start -->
 > 最近构建：**2026-10-01 22:14:59（北京时间）**
@@ -14,30 +10,25 @@
 > 状态：**成功，已通过发布校验** · 分类 33/33 · 来源：新下载 60，缓存 0，失败 0
 <!-- build-status:end -->
 
-在 AdGuard Home 的 **过滤器** 中添加下方订阅。黑名单与白名单分别添加到对应页面；已有订阅会继续使用相同地址。
-
 <!-- subscriptions:start -->
-## 规则订阅
+## 订阅
 
-数量为最近一次通过发布校验的文件条目数，含原生放行例外；每个订阅独立去重，分类之间的数量不能直接相加。
+在 AdGuard Home → **过滤器 → DNS 黑名单**添加。日常使用选综合版；国内优化可单独使用；全量版按需选择。
 
-### 基础订阅
+| 规则 | 规则数 | 适用范围 | 订阅 |
+| --- | ---: | --- | --- |
+| 综合版 | 308,701 | 通用过滤 + 国内优化 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/adguard.txt) |
+| 国内优化 | 210,674 | 中国使用环境 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/china.txt) |
+| 全量版 | 2,005,873 | 最高档位 + 全部兼容专项（含服务限制） | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/full.txt) |
 
-添加到 **DNS 黑名单**。综合版与全量版选其一，国内优化可单独使用。
+数量随成功构建更新，含原生放行例外；每个订阅独立去重。
 
-| 规则 | 规则数 | 订阅 |
-| --- | ---: | --- |
-| 综合版 | 308,701 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/adguard.txt) |
-| 国内优化 | 210,674 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/china.txt) |
-| 全量版 | 2,005,873 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/full.txt) |
-
-全量版合并 52 个兼容来源，含最高档位、设备与服务限制；各来源原生例外和个人规则保留。
-
-国内优化来源：AdRules DNS List、Anti-AD、adblockfilters / rules/adblockdnslite.txt。地域依据上游说明，规则文件独立合并与去重。
+<details>
+<summary>其他分类订阅（30 项）：强度、用途、设备与白名单</summary>
 
 ### 强度档位
 
-按需求选一个档位；1Hosts 为替代基础。综合版以 HaGeZi Normal 为基础，叠加已核验的通用与国内 DNS 来源。
+任选一个档位；1Hosts 可作为替代。
 
 | 规则 | 规则数 | 订阅 |
 | --- | ---: | --- |
@@ -50,7 +41,7 @@
 
 ### 用途分类
 
-添加到 **DNS 黑名单**，可按用途单独订阅或搭配基础订阅。
+按用途单独使用或搭配基础订阅，添加到 DNS 黑名单。
 
 | 规则 | 规则数 | 订阅 |
 | --- | ---: | --- |
@@ -69,7 +60,7 @@
 
 ### 设备与服务限制
 
-添加到 **DNS 黑名单**，按需启用；整站或服务限制可能影响正常功能。
+添加到 DNS 黑名单；整站或服务限制可能影响正常功能。
 
 | 规则 | 规则数 | 订阅 |
 | --- | ---: | --- |
@@ -85,26 +76,26 @@
 
 ### 独立白名单
 
-添加到 **DNS 白名单**。各文件按用途选用，不自动并入黑名单。
+添加到 **DNS 白名单**，按用途选择。
 
 | 规则 | 规则数 | 订阅 |
 | --- | ---: | --- |
 | 推广跳转放行 | 930 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/allow-referral.txt) |
 | 推广跳转放行（Native） | 1,611 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/allow-referral-native.txt) |
 | 短链接放行 | 9,974 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/allow-shorteners.txt) |
+
+</details>
 <!-- subscriptions:end -->
 
-DNS 过滤无法区分同一域名内的广告与正常内容，实际误杀需根据使用情况调整。
-
-## 上游来源与署名
+## 来源与署名
 
 <!-- upstream:start -->
 当前选用 **60 个来源文件**，来自 **25 个 GitHub 原仓库**及 **2 个官方站点**。
 
 <details>
-<summary>查看来源维护账号、原始订阅与规则数量</summary>
+<summary>查看上游作者、原始订阅与规则数量</summary>
 
-下表使用本次发布所选来源的支持条目数，含来源自身的放行例外，尚未做跨来源合并。仓库所属账号不代表全部原创作者，原作者及间接来源以各上游说明为准。
+数量为来源合并前的支持条目数。仓库账号不代表全部原创作者，完整署名以各上游说明为准。
 
 | 维护账号 / 原始项目 | 原始规则文件 | 支持规则数 |
 | --- | --- | ---: |
@@ -171,31 +162,27 @@ DNS 过滤无法区分同一域名内的广告与正常内容，实际误杀需�
 
 </details>
 
-完整来源与归类依据见 [来源登记](registry/sources.json)，各上游的许可及署名要求见 [许可原文](upstream/README.md)。合并产物保留各上游的权利和许可，不另行声明统一许可。
+[来源登记](registry/README.md) · [上游许可与署名](upstream/README.md)；合并产物遵循各上游许可。
 <!-- upstream:end -->
 
-## 项目维护
+## 维护
 
-每日自动构建后，首页同步更新**构建时间、状态、各订阅数量与所选上游数量**。数量来自构建结果；发布校验失败时保留上次发布的订阅数量，并显示失败状态。
+[分类与合并说明](registry/CLASSIFICATION.md) · [构建统计](dist/manifest.json) · [自动构建记录](https://github.com/Ethereal-09/adguardhome-compiled-filters/actions/workflows/update.yml)
 
 <details>
-<summary>配置、个人规则与本地运行</summary>
+<summary>修改规则与本地运行</summary>
 
-- **选源与分类**：[profiles.json](profiles.json)；依据见 [分类说明](registry/CLASSIFICATION.md) 和 [全量选源清单](registry/full_selection.json)。新增来源先登记到 [核实来源](registry/reviewed_sources.json)，再运行 `refresh_source_registry.py --validator <验证器路径>` 检查完整规则。
-- **个人规则**：[block.txt](custom/block.txt) / [allow.txt](custom/allow.txt)，默认作用于综合版、全量版；个人放行附加 `important`。
-- **合并与去重**：每个订阅独立处理，分类之间允许重复。只拦截子域名不会扩大到父域名；覆盖优化仅移除已被现有同动作、同优先级规则覆盖的条目，可用 `coverageOptimization: false` 关闭。
-- **原生例外**：黑名单携带所选上游自身的放行例外；合并后的例外可能影响其他来源。独立白名单仍按用途单独订阅。
-- **发布校验**：使用 AdGuard 官方引擎验证产物。网络异常可使用 72 小时内有效缓存；数量异常或校验失败时保留上次发布的订阅。
+- 选源与分类：[profiles.json](profiles.json)。新增来源先登记到 [核实来源](registry/reviewed_sources.json)，再用 `refresh_source_registry.py --validator <验证器路径>` 检查。
+- 个人规则：[拦截](custom/block.txt) / [放行](custom/allow.txt)，默认用于综合版、全量版。
+- 自动构建通过发布校验后更新规则及数量；失败时保留上次发布版本。
 
-Python 3.12 本地运行：
+Python 3.12 本地构建：
 
 ```powershell
 py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe -X utf8 build_filters.py
 ```
 
-GitHub Actions 自动编译官方引擎验证器并执行完整校验。本地完整校验需使用 `--validator` 指定验证器，再执行 `validate_subscriptions.py`。构建时间记录最近一次执行完成；规则文件的更新时间仅在内容变化时改变。
+完整发布校验需使用 `--validator` 指定官方引擎验证器，并运行 `validate_subscriptions.py`；GitHub Actions 自动完成这些步骤。
 
 </details>
-
-[自动构建记录](https://github.com/Ethereal-09/adguardhome-compiled-filters/actions/workflows/update.yml) · [构建统计](dist/manifest.json) · [来源分类目录](registry/README.md)

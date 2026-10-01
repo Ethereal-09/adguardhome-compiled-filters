@@ -36,6 +36,8 @@ def publication_blocks(config, manifest, registry, repository):
               'balanced': 'HaGeZi 均衡 · Normal', 'extended': 'HaGeZi 扩展 · Pro',
               'aggressive': 'HaGeZi 激进 · Pro++', 'maximum': 'HaGeZi 最强 · Ultimate',
               'balanced-1hosts': '1Hosts 均衡 · Lite', 'aggressive-1hosts': '1Hosts 激进 · Xtra'}
+    scopes = {'combined': '通用过滤 + 国内优化', 'china': '中国使用环境',
+              'full': '最高档位 + 全部兼容专项（含服务限制）'}
     for profile in profiles:
         pid = profile['id']
         item = manifest['profiles'][pid]
@@ -58,38 +60,45 @@ def publication_blocks(config, manifest, registry, repository):
         label = labels.get(pid, profile['name']).replace('|', r'\|').replace('\n', ' ')
         filename = 'adguard.txt' if pid == config['defaultProfile'] else pid + '.txt'
         url = f'https://raw.githubusercontent.com/{repository}/main/dist/{filename}'
-        row = f'| {label} | {count:,} | [订阅]({url}) |'
+        scope = f" {scopes.get(pid, '按需选用')} |" if group == '基础订阅' else ''
+        row = f'| {label} | {count:,} |{scope} [订阅]({url}) |'
         groups[group].append((pid, row))
 
-    rows = ['## 规则订阅', '',
-            '数量为最近一次通过发布校验的文件条目数，含原生放行例外；每个订阅独立去重，分类之间的数量不能直接相加。', '']
-    notes = {'基础订阅': '添加到 **DNS 黑名单**。综合版与全量版选其一，国内优化可单独使用。',
-             '强度档位': '按需求选一个档位；1Hosts 为替代基础。综合版以 HaGeZi Normal 为基础，叠加已核验的通用与国内 DNS 来源。',
-             '用途分类': '添加到 **DNS 黑名单**，可按用途单独订阅或搭配基础订阅。',
-             '设备与服务限制': '添加到 **DNS 黑名单**，按需启用；整站或服务限制可能影响正常功能。',
-             '独立白名单': '添加到 **DNS 白名单**。各文件按用途选用，不自动并入黑名单。'}
+    rows = ['## 订阅', '',
+            '在 AdGuard Home → **过滤器 → DNS 黑名单**添加。日常使用选综合版；国内优化可单独使用；全量版按需选择。', '']
+    notes = {'强度档位': '任选一个档位；1Hosts 可作为替代。',
+             '用途分类': '按用途单独使用或搭配基础订阅，添加到 DNS 黑名单。',
+             '设备与服务限制': '添加到 DNS 黑名单；整站或服务限制可能影响正常功能。',
+             '独立白名单': '添加到 **DNS 白名单**，按用途选择。'}
+    extra_count = sum(len(entries) for group, entries in groups.items() if group != '基础订阅')
+    folded = False
     for group, entries in groups.items():
         if not entries:
             continue
         if group == '基础订阅':
             order = {'combined': 0, 'china': 1, 'full': 2}
             entries.sort(key=lambda entry: order.get(entry[0], 3))
-        rows += ['### ' + group, '', notes[group], '',
-                 '| 规则 | 规则数 | 订阅 |', '| --- | ---: | --- |',
-                 *(row for _, row in entries), '']
-        if group == '基础订阅' and any(pid == 'full' for pid, _ in entries):
-            rows += [f"全量版合并 {len(manifest['profiles']['full']['sourceIds'])} 个兼容来源，含最高档位、设备与服务限制；各来源原生例外和个人规则保留。", '']
-        if group == '基础订阅' and any(pid == 'china' for pid, _ in entries):
-            names = '、'.join(sources[sid]['name'] for sid in manifest['profiles']['china']['sourceIds'])
-            rows += ['国内优化来源：' + names + '。地域依据上游说明，规则文件独立合并与去重。', '']
+            rows += ['| 规则 | 规则数 | 适用范围 | 订阅 |', '| --- | ---: | --- | --- |',
+                     *(row for _, row in entries), '']
+            rows += ['数量随成功构建更新，含原生放行例外；每个订阅独立去重。', '']
+        else:
+            if not folded:
+                rows += ['<details>',
+                         f'<summary>其他分类订阅（{extra_count} 项）：强度、用途、设备与白名单</summary>', '']
+                folded = True
+            rows += ['### ' + group, '', notes[group], '',
+                     '| 规则 | 规则数 | 订阅 |', '| --- | ---: | --- |',
+                     *(row for _, row in entries), '']
+    if folded:
+        rows += ['</details>', '']
 
     repositories = {sources[sid]['repository'] for sid in selected}
     github = sum(repo.startswith('https://github.com/') for repo in repositories)
     external = len(repositories) - github
     origins = f'**{github} 个 GitHub 原仓库**' + (f'及 **{external} 个官方站点**' if external else '')
     upstream = [f'当前选用 **{len(selected)} 个来源文件**，来自 {origins}。', '',
-                '<details>', '<summary>查看来源维护账号、原始订阅与规则数量</summary>', '',
-                '下表使用本次发布所选来源的支持条目数，含来源自身的放行例外，尚未做跨来源合并。仓库所属账号不代表全部原创作者，原作者及间接来源以各上游说明为准。', '',
+                '<details>', '<summary>查看上游作者、原始订阅与规则数量</summary>', '',
+                '数量为来源合并前的支持条目数。仓库账号不代表全部原创作者，完整署名以各上游说明为准。', '',
                 '| 维护账号 / 原始项目 | 原始规则文件 | 支持规则数 |', '| --- | --- | ---: |']
     for sid in sorted(selected, key=lambda sid: (sources[sid]['repository'].lower(), sources[sid]['path'])):
         source, stats = sources[sid], manifest['sources'][sid]
@@ -100,7 +109,7 @@ def publication_blocks(config, manifest, registry, repository):
         filename = source['path'].replace('|', r'\|')
         upstream.append(f"| [{name}]({repo}) | [{filename}]({source['url']}) | {stats['accepted']:,} |")
     upstream += ['', '</details>', '',
-                 '完整来源与归类依据见 [来源登记](registry/sources.json)，各上游的许可及署名要求见 [许可原文](upstream/README.md)。合并产物保留各上游的权利和许可，不另行声明统一许可。']
+                 '[来源登记](registry/README.md) · [上游许可与署名](upstream/README.md)；合并产物遵循各上游许可。']
     return '\n'.join(rows), '\n'.join(upstream)
 
 

@@ -49,6 +49,11 @@ class ReadmeStatusTests(unittest.TestCase):
             self.assertIn('**2 个来源文件**', text)
             self.assertNotIn('99,999', text)
             self.assertTrue(text.endswith('## Sources\nkeep credits\n'))
+            subscriptions = text.split(SUBSCRIPTIONS_START)[1].split(SUBSCRIPTIONS_END)[0]
+            self.assertIn('<summary>其他分类订阅（2 项）', subscriptions)
+            self.assertLess(subscriptions.index('| 全量版 |'), subscriptions.index('<details>'))
+            self.assertLess(subscriptions.index('<details>'), subscriptions.index('| 新增用途 |'))
+            self.assertLess(subscriptions.index('| 测试放行 |'), subscriptions.index('</details>'))
 
             publication['manifest']['profiles']['full'].update(totalRules=1600, blockingRules=1590)
             publication['manifest']['sources']['a']['accepted'] = 3300
@@ -57,6 +62,7 @@ class ReadmeStatusTests(unittest.TestCase):
             self.assertIn('| 全量版 | 1,600 |', text)
             self.assertIn(' | 3,300 |', text)
             self.assertNotIn('| 全量版 | 1,200 |', text)
+            self.assertEqual(text.count('<summary>其他分类订阅'), 1)
 
     def test_official_website_attribution_is_not_counted_as_a_github_repository(self):
         with tempfile.TemporaryDirectory() as folder:

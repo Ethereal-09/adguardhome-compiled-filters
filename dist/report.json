@@ -1,6 +1,6 @@
 {
-  "updatedUtc": "2026-10-01T14:02:27+00:00",
-  "totalRules": 308701,
+  "updatedUtc": "2026-10-01T20:38:51+00:00",
+  "totalRules": 308687,
   "defaultProfile": "combined",
   "sources": [
     {
@@ -71,8 +71,8 @@
       "repository": "https://github.com/217heidai/adblockfilters",
       "repositoryAccount": "217heidai",
       "downloadState": "fresh",
-      "accepted": 5376,
-      "parsedEntries": 5376,
+      "accepted": 5323,
+      "parsedEntries": 5323,
       "duplicates": 0,
       "unsupported": 0,
       "unsupportedExamples": [],
@@ -85,8 +85,8 @@
       "repository": "https://github.com/sjhgvr/oisd",
       "repositoryAccount": "sjhgvr",
       "downloadState": "fresh",
-      "accepted": 57297,
-      "parsedEntries": 57297,
+      "accepted": 57372,
+      "parsedEntries": 57372,
       "duplicates": 0,
       "unsupported": 0,
       "unsupportedExamples": [],

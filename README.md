@@ -5,7 +5,7 @@
 合并、去重并分类上游 DNS 规则，**规则由上游原作者及贡献者维护**。每天北京时间 **04:23** 自动更新。
 
 <!-- build-status:start -->
-> 最近构建：**2026-10-01 22:47:47（北京时间）**
+> 最近构建：**2026-10-02 04:41:49（北京时间）**
 >
 > 状态：**成功，已通过发布校验** · 分类 33/33 · 来源：新下载 60，缓存 0，失败 0
 <!-- build-status:end -->
@@ -17,9 +17,9 @@
 
 | 规则 | 规则数 | 适用范围 | 订阅 |
 | --- | ---: | --- | --- |
-| 综合版 | 308,701 | 通用过滤 + 国内优化 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/adguard.txt) |
-| 国内优化 | 210,674 | 中国使用环境 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/china.txt) |
-| 全量版 | 2,005,873 | 最高档位 + 全部兼容专项（含服务限制） | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/full.txt) |
+| 综合版 | 308,687 | 通用过滤 + 国内优化 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/adguard.txt) |
+| 国内优化 | 210,652 | 中国使用环境 | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/china.txt) |
+| 全量版 | 2,005,896 | 最高档位 + 全部兼容专项（含服务限制） | [订阅](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/full.txt) |
 
 数量随成功构建更新，含原生放行例外；每个订阅独立去重。
 
@@ -99,9 +99,9 @@
 
 | 维护账号 / 原始项目 | 原始规则文件 | 支持规则数 |
 | --- | --- | ---: |
-| [217heidai/adblockfilters](https://github.com/217heidai/adblockfilters) | [rules/adblockdns.txt](https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdns.txt) | 216,067 |
-| [217heidai/adblockfilters](https://github.com/217heidai/adblockfilters) | [rules/adblockdnslite.txt](https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt) | 5,376 |
-| [8680/GOODBYEADS](https://github.com/8680/GOODBYEADS) | [data/rules/dns.txt](https://raw.githubusercontent.com/8680/GOODBYEADS/master/data/rules/dns.txt) | 113,593 |
+| [217heidai/adblockfilters](https://github.com/217heidai/adblockfilters) | [rules/adblockdns.txt](https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdns.txt) | 215,233 |
+| [217heidai/adblockfilters](https://github.com/217heidai/adblockfilters) | [rules/adblockdnslite.txt](https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt) | 5,323 |
+| [8680/GOODBYEADS](https://github.com/8680/GOODBYEADS) | [data/rules/dns.txt](https://raw.githubusercontent.com/8680/GOODBYEADS/master/data/rules/dns.txt) | 113,772 |
 | [AdAway/adaway.github.io](https://github.com/AdAway/adaway.github.io) | [hosts.txt](https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt) | 6,540 |
 | [AdguardTeam/AdguardFilters](https://github.com/AdguardTeam/AdguardFilters) | [MobileFilter/sections/adservers.txt](https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/adservers.txt) | 951 |
 | [anudeepND/blacklist](https://github.com/anudeepND/blacklist) | [adservers.txt](https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt) | 42,343 |
@@ -152,7 +152,7 @@
 | [nextdns/native-tracking-domains](https://github.com/nextdns/native-tracking-domains) | [domains/xiaomi](https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/xiaomi) | 9 |
 | [Perflyst/PiHoleBlocklist](https://github.com/Perflyst/PiHoleBlocklist) | [SmartTV-AGH.txt](https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV-AGH.txt) | 154 |
 | [privacy-protection-tools/anti-AD](https://github.com/privacy-protection-tools/anti-AD) | [anti-ad-easylist.txt](https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-easylist.txt) | 93,230 |
-| [sjhgvr/oisd](https://github.com/sjhgvr/oisd) | [abp_small.txt](https://raw.githubusercontent.com/sjhgvr/oisd/main/abp_small.txt) | 57,297 |
+| [sjhgvr/oisd](https://github.com/sjhgvr/oisd) | [abp_small.txt](https://raw.githubusercontent.com/sjhgvr/oisd/main/abp_small.txt) | 57,372 |
 | [Spam404/lists](https://github.com/Spam404/lists) | [main-blacklist.txt](https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt) | 8,140 |
 | [StevenBlack/hosts](https://github.com/StevenBlack/hosts) | [hosts](https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts) | 74,759 |
 | [TG-Twilight/AWAvenue-Ads-Rule](https://github.com/TG-Twilight/AWAvenue-Ads-Rule) | [AWAvenue-Ads-Rule.txt](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt) | 962 |

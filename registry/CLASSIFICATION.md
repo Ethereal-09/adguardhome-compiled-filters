@@ -1,6 +1,6 @@
 # 分类订阅与组合说明
 
-来源整理与每日分类构建已接通。每条来源在 sources.json 中有稳定 id；groups.json 仍是候选目录，profiles.json 通过来源 id 确定实际组合，build_filters.py 生成 dist 下的分类文件。已生成本地订阅，远程每日发布需上传仓库并启用 GitHub Actions；实际应用误杀仍需验证。
+每日分类构建和 GitHub 自动发布已启用。sources.json 记录来源与依据，groups.json 是候选目录；实际选源由 profiles.json 决定，build_filters.py 生成 dist 下的订阅。最新构建时间和状态见 [首页](../README.md)，真实应用的误杀仍需使用后验证。
 
 ## 分类维度
 
@@ -15,7 +15,7 @@
 | 格式关系 | representationGroup、rawCounts | 同来源不同格式择一；不声称匹配语义相同 |
 | 格式兼容 | compatibility、unsupported | 当前解析器是 DNS 子集，不是浏览器完整规则引擎 |
 | 更新情况 | checkedUtc、lifecycle | 下载检查时间与停更标记；下载成功不代表活跃维护 |
-| 当前启用 | enabledInCurrentConfig | 保留已有配置与新增候选之间的区别 |
+| 历史启用 | enabledInCurrentConfig | 记录旧 config.json 的启用状态；当前选源以 profiles.json 为准 |
 
 ## 强度与用途分开
 

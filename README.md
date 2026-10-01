@@ -5,7 +5,7 @@
 [![自动更新](https://github.com/Ethereal-09/adguardhome-compiled-filters/actions/workflows/update.yml/badge.svg)](https://github.com/Ethereal-09/adguardhome-compiled-filters/actions/workflows/update.yml)
 
 <!-- build-status:start -->
-> 最近构建：**2026-10-01 09:10:59（北京时间）**
+> 最近构建：**2026-10-01 09:23:28（北京时间）**
 >
 > 状态：**成功，已通过发布校验** · 分类 30/30 · 来源：新下载 41，缓存 0，失败 0
 <!-- build-status:end -->

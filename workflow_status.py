@@ -15,6 +15,8 @@ SUBSCRIPTIONS_END = '<!-- subscriptions:end -->'
 UPSTREAM_START = '<!-- upstream:start -->'
 UPSTREAM_END = '<!-- upstream:end -->'
 DEFAULT_REPOSITORY = 'Ethereal-09/adguardhome-compiled-filters'
+SUBSCRIPTION_ACCELERATORS = (('Boki', 'https://github.boki.moe/'),
+                            ('GHFast', 'https://ghfast.top/'))
 
 
 def replace_block(text, start, end, content):
@@ -60,8 +62,10 @@ def publication_blocks(config, manifest, registry, repository):
         label = labels.get(pid, profile['name']).replace('|', r'\|').replace('\n', ' ')
         filename = 'adguard.txt' if pid == config['defaultProfile'] else pid + '.txt'
         url = f'https://raw.githubusercontent.com/{repository}/main/dist/{filename}'
+        links = ' | '.join([f'[原始]({url})',
+                            *(f'[{name}]({prefix}{url})' for name, prefix in SUBSCRIPTION_ACCELERATORS)])
         scope = f" {scopes.get(pid, '按需选用')} |" if group == '基础订阅' else ''
-        row = f'| {label} | {count:,} |{scope} [订阅]({url}) |'
+        row = f'| {label} | {count:,} |{scope} {links} |'
         groups[group].append((pid, row))
 
     rows = ['## 订阅', '',
@@ -78,16 +82,18 @@ def publication_blocks(config, manifest, registry, repository):
         if group == '基础订阅':
             order = {'combined': 0, 'china': 1, 'full': 2}
             entries.sort(key=lambda entry: order.get(entry[0], 3))
-            rows += ['| 规则 | 规则数 | 适用范围 | 订阅 |', '| --- | ---: | --- | --- |',
+            rows += ['| 规则 | 规则数 | 适用范围 | 原始链接 | 加速1 | 加速2 |',
+                     '| --- | ---: | --- | --- | --- | --- |',
                      *(row for _, row in entries), '']
-            rows += ['数量随成功构建更新，含原生放行例外；每个订阅独立去重。', '']
+            rows += ['每条规则的三个链接任选一个订阅。数量随成功构建更新，含原生放行例外；每个订阅独立去重。', '']
         else:
             if not folded:
                 rows += ['<details>',
                          f'<summary>其他分类订阅（{extra_count} 项）：强度、用途、设备与白名单</summary>', '']
                 folded = True
             rows += ['### ' + group, '', notes[group], '',
-                     '| 规则 | 规则数 | 订阅 |', '| --- | ---: | --- |',
+                     '| 规则 | 规则数 | 原始链接 | 加速1 | 加速2 |',
+                     '| --- | ---: | --- | --- | --- |',
                      *(row for _, row in entries), '']
     if folded:
         rows += ['</details>', '']

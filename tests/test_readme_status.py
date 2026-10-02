@@ -1,4 +1,5 @@
 from pathlib import Path
+import re
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -77,6 +78,25 @@ class ReadmeStatusTests(unittest.TestCase):
             content=path.read_text(encoding='utf-8')
             self.assertIn('**1 个 GitHub 原仓库**及 **1 个官方站点**',content)
             self.assertIn('[Original Author](https://lists.example/hosts/)',content)
+
+    def test_accelerators_wrap_each_exact_original_including_default_and_allowlist(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = self.write_readme(Path(folder), with_publication=True)
+            publication = self.publication_fixture()
+            run = dict(checkedUtc='2026-10-02T00:00:00Z', status='success')
+            update_readme(path, run, 'success', 'success', **publication)
+            text = path.read_text(encoding='utf-8')
+            subscriptions = text.split(SUBSCRIPTIONS_START)[1].split(SUBSCRIPTIONS_END)[0]
+            rows = [line for line in subscriptions.splitlines() if '[原始](' in line]
+            self.assertEqual(len(rows), 3)
+            for filename, row in zip(['adguard.txt', 'new-category.txt', 'allow-test.txt'], rows):
+                original = f'https://raw.githubusercontent.com/fixture/compiled/main/dist/{filename}'
+                self.assertEqual(re.findall(r'\]\(([^)]+)\)', row), [original,
+                    'https://github.boki.moe/' + original, 'https://ghfast.top/' + original])
+            self.assertNotIn('jsdelivr.net', subscriptions)
+            before = path.read_bytes()
+            update_readme(path, run, 'success', 'success', **publication)
+            self.assertEqual(before, path.read_bytes())
 
     def test_build_or_audit_failure_preserves_published_counts(self):
         with tempfile.TemporaryDirectory() as folder:

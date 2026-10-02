@@ -1,7 +1,7 @@
 ! Title: 动态 DNS 服务限制组件
-! Updated: 2026-09-30T20:58:06+00:00
+! Updated: 2026-10-02T02:59:01+00:00
 ! Expires: 1 day
-! Rules: 1538
+! Rules: 1536
 ! Maintainer merges only; upstream rules belong to their authors.
 ! DNS masks/regex preserved; exact Hosts scope and source exception priority retained.
 ! Upstream licenses and notices: ../upstream/README.md (in the original repository).
@@ -152,7 +152,6 @@
 ||byte4byte.com^
 ||cable-modem.org^
 ||camdvr.org^
-||canadascastillo.com^
 ||casacam.net^
 ||cashit.info^
 ||cbopelousas.com^
@@ -1429,7 +1428,6 @@
 ||tvlinux.com^
 ||twilightparadox.com^
 ||twodns.de^
-||twsuser.com^
 ||tzo.com^
 ||ucvradio.cl^
 ||udp64.de^

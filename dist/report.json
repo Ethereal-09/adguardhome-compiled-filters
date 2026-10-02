@@ -1,6 +1,6 @@
 {
-  "updatedUtc": "2026-10-02T02:57:31+00:00",
-  "totalRules": 307161,
+  "updatedUtc": "2026-10-02T03:55:57+00:00",
+  "totalRules": 307183,
   "defaultProfile": "combined",
   "sources": [
     {
@@ -24,8 +24,8 @@
       "repository": "https://github.com/Cats-Team/AdRules",
       "repositoryAccount": "Cats-Team",
       "downloadState": "fresh",
-      "accepted": 196853,
-      "parsedEntries": 196853,
+      "accepted": 196933,
+      "parsedEntries": 196933,
       "duplicates": 0,
       "unsupported": 0,
       "unsupportedExamples": [],
@@ -85,8 +85,8 @@
       "repository": "https://github.com/sjhgvr/oisd",
       "repositoryAccount": "sjhgvr",
       "downloadState": "fresh",
-      "accepted": 57521,
-      "parsedEntries": 57521,
+      "accepted": 57475,
+      "parsedEntries": 57475,
       "duplicates": 0,
       "unsupported": 0,
       "unsupportedExamples": [],

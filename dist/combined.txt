@@ -1,7 +1,7 @@
 ! Title: 综合 DNS 过滤（基础＋国内优化）
-! Updated: 2026-10-02T02:57:31+00:00
+! Updated: 2026-10-02T03:55:57+00:00
 ! Expires: 1 day
-! Rules: 307161
+! Rules: 307183
 ! Maintainer merges only; upstream rules belong to their authors.
 ! DNS masks/regex preserved; exact Hosts scope and source exception priority retained.
 ! Upstream licenses and notices: ../upstream/README.md (in the original repository).
@@ -6062,6 +6062,7 @@
 ||3is34bpqs4.com^
 ||3iulae112b.com^
 ||3j0pw4ed7uac-a.akamaihd.net^
+||3j1rortrvbo998.cfd^
 ||3j4vjpx7k.com^
 ||3j8c56p9.de^
 ||3jia5.com^
@@ -8430,6 +8431,7 @@
 ||7offers.ru^
 ||7ouur.777269.com^
 ||7p5ruxflv0.com^
+||7p9h118itkqe18o2m59iu5cxfmvvz.rest^
 ||7pe17z68y.com^
 ||7phrfu8c4k83q6.cfd^
 ||7pk.com^
@@ -25632,6 +25634,7 @@
 ||ami.coppermakersquare.com^
 ||amiabledelinquent.com^
 ||amiablefaithfully.com^
+||amianthveilingsanit.qpon^
 ||amiasdoubleryerb.qpon^
 ||amidbow.com^
 ||amidcleopatrastamps.com^
@@ -34783,6 +34786,7 @@
 ||anemicdename.cyou^
 ||anemicfestival.cz^
 ||anemone.blue^
+||anemonystonersaccerse.qpon^
 ||anenstdecodenear.com^
 ||anenstscance.qpon^
 ||anephangja.com^
@@ -40621,6 +40625,7 @@
 ||asslikezanyish.com^
 ||assmafsi.com^
 ||assmjxiqhkaax.com^
+||assneordfsxwx.site^
 ||assobreeclipse.cyou^
 ||assobresciath.com^
 ||assoc-amazon.*^
@@ -44555,6 +44560,7 @@
 ||batoktor.in^
 ||batomqsmoocc.com^
 ||baton.cuetv.online^
+||batonconfit.com^
 ||batongaashcake.shop^
 ||bats.video.yahoo.com^
 ||batsavcdn.ksmobile.net^
@@ -48119,6 +48125,7 @@
 ||bjads.bejbej.ca^
 ||bjakku.com^
 ||bjbcyyhm.com^
+||bjbifncqdeunawu.com^
 ||bjbta.com^
 ||bjcass.com^
 ||bjcathay.com^
@@ -48475,6 +48482,7 @@
 ||blbkfhdkak.com^
 ||blblbl-1359435016.cos.ap-guangzhou.myqcloud.com^
 ||blcdog.com^
+||blcfaglwjptwo.online^
 ||blcknvr.com^
 ||blclajmgsqq.com^
 ||blcmm.com^
@@ -54462,6 +54470,7 @@
 ||cantinadautoress.com^
 ||cantingku.icu^
 ||cantinonoxial.shop^
+||cantorspaver.com^
 ||cantseeme.dapper.agency^
 ||canttouchme.broring.com^
 ||canttouchme.estagencymarbella.com^
@@ -86148,6 +86157,7 @@
 ||ebgagg.novi.ba^
 ||ebgagg.pink.rs^
 ||ebgfyn.zenden.ru^
+||ebgkhzzuqidcml.com^
 ||ebgnpwucfhucvbr.com^
 ||ebgock7kz.com^
 ||ebh.eggbackhome.com^
@@ -89156,6 +89166,7 @@
 ||emeutetubbers.cfd^
 ||emfgcm.gretta.ru^
 ||emfokh.discountlens.de^
+||emgrjwjfp.com^
 ||emgthroposit.org^
 ||emgy.top^
 ||emhjekwvkwnvz.website^
@@ -89187,6 +89198,7 @@
 ||emitum.com^
 ||emivppsinqkji.website^
 ||emjcd.com^
+||emjmeadlsjrho.online^
 ||emjs.mkzhan.com^
 ||emkfl.com^
 ||emkho.killcliff.com^
@@ -94027,6 +94039,7 @@
 ||fafpiqlmaogr.com^
 ||fafxuylrwwnxg.online^
 ||fag-bearing.net^
+||fagaratirling.com^
 ||fagarauvitic.com^
 ||fagdrgfd.mammut-aktenvernichtung.de^
 ||fagebusera.cfd^
@@ -108348,6 +108361,7 @@
 ||greyaxgqpraqj.website^
 ||greygrid.net^
 ||greyinstrument.com^
+||greylagbact.com^
 ||greystripe.com^
 ||grfpr.com^
 ||grfx.mp3.com^
@@ -119876,6 +119890,7 @@
 ||hokitogel.com^
 ||hokkaidobank.rapi.jp^
 ||hokkid5.com^
+||hokkuarces.com^
 ||hokmlnzfftxvg.space^
 ||hoksomuptak.net^
 ||hoktrips.com^
@@ -168823,6 +168838,7 @@
 ||mhlxxxekfd.com^
 ||mhmciof8ef.com^
 ||mhmp.bruker.com^
+||mhmqdeifitclh.site^
 ||mhmrksbozygwo.online^
 ||mhmzhc.trysnow.com^
 ||mhnpec.nimaxi-online.com^
@@ -179463,6 +179479,7 @@
 ||nsikar.ackermann.ch^
 ||nsis.bisrv.com^
 ||nsitza.terresdecafe.com^
+||nsixrjjgqwio.com^
 ||nsjpu.com^
 ||nsjuef.shop^
 ||nsk-gmbh.myshopify.com^
@@ -200632,6 +200649,7 @@
 ||qloekmmsuwjlq.website^
 ||qloevv.wikicasa.it^
 ||qlog.qcore.com^
+||qloncszjlpzum.online^
 ||qlp.czfhou822nye2zwuotpoxm.cyou^
 ||qlp.egghead.link^
 ||qlplayerr.cyou^
@@ -203168,6 +203186,7 @@
 ||rbfour.bid^
 ||rbg66vhew1z6g4256jfivbj.cfd^
 ||rbhhvaxljm.com^
+||rbhjjqqbwoiaq.online^
 ||rbhraahxxsllp.online^
 ||rbillysimp.com^
 ||rbioclv.cn^
@@ -220568,6 +220587,7 @@
 ||seying.com^
 ||seyipagkmopqv.com^
 ||seyjzx.jeanpatrique.com^
+||seyrqfcwlwrae.website^
 ||seyscdqqnejex.site^
 ||sez-pr.com^
 ||sez.jp^
@@ -280824,6 +280844,7 @@
 ||umgpjdlllhl.ru^
 ||umguf.samialert.com^
 ||umgzvlbrqzyeq.online^
+||umhfftghpj.com^
 ||umhjh9rwe.com^
 ||umhkzidngrmor.website^
 ||umhyck.belvilla.com^
@@ -281774,6 +281795,7 @@
 ||unusualtitle.com^
 ||unuyjbisppuep.online^
 ||unvalueawave.qpon^
+||unvestgary.com^
 ||unvexedmehari.com^
 ||unvicarlyncean.com^
 ||unvira.com^

@@ -21,15 +21,15 @@
 
 | 分类 | 拦截条目 | 例外条目 | 原始 | 加速1 | 加速2 |
 | --- | ---: | ---: | --- | --- | --- |
-| 综合 DNS 过滤（基础＋国内优化） | 307,038 | 123 | [combined.yaml](combined.yaml) | [Boki](combined-boki.yaml) | [GHFast](combined-ghfast.yaml) |
-| 全量 DNS 黑名单（最高档＋全部可用专项） | 2,004,790 | 312 | [full.yaml](full.yaml) | [Boki](full-boki.yaml) | [GHFast](full-ghfast.yaml) |
+| 综合 DNS 过滤（基础＋国内优化） | 307,060 | 123 | [combined.yaml](combined.yaml) | [Boki](combined-boki.yaml) | [GHFast](combined-ghfast.yaml) |
+| 全量 DNS 黑名单（最高档＋全部可用专项） | 2,004,812 | 312 | [full.yaml](full.yaml) | [Boki](full-boki.yaml) | [GHFast](full-ghfast.yaml) |
 | 均衡 DNS 过滤 | 198,941 | 0 | [balanced.yaml](balanced.yaml) | [Boki](balanced-boki.yaml) | [GHFast](balanced-ghfast.yaml) |
 | 扩展 DNS 过滤 | 227,618 | 0 | [extended.yaml](extended.yaml) | [Boki](extended-boki.yaml) | [GHFast](extended-ghfast.yaml) |
 | 激进 DNS 过滤 | 248,284 | 0 | [aggressive.yaml](aggressive.yaml) | [Boki](aggressive-boki.yaml) | [GHFast](aggressive-ghfast.yaml) |
 | 最强 DNS 过滤 | 284,102 | 0 | [maximum.yaml](maximum.yaml) | [Boki](maximum-boki.yaml) | [GHFast](maximum-ghfast.yaml) |
 | 1Hosts 均衡（替代基础） | 102,241 | 0 | [balanced-1hosts.yaml](balanced-1hosts.yaml) | [Boki](balanced-1hosts-boki.yaml) | [GHFast](balanced-1hosts-ghfast.yaml) |
 | 1Hosts 激进（替代基础） | 786,132 | 0 | [aggressive-1hosts.yaml](aggressive-1hosts.yaml) | [Boki](aggressive-1hosts-boki.yaml) | [GHFast](aggressive-1hosts-ghfast.yaml) |
-| 中国国内优化 DNS 黑名单 | 210,669 | 123 | [china.yaml](china.yaml) | [Boki](china-boki.yaml) | [GHFast](china-ghfast.yaml) |
+| 中国国内优化 DNS 黑名单 | 210,743 | 123 | [china.yaml](china.yaml) | [Boki](china-boki.yaml) | [GHFast](china-ghfast.yaml) |
 | 广告分类 | 143,763 | 0 | [ads.yaml](ads.yaml) | [Boki](ads-boki.yaml) | [GHFast](ads-ghfast.yaml) |
 | 跟踪与遥测分类 | 133,812 | 0 | [tracking.yaml](tracking.yaml) | [Boki](tracking-boki.yaml) | [GHFast](tracking-ghfast.yaml) |
 | 安全分类（威胁与诈骗等） | 654,800 | 0 | [security.yaml](security.yaml) | [Boki](security-boki.yaml) | [GHFast](security-ghfast.yaml) |

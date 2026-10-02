@@ -13,17 +13,17 @@
         "217heidai-adblockfilters-rules-adblockdnslite-txt-99bc0b64",
         "sjhgvr-oisd-abp-small-txt-50559e3d"
       ],
-      "updatedUtc": "2026-10-02T02:57:31+00:00",
-      "inputSha256": "bc5ae6af57e6b45d38ea1cec3a40e04041b1cf5d56b6e23c27c15ce91aff659f",
-      "inputRules": 307161,
-      "blockingRules": 307038,
+      "updatedUtc": "2026-10-02T03:55:57+00:00",
+      "inputSha256": "4525af153156d8707c941d25370744eaa4e7b71016faf80b510b02baa062db26",
+      "inputRules": 307183,
+      "blockingRules": 307060,
       "exceptionRules": 123,
-      "convertedRules": 307161,
+      "convertedRules": 307183,
       "upstreamNotices": [
         "# Title: 综合 DNS 过滤（基础＋国内优化）",
-        "# Updated: 2026-10-02T02:57:31+00:00",
+        "# Updated: 2026-10-02T03:55:57+00:00",
         "# Expires: 1 day",
-        "# Rules: 307161",
+        "# Rules: 307183",
         "# Maintainer merges only; upstream rules belong to their authors.",
         "# DNS masks/regex preserved; exact Hosts scope and source exception priority retained.",
         "# Upstream licenses and notices: ../upstream/README.md (in the original repository).",
@@ -49,8 +49,8 @@
           "bucket": "block",
           "behavior": "domain",
           "format": "mrs",
-          "rules": 306515,
-          "sha256": "9f590119ed9990b2823118439be892b37367c662f2fc08fd0da90253ddee3032"
+          "rules": 306537,
+          "sha256": "99c25e51309754d99ebaa7ce070dc31bc4cf0484bba1ca4a839e552512db31fe"
         },
         "compiled-combined-block-regex": {
           "file": "combined-regex.txt",
@@ -58,7 +58,7 @@
           "behavior": "classical",
           "format": "text",
           "rules": 523,
-          "sha256": "3034ee9b5dc0f437347f33296a4b54860d9c0ba1780ce4eff13cbc746237e6a7"
+          "sha256": "b4dd3499378e6abc202680ac4168e2a84bb4ea728ef4fba0d9a10d1a4f7158b7"
         },
         "compiled-combined-allow": {
           "file": "combined-allow.mrs",
@@ -74,7 +74,7 @@
           "behavior": "classical",
           "format": "text",
           "rules": 2,
-          "sha256": "9c5ece6f459b739ccd6864b6a784218c1221149bc82b1672d95d39b6a9d7b9a0"
+          "sha256": "af94a4103072b1d3fdd1e204f783b176bced3b004de66ea876827da0eae2ae6f"
         }
       },
       "rules": [
@@ -138,17 +138,17 @@
         "https-someonewhocares-org-hosts-hosts-zero-hosts-dfd8da19",
         "https-pgl-yoyo-org-adservers-adservers-serverlist-php-f785075c"
       ],
-      "updatedUtc": "2026-10-02T02:58:08+00:00",
-      "inputSha256": "055e459e8481441d8cd64ebed3a95ead521f1df586610f74bc41d7355c579299",
-      "inputRules": 2005102,
-      "blockingRules": 2004790,
+      "updatedUtc": "2026-10-02T03:56:58+00:00",
+      "inputSha256": "43d6e8bbe0cdd2b5881e26e4e366eee5a5606011b7f27d4d8e6c793377196037",
+      "inputRules": 2005124,
+      "blockingRules": 2004812,
       "exceptionRules": 312,
-      "convertedRules": 2005102,
+      "convertedRules": 2005124,
       "upstreamNotices": [
         "# Title: 全量 DNS 黑名单（最高档＋全部可用专项）",
-        "# Updated: 2026-10-02T02:58:08+00:00",
+        "# Updated: 2026-10-02T03:56:58+00:00",
         "# Expires: 1 day",
-        "# Rules: 2005102",
+        "# Rules: 2005124",
         "# Maintainer merges only; upstream rules belong to their authors.",
         "# DNS masks/regex preserved; exact Hosts scope and source exception priority retained.",
         "# Upstream licenses and notices: ../upstream/README.md (in the original repository).",
@@ -297,8 +297,8 @@
           "bucket": "block",
           "behavior": "domain",
           "format": "mrs",
-          "rules": 2003941,
-          "sha256": "232e2d3533f9b5a8fa9c08b854e746bdd36ee8263a99d1e783720af727993fa9"
+          "rules": 2003963,
+          "sha256": "784dee6709e5d016dbaf92fc94174cd8074f75236f38961fdee7b8fb62069a79"
         },
         "compiled-full-block-regex": {
           "file": "full-regex.txt",
@@ -306,7 +306,7 @@
           "behavior": "classical",
           "format": "text",
           "rules": 849,
-          "sha256": "29f22e11c5aec0eca010b8816d36cfdb90d1fb90fe4ce9ac7cb286ffe48e4142"
+          "sha256": "f56a2f1f8a9ef125e48893660e7302290f4919e201715c4848e0d2920862b969"
         },
         "compiled-full-allow": {
           "file": "full-allow.mrs",
@@ -322,7 +322,7 @@
           "behavior": "classical",
           "format": "text",
           "rules": 2,
-          "sha256": "7b5b5519b9de0ff0a3abe5be4bcd72ff6fa83267d63453df747925d7edd39753"
+          "sha256": "fed1b0b1caab36e2f8876a6c481ccee00ea355f739517b0cff9465a436603c42"
         }
       },
       "rules": [
@@ -565,17 +565,17 @@
         "privacy-protection-tools-anti-ad-anti-ad-easylist-txt-9b62e65d",
         "217heidai-adblockfilters-rules-adblockdnslite-txt-99bc0b64"
       ],
-      "updatedUtc": "2026-10-02T02:58:37+00:00",
-      "inputSha256": "4714d4965c03e52b17761ce694f7c01e17d37462541fcf10b54a003d87f2dda0",
-      "inputRules": 210792,
-      "blockingRules": 210669,
+      "updatedUtc": "2026-10-02T03:57:45+00:00",
+      "inputSha256": "a230ef9545e1e770fdddf45ad6fb34cdbbbb71ec38063c1c7a2f34b7db48bb57",
+      "inputRules": 210866,
+      "blockingRules": 210743,
       "exceptionRules": 123,
-      "convertedRules": 210792,
+      "convertedRules": 210866,
       "upstreamNotices": [
         "# Title: 中国国内优化 DNS 黑名单",
-        "# Updated: 2026-10-02T02:58:37+00:00",
+        "# Updated: 2026-10-02T03:57:45+00:00",
         "# Expires: 1 day",
-        "# Rules: 210792",
+        "# Rules: 210866",
         "# Maintainer merges only; upstream rules belong to their authors.",
         "# DNS masks/regex preserved; exact Hosts scope and source exception priority retained.",
         "# Upstream licenses and notices: ../upstream/README.md (in the original repository).",
@@ -593,8 +593,8 @@
           "bucket": "block",
           "behavior": "domain",
           "format": "mrs",
-          "rules": 210150,
-          "sha256": "1bd748acb98c321b90be6aea394a310cccd9e447c0601c28acc7348505e8dbca"
+          "rules": 210224,
+          "sha256": "d59d9a7fd487c64d444d343c08f698cbb7cc18d5e61665b4abfb87d879358807"
         },
         "compiled-china-block-regex": {
           "file": "china-regex.txt",
@@ -602,7 +602,7 @@
           "behavior": "classical",
           "format": "text",
           "rules": 519,
-          "sha256": "af14c5594b5fdcddb94cffd37a6b1fb0483534bc8401e592c539f672046b2c53"
+          "sha256": "2882efa8a1f03ff2aebbc6cbb03ad59d927569f1a387317bcf15d6d8e93a0dfd"
         },
         "compiled-china-allow": {
           "file": "china-allow.mrs",
@@ -618,7 +618,7 @@
           "behavior": "classical",
           "format": "text",
           "rules": 2,
-          "sha256": "059fd2b895b1a52e2d026535ba329d101f805a48efbafc911e7bec86c0e6a1c1"
+          "sha256": "db8bc89b875d834b49c37bd574165164369900eba7eb4ae95e8c70d084722b9a"
         }
       },
       "rules": [
@@ -1691,5 +1691,5 @@
     }
   },
   "validatedProviders": 48,
-  "sourceManifestSha256": "3cc4fb1be00697efdd26d5564b3828227e557a56afed0c25579834f70d7c3d33"
+  "sourceManifestSha256": "8d7d108eba6a3b56b50a8e9337e8911eda13809fe47e635106a533bca96a5051"
 }

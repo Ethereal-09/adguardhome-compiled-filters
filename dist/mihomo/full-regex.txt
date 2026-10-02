@@ -1,7 +1,7 @@
 # Title: 全量 DNS 黑名单（最高档＋全部可用专项）
-# Updated: 2026-10-02T02:58:08+00:00
+# Updated: 2026-10-02T03:56:58+00:00
 # Expires: 1 day
-# Rules: 2005102
+# Rules: 2005124
 # Maintainer merges only; upstream rules belong to their authors.
 # DNS masks/regex preserved; exact Hosts scope and source exception priority retained.
 # Upstream licenses and notices: ../upstream/README.md (in the original repository).

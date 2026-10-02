@@ -1,5 +1,6 @@
 import hashlib
 import http.client
+import io
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 import json
 import os
@@ -10,13 +11,26 @@ import tempfile
 import threading
 import time
 import unittest
+from unittest.mock import MagicMock, patch
 from urllib.request import ProxyHandler, build_opener
 
-from export_mihomo import convert_rule, export, reject_rules, kernel_errors, profile_config
+from export_mihomo import convert_rule, export, reject_rules, kernel_errors, profile_config, validate_kernel
 from workflow_status import mihomo_content
 
 
 class ConversionTests(unittest.TestCase):
+    def test_kernel_waits_when_startup_api_has_null_providers(self):
+        process, opener = MagicMock(), MagicMock()
+        process.poll.return_value = None
+        opener.open.side_effect = [io.BytesIO(b'{"providers":null}'),
+                                  io.BytesIO(b'{"providers":{"fixture":{"ruleCount":1}}}')]
+        with tempfile.TemporaryDirectory() as folder, patch('export_mihomo.subprocess.Popen', return_value=process), patch(
+                'export_mihomo.build_opener', return_value=opener), patch('export_mihomo.time.sleep'):
+            validate_kernel(Path('fixture-kernel'), Path(folder), {'rules': ['MATCH,DIRECT']},
+                            {'fixture': {'rules': 1}})
+        self.assertEqual(opener.open.call_count, 2)
+        process.terminate.assert_called_once()
+
     def test_normal_linux_shutdown_is_not_a_rule_validation_warning(self):
         self.assertEqual(kernel_errors('level=warning msg="Mihomo shutting down"\n'), [])
         self.assertEqual(len(kernel_errors('level=warning msg="skip invalid domain"\n')), 1)

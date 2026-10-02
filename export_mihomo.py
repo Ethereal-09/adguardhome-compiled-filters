@@ -150,7 +150,9 @@ def validate_kernel(binary, stage, offline, providers):
                     raise ValueError('mihomo exited during provider validation')
                 try:
                     with opener.open(f'http://127.0.0.1:{port}/providers/rules', timeout=2) as response:
-                        loaded = json.load(response)['providers']
+                        # During bulk initialization the controller may return
+                        # {"providers": null} before registration completes.
+                        loaded = json.load(response).get('providers') or {}
                     if all(name in loaded and loaded[name]['ruleCount'] == info['rules']
                            for name, info in providers.items()):
                         break

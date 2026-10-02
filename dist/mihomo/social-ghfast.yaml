@@ -1,0 +1,15 @@
+{
+  "rule-providers": {
+    "compiled-social-block": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "mrs",
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/social.mrs",
+      "path": "./rule_provider/compiled/social.mrs",
+      "interval": 86400
+    }
+  },
+  "rules": [
+    "RULE-SET,compiled-social-block,REJECT"
+  ]
+}

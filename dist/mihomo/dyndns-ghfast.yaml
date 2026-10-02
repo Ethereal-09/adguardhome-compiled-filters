@@ -1,0 +1,15 @@
+{
+  "rule-providers": {
+    "compiled-dyndns-block": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "mrs",
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/dyndns.mrs",
+      "path": "./rule_provider/compiled/dyndns.mrs",
+      "interval": 86400
+    }
+  },
+  "rules": [
+    "RULE-SET,compiled-dyndns-block,REJECT"
+  ]
+}

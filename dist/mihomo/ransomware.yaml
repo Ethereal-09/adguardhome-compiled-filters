@@ -1,0 +1,15 @@
+{
+  "rule-providers": {
+    "compiled-ransomware-block": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "mrs",
+      "url": "https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/ransomware.mrs",
+      "path": "./rule_provider/compiled/ransomware.mrs",
+      "interval": 86400
+    }
+  },
+  "rules": [
+    "RULE-SET,compiled-ransomware-block,REJECT"
+  ]
+}

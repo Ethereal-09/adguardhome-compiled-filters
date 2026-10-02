@@ -1,0 +1,15 @@
+{
+  "rule-providers": {
+    "compiled-windows-block": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "mrs",
+      "url": "https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/windows.mrs",
+      "path": "./rule_provider/compiled/windows.mrs",
+      "interval": 86400
+    }
+  },
+  "rules": [
+    "RULE-SET,compiled-windows-block,REJECT"
+  ]
+}

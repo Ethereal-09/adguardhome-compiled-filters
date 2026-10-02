@@ -1,0 +1,23 @@
+{
+  "rule-providers": {
+    "compiled-security-block": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "mrs",
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/security.mrs",
+      "path": "./rule_provider/compiled/security.mrs",
+      "interval": 86400
+    },
+    "compiled-security-block-regex": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/security-regex.txt",
+      "path": "./rule_provider/compiled/security-regex.txt",
+      "interval": 86400
+    }
+  },
+  "rules": [
+    "OR,((RULE-SET,compiled-security-block),(RULE-SET,compiled-security-block-regex)),REJECT"
+  ]
+}

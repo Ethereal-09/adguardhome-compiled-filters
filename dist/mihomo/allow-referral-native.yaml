@@ -1,0 +1,13 @@
+{
+  "rule-providers": {
+    "compiled-allow-referral-native-allow": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "mrs",
+      "url": "https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/allow-referral-native.mrs",
+      "path": "./rule_provider/compiled/allow-referral-native.mrs",
+      "interval": 86400
+    }
+  },
+  "rules": []
+}

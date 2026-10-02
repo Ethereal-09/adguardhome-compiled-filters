@@ -1,0 +1,15 @@
+{
+  "rule-providers": {
+    "compiled-aggressive-1hosts-block": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "mrs",
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/aggressive-1hosts.mrs",
+      "path": "./rule_provider/compiled/aggressive-1hosts.mrs",
+      "interval": 86400
+    }
+  },
+  "rules": [
+    "RULE-SET,compiled-aggressive-1hosts-block,REJECT"
+  ]
+}

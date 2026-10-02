@@ -1,0 +1,39 @@
+{
+  "rule-providers": {
+    "compiled-combined-block": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "mrs",
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/combined.mrs",
+      "path": "./rule_provider/compiled/combined.mrs",
+      "interval": 86400
+    },
+    "compiled-combined-block-regex": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/combined-regex.txt",
+      "path": "./rule_provider/compiled/combined-regex.txt",
+      "interval": 86400
+    },
+    "compiled-combined-allow": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "mrs",
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/combined-allow.mrs",
+      "path": "./rule_provider/compiled/combined-allow.mrs",
+      "interval": 86400
+    },
+    "compiled-combined-allow-regex": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/combined-allow-regex.txt",
+      "path": "./rule_provider/compiled/combined-allow-regex.txt",
+      "interval": 86400
+    }
+  },
+  "rules": [
+    "AND,((OR,((RULE-SET,compiled-combined-block),(RULE-SET,compiled-combined-block-regex))),(NOT,((OR,((RULE-SET,compiled-combined-allow),(RULE-SET,compiled-combined-allow-regex)))))),REJECT"
+  ]
+}

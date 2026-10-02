@@ -18,6 +18,8 @@ on:
       - build_filters.py
       - validate_subscriptions.py
       - workflow_status.py
+      - export_mihomo.py
+      - tools/install_mihomo.py
       - tools/engine/**
       - update_rules.py
       - verify_github_sources.py
@@ -37,6 +39,7 @@ jobs:
     env:
       PYTHONUTF8: '1'
       DNS_RULE_VALIDATOR: ${{ github.workspace }}/.cache/dns-rule-validator
+      MIHOMO_BINARY: ${{ github.workspace }}/.cache/mihomo/mihomo
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
@@ -51,6 +54,8 @@ jobs:
         run: |
           go test ./...
           go build -o ../../.cache/dns-rule-validator .
+      - name: Install checksum-pinned official mihomo
+        run: python tools/install_mihomo.py
       - name: Test
         run: python -m unittest discover -s tests -p 'test_*.py'
       - name: Restore validated source cache
@@ -74,19 +79,24 @@ jobs:
         with:
           path: .cache/sources
           key: dns-sources-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Export and validate mihomo providers
+        id: mihomo
+        if: steps.audit.outcome == 'success'
+        continue-on-error: true
+        run: python export_mihomo.py 2>&1 | tee .cache/mihomo-export.log
       - name: Update README build status and validated rule counts
         id: readme
         if: always() && (steps.build.outcome == 'success' || steps.build.outcome == 'failure')
         env:
           BUILD_OUTCOME: ${{ steps.build.outcome }}
-          AUDIT_OUTCOME: ${{ steps.audit.outcome }}
+          AUDIT_OUTCOME: ${{ steps.audit.outcome == 'success' && steps.mihomo.outcome == 'success' && 'success' || 'failure' }}
         run: python workflow_status.py --readme README.md --build-outcome "$BUILD_OUTCOME" --audit-outcome "$AUDIT_OUTCOME"
       - name: Commit build status and verified subscriptions
         if: always() && steps.readme.outcome == 'success'
         shell: bash
         env:
           BUILD_OUTCOME: ${{ steps.build.outcome }}
-          AUDIT_OUTCOME: ${{ steps.audit.outcome }}
+          AUDIT_OUTCOME: ${{ steps.audit.outcome == 'success' && steps.mihomo.outcome == 'success' && 'success' || 'failure' }}
         run: |
           git add README.md
           if [ "$BUILD_OUTCOME" = success ] && [ "$AUDIT_OUTCOME" = success ]; then
@@ -110,8 +120,9 @@ jobs:
             .cache/last-run.json
             .cache/publish-audit.json
             .cache/build.log
+            .cache/mihomo-export.log
           if-no-files-found: ignore
           retention-days: 30
       - name: Report build or audit failure
-        if: always() && (steps.build.outcome == 'failure' || steps.audit.outcome == 'failure')
+        if: always() && (steps.build.outcome == 'failure' || steps.audit.outcome == 'failure' || steps.mihomo.outcome == 'failure')
         run: exit 1

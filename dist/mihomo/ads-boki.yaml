@@ -1,0 +1,15 @@
+{
+  "rule-providers": {
+    "compiled-ads-block": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "mrs",
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/ads.mrs",
+      "path": "./rule_provider/compiled/ads.mrs",
+      "interval": 86400
+    }
+  },
+  "rules": [
+    "RULE-SET,compiled-ads-block,REJECT"
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "rule-providers": {
+    "compiled-china-block": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "mrs",
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/china.mrs",
+      "path": "./rule_provider/compiled/china.mrs",
+      "interval": 86400
+    },
+    "compiled-china-block-regex": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/china-regex.txt",
+      "path": "./rule_provider/compiled/china-regex.txt",
+      "interval": 86400
+    },
+    "compiled-china-allow": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "mrs",
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/china-allow.mrs",
+      "path": "./rule_provider/compiled/china-allow.mrs",
+      "interval": 86400
+    },
+    "compiled-china-allow-regex": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/china-allow-regex.txt",
+      "path": "./rule_provider/compiled/china-allow-regex.txt",
+      "interval": 86400
+    }
+  },
+  "rules": [
+    "AND,((OR,((RULE-SET,compiled-china-block),(RULE-SET,compiled-china-block-regex))),(NOT,((OR,((RULE-SET,compiled-china-allow),(RULE-SET,compiled-china-allow-regex)))))),REJECT"
+  ]
+}

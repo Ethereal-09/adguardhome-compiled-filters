@@ -1,0 +1,15 @@
+{
+  "rule-providers": {
+    "compiled-youtube-block": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "mrs",
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/youtube.mrs",
+      "path": "./rule_provider/compiled/youtube.mrs",
+      "interval": 86400
+    }
+  },
+  "rules": [
+    "RULE-SET,compiled-youtube-block,REJECT"
+  ]
+}

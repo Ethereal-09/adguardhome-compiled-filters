@@ -1,0 +1,25 @@
+# Title: 综合 DNS 过滤（基础＋国内优化）
+# Updated: 2026-10-02T02:57:31+00:00
+# Expires: 1 day
+# Rules: 307161
+# Maintainer merges only; upstream rules belong to their authors.
+# DNS masks/regex preserved; exact Hosts scope and source exception priority retained.
+# Upstream licenses and notices: ../upstream/README.md (in the original repository).
+# Source: HaGeZi Normal | https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/multi.txt
+# Repository: https://github.com/hagezi/dns-blocklists | Account: hagezi
+# Upstream license: https://github.com/hagezi/dns-blocklists/blob/main/LICENSE
+# Source: AdRules DNS List | https://raw.githubusercontent.com/Cats-Team/AdRules/main/dns.txt
+# Repository: https://github.com/Cats-Team/AdRules | Account: Cats-Team
+# Upstream license: https://github.com/Cats-Team/AdRules/blob/script/LICENSE
+# Source: AWAvenue Ads Rule | https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
+# Repository: https://github.com/TG-Twilight/AWAvenue-Ads-Rule | Account: TG-Twilight
+# Upstream license: https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE
+# Source: Anti-AD | https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-easylist.txt
+# Repository: https://github.com/privacy-protection-tools/anti-AD | Account: privacy-protection-tools
+# Source: adblockfilters / rules/adblockdnslite.txt | https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt
+# Repository: https://github.com/217heidai/adblockfilters | Account: 217heidai
+# Source: OISD Basic | https://raw.githubusercontent.com/sjhgvr/oisd/main/abp_small.txt
+# Repository: https://github.com/sjhgvr/oisd | Account: sjhgvr
+# mihomo classical provider; preserve companion exception providers.
+DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?profile.*\.se\.360\.cn([^ a-zA-Z0-9.%_-]|$)
+DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?tongji\..*kuwo\.cn([^ a-zA-Z0-9.%_-]|$)

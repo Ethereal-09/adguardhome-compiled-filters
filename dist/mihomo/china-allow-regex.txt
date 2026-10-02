@@ -1,0 +1,17 @@
+# Title: 中国国内优化 DNS 黑名单
+# Updated: 2026-10-02T02:58:37+00:00
+# Expires: 1 day
+# Rules: 210792
+# Maintainer merges only; upstream rules belong to their authors.
+# DNS masks/regex preserved; exact Hosts scope and source exception priority retained.
+# Upstream licenses and notices: ../upstream/README.md (in the original repository).
+# Source: AdRules DNS List | https://raw.githubusercontent.com/Cats-Team/AdRules/main/dns.txt
+# Repository: https://github.com/Cats-Team/AdRules | Account: Cats-Team
+# Upstream license: https://github.com/Cats-Team/AdRules/blob/script/LICENSE
+# Source: Anti-AD | https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-easylist.txt
+# Repository: https://github.com/privacy-protection-tools/anti-AD | Account: privacy-protection-tools
+# Source: adblockfilters / rules/adblockdnslite.txt | https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdnslite.txt
+# Repository: https://github.com/217heidai/adblockfilters | Account: 217heidai
+# mihomo classical provider; preserve companion exception providers.
+DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?profile.*\.se\.360\.cn([^ a-zA-Z0-9.%_-]|$)
+DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?tongji\..*kuwo\.cn([^ a-zA-Z0-9.%_-]|$)

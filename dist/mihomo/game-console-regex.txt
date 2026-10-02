@@ -1,0 +1,16 @@
+# Title: 游戏机分类
+# Updated: 2026-09-30T20:58:04+00:00
+# Expires: 1 day
+# Rules: 14
+# Maintainer merges only; upstream rules belong to their authors.
+# DNS masks/regex preserved; exact Hosts scope and source exception priority retained.
+# Upstream licenses and notices: ../upstream/README.md (in the original repository).
+# Source: Game Console Adblock List | https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GameConsoleAdblockList.txt
+# Repository: https://github.com/DandelionSprout/adfilt | Account: DandelionSprout
+# Upstream license: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
+# mihomo classical provider; preserve companion exception providers.
+DOMAIN-REGEX,.*watson\.events\.data\.microsoft\.com([^ a-zA-Z0-9.%_-]|$)
+DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?realtime\-receive\-lp1\.dg\.srv\.nintendo\.net
+DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?receive\-lp1\.dg\.srv\.nintendo\.net
+DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?receive\-lp1\.er\.srv\.nintendo\.net
+DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?sprofile\-lp1\.cdn\.nintendo\.net

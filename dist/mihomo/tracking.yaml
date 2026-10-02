@@ -1,0 +1,15 @@
+{
+  "rule-providers": {
+    "compiled-tracking-block": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "mrs",
+      "url": "https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/tracking.mrs",
+      "path": "./rule_provider/compiled/tracking.mrs",
+      "interval": 86400
+    }
+  },
+  "rules": [
+    "RULE-SET,compiled-tracking-block,REJECT"
+  ]
+}

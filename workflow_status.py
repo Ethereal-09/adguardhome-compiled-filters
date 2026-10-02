@@ -14,6 +14,8 @@ SUBSCRIPTIONS_START = '<!-- subscriptions:start -->'
 SUBSCRIPTIONS_END = '<!-- subscriptions:end -->'
 UPSTREAM_START = '<!-- upstream:start -->'
 UPSTREAM_END = '<!-- upstream:end -->'
+MIHOMO_START = '<!-- mihomo:start -->'
+MIHOMO_END = '<!-- mihomo:end -->'
 DEFAULT_REPOSITORY = 'Ethereal-09/adguardhome-compiled-filters'
 SUBSCRIPTION_ACCELERATORS = (('Boki', 'https://github.boki.moe/'),
                             ('GHFast', 'https://ghfast.top/'))
@@ -68,7 +70,7 @@ def publication_blocks(config, manifest, registry, repository):
         row = f'| {label} | {count:,} |{scope} {links} |'
         groups[group].append((pid, row))
 
-    rows = ['## 订阅', '',
+    rows = ['## AdGuard Home 订阅', '',
             '在 AdGuard Home → **过滤器 → DNS 黑名单**添加。日常使用选综合版；国内优化可单独使用；全量版按需选择。', '']
     notes = {'强度档位': '任选一个档位；1Hosts 可作为替代。',
              '用途分类': '按用途单独使用或搭配基础订阅，添加到 DNS 黑名单。',
@@ -120,7 +122,8 @@ def publication_blocks(config, manifest, registry, repository):
 
 
 def update_readme(path, run, build_outcome=None, audit_outcome=None, *,
-                  config=None, manifest=None, registry=None, repository=DEFAULT_REPOSITORY):
+                  config=None, manifest=None, registry=None, repository=DEFAULT_REPOSITORY,
+                  mihomo_manifest=None):
     """Refresh counts only after successful publication validation; preserve them on failure."""
     if not path.exists():
         return
@@ -152,8 +155,41 @@ def update_readme(path, run, build_outcome=None, audit_outcome=None, *,
         subscriptions, upstream = publication_blocks(config, manifest, registry, repository)
         updated = replace_block(updated, SUBSCRIPTIONS_START, SUBSCRIPTIONS_END, subscriptions)
         updated = replace_block(updated, UPSTREAM_START, UPSTREAM_END, upstream)
+        if MIHOMO_START in updated and mihomo_manifest is not None:
+            updated = replace_block(updated, MIHOMO_START, MIHOMO_END,
+                                    mihomo_content(manifest, mihomo_manifest, repository))
     if updated != text:
         atomic_write(path, updated)
+
+
+def mihomo_content(dns_manifest, manifest, repository):
+    profiles = manifest['profiles']
+    if set(profiles) != set(dns_manifest['profiles']):
+        raise ValueError('mihomo profiles differ from DNS publication')
+    for pid, item in profiles.items():
+        dns_item = dns_manifest['profiles'][pid]
+        if item['inputSha256'] != dns_item['fileSha256']:
+            raise ValueError('mihomo input checksum differs from DNS publication: ' + pid)
+        if any(item[field] != dns_item[field] for field in ('blockingRules', 'exceptionRules')):
+            raise ValueError('mihomo counts differ from DNS publication: ' + pid)
+    rows = ['## mihomo 订阅', '',
+            '使用 **MRS 域名集 + 配套正则与例外**；[配置合并方法](dist/mihomo/README.md)。', '',
+            '| 分类 | 拦截条目 | 例外条目 | 原始配置 | Boki 配置 | GHFast 配置 |',
+            '| --- | ---: | ---: | --- | --- | --- |']
+    def row(pid, item):
+        label = {'combined': '综合版', 'china': '国内优化', 'full': '全量版'}.get(pid, item['name']).replace('|', r'\|')
+        base = f'https://raw.githubusercontent.com/{repository}/main/dist/mihomo/{pid}'
+        return (f'| {label} | {item["blockingRules"]:,} | {item["exceptionRules"]:,} | [原始]({base}.yaml) | '
+                f'[Boki](https://github.boki.moe/{base}-boki.yaml) | [GHFast](https://ghfast.top/{base}-ghfast.yaml) |')
+    featured = [pid for pid in ('combined', 'china', 'full') if pid in profiles]
+    rows += [row(pid, profiles[pid]) for pid in featured]
+    others = [pid for pid in profiles if pid not in featured]
+    if others:
+        rows += ['', '<details>', f'<summary>其他 mihomo 分类（{len(others)} 项）</summary>', '',
+                 '| 分类 | 拦截条目 | 例外条目 | 原始配置 | Boki 配置 | GHFast 配置 |',
+                 '| --- | ---: | ---: | --- | --- | --- |',
+                 *(row(pid, profiles[pid]) for pid in others), '', '</details>']
+    return '\n'.join(rows)
 
 
 def read_optional(path):
@@ -217,7 +253,8 @@ def main():
         publication = {}
         if args.build_outcome == 'success' and args.audit_outcome == 'success':
             publication = dict(config=read_optional(args.config), manifest=read_optional(args.manifest),
-                               registry=read_optional(args.registry), repository=args.repository)
+                               registry=read_optional(args.registry), repository=args.repository,
+                               mihomo_manifest=read_optional(args.manifest.parent / 'mihomo/manifest.json') or None)
         update_readme(args.readme, run, args.build_outcome, args.audit_outcome, **publication)
 
 

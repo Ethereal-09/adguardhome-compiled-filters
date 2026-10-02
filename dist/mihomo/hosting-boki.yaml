@@ -1,0 +1,15 @@
+{
+  "rule-providers": {
+    "compiled-hosting-block": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "mrs",
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/hosting.mrs",
+      "path": "./rule_provider/compiled/hosting.mrs",
+      "interval": 86400
+    }
+  },
+  "rules": [
+    "RULE-SET,compiled-hosting-block,REJECT"
+  ]
+}

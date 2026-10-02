@@ -7,7 +7,7 @@ from unittest.mock import patch
 import build_filters as builder
 from tests import test_builder as fixtures
 from workflow_status import (BUILD_END, BUILD_START, SUBSCRIPTIONS_START, SUBSCRIPTIONS_END,
-                             UPSTREAM_START, UPSTREAM_END, update_readme)
+                             UPSTREAM_START, UPSTREAM_END, MIHOMO_START, MIHOMO_END, update_readme)
 
 
 class ReadmeStatusTests(unittest.TestCase):
@@ -113,6 +113,32 @@ class ReadmeStatusTests(unittest.TestCase):
                     text = path.read_text(encoding='utf-8')
                     for start, end in [(SUBSCRIPTIONS_START, SUBSCRIPTIONS_END), (UPSTREAM_START, UPSTREAM_END)]:
                         self.assertEqual(text.split(start)[1].split(end)[0], before.split(start)[1].split(end)[0])
+
+    def test_mihomo_readme_updates_only_with_matching_validated_outputs(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = self.write_readme(Path(folder), with_publication=True)
+            with path.open('a', encoding='utf-8') as handle:
+                handle.write(f'\n{MIHOMO_START}\nold mihomo links\n{MIHOMO_END}\n')
+            publication = self.publication_fixture()
+            converted = {'profiles': {}}
+            for pid, item in publication['manifest']['profiles'].items():
+                item['fileSha256'] = pid + '-sha256'
+                converted['profiles'][pid] = dict(name=pid, inputSha256=item['fileSha256'],
+                    blockingRules=item['blockingRules'], exceptionRules=item['exceptionRules'])
+            publication['mihomo_manifest'] = converted
+            run = dict(checkedUtc='2026-10-02T00:00:00Z', status='success')
+            update_readme(path, run, 'success', 'success', **publication)
+            text = path.read_text(encoding='utf-8')
+            self.assertIn('main/dist/mihomo/full.yaml', text)
+            self.assertIn('https://github.boki.moe/https://raw.githubusercontent.com/fixture/compiled/main/dist/mihomo/full-boki.yaml', text)
+            before = text.split(MIHOMO_START)[1].split(MIHOMO_END)[0]
+            converted['profiles']['full']['inputSha256'] = 'stale'
+            update_readme(path, run, 'success', 'failure', **publication)
+            self.assertEqual(path.read_text(encoding='utf-8').split(MIHOMO_START)[1].split(MIHOMO_END)[0], before)
+            contents = path.read_bytes()
+            with self.assertRaisesRegex(ValueError, 'checksum'):
+                update_readme(path, run, 'success', 'success', **publication)
+            self.assertEqual(contents, path.read_bytes())
 
     def test_unready_outputs_cannot_replace_readme_numbers(self):
         with tempfile.TemporaryDirectory() as folder:

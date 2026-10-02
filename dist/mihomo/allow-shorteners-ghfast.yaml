@@ -1,0 +1,13 @@
+{
+  "rule-providers": {
+    "compiled-allow-shorteners-allow": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "mrs",
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/allow-shorteners.mrs",
+      "path": "./rule_provider/compiled/allow-shorteners.mrs",
+      "interval": 86400
+    }
+  },
+  "rules": []
+}

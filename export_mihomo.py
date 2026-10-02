@@ -99,6 +99,12 @@ def binary_version(binary):
         raise ValueError('Expected official mihomo ' + MIHOMO_VERSION + ': ' + result.stdout[:200])
 
 
+def kernel_errors(text):
+    return [line for line in text.splitlines()
+            if re.search(r'\blevel=(warning|error|fatal)\b', line)
+            and 'msg="Mihomo shutting down"' not in line]
+
+
 def validate_kernel(binary, stage, offline, providers):
     """Initialize providers in the actual kernel: -t alone does not check every payload."""
     with socket.socket() as listener:
@@ -135,7 +141,7 @@ def validate_kernel(binary, stage, offline, providers):
             except subprocess.TimeoutExpired:
                 process.kill()
                 process.wait(timeout=10)
-    if any(word in log_path.read_text(encoding='utf-8').lower() for word in ('error', 'invalid', 'warn')):
+    if kernel_errors(log_path.read_text(encoding='utf-8')):
         raise ValueError('mihomo reported invalid provider content: ' + log_path.read_text(encoding='utf-8')[-1000:])
 
 

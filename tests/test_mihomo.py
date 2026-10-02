@@ -12,11 +12,16 @@ import time
 import unittest
 from urllib.request import ProxyHandler, build_opener
 
-from export_mihomo import convert_rule, export, reject_rules
+from export_mihomo import convert_rule, export, reject_rules, kernel_errors
 from workflow_status import mihomo_content
 
 
 class ConversionTests(unittest.TestCase):
+    def test_normal_linux_shutdown_is_not_a_rule_validation_warning(self):
+        self.assertEqual(kernel_errors('level=warning msg="Mihomo shutting down"\n'), [])
+        self.assertEqual(len(kernel_errors('level=warning msg="skip invalid domain"\n')), 1)
+        self.assertEqual(len(kernel_errors('level=error msg="failed to load rule provider"\n')), 1)
+
     def test_exact_suffix_wildcard_and_priority(self):
         self.assertEqual(convert_rule('|child.parent.example|'), ('block', 'domain', 'child.parent.example'))
         self.assertEqual(convert_rule('||child.parent.example^'), ('block', 'domain', '+.child.parent.example'))

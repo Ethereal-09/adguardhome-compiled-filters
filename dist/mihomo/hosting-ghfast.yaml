@@ -1,15 +1,61 @@
-{
-  "rule-providers": {
-    "compiled-hosting-block": {
-      "type": "http",
-      "behavior": "domain",
-      "format": "mrs",
-      "url": "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/hosting.mrs",
-      "path": "./rule_provider/compiled/hosting.mrs",
-      "interval": 86400
-    }
-  },
-  "rules": [
-    "RULE-SET,compiled-hosting-block,REJECT"
-  ]
-}
+# Merge these providers and rules into your existing mihomo configuration.
+rule-providers:
+  compiled-hosting-block:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/hosting.mrs"
+    path: "./rule_provider/compiled/hosting.mrs"
+    interval: 86400
+  compiled-hosting-block-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/hosting-regex.txt"
+    path: "./rule_provider/compiled/hosting-regex.txt"
+    interval: 86400
+  compiled-hosting-allow:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/hosting-allow.mrs"
+    path: "./rule_provider/compiled/hosting-allow.mrs"
+    interval: 86400
+  compiled-hosting-allow-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/hosting-allow-regex.txt"
+    path: "./rule_provider/compiled/hosting-allow-regex.txt"
+    interval: 86400
+  compiled-hosting-block-important:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/hosting-block-important.mrs"
+    path: "./rule_provider/compiled/hosting-block-important.mrs"
+    interval: 86400
+  compiled-hosting-block-important-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/hosting-block-important-regex.txt"
+    path: "./rule_provider/compiled/hosting-block-important-regex.txt"
+    interval: 86400
+  compiled-hosting-allow-important:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/hosting-allow-important.mrs"
+    path: "./rule_provider/compiled/hosting-allow-important.mrs"
+    interval: 86400
+  compiled-hosting-allow-important-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/hosting-allow-important-regex.txt"
+    path: "./rule_provider/compiled/hosting-allow-important-regex.txt"
+    interval: 86400
+rules:
+  - "AND,((OR,((RULE-SET,compiled-hosting-block-important),(RULE-SET,compiled-hosting-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-hosting-allow-important),(RULE-SET,compiled-hosting-allow-important-regex)))))),REJECT"
+  - "AND,((OR,((RULE-SET,compiled-hosting-block),(RULE-SET,compiled-hosting-block-regex))),(NOT,((OR,((RULE-SET,compiled-hosting-allow),(RULE-SET,compiled-hosting-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-hosting-allow-important),(RULE-SET,compiled-hosting-allow-important-regex)))))),REJECT"

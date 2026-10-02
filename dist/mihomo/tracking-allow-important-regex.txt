@@ -1,0 +1,30 @@
+# Title: 跟踪与遥测分类
+# Updated: 2026-10-01T14:03:46+00:00
+# Expires: 1 day
+# Rules: 133812
+# Maintainer merges only; upstream rules belong to their authors.
+# DNS masks/regex preserved; exact Hosts scope and source exception priority retained.
+# Upstream licenses and notices: ../upstream/README.md (in the original repository).
+# Source: blocklistproject/Lists / tracking-ags.txt | https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/tracking-ags.txt
+# Repository: https://github.com/blocklistproject/Lists | Account: blocklistproject
+# Upstream license: https://github.com/blocklistproject/Lists/blob/main/LICENSE
+# Source: crazy-max/WindowsSpyBlocker / spy.txt | https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt
+# Repository: https://github.com/crazy-max/WindowsSpyBlocker | Account: crazy-max
+# Upstream license: https://github.com/crazy-max/WindowsSpyBlocker/blob/master/LICENSE
+# Source: alexa | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/alexa
+# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+# Source: apple | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/apple
+# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+# Source: huawei | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/huawei
+# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+# Source: roku | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/roku
+# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+# Source: samsung | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/samsung
+# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+# Source: sonos | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/sonos
+# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+# Source: windows | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/windows
+# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+# Source: xiaomi | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/xiaomi
+# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+# mihomo classical provider; preserve companion exception providers.

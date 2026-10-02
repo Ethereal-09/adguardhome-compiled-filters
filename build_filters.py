@@ -135,7 +135,8 @@ def parse_source(body, role):
                 rules.add(rule)
     if not rules:
         raise ValueError('No supported DNS rules')
-    return rules, dict(accepted=len(rules), parsedEntries=entries,
+    return rules, dict(accepted=len(rules), blockingRules=sum(not r.startswith('@@') for r in rules),
+                      exceptionRules=sum(r.startswith('@@') for r in rules), parsedEntries=entries,
                       duplicates=entries-len(rules), unsupported=unsupported, unsupportedExamples=examples)
 
 
@@ -204,6 +205,12 @@ def load_plan(config_path, registry_path):
         raise ValueError('Workers must be <= 8 and cache expiry <= 168 hours')
     if not 0 <= config['maxDropFraction'] < 1:
         raise ValueError('Invalid maxDropFraction')
+    checks = config.get('changeChecks', {})
+    if not 0 <= checks.get('maxGrowthFraction', 1) or not 0 <= checks.get('maxExceptionDropFraction', .3) < 1:
+        raise ValueError('Invalid changeChecks fraction')
+    for key in ('growthMinIncrease', 'exceptionMinBaseline'):
+        if type(checks.get(key, 1000 if key == 'growthMinIncrease' else 20)) is not int or checks.get(key, 1) < 1:
+            raise ValueError('Invalid changeChecks threshold: ' + key)
     profiles = [p for p in config['profiles'] if p.get('enabled', True)]
     ids = set()
     for profile in profiles:
@@ -215,6 +222,8 @@ def load_plan(config_path, registry_path):
             raise ValueError('Invalid profile kind or empty source list: ' + pid)
         if type(profile.get('coverageOptimization', True)) is not bool:
             raise ValueError('coverageOptimization must be a boolean: ' + pid)
+        if type(profile.get('includeCustom', False)) is not bool or (profile.get('includeCustom') and profile['kind'] != 'blocklist'):
+            raise ValueError('includeCustom must be boolean and only enabled for blocklists: ' + pid)
         families, representations = set(), set()
         if len(profile['sourceIds']) != len(set(profile['sourceIds'])):
             raise ValueError('Duplicate source in profile: ' + pid)
@@ -245,7 +254,18 @@ def load_plan(config_path, registry_path):
     return config, profiles, sources
 
 
-def download_source(source, limits, cache, previous, max_drop, allow_large_drop, validator=None):
+def check_changes(current, previous, checks, label):
+    if not previous:
+        return
+    before, after = previous.get('accepted', previous.get('totalRules', 0)), current.get('accepted', current.get('totalRules', 0))
+    if before and after - before >= checks.get('growthMinIncrease', 1000) and after > before * (1 + checks.get('maxGrowthFraction', 1)):
+        raise ValueError('Rule count increased beyond reviewed limit: ' + label)
+    exceptions = previous.get('exceptionRules', 0)
+    if exceptions >= checks.get('exceptionMinBaseline', 20) and current.get('exceptionRules', 0) < exceptions * (1-checks.get('maxExceptionDropFraction', .3)):
+        raise ValueError('Exception rules decreased beyond reviewed limit: ' + label)
+
+
+def download_source(source, limits, cache, previous, max_drop, allow_large_drop, validator=None, change_checks=None):
     key = hashlib.sha256(source['url'].encode()).hexdigest()
     raw_path, meta_path = cache / (key + '.txt'), cache / (key + '.json')
     state, cached_meta = 'fresh', None
@@ -271,6 +291,8 @@ def download_source(source, limits, cache, previous, max_drop, allow_large_drop,
         raise ValueError(f"Source below minimum {minimum}: {stats['accepted']}")
     if previous and previous.get('accepted') and not allow_large_drop and stats['accepted'] < previous['accepted'] * (1-max_drop):
         raise ValueError(f"Source decreased over {max_drop:.0%}: {source['name']}")
+    if not allow_large_drop:
+        check_changes(stats, previous, change_checks or {}, source['name'])
     engine = validate_engine(rules, validator)
     if engine:
         stats['validatedEngine'] = engine
@@ -365,7 +387,7 @@ def _build(config_path, registry_path, output, custom, cache, allow_large_drop, 
     print(f'Building {len(profiles)} profiles from {len(selected)} unique sources', flush=True)
     with ThreadPoolExecutor(max_workers=config['download']['workers']) as pool:
         futures = {pool.submit(download_source, sources[sid], config['download'], cache / 'sources',
-            old_sources.get(sid), config['maxDropFraction'], allow_large_drop, validator): sid for sid in selected}
+            old_sources.get(sid), config['maxDropFraction'], allow_large_drop, validator, config.get('changeChecks', {})): sid for sid in selected}
         for future in as_completed(futures):
             sid = futures[future]
             try:
@@ -402,6 +424,9 @@ def _build(config_path, registry_path, output, custom, cache, allow_large_drop, 
             if (previous.get('totalRules') and not allow_large_drop
                     and len(optimized) < previous['totalRules'] * (1-config['maxDropFraction'])):
                 raise ValueError('Profile rule count decreased over configured limit')
+            if not allow_large_drop:
+                check_changes(dict(totalRules=len(optimized), exceptionRules=sum(r.startswith('@@') for r in optimized)),
+                              previous, config.get('changeChecks', {}), pid)
             identity = json_text(dict(formatVersion=2, profile=profile, sources=[dict(id=sid, url=sources[sid]['url'],
                 name=sources[sid]['name'], repository=sources[sid]['repository'],
                 account=sources[sid]['repositoryAccount'], licenseEvidenceUrl=sources[sid].get('licenseEvidenceUrl'))
@@ -420,6 +445,7 @@ def _build(config_path, registry_path, output, custom, cache, allow_large_drop, 
                 fileSha256=hashlib.sha256(content.encode('utf-8')).hexdigest(),
                 validatedEngine='AdguardTeam/urlfilter v0.23.4' if validator else None,
                 usesCache=any(fetched[sid]['stats']['downloadState'] == 'cached' for sid in profile['sourceIds']))
+            published[pid]['includeCustom'] = profile.get('includeCustom', False)
             print(f'PROFILE {pid}: {len(optimized)} rules; duplicates={entries-unique_count}, covered={covered}', flush=True)
         except Exception as error:
             failed.append(pid)

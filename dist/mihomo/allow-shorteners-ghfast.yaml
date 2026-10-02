@@ -1,13 +1,59 @@
-{
-  "rule-providers": {
-    "compiled-allow-shorteners-allow": {
-      "type": "http",
-      "behavior": "domain",
-      "format": "mrs",
-      "url": "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/allow-shorteners.mrs",
-      "path": "./rule_provider/compiled/allow-shorteners.mrs",
-      "interval": 86400
-    }
-  },
-  "rules": []
-}
+# Merge these providers and rules into your existing mihomo configuration.
+rule-providers:
+  compiled-allow-shorteners-block:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/allow-shorteners-block.mrs"
+    path: "./rule_provider/compiled/allow-shorteners-block.mrs"
+    interval: 86400
+  compiled-allow-shorteners-block-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/allow-shorteners-block-regex.txt"
+    path: "./rule_provider/compiled/allow-shorteners-block-regex.txt"
+    interval: 86400
+  compiled-allow-shorteners-allow:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/allow-shorteners.mrs"
+    path: "./rule_provider/compiled/allow-shorteners.mrs"
+    interval: 86400
+  compiled-allow-shorteners-allow-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/allow-shorteners-regex.txt"
+    path: "./rule_provider/compiled/allow-shorteners-regex.txt"
+    interval: 86400
+  compiled-allow-shorteners-block-important:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/allow-shorteners-block-important.mrs"
+    path: "./rule_provider/compiled/allow-shorteners-block-important.mrs"
+    interval: 86400
+  compiled-allow-shorteners-block-important-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/allow-shorteners-block-important-regex.txt"
+    path: "./rule_provider/compiled/allow-shorteners-block-important-regex.txt"
+    interval: 86400
+  compiled-allow-shorteners-allow-important:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/allow-shorteners-allow-important.mrs"
+    path: "./rule_provider/compiled/allow-shorteners-allow-important.mrs"
+    interval: 86400
+  compiled-allow-shorteners-allow-important-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/allow-shorteners-allow-important-regex.txt"
+    path: "./rule_provider/compiled/allow-shorteners-allow-important-regex.txt"
+    interval: 86400
+rules: []

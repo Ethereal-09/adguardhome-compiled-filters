@@ -8,6 +8,7 @@ import os
 from pathlib import Path
 import re
 import socket
+import struct
 import subprocess
 import sys
 import tempfile
@@ -20,6 +21,32 @@ from workflow_status import DEFAULT_REPOSITORY, SUBSCRIPTION_ACCELERATORS
 MIHOMO_VERSION = 'v1.19.32'
 SIMPLE = re.compile(r'(@@)?(\|\||\|)([a-zA-Z0-9.-]+)(\^|\|)(\$important)?')
 BUCKETS = ('block', 'allow', 'block-important', 'allow-important')
+
+
+def empty_domain_mrs():
+    """MRSv1 with zero rules and a nonterminal root; it matches no hostname.
+
+    The official converter rejects zero input. Encode its documented reader
+    layout instead: root bitmap terminates before its unreachable label.
+    See v1.19.32 rules/provider/mrs_reader.go and component/trie/domain_set_bin.go.
+    A single raw Zstandard block avoids a compression library dependency.
+    Every generated file is still loaded and counted by the official kernel.
+    """
+    payload = b'MRS\x01\x00' + struct.pack('>qq', 0, 0)
+    payload += b'\x01' + struct.pack('>qqqqq', 1, 0, 1, 1, 1) + b'\x00'
+    return b'\x28\xb5\x2f\xfd\x20' + bytes([len(payload)]) + ((len(payload) << 3) | 1).to_bytes(3, 'little') + payload
+
+
+def yaml_config(config):
+    """Readable YAML using JSON-quoted scalars (no optional YAML dependency)."""
+    quote = lambda value: json.dumps(value, ensure_ascii=False)
+    lines = ['# Merge these providers and rules into your existing mihomo configuration.', 'rule-providers:']
+    for name, provider in config['rule-providers'].items():
+        lines.append('  ' + name + ':')
+        lines.extend('    ' + key + ': ' + quote(value) for key, value in provider.items())
+    lines.append('rules:' if config['rules'] else 'rules: []')
+    lines.extend('  - ' + quote(rule) for rule in config['rules'])
+    return '\n'.join(lines) + '\n'
 
 
 def convert_rule(line):
@@ -88,8 +115,6 @@ def profile_config(pid, providers, rules, repository, accelerator='original'):
         raw = f'https://raw.githubusercontent.com/{repository}/main/dist/mihomo/{info["file"]}'
         mapping[name] = dict(type='http', behavior=info['behavior'], format=info['format'],
                              url=prefix + raw, path='./rule_provider/compiled/' + info['file'], interval=86400)
-    # JSON is valid YAML; avoids introducing a runtime YAML dependency or
-    # incorrectly quoting regexes, logical rules and source metadata.
     return dict(**{'rule-providers': mapping}, rules=rules)
 
 
@@ -181,8 +206,6 @@ def export(source, output, config_path, binary, repository=DEFAULT_REPOSITORY):
                 raise ValueError('Blocking rule in allowlist: ' + pid)
             providers = {}
             for (bucket, behavior), payloads in data.items():
-                if not payloads:
-                    continue
                 primary = bucket == ('allow' if profile['kind'] == 'allowlist' else 'block')
                 stem = pid if primary else pid + '-' + bucket
                 name = 'compiled-' + pid + '-' + bucket + ('-regex' if behavior == 'classical' else '')
@@ -192,21 +215,25 @@ def export(source, output, config_path, binary, repository=DEFAULT_REPOSITORY):
                 if behavior == 'domain':
                     plain, mrs = stage / (name + '.txt'), stage / filename
                     plain.write_text(text, encoding='utf-8', newline='\n')
-                    result = subprocess.run([str(binary), 'convert-ruleset', 'domain', 'text', str(plain), str(mrs)],
+                    if not payloads:
+                        mrs.write_bytes(empty_domain_mrs())
+                    else:
+                        result = subprocess.run([str(binary), 'convert-ruleset', 'domain', 'text', str(plain), str(mrs)],
                                             capture_output=True, text=True, encoding='utf-8', timeout=180)
-                    if result.returncode or 'skip invalid' in (result.stdout + result.stderr).lower():
-                        raise ValueError('MRS conversion failed: ' + pid + ': ' + result.stdout + result.stderr)
+                        if result.returncode or 'skip invalid' in (result.stdout + result.stderr).lower():
+                            raise ValueError('MRS conversion failed: ' + pid + ': ' + result.stdout + result.stderr)
                     contents[filename] = mrs.read_bytes()
                 else:
                     contents[filename] = text.encode('utf-8')
                 providers[name] = dict(file=filename, bucket=bucket, behavior=behavior,
                     format='mrs' if behavior == 'domain' else 'text', rules=len(payloads),
                     sha256=hashlib.sha256(contents[filename]).hexdigest())
-            routing = reject_rules(providers)
+            routing = [] if profile['kind'] == 'allowlist' else reject_rules(providers)
             for accelerator in ('original', 'Boki', 'GHFast'):
                 suffix = '' if accelerator == 'original' else '-' + accelerator.lower()
-                contents[pid + suffix + '.yaml'] = json_text(profile_config(pid, providers, routing, repository, accelerator)).encode('utf-8')
+                contents[pid + suffix + '.yaml'] = yaml_config(profile_config(pid, providers, routing, repository, accelerator)).encode('utf-8')
             exported[pid] = dict(name=profile['name'], kind=profile['kind'], sourceIds=item['sourceIds'],
+                configVersion=2,
                 updatedUtc=item['updatedUtc'], inputSha256=item['fileSha256'], inputRules=count,
                 blockingRules=count-exceptions, exceptionRules=exceptions,
                 convertedRules=sum(len(r) for r in data.values()), upstreamNotices=headers,
@@ -221,14 +248,14 @@ def export(source, output, config_path, binary, repository=DEFAULT_REPOSITORY):
             name: dict(type='file', behavior=info['behavior'], format=info['format'], path=info['file'])
             for name, info in all_providers.items()},
             'rules': [rule for item in exported.values() for rule in item['rules']] + ['MATCH,DIRECT']}
-        (stage / 'test.json').write_text(json_text(offline), encoding='utf-8')
-        result = subprocess.run([str(binary), '-t', '-d', str(stage), '-f', str(stage / 'test.json')],
+        (stage / 'test.yaml').write_text(yaml_config(offline), encoding='utf-8')
+        result = subprocess.run([str(binary), '-t', '-d', str(stage), '-f', str(stage / 'test.yaml')],
                                 capture_output=True, text=True, encoding='utf-8', timeout=240)
         if result.returncode or any(word in (result.stdout + result.stderr).lower()
                                   for word in ('error', 'invalid', 'warn')):
             raise ValueError('mihomo configuration validation failed: ' + result.stdout + result.stderr)
         validate_kernel(binary, stage, offline, all_providers)
-    report = dict(schemaVersion=1, engine='mihomo ' + MIHOMO_VERSION, profiles=exported,
+    report = dict(schemaVersion=2, configVersion=2, engine='mihomo ' + MIHOMO_VERSION, profiles=exported,
                   validatedProviders=len(all_providers),
                   sourceManifestSha256=hashlib.sha256((source / 'manifest.json').read_bytes()).hexdigest())
     contents['manifest.json'] = json_text(report).encode('utf-8')
@@ -262,11 +289,15 @@ def index_content(profiles):
 2. 把片段的 `rules` 按原顺序放在现有分流规则之前。不要覆盖原来的节点、策略组或后续规则。
 3. Boki / GHFast 片段中的所有规则集下载地址也使用对应加速源。每天更新一次（86400 秒）。
 
+旧版用户需重新合并一次配置版本 2 的片段。新版固定声明八个 provider（四种动作/优先级 × 域名/正则），
+即使暂无对应规则也保留不匹配任何域名的空规则集。以后出现新的例外、important 或正则时，无需再次修改配置。
+这是配置片段，不是节点订阅；`interval` 只刷新规则文件，不刷新你合并过的配置。
+
 放行例外只跳过本分类的 REJECT，继续执行后面的分流规则。不要单独使用拦截 MRS，否则会遗漏配套例外或正则。
 独立白名单片段仅声明 provider，不自动强制 DIRECT；可用 NOT 条件排除拦截，或按你的用途指定策略。
 多分类同时启用时，例外只对各自分类有效；需统一跨分类例外时，先合并来源生成同一分类。
 这是域名流量拦截，不是 DNS 响应改写；仅 IP 连接且没有域名元数据时无法按域名过滤。
-使用 mihomo ''' + MIHOMO_VERSION + ''' 或更新版本。生成器用官方内核转换 MRS 并验证配置，未支持的规则会使整次导出失败。
+使用 mihomo ''' + MIHOMO_VERSION + ''' 或更新版本。生成器用官方内核转换 MRS 并验证配置；每日发布按分类隔离失败，保留该分类旧版。
 格式依据：[规则集合](https://wiki.metacubex.one/config/rule-providers/) / [路由规则](https://wiki.metacubex.one/config/rules/)。
 
 ## 配置片段

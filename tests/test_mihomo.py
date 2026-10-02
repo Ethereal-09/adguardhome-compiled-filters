@@ -12,7 +12,7 @@ import time
 import unittest
 from urllib.request import ProxyHandler, build_opener
 
-from export_mihomo import convert_rule, export, reject_rules, kernel_errors
+from export_mihomo import convert_rule, export, reject_rules, kernel_errors, profile_config
 from workflow_status import mihomo_content
 
 
@@ -46,6 +46,9 @@ class ConversionTests(unittest.TestCase):
         dns = {'profiles': {'china': {'fileSha256': 'new'}}}
         with self.assertRaisesRegex(ValueError, 'checksum'):
             mihomo_content(dns, {'profiles': {'china': {'inputSha256': 'old'}}}, 'fixture/rules')
+        with self.assertRaisesRegex(ValueError, 'checksum'):
+            mihomo_content(dns, {'profiles': {'china': {'inputSha256': 'old', 'status': 'ready'}}},
+                           'fixture/rules', allow_stale=True)
 
 
 @unittest.skipUnless(os.environ.get('MIHOMO_BINARY') and os.environ.get('DNS_RULE_VALIDATOR'),
@@ -85,9 +88,24 @@ class RealMihomoTests(unittest.TestCase):
             config = {'profiles': [dict(id='fixture', name='fixture', enabled=True, kind='blocklist', sourceIds=['a'])]}
             config_path = root / 'profiles.json'
             config_path.write_text(json.dumps(config), encoding='utf-8')
+            # The installed config must stay identical when exceptions,
+            # important rules and regexes appear for the first time.
+            bootstrap_body = '||parent.example^\n'
+            bootstrap_item = dict(manifest['profiles']['fixture'], totalRules=1, blockingRules=1, exceptionRules=0,
+                                 fileSha256=hashlib.sha256(bootstrap_body.encode()).hexdigest())
+            (source / 'fixture.txt').write_text(bootstrap_body, encoding='utf-8', newline='\n')
+            (source / 'manifest.json').write_text(json.dumps({'profiles': {'fixture': bootstrap_item}}), encoding='utf-8')
+            bootstrap = export(source, output, config_path, os.environ['MIHOMO_BINARY'], 'fixture/rules')
+            installed_config = (output / 'fixture.yaml').read_bytes()
+            self.assertEqual(len(bootstrap['profiles']['fixture']['providers']), 8)
+            self.assertEqual(sum(p['rules'] for p in bootstrap['profiles']['fixture']['providers'].values()), 1)
+            (source / 'fixture.txt').write_text(body, encoding='utf-8', newline='\n')
+            (source / 'manifest.json').write_text(json.dumps(manifest), encoding='utf-8')
             report = export(source, output, config_path, os.environ['MIHOMO_BINARY'], 'fixture/rules')
+            self.assertEqual(installed_config, (output / 'fixture.yaml').read_bytes())
             self.assertEqual(report['profiles']['fixture']['inputRules'], len(rules))
-            boki = json.loads((output / 'fixture-boki.yaml').read_text(encoding='utf-8'))
+            boki = profile_config('fixture', report['profiles']['fixture']['providers'],
+                report['profiles']['fixture']['rules'], 'fixture/rules', 'Boki')
             self.assertTrue(all(p['url'].startswith('https://github.boki.moe/https://raw.githubusercontent.com/fixture/rules/')
                                 for p in boki['rule-providers'].values()))
             files_before = {p.name: p.read_bytes() for p in output.iterdir()}
@@ -110,7 +128,8 @@ class RealMihomoTests(unittest.TestCase):
                     sock.bind(('127.0.0.1', 0))
                     return sock.getsockname()[1]
             proxy_port, controller_port = free_port(), free_port()
-            runtime = json.loads((output / 'fixture.yaml').read_text(encoding='utf-8'))
+            runtime = profile_config('fixture', report['profiles']['fixture']['providers'],
+                report['profiles']['fixture']['rules'], 'fixture/rules')
             for name, provider in runtime['rule-providers'].items():
                 provider['type'] = 'file'
                 provider['path'] = report['profiles']['fixture']['providers'][name]['file']

@@ -1,7 +1,7 @@
 # Title: 诈骗分类
-# Updated: 2026-10-01T07:47:30+00:00
+# Updated: 2026-10-02T05:31:06+00:00
 # Expires: 1 day
-# Rules: 157609
+# Rules: 157602
 # Maintainer merges only; upstream rules belong to their authors.
 # DNS masks/regex preserved; exact Hosts scope and source exception priority retained.
 # Upstream licenses and notices: ../upstream/README.md (in the original repository).

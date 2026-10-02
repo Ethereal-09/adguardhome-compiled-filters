@@ -1,15 +1,61 @@
-{
-  "rule-providers": {
-    "compiled-extended-block": {
-      "type": "http",
-      "behavior": "domain",
-      "format": "mrs",
-      "url": "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/extended.mrs",
-      "path": "./rule_provider/compiled/extended.mrs",
-      "interval": 86400
-    }
-  },
-  "rules": [
-    "RULE-SET,compiled-extended-block,REJECT"
-  ]
-}
+# Merge these providers and rules into your existing mihomo configuration.
+rule-providers:
+  compiled-extended-block:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/extended.mrs"
+    path: "./rule_provider/compiled/extended.mrs"
+    interval: 86400
+  compiled-extended-block-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/extended-regex.txt"
+    path: "./rule_provider/compiled/extended-regex.txt"
+    interval: 86400
+  compiled-extended-allow:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/extended-allow.mrs"
+    path: "./rule_provider/compiled/extended-allow.mrs"
+    interval: 86400
+  compiled-extended-allow-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/extended-allow-regex.txt"
+    path: "./rule_provider/compiled/extended-allow-regex.txt"
+    interval: 86400
+  compiled-extended-block-important:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/extended-block-important.mrs"
+    path: "./rule_provider/compiled/extended-block-important.mrs"
+    interval: 86400
+  compiled-extended-block-important-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/extended-block-important-regex.txt"
+    path: "./rule_provider/compiled/extended-block-important-regex.txt"
+    interval: 86400
+  compiled-extended-allow-important:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/extended-allow-important.mrs"
+    path: "./rule_provider/compiled/extended-allow-important.mrs"
+    interval: 86400
+  compiled-extended-allow-important-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/extended-allow-important-regex.txt"
+    path: "./rule_provider/compiled/extended-allow-important-regex.txt"
+    interval: 86400
+rules:
+  - "AND,((OR,((RULE-SET,compiled-extended-block-important),(RULE-SET,compiled-extended-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-extended-allow-important),(RULE-SET,compiled-extended-allow-important-regex)))))),REJECT"
+  - "AND,((OR,((RULE-SET,compiled-extended-block),(RULE-SET,compiled-extended-block-regex))),(NOT,((OR,((RULE-SET,compiled-extended-allow),(RULE-SET,compiled-extended-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-extended-allow-important),(RULE-SET,compiled-extended-allow-important-regex)))))),REJECT"

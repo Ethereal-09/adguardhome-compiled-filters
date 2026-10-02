@@ -1,0 +1,11 @@
+# Title: 均衡 DNS 过滤
+# Updated: 2026-10-02T02:58:13+00:00
+# Expires: 1 day
+# Rules: 198941
+# Maintainer merges only; upstream rules belong to their authors.
+# DNS masks/regex preserved; exact Hosts scope and source exception priority retained.
+# Upstream licenses and notices: ../upstream/README.md (in the original repository).
+# Source: HaGeZi Normal | https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/multi.txt
+# Repository: https://github.com/hagezi/dns-blocklists | Account: hagezi
+# Upstream license: https://github.com/hagezi/dns-blocklists/blob/main/LICENSE
+# mihomo classical provider; preserve companion exception providers.

@@ -1,15 +1,61 @@
-{
-  "rule-providers": {
-    "compiled-tracking-block": {
-      "type": "http",
-      "behavior": "domain",
-      "format": "mrs",
-      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/tracking.mrs",
-      "path": "./rule_provider/compiled/tracking.mrs",
-      "interval": 86400
-    }
-  },
-  "rules": [
-    "RULE-SET,compiled-tracking-block,REJECT"
-  ]
-}
+# Merge these providers and rules into your existing mihomo configuration.
+rule-providers:
+  compiled-tracking-block:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/tracking.mrs"
+    path: "./rule_provider/compiled/tracking.mrs"
+    interval: 86400
+  compiled-tracking-block-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/tracking-regex.txt"
+    path: "./rule_provider/compiled/tracking-regex.txt"
+    interval: 86400
+  compiled-tracking-allow:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/tracking-allow.mrs"
+    path: "./rule_provider/compiled/tracking-allow.mrs"
+    interval: 86400
+  compiled-tracking-allow-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/tracking-allow-regex.txt"
+    path: "./rule_provider/compiled/tracking-allow-regex.txt"
+    interval: 86400
+  compiled-tracking-block-important:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/tracking-block-important.mrs"
+    path: "./rule_provider/compiled/tracking-block-important.mrs"
+    interval: 86400
+  compiled-tracking-block-important-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/tracking-block-important-regex.txt"
+    path: "./rule_provider/compiled/tracking-block-important-regex.txt"
+    interval: 86400
+  compiled-tracking-allow-important:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/tracking-allow-important.mrs"
+    path: "./rule_provider/compiled/tracking-allow-important.mrs"
+    interval: 86400
+  compiled-tracking-allow-important-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/tracking-allow-important-regex.txt"
+    path: "./rule_provider/compiled/tracking-allow-important-regex.txt"
+    interval: 86400
+rules:
+  - "AND,((OR,((RULE-SET,compiled-tracking-block-important),(RULE-SET,compiled-tracking-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-tracking-allow-important),(RULE-SET,compiled-tracking-allow-important-regex)))))),REJECT"
+  - "AND,((OR,((RULE-SET,compiled-tracking-block),(RULE-SET,compiled-tracking-block-regex))),(NOT,((OR,((RULE-SET,compiled-tracking-allow),(RULE-SET,compiled-tracking-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-tracking-allow-important),(RULE-SET,compiled-tracking-allow-important-regex)))))),REJECT"

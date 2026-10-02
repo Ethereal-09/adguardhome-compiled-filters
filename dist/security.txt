@@ -1,7 +1,7 @@
 ! Title: 安全分类（威胁与诈骗等）
-! Updated: 2026-10-01T07:47:25+00:00
+! Updated: 2026-10-02T05:31:02+00:00
 ! Expires: 1 day
-! Rules: 654800
+! Rules: 654793
 ! Maintainer merges only; upstream rules belong to their authors.
 ! DNS masks/regex preserved; exact Hosts scope and source exception priority retained.
 ! Upstream licenses and notices: ../upstream/README.md (in the original repository).
@@ -11869,7 +11869,6 @@
 ||1blox.info^
 ||1bluemountain.com^
 ||1bm0-verified-identity8910.com^
-||1bmo-reactivemyaccount0.com^
 ||1bmo-security-alert.com^
 ||1browse.cn^
 ||1browse.info^
@@ -31262,7 +31261,6 @@
 ||a6shbjls2t.neliver.com^
 ||a6shd.perfectcleanredir.com^
 ||a6tw86ggaz.neliver.com^
-||a6u.uk^
 ||a6xqm5su8u.neliver.com^
 ||a6zkstvfgp.neliver.com^
 ||a71.info^
@@ -31835,7 +31833,6 @@
 ||aadil.000webhostapp.com^
 ||aadils.com^
 ||aadiproperties.co.in^
-||aadirone.cc^
 ||aadisol.in^
 ||aaditya.tech^
 ||aadityainc.com^
@@ -34671,7 +34668,6 @@
 ||accesttpayment.biz^
 ||accesweb-account-intl.com^
 ||accfb.000webhostapp.com^
-||accfiverif.com^
 ||accformacion.com^
 ||accgendexbplacey.bplaced.net^
 ||acchelp-support.biz^
@@ -57524,7 +57520,6 @@
 ||alphatech.tel^
 ||alphatech365.com^
 ||alphatoastmasters.org.au^
-||alphatowercompany.in^
 ||alphatradings.co.uk^
 ||alphatrize-software.com^
 ||alphatronic.ie^
@@ -67622,7 +67617,6 @@
 ||appdom.mobi^
 ||appdown.7723.cn^
 ||appdownloadcity.com^
-||appdrive.info^
 ||appds-storbilpay.myvnc.com^
 ||appdvloprfb.gq^
 ||appeal-submmision-created.stmattnc.org^
@@ -112606,7 +112600,6 @@
 ||by-akira.com^
 ||by-anyone.tk^
 ||by-cosmetics.dent-spa.ru^
-||by-emmamuller.de^
 ||by-fotos.ifrance.com^
 ||by-isabel.nl^
 ||by-its.com^
@@ -172994,7 +172987,6 @@
 ||discountghd.org^
 ||discounthardwaredirect.com^
 ||discounthedges.com^
-||discounthoneywell.com^
 ||discounthotelratesthailand.com^
 ||discounthotelsupplies.com^
 ||discountion.info^
@@ -216913,7 +216905,6 @@
 ||faze77.com^
 ||faze8.com^
 ||faze9.com^
-||faze91.com^
 ||fazecrew.tk^
 ||fazedo.com^
 ||fazeebook.com^
@@ -223374,6 +223365,7 @@
 ||fitga.ru^
 ||fitgazette.com^
 ||fitgirl-repacks-site.org^
+||fitgirl-repacks.vip^
 ||fitgirlsguide.com^
 ||fitgoalz.com^
 ||fitgr8.com^
@@ -379775,7 +379767,6 @@
 ||navi7.com^
 ||navi72.com^
 ||navi72.ru^
-||navi74.ru^
 ||navi77.com^
 ||navi78.ru^
 ||navi8.com^
@@ -411216,7 +411207,6 @@
 ||pamba.cn^
 ||pambadiyal.com^
 ||pambaheritage.com^
-||pambi.tech^
 ||pambosdrivingschool.com^
 ||pambosnaparocks.com^
 ||pamchambers.com^
@@ -426977,7 +426967,6 @@
 ||pinindivam.cyou^
 ||piningcheer.host^
 ||piniyakobidiamonds.com^
-||pinjamanelit.top^
 ||pinjamanrupiah.xyz^
 ||pinjamanuangbpkb.com^
 ||pinjamteman.top^
@@ -535347,6 +535336,7 @@
 ||tdfreepdf.site^
 ||tdftechnologies.com^
 ||tdgixd.org^
+||tdgrop168.vip^
 ||tdgw.com^
 ||tdgysmmdru.bid^
 ||tdgzin36bqr86m89u4ks.bosch-web-marketing.co.uk^
@@ -553039,6 +553029,7 @@
 ||toko-lariss.dproject-asia.com^
 ||toko.abaditenda.net^
 ||toko.dinimutia.com^
+||toko999.net^
 ||tokoahbab.berniagabagus.com^
 ||tokoahlussunnah.com^
 ||tokoaquila.net^
@@ -600636,6 +600627,7 @@
 ||whkpskyj.com^
 ||whkwbllcctfm.com^
 ||whl.meegmfio.in^
+||whliksrvlj.webtool.sk^
 ||whlkfqmdfezzes.download^
 ||whm.com.pk^
 ||whm.gbithosting.ro^
@@ -602017,6 +602009,7 @@
 ||wind-borne-generati.000webhostapp.com^
 ||wind.mobi^
 ||wind.pie.me.uk^
+||wind88.shop^
 ||winda-ep.com^
 ||windaily.tk^
 ||windbellstore.com^

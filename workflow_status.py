@@ -28,7 +28,7 @@ def replace_block(text, start, end, content):
                   lambda _: start + '\n' + content.rstrip() + '\n' + end, text, flags=re.DOTALL)
 
 
-def publication_blocks(config, manifest, registry, repository):
+def publication_blocks(config, manifest, registry, repository, allow_retained=False):
     """Describe the validated output; never use historical registry rule counts."""
     if not re.fullmatch(r'[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+', repository):
         raise ValueError('Invalid README repository')
@@ -45,12 +45,14 @@ def publication_blocks(config, manifest, registry, repository):
     for profile in profiles:
         pid = profile['id']
         item = manifest['profiles'][pid]
-        if item['status'] != 'ready' or item['sourceIds'] != profile['sourceIds']:
+        if not allow_retained and (item['status'] != 'ready' or item['sourceIds'] != profile['sourceIds']):
             raise ValueError('README counts require ready outputs with matching sources: ' + pid)
+        if item['status'] == 'failed':
+            continue
         count = item['totalRules']
         if type(count) is not int or count < 1 or count != item['blockingRules'] + item['exceptionRules']:
             raise ValueError('Invalid README rule count: ' + pid)
-        selected.update(profile['sourceIds'])
+        selected.update(item['sourceIds'])
         if profile['kind'] == 'allowlist':
             group = '独立白名单'
         elif profile['axis'] in ('composition', 'region'):
@@ -62,6 +64,8 @@ def publication_blocks(config, manifest, registry, repository):
         else:
             group = '用途分类'
         label = labels.get(pid, profile['name']).replace('|', r'\|').replace('\n', ' ')
+        if item['status'] == 'retained':
+            label += '（保留旧版）'
         filename = 'adguard.txt' if pid == config['defaultProfile'] else pid + '.txt'
         url = f'https://raw.githubusercontent.com/{repository}/main/dist/{filename}'
         links = ' | '.join([f'[原始]({url})',
@@ -71,7 +75,7 @@ def publication_blocks(config, manifest, registry, repository):
         groups[group].append((pid, row))
 
     rows = ['## AdGuard Home 订阅', '',
-            '在 AdGuard Home → **过滤器 → DNS 黑名单**添加。日常使用选综合版；国内优化可单独使用；全量版按需选择。', '']
+            '在 AdGuard Home → **过滤器 → DNS 黑名单**添加。日常使用选综合版；国内优化可单独使用。**全量版包含整站和服务限制，可能影响正常使用。**', '']
     notes = {'强度档位': '任选一个档位；1Hosts 可作为替代。',
              '用途分类': '按用途单独使用或搭配基础订阅，添加到 DNS 黑名单。',
              '设备与服务限制': '添加到 DNS 黑名单；整站或服务限制可能影响正常功能。',
@@ -99,6 +103,8 @@ def publication_blocks(config, manifest, registry, repository):
                      *(row for _, row in entries), '']
     if folded:
         rows += ['</details>', '']
+    custom_profiles = [labels.get(p['id'], p['name']) for p in profiles if p.get('includeCustom')]
+    rows += ['个人规则适用：' + '、'.join(custom_profiles) + '；其他分类可通过 `includeCustom` 单独开启。', '']
 
     repositories = {sources[sid]['repository'] for sid in selected}
     github = sum(repo.startswith('https://github.com/') for repo in repositories)
@@ -110,12 +116,13 @@ def publication_blocks(config, manifest, registry, repository):
                 '| 维护账号 / 原始项目 | 原始规则文件 | 支持规则数 |', '| --- | --- | ---: |']
     for sid in sorted(selected, key=lambda sid: (sources[sid]['repository'].lower(), sources[sid]['path'])):
         source, stats = sources[sid], manifest['sources'][sid]
-        if stats.get('url') != source['url'] or type(stats.get('accepted')) is not int or stats['accepted'] < 1:
+        if not allow_retained and (stats.get('url') != source['url'] or type(stats.get('accepted')) is not int or stats['accepted'] < 1):
             raise ValueError('Invalid README upstream count or identity: ' + sid)
         repo = source['repository']
         name = repo.removeprefix('https://github.com/') if repo.startswith('https://github.com/') else source['repositoryAccount']
         filename = source['path'].replace('|', r'\|')
-        upstream.append(f"| [{name}]({repo}) | [{filename}]({source['url']}) | {stats['accepted']:,} |")
+        count_text = f"{stats['accepted']:,}" if type(stats.get('accepted')) is int else '本次未获取'
+        upstream.append(f"| [{name}]({repo}) | [{filename}]({source['url']}) | {count_text} |")
     upstream += ['', '</details>', '',
                  '[来源登记](registry/README.md) · [上游许可与署名](upstream/README.md)；合并产物遵循各上游许可。']
     return '\n'.join(rows), '\n'.join(upstream)
@@ -123,11 +130,34 @@ def publication_blocks(config, manifest, registry, repository):
 
 def update_readme(path, run, build_outcome=None, audit_outcome=None, *,
                   config=None, manifest=None, registry=None, repository=DEFAULT_REPOSITORY,
-                  mihomo_manifest=None):
+                  mihomo_manifest=None, publication=None):
     """Refresh counts only after successful publication validation; preserve them on failure."""
     if not path.exists():
         return
     text = path.read_text(encoding='utf-8')
+    if publication is not None:
+        checked = datetime.fromisoformat(publication['checkedUtc']).astimezone(timezone(timedelta(hours=8)))
+        published = publication.get('publishedUtc')
+        block = []
+        if published:
+            stamp = datetime.fromisoformat(published).astimezone(timezone(timedelta(hours=8)))
+            block += [f'> 最近成功发布：**{stamp:%Y-%m-%d %H:%M:%S}（北京时间）**', '>']
+        state = {'success': '全部通过校验', 'partial': '部分更新，失败分类保留旧版', 'failed': '本次失败，保留旧版'}[publication['status']]
+        block += [f'> 最近检查：{checked:%Y-%m-%d %H:%M:%S} · **{state}**', '>',
+                  f'> 本次通过：AdGuard Home {len(publication["dnsValidated"])} / mihomo {len(publication["mihomoValidated"])} · [变化与失败详情](dist/publication.json)']
+        cached = len(run.get('cacheSources', []))
+        if cached:
+            block[-1] += f' · 缓存来源 {cached}'
+        updated = replace_block(text, BUILD_START, BUILD_END, '\n'.join(block))
+        subscriptions, upstream = publication_blocks(config, manifest, registry, repository, allow_retained=True)
+        updated = replace_block(updated, SUBSCRIPTIONS_START, SUBSCRIPTIONS_END, subscriptions)
+        updated = replace_block(updated, UPSTREAM_START, UPSTREAM_END, upstream)
+        if MIHOMO_START in updated:
+            updated = replace_block(updated, MIHOMO_START, MIHOMO_END,
+                                    mihomo_content(manifest, mihomo_manifest, repository, allow_stale=True))
+        if updated != text:
+            atomic_write(path, updated)
+        return
     stamp = datetime.fromisoformat(run['checkedUtc']).astimezone(timezone(timedelta(hours=8)))
     failed = run.get('status') == 'failed' or run.get('failedProfiles') or run.get('error')
     if build_outcome in ('failure', 'cancelled') or failed:
@@ -150,6 +180,10 @@ def update_readme(path, run, build_outcome=None, audit_outcome=None, *,
         details.append(f'来源：新下载 {fresh}，缓存 {cached}，失败 {source_failed}')
     block = [f"> 最近构建：**{stamp:%Y-%m-%d %H:%M:%S}（北京时间）**", '>',
              '> 状态：**' + state + '**' + (' · ' + ' · '.join(details) if details else '')]
+    if failed or audit_outcome == 'failure' or build_outcome == 'failure':
+        previous_publication = re.search(r'^> 最近成功发布：.*$', text, flags=re.MULTILINE)
+        if previous_publication:
+            block = [previous_publication[0], '>'] + block
     updated = replace_block(text, BUILD_START, BUILD_END, '\n'.join(block))
     if not failed and build_outcome == 'success' and audit_outcome == 'success' and manifest is not None:
         subscriptions, upstream = publication_blocks(config, manifest, registry, repository)
@@ -162,22 +196,27 @@ def update_readme(path, run, build_outcome=None, audit_outcome=None, *,
         atomic_write(path, updated)
 
 
-def mihomo_content(dns_manifest, manifest, repository):
+def mihomo_content(dns_manifest, manifest, repository, allow_stale=False):
     profiles = manifest['profiles']
-    if set(profiles) != set(dns_manifest['profiles']):
+    if not allow_stale and set(profiles) != set(dns_manifest['profiles']):
         raise ValueError('mihomo profiles differ from DNS publication')
     for pid, item in profiles.items():
         dns_item = dns_manifest['profiles'][pid]
-        if item['inputSha256'] != dns_item['fileSha256']:
+        may_retain = allow_stale and item.get('status') == 'retained'
+        if not may_retain and item['inputSha256'] != dns_item['fileSha256']:
             raise ValueError('mihomo input checksum differs from DNS publication: ' + pid)
-        if any(item[field] != dns_item[field] for field in ('blockingRules', 'exceptionRules')):
+        if not may_retain and any(item[field] != dns_item[field] for field in ('blockingRules', 'exceptionRules')):
             raise ValueError('mihomo counts differ from DNS publication: ' + pid)
     rows = ['## mihomo 订阅', '',
-            '使用 **MRS 域名集 + 配套正则与例外**；[配置合并方法](dist/mihomo/README.md)。', '',
+            '使用 **MRS 域名集 + 配套正则与例外**；[配置合并方法](dist/mihomo/README.md)。旧配置需重新合并一次新版片段，此后规则集按日刷新。', '',
             '| 分类 | 拦截条目 | 例外条目 | 原始配置 | Boki 配置 | GHFast 配置 |',
             '| --- | ---: | ---: | --- | --- | --- |']
     def row(pid, item):
         label = {'combined': '综合版', 'china': '国内优化', 'full': '全量版'}.get(pid, item['name']).replace('|', r'\|')
+        if item.get('status') == 'retained':
+            label += '（保留旧版）'
+        if item['inputSha256'] != dns_manifest['profiles'][pid].get('fileSha256'):
+            label += '（与 DNS 版本不同）'
         base = f'https://raw.githubusercontent.com/{repository}/main/dist/mihomo/{pid}'
         return (f'| {label} | {item["blockingRules"]:,} | {item["exceptionRules"]:,} | [原始]({base}.yaml) | '
                 f'[Boki](https://github.boki.moe/{base}-boki.yaml) | [GHFast](https://ghfast.top/{base}-ghfast.yaml) |')
@@ -215,12 +254,14 @@ def summary(path, cache):
              f"Checked: {run.get('checkedUtc', 'Build did not complete')}", '',
              f"Sources: {len(sources)}; cache fallback: {len(cached)}; failed profiles: {len(run.get('failedProfiles', []))}",
              f"Publication audit: {audit.get('status', 'not run')}", '',
-             'Subscriptions are committed only after build and publication audit both succeed.', '']
+             'Each validated profile/platform can publish independently; failed outputs retain their previous version.', '']
     if cached:
         print(f'::warning::{len(cached)} upstream sources used validated cache (maximum age 72 hours); see run artifact.')
         lines += ['Cached sources (these were not freshly downloaded):', ''] + [f'- {sid}' for sid in cached]
     if audit.get('error'):
         lines += ['', audit['error']]
+    for pid, errors in audit.get('failures', {}).items():
+        lines += [f'- {pid}: {errors}']
     lines += ['', '| Profile | Rules | Engine |', '| --- | ---: | --- |']
     for pid, item in audit.get('profiles', {}).items():
         lines.append(f"| {pid} | {item['rules']} | {item['engine']} |")

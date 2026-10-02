@@ -1,7 +1,7 @@
 ! Title: 中国国内优化 DNS 黑名单
-! Updated: 2026-10-02T03:57:45+00:00
+! Updated: 2026-10-02T05:30:44+00:00
 ! Expires: 1 day
-! Rules: 210866
+! Rules: 210865
 ! Maintainer merges only; upstream rules belong to their authors.
 ! DNS masks/regex preserved; exact Hosts scope and source exception priority retained.
 ! Upstream licenses and notices: ../upstream/README.md (in the original repository).
@@ -149045,7 +149045,6 @@
 ||shang.baful.net^
 ||shangtuke.cn^
 ||shanhaogc.com^
-||shanhulan.cn^
 ||shanhutech.cn^
 ||shanjewelry.com^
 ||shankejingling.com^

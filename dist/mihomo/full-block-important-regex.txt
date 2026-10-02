@@ -1,0 +1,146 @@
+# Title: 全量 DNS 黑名单（最高档＋全部可用专项）
+# Updated: 2026-10-02T05:30:17+00:00
+# Expires: 1 day
+# Rules: 2005108
+# Maintainer merges only; upstream rules belong to their authors.
+# DNS masks/regex preserved; exact Hosts scope and source exception priority retained.
+# Upstream licenses and notices: ../upstream/README.md (in the original repository).
+# Source: AdGuard Mobile Ads filter | https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/adservers.txt
+# Repository: https://github.com/AdguardTeam/AdguardFilters | Account: AdguardTeam
+# Upstream license: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
+# Source: AdRules DNS List | https://raw.githubusercontent.com/Cats-Team/AdRules/main/dns.txt
+# Repository: https://github.com/Cats-Team/AdRules | Account: Cats-Team
+# Upstream license: https://github.com/Cats-Team/AdRules/blob/script/LICENSE
+# Source: AWAvenue Ads Rule | https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
+# Repository: https://github.com/TG-Twilight/AWAvenue-Ads-Rule | Account: TG-Twilight
+# Upstream license: https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE
+# Source: StevenBlack hosts | https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
+# Repository: https://github.com/StevenBlack/hosts | Account: StevenBlack
+# Upstream license: https://github.com/StevenBlack/hosts/blob/master/license.txt
+# Source: 大圣净化 | https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts
+# Repository: https://github.com/jdlingyu/ad-wars | Account: jdlingyu
+# Upstream license: https://github.com/jdlingyu/ad-wars/blob/master/README.md
+# Source: AdAway default blocklist | https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt
+# Repository: https://github.com/AdAway/adaway.github.io | Account: AdAway
+# Upstream license: https://github.com/AdAway/adaway.github.io/blob/master/LICENSE.md
+# Source: Perflyst and Dandelion Sprout's Smart-TV Blocklist | https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV-AGH.txt
+# Repository: https://github.com/Perflyst/PiHoleBlocklist | Account: Perflyst
+# Upstream license: https://github.com/Perflyst/PiHoleBlocklist/blob/master/LICENSE
+# Source: Scam Blocklist by DurableNapkin | https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt
+# Repository: https://github.com/durablenapkin/scamblocklist | Account: durablenapkin
+# Upstream license: https://github.com/durablenapkin/scamblocklist/blob/master/LICENSE
+# Source: Game Console Adblock List | https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GameConsoleAdblockList.txt
+# Repository: https://github.com/DandelionSprout/adfilt | Account: DandelionSprout
+# Upstream license: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
+# Source: Spam404 | https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt
+# Repository: https://github.com/Spam404/lists | Account: Spam404
+# Upstream license: https://github.com/Spam404/lists/blob/master/LICENSE.md/LICENSE.md
+# Source: The Big List of Hacked Malware Web Sites | https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list
+# Repository: https://github.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites | Account: mitchellkrogza
+# Upstream license: https://github.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/blob/master/LICENSE.md
+# Source: HaGeZi Ultimate | https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/ultimate.txt
+# Repository: https://github.com/hagezi/dns-blocklists | Account: hagezi
+# Upstream license: https://github.com/hagezi/dns-blocklists/blob/main/LICENSE
+# Source: HaGeZi Badware Hoster | https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/hoster.txt
+# Repository: https://github.com/hagezi/dns-blocklists | Account: hagezi
+# Upstream license: https://github.com/hagezi/dns-blocklists/blob/main/LICENSE
+# Source: HaGeZi DynDNS | https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/dyndns.txt
+# Repository: https://github.com/hagezi/dns-blocklists | Account: hagezi
+# Upstream license: https://github.com/hagezi/dns-blocklists/blob/main/LICENSE
+# Source: HaGeZi URL Shortener | https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/urlshortener.txt
+# Repository: https://github.com/hagezi/dns-blocklists | Account: hagezi
+# Upstream license: https://github.com/hagezi/dns-blocklists/blob/main/LICENSE
+# Source: 1Hosts Xtra | https://raw.githubusercontent.com/badmojr/1Hosts/master/Xtra/adblock.txt
+# Repository: https://github.com/badmojr/1Hosts | Account: badmojr
+# Upstream license: https://github.com/badmojr/1Hosts/blob/master/LICENSE
+# Source: blocklistproject/Lists / abuse-ags.txt | https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/abuse-ags.txt
+# Repository: https://github.com/blocklistproject/Lists | Account: blocklistproject
+# Upstream license: https://github.com/blocklistproject/Lists/blob/main/LICENSE
+# Source: blocklistproject/Lists / ads-ags.txt | https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/ads-ags.txt
+# Repository: https://github.com/blocklistproject/Lists | Account: blocklistproject
+# Upstream license: https://github.com/blocklistproject/Lists/blob/main/LICENSE
+# Source: blocklistproject/Lists / crypto-ags.txt | https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/crypto-ags.txt
+# Repository: https://github.com/blocklistproject/Lists | Account: blocklistproject
+# Upstream license: https://github.com/blocklistproject/Lists/blob/main/LICENSE
+# Source: blocklistproject/Lists / fraud-ags.txt | https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/fraud-ags.txt
+# Repository: https://github.com/blocklistproject/Lists | Account: blocklistproject
+# Upstream license: https://github.com/blocklistproject/Lists/blob/main/LICENSE
+# Source: blocklistproject/Lists / phishing-ags.txt | https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/phishing-ags.txt
+# Repository: https://github.com/blocklistproject/Lists | Account: blocklistproject
+# Upstream license: https://github.com/blocklistproject/Lists/blob/main/LICENSE
+# Source: blocklistproject/Lists / ransomware-ags.txt | https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/ransomware-ags.txt
+# Repository: https://github.com/blocklistproject/Lists | Account: blocklistproject
+# Upstream license: https://github.com/blocklistproject/Lists/blob/main/LICENSE
+# Source: blocklistproject/Lists / redirect-ags.txt | https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/redirect-ags.txt
+# Repository: https://github.com/blocklistproject/Lists | Account: blocklistproject
+# Upstream license: https://github.com/blocklistproject/Lists/blob/main/LICENSE
+# Source: blocklistproject/Lists / scam-ags.txt | https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/scam-ags.txt
+# Repository: https://github.com/blocklistproject/Lists | Account: blocklistproject
+# Upstream license: https://github.com/blocklistproject/Lists/blob/main/LICENSE
+# Source: blocklistproject/Lists / smart-tv-ags.txt | https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/smart-tv-ags.txt
+# Repository: https://github.com/blocklistproject/Lists | Account: blocklistproject
+# Upstream license: https://github.com/blocklistproject/Lists/blob/main/LICENSE
+# Source: blocklistproject/Lists / tracking-ags.txt | https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/tracking-ags.txt
+# Repository: https://github.com/blocklistproject/Lists | Account: blocklistproject
+# Upstream license: https://github.com/blocklistproject/Lists/blob/main/LICENSE
+# Source: anudeepND/blacklist / adservers.txt | https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt
+# Repository: https://github.com/anudeepND/blacklist | Account: anudeepND
+# Upstream license: https://github.com/anudeepND/blacklist/blob/master/LICENSE
+# Source: anudeepND/blacklist / facebook.txt | https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt
+# Repository: https://github.com/anudeepND/blacklist | Account: anudeepND
+# Upstream license: https://github.com/anudeepND/blacklist/blob/master/LICENSE
+# Source: crazy-max/WindowsSpyBlocker / spy.txt | https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt
+# Repository: https://github.com/crazy-max/WindowsSpyBlocker | Account: crazy-max
+# Upstream license: https://github.com/crazy-max/WindowsSpyBlocker/blob/master/LICENSE
+# Source: jerryn70/GoodbyeAds / GoodbyeAds-AdBlock-Filter.txt | https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Formats/GoodbyeAds-AdBlock-Filter.txt
+# Repository: https://github.com/jerryn70/GoodbyeAds | Account: jerryn70
+# Upstream license: https://github.com/jerryn70/GoodbyeAds/blob/master/LICENSE
+# Source: jerryn70/GoodbyeAds / GoodbyeAds-Xiaomi-Extension.txt | https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Xiaomi-Extension.txt
+# Repository: https://github.com/jerryn70/GoodbyeAds | Account: jerryn70
+# Upstream license: https://github.com/jerryn70/GoodbyeAds/blob/master/LICENSE
+# Source: jerryn70/GoodbyeAds / GoodbyeAds-Samsung-AdBlock.txt | https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Samsung-AdBlock.txt
+# Repository: https://github.com/jerryn70/GoodbyeAds | Account: jerryn70
+# Upstream license: https://github.com/jerryn70/GoodbyeAds/blob/master/LICENSE
+# Source: jerryn70/GoodbyeAds / GoodbyeAds-Spotify-AdBlock.txt | https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Spotify-AdBlock.txt
+# Repository: https://github.com/jerryn70/GoodbyeAds | Account: jerryn70
+# Upstream license: https://github.com/jerryn70/GoodbyeAds/blob/master/LICENSE
+# Source: jerryn70/GoodbyeAds / GoodbyeAds-YouTube-AdBlock-Filter.txt | https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Formats/GoodbyeAds-YouTube-AdBlock-Filter.txt
+# Repository: https://github.com/jerryn70/GoodbyeAds | Account: jerryn70
+# Upstream license: https://github.com/jerryn70/GoodbyeAds/blob/master/LICENSE
+# Source: OISD Basic | https://raw.githubusercontent.com/sjhgvr/oisd/main/abp_small.txt
+# Repository: https://github.com/sjhgvr/oisd | Account: sjhgvr
+# Source: alexa | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/alexa
+# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+# Source: apple | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/apple
+# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+# Source: huawei | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/huawei
+# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+# Source: roku | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/roku
+# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+# Source: samsung | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/samsung
+# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+# Source: sonos | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/sonos
+# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+# Source: windows | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/windows
+# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+# Source: xiaomi | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/xiaomi
+# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+# Source: Anti-AD | https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-easylist.txt
+# Repository: https://github.com/privacy-protection-tools/anti-AD | Account: privacy-protection-tools
+# Source: HaGeZi Most Abused TLDs | https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/spam-tlds.txt
+# Repository: https://github.com/hagezi/dns-blocklists | Account: hagezi
+# Source: adblock-nocoin-list / hosts.txt | https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt
+# Repository: https://github.com/hoshsadiq/adblock-nocoin-list | Account: hoshsadiq
+# Source: ios_rule_script / rule/AdGuard/Advertising/Advertising.txt | https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/AdGuard/Advertising/Advertising.txt
+# Repository: https://github.com/blackmatrix7/ios_rule_script | Account: blackmatrix7
+# Source: uAssets / filters/resource-abuse.txt | https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt
+# Repository: https://github.com/uBlockOrigin/uAssets | Account: uBlockOrigin
+# Source: GOODBYEADS / data/rules/dns.txt | https://raw.githubusercontent.com/8680/GOODBYEADS/master/data/rules/dns.txt
+# Repository: https://github.com/8680/GOODBYEADS | Account: 8680
+# Source: adblockfilters / rules/adblockdns.txt | https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdns.txt
+# Repository: https://github.com/217heidai/adblockfilters | Account: 217heidai
+# Source: Dan Pollock's List | https://someonewhocares.org/hosts/zero/hosts
+# Repository: https://someonewhocares.org/hosts/ | Account: Dan Pollock
+# Source: Peter Lowe's List | https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblockplus&showintro=1&mimetype=plaintext
+# Repository: https://pgl.yoyo.org/adservers/ | Account: Peter Lowe
+# mihomo classical provider; preserve companion exception providers.

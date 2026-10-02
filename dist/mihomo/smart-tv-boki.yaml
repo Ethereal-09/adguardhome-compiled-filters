@@ -1,31 +1,61 @@
-{
-  "rule-providers": {
-    "compiled-smart-tv-block": {
-      "type": "http",
-      "behavior": "domain",
-      "format": "mrs",
-      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/smart-tv.mrs",
-      "path": "./rule_provider/compiled/smart-tv.mrs",
-      "interval": 86400
-    },
-    "compiled-smart-tv-block-regex": {
-      "type": "http",
-      "behavior": "classical",
-      "format": "text",
-      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/smart-tv-regex.txt",
-      "path": "./rule_provider/compiled/smart-tv-regex.txt",
-      "interval": 86400
-    },
-    "compiled-smart-tv-allow": {
-      "type": "http",
-      "behavior": "domain",
-      "format": "mrs",
-      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/smart-tv-allow.mrs",
-      "path": "./rule_provider/compiled/smart-tv-allow.mrs",
-      "interval": 86400
-    }
-  },
-  "rules": [
-    "AND,((OR,((RULE-SET,compiled-smart-tv-block),(RULE-SET,compiled-smart-tv-block-regex))),(NOT,((RULE-SET,compiled-smart-tv-allow)))),REJECT"
-  ]
-}
+# Merge these providers and rules into your existing mihomo configuration.
+rule-providers:
+  compiled-smart-tv-block:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/smart-tv.mrs"
+    path: "./rule_provider/compiled/smart-tv.mrs"
+    interval: 86400
+  compiled-smart-tv-block-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/smart-tv-regex.txt"
+    path: "./rule_provider/compiled/smart-tv-regex.txt"
+    interval: 86400
+  compiled-smart-tv-allow:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/smart-tv-allow.mrs"
+    path: "./rule_provider/compiled/smart-tv-allow.mrs"
+    interval: 86400
+  compiled-smart-tv-allow-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/smart-tv-allow-regex.txt"
+    path: "./rule_provider/compiled/smart-tv-allow-regex.txt"
+    interval: 86400
+  compiled-smart-tv-block-important:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/smart-tv-block-important.mrs"
+    path: "./rule_provider/compiled/smart-tv-block-important.mrs"
+    interval: 86400
+  compiled-smart-tv-block-important-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/smart-tv-block-important-regex.txt"
+    path: "./rule_provider/compiled/smart-tv-block-important-regex.txt"
+    interval: 86400
+  compiled-smart-tv-allow-important:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/smart-tv-allow-important.mrs"
+    path: "./rule_provider/compiled/smart-tv-allow-important.mrs"
+    interval: 86400
+  compiled-smart-tv-allow-important-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/smart-tv-allow-important-regex.txt"
+    path: "./rule_provider/compiled/smart-tv-allow-important-regex.txt"
+    interval: 86400
+rules:
+  - "AND,((OR,((RULE-SET,compiled-smart-tv-block-important),(RULE-SET,compiled-smart-tv-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-smart-tv-allow-important),(RULE-SET,compiled-smart-tv-allow-important-regex)))))),REJECT"
+  - "AND,((OR,((RULE-SET,compiled-smart-tv-block),(RULE-SET,compiled-smart-tv-block-regex))),(NOT,((OR,((RULE-SET,compiled-smart-tv-allow),(RULE-SET,compiled-smart-tv-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-smart-tv-allow-important),(RULE-SET,compiled-smart-tv-allow-important-regex)))))),REJECT"

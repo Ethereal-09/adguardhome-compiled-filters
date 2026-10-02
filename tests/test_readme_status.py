@@ -11,6 +11,22 @@ from workflow_status import (BUILD_END, BUILD_START, SUBSCRIPTIONS_START, SUBSCR
 
 
 class ReadmeStatusTests(unittest.TestCase):
+    def test_partial_publication_refreshes_ready_counts_and_marks_retained_versions(self):
+        with tempfile.TemporaryDirectory() as folder:
+            path = self.write_readme(Path(folder), with_publication=True)
+            publication = self.publication_fixture()
+            publication['manifest']['profiles']['full']['status'] = 'retained'
+            report = dict(status='partial', checkedUtc='2026-10-02T00:02:00Z',
+                          publishedUtc='2026-10-02T00:02:00Z', dnsValidated=['new-category'], mihomoValidated=[])
+            update_readme(path, dict(checkedUtc='2026-10-02T00:00:00Z'), publication=report, **publication)
+            text = path.read_text(encoding='utf-8')
+            self.assertIn('最近成功发布：**2026-10-02 08:02:00', text)
+            self.assertIn('全量版（保留旧版） | 1,200', text)
+            self.assertIn('新增用途 | 7', text)
+            self.assertIn('部分更新', text)
+            update_readme(path, dict(checkedUtc='2026-10-03T00:00:00Z', status='failed'), 'failure', 'failure')
+            self.assertIn('最近成功发布：**2026-10-02 08:02:00', path.read_text(encoding='utf-8'))
+
     def write_readme(self, root, with_publication=False):
         path = root / 'README.md'
         publication = (f'\n{SUBSCRIPTIONS_START}\nprevious subscriptions\n{SUBSCRIPTIONS_END}\n'

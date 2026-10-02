@@ -1,15 +1,61 @@
-{
-  "rule-providers": {
-    "compiled-xiaomi-block": {
-      "type": "http",
-      "behavior": "domain",
-      "format": "mrs",
-      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/xiaomi.mrs",
-      "path": "./rule_provider/compiled/xiaomi.mrs",
-      "interval": 86400
-    }
-  },
-  "rules": [
-    "RULE-SET,compiled-xiaomi-block,REJECT"
-  ]
-}
+# Merge these providers and rules into your existing mihomo configuration.
+rule-providers:
+  compiled-xiaomi-block:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/xiaomi.mrs"
+    path: "./rule_provider/compiled/xiaomi.mrs"
+    interval: 86400
+  compiled-xiaomi-block-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/xiaomi-regex.txt"
+    path: "./rule_provider/compiled/xiaomi-regex.txt"
+    interval: 86400
+  compiled-xiaomi-allow:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/xiaomi-allow.mrs"
+    path: "./rule_provider/compiled/xiaomi-allow.mrs"
+    interval: 86400
+  compiled-xiaomi-allow-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/xiaomi-allow-regex.txt"
+    path: "./rule_provider/compiled/xiaomi-allow-regex.txt"
+    interval: 86400
+  compiled-xiaomi-block-important:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/xiaomi-block-important.mrs"
+    path: "./rule_provider/compiled/xiaomi-block-important.mrs"
+    interval: 86400
+  compiled-xiaomi-block-important-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/xiaomi-block-important-regex.txt"
+    path: "./rule_provider/compiled/xiaomi-block-important-regex.txt"
+    interval: 86400
+  compiled-xiaomi-allow-important:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/xiaomi-allow-important.mrs"
+    path: "./rule_provider/compiled/xiaomi-allow-important.mrs"
+    interval: 86400
+  compiled-xiaomi-allow-important-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/xiaomi-allow-important-regex.txt"
+    path: "./rule_provider/compiled/xiaomi-allow-important-regex.txt"
+    interval: 86400
+rules:
+  - "AND,((OR,((RULE-SET,compiled-xiaomi-block-important),(RULE-SET,compiled-xiaomi-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-xiaomi-allow-important),(RULE-SET,compiled-xiaomi-allow-important-regex)))))),REJECT"
+  - "AND,((OR,((RULE-SET,compiled-xiaomi-block),(RULE-SET,compiled-xiaomi-block-regex))),(NOT,((OR,((RULE-SET,compiled-xiaomi-allow),(RULE-SET,compiled-xiaomi-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-xiaomi-allow-important),(RULE-SET,compiled-xiaomi-allow-important-regex)))))),REJECT"

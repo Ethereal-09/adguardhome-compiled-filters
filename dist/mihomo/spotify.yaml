@@ -1,15 +1,61 @@
-{
-  "rule-providers": {
-    "compiled-spotify-block": {
-      "type": "http",
-      "behavior": "domain",
-      "format": "mrs",
-      "url": "https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/spotify.mrs",
-      "path": "./rule_provider/compiled/spotify.mrs",
-      "interval": 86400
-    }
-  },
-  "rules": [
-    "RULE-SET,compiled-spotify-block,REJECT"
-  ]
-}
+# Merge these providers and rules into your existing mihomo configuration.
+rule-providers:
+  compiled-spotify-block:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/spotify.mrs"
+    path: "./rule_provider/compiled/spotify.mrs"
+    interval: 86400
+  compiled-spotify-block-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/spotify-regex.txt"
+    path: "./rule_provider/compiled/spotify-regex.txt"
+    interval: 86400
+  compiled-spotify-allow:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/spotify-allow.mrs"
+    path: "./rule_provider/compiled/spotify-allow.mrs"
+    interval: 86400
+  compiled-spotify-allow-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/spotify-allow-regex.txt"
+    path: "./rule_provider/compiled/spotify-allow-regex.txt"
+    interval: 86400
+  compiled-spotify-block-important:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/spotify-block-important.mrs"
+    path: "./rule_provider/compiled/spotify-block-important.mrs"
+    interval: 86400
+  compiled-spotify-block-important-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/spotify-block-important-regex.txt"
+    path: "./rule_provider/compiled/spotify-block-important-regex.txt"
+    interval: 86400
+  compiled-spotify-allow-important:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/spotify-allow-important.mrs"
+    path: "./rule_provider/compiled/spotify-allow-important.mrs"
+    interval: 86400
+  compiled-spotify-allow-important-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/spotify-allow-important-regex.txt"
+    path: "./rule_provider/compiled/spotify-allow-important-regex.txt"
+    interval: 86400
+rules:
+  - "AND,((OR,((RULE-SET,compiled-spotify-block-important),(RULE-SET,compiled-spotify-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-spotify-allow-important),(RULE-SET,compiled-spotify-allow-important-regex)))))),REJECT"
+  - "AND,((OR,((RULE-SET,compiled-spotify-block),(RULE-SET,compiled-spotify-block-regex))),(NOT,((OR,((RULE-SET,compiled-spotify-allow),(RULE-SET,compiled-spotify-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-spotify-allow-important),(RULE-SET,compiled-spotify-allow-important-regex)))))),REJECT"

@@ -9,8 +9,10 @@
       "repository": "https://github.com/217heidai/adblockfilters",
       "repositoryAccount": "217heidai",
       "downloadState": "fresh",
-      "accepted": 215300,
-      "parsedEntries": 215300,
+      "accepted": 215444,
+      "blockingRules": 215247,
+      "exceptionRules": 197,
+      "parsedEntries": 215444,
       "duplicates": 0,
       "unsupported": 57,
       "unsupportedExamples": [
@@ -29,8 +31,10 @@
       "repository": "https://github.com/217heidai/adblockfilters",
       "repositoryAccount": "217heidai",
       "downloadState": "fresh",
-      "accepted": 5323,
-      "parsedEntries": 5323,
+      "accepted": 5322,
+      "blockingRules": 5306,
+      "exceptionRules": 16,
+      "parsedEntries": 5322,
       "duplicates": 0,
       "unsupported": 0,
       "unsupportedExamples": [],
@@ -43,8 +47,10 @@
       "repository": "https://github.com/8680/GOODBYEADS",
       "repositoryAccount": "8680",
       "downloadState": "fresh",
-      "accepted": 113772,
-      "parsedEntries": 113772,
+      "accepted": 113922,
+      "blockingRules": 113922,
+      "exceptionRules": 0,
+      "parsedEntries": 113922,
       "duplicates": 0,
       "unsupported": 288,
       "unsupportedExamples": [
@@ -64,6 +70,8 @@
       "repositoryAccount": "AdAway",
       "downloadState": "fresh",
       "accepted": 6540,
+      "blockingRules": 6540,
+      "exceptionRules": 0,
       "parsedEntries": 6540,
       "duplicates": 0,
       "unsupported": 0,
@@ -78,6 +86,8 @@
       "repositoryAccount": "AdguardTeam",
       "downloadState": "fresh",
       "accepted": 951,
+      "blockingRules": 951,
+      "exceptionRules": 0,
       "parsedEntries": 951,
       "duplicates": 0,
       "unsupported": 41,
@@ -98,6 +108,8 @@
       "repositoryAccount": "anudeepND",
       "downloadState": "fresh",
       "accepted": 42343,
+      "blockingRules": 42343,
+      "exceptionRules": 0,
       "parsedEntries": 42516,
       "duplicates": 173,
       "unsupported": 15,
@@ -118,6 +130,8 @@
       "repositoryAccount": "anudeepND",
       "downloadState": "fresh",
       "accepted": 3995,
+      "blockingRules": 3995,
+      "exceptionRules": 0,
       "parsedEntries": 3996,
       "duplicates": 1,
       "unsupported": 1,
@@ -134,6 +148,8 @@
       "repositoryAccount": "badmojr",
       "downloadState": "fresh",
       "accepted": 102241,
+      "blockingRules": 102241,
+      "exceptionRules": 0,
       "parsedEntries": 102241,
       "duplicates": 0,
       "unsupported": 18,
@@ -154,6 +170,8 @@
       "repositoryAccount": "badmojr",
       "downloadState": "fresh",
       "accepted": 786132,
+      "blockingRules": 786132,
+      "exceptionRules": 0,
       "parsedEntries": 786132,
       "duplicates": 0,
       "unsupported": 40,
@@ -174,6 +192,8 @@
       "repositoryAccount": "blackmatrix7",
       "downloadState": "fresh",
       "accepted": 280859,
+      "blockingRules": 280859,
+      "exceptionRules": 0,
       "parsedEntries": 280859,
       "duplicates": 0,
       "unsupported": 207,
@@ -194,6 +214,8 @@
       "repositoryAccount": "blocklistproject",
       "downloadState": "fresh",
       "accepted": 435051,
+      "blockingRules": 435051,
+      "exceptionRules": 0,
       "parsedEntries": 435051,
       "duplicates": 0,
       "unsupported": 68,
@@ -214,6 +236,8 @@
       "repositoryAccount": "blocklistproject",
       "downloadState": "fresh",
       "accepted": 233991,
+      "blockingRules": 233991,
+      "exceptionRules": 0,
       "parsedEntries": 233991,
       "duplicates": 0,
       "unsupported": 34,
@@ -234,6 +258,8 @@
       "repositoryAccount": "blocklistproject",
       "downloadState": "fresh",
       "accepted": 1272,
+      "blockingRules": 1272,
+      "exceptionRules": 0,
       "parsedEntries": 1272,
       "duplicates": 0,
       "unsupported": 0,
@@ -248,6 +274,8 @@
       "repositoryAccount": "blocklistproject",
       "downloadState": "fresh",
       "accepted": 256184,
+      "blockingRules": 256184,
+      "exceptionRules": 0,
       "parsedEntries": 256184,
       "duplicates": 0,
       "unsupported": 84,
@@ -268,6 +296,8 @@
       "repositoryAccount": "blocklistproject",
       "downloadState": "fresh",
       "accepted": 190191,
+      "blockingRules": 190191,
+      "exceptionRules": 0,
       "parsedEntries": 190191,
       "duplicates": 0,
       "unsupported": 24,
@@ -288,6 +318,8 @@
       "repositoryAccount": "blocklistproject",
       "downloadState": "fresh",
       "accepted": 1904,
+      "blockingRules": 1904,
+      "exceptionRules": 0,
       "parsedEntries": 1904,
       "duplicates": 0,
       "unsupported": 0,
@@ -302,6 +334,8 @@
       "repositoryAccount": "blocklistproject",
       "downloadState": "fresh",
       "accepted": 108682,
+      "blockingRules": 108682,
+      "exceptionRules": 0,
       "parsedEntries": 108682,
       "duplicates": 0,
       "unsupported": 3,
@@ -320,6 +354,8 @@
       "repositoryAccount": "blocklistproject",
       "downloadState": "fresh",
       "accepted": 8527,
+      "blockingRules": 8527,
+      "exceptionRules": 0,
       "parsedEntries": 8527,
       "duplicates": 0,
       "unsupported": 0,
@@ -334,6 +370,8 @@
       "repositoryAccount": "blocklistproject",
       "downloadState": "fresh",
       "accepted": 77,
+      "blockingRules": 77,
+      "exceptionRules": 0,
       "parsedEntries": 77,
       "duplicates": 0,
       "unsupported": 0,
@@ -348,6 +386,8 @@
       "repositoryAccount": "blocklistproject",
       "downloadState": "fresh",
       "accepted": 143866,
+      "blockingRules": 143866,
+      "exceptionRules": 0,
       "parsedEntries": 143866,
       "duplicates": 0,
       "unsupported": 10,
@@ -368,6 +408,8 @@
       "repositoryAccount": "Cats-Team",
       "downloadState": "fresh",
       "accepted": 196933,
+      "blockingRules": 196933,
+      "exceptionRules": 0,
       "parsedEntries": 196933,
       "duplicates": 0,
       "unsupported": 0,
@@ -382,6 +424,8 @@
       "repositoryAccount": "crazy-max",
       "downloadState": "fresh",
       "accepted": 347,
+      "blockingRules": 347,
+      "exceptionRules": 0,
       "parsedEntries": 347,
       "duplicates": 0,
       "unsupported": 0,
@@ -396,6 +440,8 @@
       "repositoryAccount": "DandelionSprout",
       "downloadState": "fresh",
       "accepted": 14,
+      "blockingRules": 14,
+      "exceptionRules": 0,
       "parsedEntries": 14,
       "duplicates": 0,
       "unsupported": 1,
@@ -411,8 +457,10 @@
       "repository": "https://github.com/durablenapkin/scamblocklist",
       "repositoryAccount": "durablenapkin",
       "downloadState": "fresh",
-      "accepted": 957,
-      "parsedEntries": 957,
+      "accepted": 952,
+      "blockingRules": 952,
+      "exceptionRules": 0,
+      "parsedEntries": 952,
       "duplicates": 0,
       "unsupported": 1,
       "unsupportedExamples": [
@@ -428,6 +476,8 @@
       "repositoryAccount": "hagezi",
       "downloadState": "fresh",
       "accepted": 1536,
+      "blockingRules": 1536,
+      "exceptionRules": 0,
       "parsedEntries": 1536,
       "duplicates": 0,
       "unsupported": 0,
@@ -442,6 +492,8 @@
       "repositoryAccount": "hagezi",
       "downloadState": "fresh",
       "accepted": 1235,
+      "blockingRules": 1235,
+      "exceptionRules": 0,
       "parsedEntries": 1235,
       "duplicates": 0,
       "unsupported": 0,
@@ -456,6 +508,8 @@
       "repositoryAccount": "hagezi",
       "downloadState": "fresh",
       "accepted": 198941,
+      "blockingRules": 198941,
+      "exceptionRules": 0,
       "parsedEntries": 198941,
       "duplicates": 0,
       "unsupported": 0,
@@ -470,6 +524,8 @@
       "repositoryAccount": "hagezi",
       "downloadState": "fresh",
       "accepted": 248284,
+      "blockingRules": 248284,
+      "exceptionRules": 0,
       "parsedEntries": 248284,
       "duplicates": 0,
       "unsupported": 0,
@@ -484,6 +540,8 @@
       "repositoryAccount": "hagezi",
       "downloadState": "fresh",
       "accepted": 227618,
+      "blockingRules": 227618,
+      "exceptionRules": 0,
       "parsedEntries": 227618,
       "duplicates": 0,
       "unsupported": 0,
@@ -498,6 +556,8 @@
       "repositoryAccount": "hagezi",
       "downloadState": "fresh",
       "accepted": 281,
+      "blockingRules": 281,
+      "exceptionRules": 0,
       "parsedEntries": 281,
       "duplicates": 0,
       "unsupported": 164,
@@ -518,6 +578,8 @@
       "repositoryAccount": "hagezi",
       "downloadState": "fresh",
       "accepted": 284102,
+      "blockingRules": 284102,
+      "exceptionRules": 0,
       "parsedEntries": 284102,
       "duplicates": 0,
       "unsupported": 0,
@@ -532,6 +594,8 @@
       "repositoryAccount": "hagezi",
       "downloadState": "fresh",
       "accepted": 9935,
+      "blockingRules": 9935,
+      "exceptionRules": 0,
       "parsedEntries": 9935,
       "duplicates": 0,
       "unsupported": 0,
@@ -546,6 +610,8 @@
       "repositoryAccount": "hagezi",
       "downloadState": "fresh",
       "accepted": 1611,
+      "blockingRules": 0,
+      "exceptionRules": 1611,
       "parsedEntries": 1611,
       "duplicates": 0,
       "unsupported": 0,
@@ -560,6 +626,8 @@
       "repositoryAccount": "hagezi",
       "downloadState": "fresh",
       "accepted": 936,
+      "blockingRules": 0,
+      "exceptionRules": 936,
       "parsedEntries": 936,
       "duplicates": 0,
       "unsupported": 0,
@@ -574,6 +642,8 @@
       "repositoryAccount": "hagezi",
       "downloadState": "fresh",
       "accepted": 9928,
+      "blockingRules": 0,
+      "exceptionRules": 9928,
       "parsedEntries": 9928,
       "duplicates": 0,
       "unsupported": 0,
@@ -588,6 +658,8 @@
       "repositoryAccount": "hoshsadiq",
       "downloadState": "fresh",
       "accepted": 312,
+      "blockingRules": 312,
+      "exceptionRules": 0,
       "parsedEntries": 312,
       "duplicates": 0,
       "unsupported": 0,
@@ -602,6 +674,8 @@
       "repositoryAccount": "Peter Lowe",
       "downloadState": "fresh",
       "accepted": 3552,
+      "blockingRules": 3552,
+      "exceptionRules": 0,
       "parsedEntries": 3552,
       "duplicates": 0,
       "unsupported": 0,
@@ -616,6 +690,8 @@
       "repositoryAccount": "Dan Pollock",
       "downloadState": "fresh",
       "accepted": 13082,
+      "blockingRules": 13082,
+      "exceptionRules": 0,
       "parsedEntries": 13082,
       "duplicates": 0,
       "unsupported": 11,
@@ -636,6 +712,8 @@
       "repositoryAccount": "jdlingyu",
       "downloadState": "fresh",
       "accepted": 1645,
+      "blockingRules": 1645,
+      "exceptionRules": 0,
       "parsedEntries": 1707,
       "duplicates": 62,
       "unsupported": 0,
@@ -650,6 +728,8 @@
       "repositoryAccount": "jerryn70",
       "downloadState": "fresh",
       "accepted": 101,
+      "blockingRules": 101,
+      "exceptionRules": 0,
       "parsedEntries": 101,
       "duplicates": 0,
       "unsupported": 0,
@@ -664,6 +744,8 @@
       "repositoryAccount": "jerryn70",
       "downloadState": "fresh",
       "accepted": 3780,
+      "blockingRules": 3780,
+      "exceptionRules": 0,
       "parsedEntries": 3780,
       "duplicates": 0,
       "unsupported": 0,
@@ -678,6 +760,8 @@
       "repositoryAccount": "jerryn70",
       "downloadState": "fresh",
       "accepted": 278,
+      "blockingRules": 278,
+      "exceptionRules": 0,
       "parsedEntries": 278,
       "duplicates": 0,
       "unsupported": 0,
@@ -692,6 +776,8 @@
       "repositoryAccount": "jerryn70",
       "downloadState": "fresh",
       "accepted": 277714,
+      "blockingRules": 277714,
+      "exceptionRules": 0,
       "parsedEntries": 277714,
       "duplicates": 0,
       "unsupported": 117,
@@ -712,6 +798,8 @@
       "repositoryAccount": "jerryn70",
       "downloadState": "fresh",
       "accepted": 97645,
+      "blockingRules": 97645,
+      "exceptionRules": 0,
       "parsedEntries": 97645,
       "duplicates": 0,
       "unsupported": 0,
@@ -726,6 +814,8 @@
       "repositoryAccount": "mitchellkrogza",
       "downloadState": "fresh",
       "accepted": 9,
+      "blockingRules": 9,
+      "exceptionRules": 0,
       "parsedEntries": 9,
       "duplicates": 0,
       "unsupported": 0,
@@ -740,6 +830,8 @@
       "repositoryAccount": "nextdns",
       "downloadState": "fresh",
       "accepted": 3,
+      "blockingRules": 3,
+      "exceptionRules": 0,
       "parsedEntries": 3,
       "duplicates": 0,
       "unsupported": 0,
@@ -754,6 +846,8 @@
       "repositoryAccount": "nextdns",
       "downloadState": "fresh",
       "accepted": 19,
+      "blockingRules": 19,
+      "exceptionRules": 0,
       "parsedEntries": 19,
       "duplicates": 0,
       "unsupported": 0,
@@ -768,6 +862,8 @@
       "repositoryAccount": "nextdns",
       "downloadState": "fresh",
       "accepted": 37,
+      "blockingRules": 37,
+      "exceptionRules": 0,
       "parsedEntries": 37,
       "duplicates": 0,
       "unsupported": 0,
@@ -782,6 +878,8 @@
       "repositoryAccount": "nextdns",
       "downloadState": "fresh",
       "accepted": 1,
+      "blockingRules": 1,
+      "exceptionRules": 0,
       "parsedEntries": 1,
       "duplicates": 0,
       "unsupported": 0,
@@ -796,6 +894,8 @@
       "repositoryAccount": "nextdns",
       "downloadState": "fresh",
       "accepted": 4,
+      "blockingRules": 4,
+      "exceptionRules": 0,
       "parsedEntries": 4,
       "duplicates": 0,
       "unsupported": 0,
@@ -810,6 +910,8 @@
       "repositoryAccount": "nextdns",
       "downloadState": "fresh",
       "accepted": 2,
+      "blockingRules": 2,
+      "exceptionRules": 0,
       "parsedEntries": 2,
       "duplicates": 0,
       "unsupported": 0,
@@ -824,6 +926,8 @@
       "repositoryAccount": "nextdns",
       "downloadState": "fresh",
       "accepted": 23,
+      "blockingRules": 23,
+      "exceptionRules": 0,
       "parsedEntries": 24,
       "duplicates": 1,
       "unsupported": 0,
@@ -838,6 +942,8 @@
       "repositoryAccount": "nextdns",
       "downloadState": "fresh",
       "accepted": 9,
+      "blockingRules": 9,
+      "exceptionRules": 0,
       "parsedEntries": 9,
       "duplicates": 0,
       "unsupported": 0,
@@ -852,6 +958,8 @@
       "repositoryAccount": "Perflyst",
       "downloadState": "fresh",
       "accepted": 154,
+      "blockingRules": 145,
+      "exceptionRules": 9,
       "parsedEntries": 154,
       "duplicates": 0,
       "unsupported": 9,
@@ -872,6 +980,8 @@
       "repositoryAccount": "privacy-protection-tools",
       "downloadState": "fresh",
       "accepted": 93908,
+      "blockingRules": 93798,
+      "exceptionRules": 110,
       "parsedEntries": 93908,
       "duplicates": 0,
       "unsupported": 4,
@@ -890,8 +1000,10 @@
       "repository": "https://github.com/sjhgvr/oisd",
       "repositoryAccount": "sjhgvr",
       "downloadState": "fresh",
-      "accepted": 57475,
-      "parsedEntries": 57475,
+      "accepted": 57474,
+      "blockingRules": 57474,
+      "exceptionRules": 0,
+      "parsedEntries": 57474,
       "duplicates": 0,
       "unsupported": 0,
       "unsupportedExamples": [],
@@ -905,6 +1017,8 @@
       "repositoryAccount": "Spam404",
       "downloadState": "fresh",
       "accepted": 8140,
+      "blockingRules": 8140,
+      "exceptionRules": 0,
       "parsedEntries": 8140,
       "duplicates": 0,
       "unsupported": 0,
@@ -919,6 +1033,8 @@
       "repositoryAccount": "StevenBlack",
       "downloadState": "fresh",
       "accepted": 74759,
+      "blockingRules": 74759,
+      "exceptionRules": 0,
       "parsedEntries": 74759,
       "duplicates": 0,
       "unsupported": 12,
@@ -939,6 +1055,8 @@
       "repositoryAccount": "TG-Twilight",
       "downloadState": "fresh",
       "accepted": 962,
+      "blockingRules": 962,
+      "exceptionRules": 0,
       "parsedEntries": 965,
       "duplicates": 3,
       "unsupported": 0,
@@ -953,6 +1071,8 @@
       "repositoryAccount": "uBlockOrigin",
       "downloadState": "fresh",
       "accepted": 1,
+      "blockingRules": 1,
+      "exceptionRules": 0,
       "parsedEntries": 1,
       "duplicates": 0,
       "unsupported": 76,
@@ -981,16 +1101,17 @@
         "sjhgvr-oisd-abp-small-txt-50559e3d"
       ],
       "status": "ready",
-      "updatedUtc": "2026-10-02T03:55:57+00:00",
-      "contentDigest": "bd84458693bcb3e5c95cff559635b79490781d1b5c41e514ceb6ce58f6d87a9c",
-      "totalRules": 307183,
-      "blockingRules": 307060,
+      "updatedUtc": "2026-10-02T05:29:40+00:00",
+      "contentDigest": "64bcf43755bcfa182f8696f953aec005ac48a578bba20108dc5fc38e88b856c2",
+      "totalRules": 307182,
+      "blockingRules": 307059,
       "exceptionRules": 123,
-      "duplicatesRemoved": 223002,
+      "duplicatesRemoved": 223001,
       "coveredRemoved": 23360,
-      "fileSha256": "4525af153156d8707c941d25370744eaa4e7b71016faf80b510b02baa062db26",
+      "fileSha256": "35408fccf1e6db6f3c711495fd5b5601499a951a6e8c90e8efc00bf887671f44",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": true
     },
     "full": {
       "name": "全量 DNS 黑名单（最高档＋全部可用专项）",
@@ -1052,16 +1173,17 @@
         "https-pgl-yoyo-org-adservers-adservers-serverlist-php-f785075c"
       ],
       "status": "ready",
-      "updatedUtc": "2026-10-02T03:56:58+00:00",
-      "contentDigest": "8cee3b46411d5fb733142d585dafba70df061bbf3aa4161d25316a6a25350edb",
-      "totalRules": 2005124,
-      "blockingRules": 2004812,
+      "updatedUtc": "2026-10-02T05:30:17+00:00",
+      "contentDigest": "d19f9142ce9a80e0b5d231f6f5471fce3fc07dfcecdc3f782cc15f30c809cbc0",
+      "totalRules": 2005108,
+      "blockingRules": 2004796,
       "exceptionRules": 312,
-      "duplicatesRemoved": 1234076,
-      "coveredRemoved": 719632,
-      "fileSha256": "43d6e8bbe0cdd2b5881e26e4e366eee5a5606011b7f27d4d8e6c793377196037",
+      "duplicatesRemoved": 1234378,
+      "coveredRemoved": 719634,
+      "fileSha256": "b39f6839b7f15df88812c1f35e0f85057cb607265481ab6d6f90bedad91f17b2",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": true
     },
     "balanced": {
       "name": "均衡 DNS 过滤",
@@ -1081,7 +1203,8 @@
       "coveredRemoved": 0,
       "fileSha256": "be52c32b0ba9a3cffdf1b7f0f3cffd65e6885d7c549208da9271b30c36860ec0",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "extended": {
       "name": "扩展 DNS 过滤",
@@ -1101,7 +1224,8 @@
       "coveredRemoved": 0,
       "fileSha256": "71a929dd950024c477761bc8e2f954a7d78c7605339d78b467f4fd039646ed81",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "aggressive": {
       "name": "激进 DNS 过滤",
@@ -1121,7 +1245,8 @@
       "coveredRemoved": 0,
       "fileSha256": "361c158045db89070cbac069ca7098a19be883b8f58dd98827f17beb629c4809",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "maximum": {
       "name": "最强 DNS 过滤",
@@ -1141,7 +1266,8 @@
       "coveredRemoved": 0,
       "fileSha256": "6758037ccf00ed8b9d8ba0a0c62e5b5c9a163d86540e8e9fee7c98de00597529",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "balanced-1hosts": {
       "name": "1Hosts 均衡（替代基础）",
@@ -1161,7 +1287,8 @@
       "coveredRemoved": 0,
       "fileSha256": "bd44a14da9f8ba5e7b3e9a8bbeef2f9bc92ad4bee622994f319145f74ef5bc3d",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "aggressive-1hosts": {
       "name": "1Hosts 激进（替代基础）",
@@ -1181,7 +1308,8 @@
       "coveredRemoved": 0,
       "fileSha256": "2803bd438ff2d3c5ff713c00df16b044d462c20f1cf39fa460bdfea25f99d058",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "china": {
       "name": "中国国内优化 DNS 黑名单",
@@ -1194,16 +1322,17 @@
         "217heidai-adblockfilters-rules-adblockdnslite-txt-99bc0b64"
       ],
       "status": "ready",
-      "updatedUtc": "2026-10-02T03:57:45+00:00",
-      "contentDigest": "48338b4513e03366a2353c407b1eeea64f4953bf58fad079b21b7c159815d4ae",
-      "totalRules": 210866,
-      "blockingRules": 210743,
+      "updatedUtc": "2026-10-02T05:30:44+00:00",
+      "contentDigest": "0b96e046c053828614b7b90b9ef2d011ba901e78f09e6435d0b9e8e0673f9a0c",
+      "totalRules": 210865,
+      "blockingRules": 210742,
       "exceptionRules": 123,
       "duplicatesRemoved": 82405,
       "coveredRemoved": 2893,
-      "fileSha256": "a230ef9545e1e770fdddf45ad6fb34cdbbbb71ec38063c1c7a2f34b7db48bb57",
+      "fileSha256": "12599b155cdd9415ad4510d085b5aa808b7800ddd314b1e1614121d4574d407a",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": true
     },
     "ads": {
       "name": "广告分类",
@@ -1224,7 +1353,8 @@
       "coveredRemoved": 96768,
       "fileSha256": "8b9161c2fd2a423809324504fc392c0b33b89d267e8782278b2af0c32ea1df45",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "tracking": {
       "name": "跟踪与遥测分类",
@@ -1253,7 +1383,8 @@
       "coveredRemoved": 10484,
       "fileSha256": "3fbe85eba449e1a164bbe77a3d96a6ee16b06d8f60adfc7c49dcf7f15490993b",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "security": {
       "name": "安全分类（威胁与诈骗等）",
@@ -1272,19 +1403,20 @@
         "blocklistproject-lists-adguard-phishing-ags-txt-6ab23539"
       ],
       "status": "ready",
-      "updatedUtc": "2026-10-01T07:47:25+00:00",
-      "contentDigest": "b3d6c09e7fefadba05861c5294731537efe65030dc698572da9d2e4c77a9604b",
-      "totalRules": 654800,
-      "blockingRules": 654800,
+      "updatedUtc": "2026-10-02T05:31:02+00:00",
+      "contentDigest": "975ddbc0de7d4d53d0fb2101c8cfb9013330d7a27b9da8bec3cc755470b365e7",
+      "totalRules": 654793,
+      "blockingRules": 654793,
       "exceptionRules": 0,
-      "duplicatesRemoved": 15638,
+      "duplicatesRemoved": 15640,
       "coveredRemoved": 339207,
-      "fileSha256": "979c4160bc0a328835969874176545b421e705963f3eb23e06af086c73076ff0",
+      "fileSha256": "118dde04e1b701691f41752da4555b30ac5b4eedcb9d65445d01a8ecb32b3cb2",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "malware": {
-      "name": "恶意网站分类",
+      "name": "被入侵网站补充列表（单一来源）",
       "kind": "blocklist",
       "axis": "type",
       "value": "malware",
@@ -1292,16 +1424,17 @@
         "mitchellkrogza-the-big-list-of-hacked-malware-web-sites-hacked-domains-list-5df168a2"
       ],
       "status": "ready",
-      "updatedUtc": "2026-09-30T20:58:04+00:00",
-      "contentDigest": "ce978dd66c89a49497074b87d3def1b3930130ae533ad5763e9048dc8f1f78bd",
+      "updatedUtc": "2026-10-02T05:31:02+00:00",
+      "contentDigest": "45ce666529d9343e578cb728d3f561b7b0567565d1feeae866167ea3db8e2250",
       "totalRules": 9,
       "blockingRules": 9,
       "exceptionRules": 0,
       "duplicatesRemoved": 0,
       "coveredRemoved": 0,
-      "fileSha256": "3fbe854d6eecfefd68e56416a9d4f0af85b408e7c13a479c8eb0d4d4be284dcb",
+      "fileSha256": "56c74d3455751dcaafb89e5546ada67bfd0d8eb4938275011113967ae99c4a5b",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "scam": {
       "name": "诈骗分类",
@@ -1314,16 +1447,17 @@
         "blocklistproject-lists-adguard-fraud-ags-txt-859f4062"
       ],
       "status": "ready",
-      "updatedUtc": "2026-10-01T07:47:30+00:00",
-      "contentDigest": "5f6b692ebad98abca4f1a5f8a9d9d5ce8753565d790d8fc288460ecc8b4ac6f6",
-      "totalRules": 157609,
-      "blockingRules": 157609,
+      "updatedUtc": "2026-10-02T05:31:06+00:00",
+      "contentDigest": "e2356150cfea02bafdc5595ac43b38c7611bf71f465ba346a31985bc6fc92f30",
+      "totalRules": 157602,
+      "blockingRules": 157602,
       "exceptionRules": 0,
-      "duplicatesRemoved": 430,
+      "duplicatesRemoved": 432,
       "coveredRemoved": 107629,
-      "fileSha256": "067f5370092f321fab346290110cd6dbfc3449f0c4de3212254a8475f73cab1f",
+      "fileSha256": "615c9b8e279cb2368579837e733f1bede8f460369981db85f2e2775552a86577",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "ransomware": {
       "name": "勒索软件分类",
@@ -1343,7 +1477,8 @@
       "coveredRemoved": 1,
       "fileSha256": "5adf6eba16b273d35501dcd4cf82244176e406c5504a3cc8db7afd230b7f78ca",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "mining": {
       "name": "挖矿分类",
@@ -1365,7 +1500,8 @@
       "coveredRemoved": 61,
       "fileSha256": "f9cd9997dad99bb37206eecf07f009aab86a7d55a4cd74187099fa7b2052abb1",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "smart-tv": {
       "name": "电视分类",
@@ -1386,7 +1522,8 @@
       "coveredRemoved": 47,
       "fileSha256": "9a194bacdbe279f5c002ac35ce8e8e0a5a23ba3f3c936e5820d442d44022bb28",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "game-console": {
       "name": "游戏机分类",
@@ -1406,7 +1543,8 @@
       "coveredRemoved": 0,
       "fileSha256": "8e2e4207d58b75b236ca1c3ea639f3f10c6b51601380226e53696a3f2d61c71f",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "windows": {
       "name": "Windows 遥测组件",
@@ -1427,7 +1565,8 @@
       "coveredRemoved": 0,
       "fileSha256": "1d81783dbfc3644ce290c9cee44d541c6314b2f95c44fd8c847b383010aa13a9",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "xiaomi": {
       "name": "小米组件",
@@ -1448,7 +1587,8 @@
       "coveredRemoved": 0,
       "fileSha256": "b640eaaeab4760dc2fb5a027e456a2dc2833248d6dc9bb316a737e79b9a4000f",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "samsung": {
       "name": "三星组件",
@@ -1469,7 +1609,8 @@
       "coveredRemoved": 0,
       "fileSha256": "9cda202d08bd426f1aa3390da0152463afd451c26a7e7e1f8c2be604a006469e",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "spotify": {
       "name": "Spotify 域名拦截组件",
@@ -1489,7 +1630,8 @@
       "coveredRemoved": 0,
       "fileSha256": "39afa8b40d27b3c6df647a1df336e16b43020ab09c235a6038b537cb37d9c136",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "youtube": {
       "name": "YouTube 域名拦截组件",
@@ -1509,7 +1651,8 @@
       "coveredRemoved": 54,
       "fileSha256": "4bbd0116f99897cfacc26d183cb686450275b5361869f8db2bb94c933ae7e7dd",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "social": {
       "name": "社交平台限制组件",
@@ -1529,7 +1672,8 @@
       "coveredRemoved": 0,
       "fileSha256": "6d930c9f1200f6e2a7a3f422dad3c14a2fe222db612a3252541a79d196e0ebbc",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "shorteners": {
       "name": "短链接服务限制组件",
@@ -1549,7 +1693,8 @@
       "coveredRemoved": 0,
       "fileSha256": "54e7dbe110584dd0a49ea8f440802ceec4081065159069cfe71572f5ce7f9f41",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "dyndns": {
       "name": "动态 DNS 服务限制组件",
@@ -1569,7 +1714,8 @@
       "coveredRemoved": 0,
       "fileSha256": "3da47a755269ebb2194ab05507f9afe1ed6f4d7294ebb16aab4c63e2a0d8b182",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "hosting": {
       "name": "托管服务限制组件",
@@ -1589,7 +1735,8 @@
       "coveredRemoved": 0,
       "fileSha256": "f256a572d190ab1c03c874f877e1bb15c1be07ce2f377062ce14c6a33b7262b7",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "allow-referral": {
       "name": "推广跳转放行",
@@ -1609,7 +1756,8 @@
       "coveredRemoved": 6,
       "fileSha256": "1b42d134622f05031cf4f87b899fd42ee56846b360bdfef6fb03c1cd8a916328",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "allow-referral-native": {
       "name": "推广跳转放行（Native）",
@@ -1629,7 +1777,8 @@
       "coveredRemoved": 0,
       "fileSha256": "85a0dddac1b23e9c6d30767af1a630cdfc733cfece86fc4ae77f7838331ea692",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "allow-shorteners": {
       "name": "短链接放行",
@@ -1649,7 +1798,8 @@
       "coveredRemoved": 0,
       "fileSha256": "928957620cc8f0e18ec6db5a385b76ad34514cc79c2d30ca019f8c7bceed11bc",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "native-tracking": {
       "name": "设备原生遥测",
@@ -1676,7 +1826,8 @@
       "coveredRemoved": 0,
       "fileSha256": "f5a6d3da65862067e1ddf3727c13abf03b155c6581639a9fb2d9b5a73ad09456",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "tld-restrictions": {
       "name": "高滥用顶级域名限制",
@@ -1696,7 +1847,8 @@
       "coveredRemoved": 0,
       "fileSha256": "8af2805fceb101b70cd3c527bfe30062305645717c4cbc660a7b06819268b759",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     },
     "phishing": {
       "name": "钓鱼网站分类",
@@ -1716,7 +1868,8 @@
       "coveredRemoved": 72125,
       "fileSha256": "1e25e99f94f77dba9fa6685a37a6ddc6a98c3aa477cdad64ef7d7964450ea19b",
       "validatedEngine": "AdguardTeam/urlfilter v0.23.4",
-      "usesCache": false
+      "usesCache": false,
+      "includeCustom": false
     }
   }
 }

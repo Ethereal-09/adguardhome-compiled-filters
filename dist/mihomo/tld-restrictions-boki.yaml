@@ -1,15 +1,61 @@
-{
-  "rule-providers": {
-    "compiled-tld-restrictions-block-regex": {
-      "type": "http",
-      "behavior": "classical",
-      "format": "text",
-      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/tld-restrictions-regex.txt",
-      "path": "./rule_provider/compiled/tld-restrictions-regex.txt",
-      "interval": 86400
-    }
-  },
-  "rules": [
-    "RULE-SET,compiled-tld-restrictions-block-regex,REJECT"
-  ]
-}
+# Merge these providers and rules into your existing mihomo configuration.
+rule-providers:
+  compiled-tld-restrictions-block:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/tld-restrictions.mrs"
+    path: "./rule_provider/compiled/tld-restrictions.mrs"
+    interval: 86400
+  compiled-tld-restrictions-block-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/tld-restrictions-regex.txt"
+    path: "./rule_provider/compiled/tld-restrictions-regex.txt"
+    interval: 86400
+  compiled-tld-restrictions-allow:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/tld-restrictions-allow.mrs"
+    path: "./rule_provider/compiled/tld-restrictions-allow.mrs"
+    interval: 86400
+  compiled-tld-restrictions-allow-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/tld-restrictions-allow-regex.txt"
+    path: "./rule_provider/compiled/tld-restrictions-allow-regex.txt"
+    interval: 86400
+  compiled-tld-restrictions-block-important:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/tld-restrictions-block-important.mrs"
+    path: "./rule_provider/compiled/tld-restrictions-block-important.mrs"
+    interval: 86400
+  compiled-tld-restrictions-block-important-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/tld-restrictions-block-important-regex.txt"
+    path: "./rule_provider/compiled/tld-restrictions-block-important-regex.txt"
+    interval: 86400
+  compiled-tld-restrictions-allow-important:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/tld-restrictions-allow-important.mrs"
+    path: "./rule_provider/compiled/tld-restrictions-allow-important.mrs"
+    interval: 86400
+  compiled-tld-restrictions-allow-important-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/tld-restrictions-allow-important-regex.txt"
+    path: "./rule_provider/compiled/tld-restrictions-allow-important-regex.txt"
+    interval: 86400
+rules:
+  - "AND,((OR,((RULE-SET,compiled-tld-restrictions-block-important),(RULE-SET,compiled-tld-restrictions-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-tld-restrictions-allow-important),(RULE-SET,compiled-tld-restrictions-allow-important-regex)))))),REJECT"
+  - "AND,((OR,((RULE-SET,compiled-tld-restrictions-block),(RULE-SET,compiled-tld-restrictions-block-regex))),(NOT,((OR,((RULE-SET,compiled-tld-restrictions-allow),(RULE-SET,compiled-tld-restrictions-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-tld-restrictions-allow-important),(RULE-SET,compiled-tld-restrictions-allow-important-regex)))))),REJECT"

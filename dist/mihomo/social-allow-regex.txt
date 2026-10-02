@@ -1,0 +1,11 @@
+# Title: 社交平台限制组件
+# Updated: 2026-09-30T20:58:06+00:00
+# Expires: 1 day
+# Rules: 3995
+# Maintainer merges only; upstream rules belong to their authors.
+# DNS masks/regex preserved; exact Hosts scope and source exception priority retained.
+# Upstream licenses and notices: ../upstream/README.md (in the original repository).
+# Source: anudeepND/blacklist / facebook.txt | https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt
+# Repository: https://github.com/anudeepND/blacklist | Account: anudeepND
+# Upstream license: https://github.com/anudeepND/blacklist/blob/master/LICENSE
+# mihomo classical provider; preserve companion exception providers.

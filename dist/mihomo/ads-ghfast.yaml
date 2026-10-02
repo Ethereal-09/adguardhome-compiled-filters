@@ -1,15 +1,61 @@
-{
-  "rule-providers": {
-    "compiled-ads-block": {
-      "type": "http",
-      "behavior": "domain",
-      "format": "mrs",
-      "url": "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/ads.mrs",
-      "path": "./rule_provider/compiled/ads.mrs",
-      "interval": 86400
-    }
-  },
-  "rules": [
-    "RULE-SET,compiled-ads-block,REJECT"
-  ]
-}
+# Merge these providers and rules into your existing mihomo configuration.
+rule-providers:
+  compiled-ads-block:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/ads.mrs"
+    path: "./rule_provider/compiled/ads.mrs"
+    interval: 86400
+  compiled-ads-block-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/ads-regex.txt"
+    path: "./rule_provider/compiled/ads-regex.txt"
+    interval: 86400
+  compiled-ads-allow:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/ads-allow.mrs"
+    path: "./rule_provider/compiled/ads-allow.mrs"
+    interval: 86400
+  compiled-ads-allow-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/ads-allow-regex.txt"
+    path: "./rule_provider/compiled/ads-allow-regex.txt"
+    interval: 86400
+  compiled-ads-block-important:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/ads-block-important.mrs"
+    path: "./rule_provider/compiled/ads-block-important.mrs"
+    interval: 86400
+  compiled-ads-block-important-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/ads-block-important-regex.txt"
+    path: "./rule_provider/compiled/ads-block-important-regex.txt"
+    interval: 86400
+  compiled-ads-allow-important:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/ads-allow-important.mrs"
+    path: "./rule_provider/compiled/ads-allow-important.mrs"
+    interval: 86400
+  compiled-ads-allow-important-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/ads-allow-important-regex.txt"
+    path: "./rule_provider/compiled/ads-allow-important-regex.txt"
+    interval: 86400
+rules:
+  - "AND,((OR,((RULE-SET,compiled-ads-block-important),(RULE-SET,compiled-ads-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-ads-allow-important),(RULE-SET,compiled-ads-allow-important-regex)))))),REJECT"
+  - "AND,((OR,((RULE-SET,compiled-ads-block),(RULE-SET,compiled-ads-block-regex))),(NOT,((OR,((RULE-SET,compiled-ads-allow),(RULE-SET,compiled-ads-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-ads-allow-important),(RULE-SET,compiled-ads-allow-important-regex)))))),REJECT"

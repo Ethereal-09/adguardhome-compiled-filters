@@ -8,6 +8,12 @@
     "cacheMaxAgeHours": 72
   },
   "maxDropFraction": 0.3,
+  "changeChecks": {
+    "maxGrowthFraction": 1.0,
+    "growthMinIncrease": 1000,
+    "maxExceptionDropFraction": 0.3,
+    "exceptionMinBaseline": 20
+  },
   "profiles": [
     {
       "id": "combined",
@@ -167,7 +173,8 @@
         "cats-team-adrules-dns-txt-35998f0f",
         "privacy-protection-tools-anti-ad-anti-ad-easylist-txt-9b62e65d",
         "217heidai-adblockfilters-rules-adblockdnslite-txt-99bc0b64"
-      ]
+      ],
+      "includeCustom": true
     },
     {
       "id": "ads",
@@ -222,7 +229,7 @@
     },
     {
       "id": "malware",
-      "name": "恶意网站分类",
+      "name": "被入侵网站补充列表（单一来源）",
       "kind": "blocklist",
       "axis": "type",
       "value": "malware",

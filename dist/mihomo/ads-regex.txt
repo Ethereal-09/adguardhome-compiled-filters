@@ -1,0 +1,14 @@
+# Title: 广告分类
+# Updated: 2026-09-30T20:57:55+00:00
+# Expires: 1 day
+# Rules: 143763
+# Maintainer merges only; upstream rules belong to their authors.
+# DNS masks/regex preserved; exact Hosts scope and source exception priority retained.
+# Upstream licenses and notices: ../upstream/README.md (in the original repository).
+# Source: blocklistproject/Lists / ads-ags.txt | https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/ads-ags.txt
+# Repository: https://github.com/blocklistproject/Lists | Account: blocklistproject
+# Upstream license: https://github.com/blocklistproject/Lists/blob/main/LICENSE
+# Source: AdAway default blocklist | https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt
+# Repository: https://github.com/AdAway/adaway.github.io | Account: AdAway
+# Upstream license: https://github.com/AdAway/adaway.github.io/blob/master/LICENSE.md
+# mihomo classical provider; preserve companion exception providers.

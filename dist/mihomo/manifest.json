@@ -1,6 +1,6 @@
 {
-  "schemaVersion": 1,
-  "engine": "mihomo v1.19.32",
+  "schemaVersion": 2,
+  "configVersion": 2,
   "profiles": {
     "combined": {
       "name": "综合 DNS 过滤（基础＋国内优化）",
@@ -13,17 +13,17 @@
         "217heidai-adblockfilters-rules-adblockdnslite-txt-99bc0b64",
         "sjhgvr-oisd-abp-small-txt-50559e3d"
       ],
-      "updatedUtc": "2026-10-02T03:55:57+00:00",
-      "inputSha256": "4525af153156d8707c941d25370744eaa4e7b71016faf80b510b02baa062db26",
-      "inputRules": 307183,
-      "blockingRules": 307060,
+      "updatedUtc": "2026-10-02T05:29:40+00:00",
+      "inputSha256": "35408fccf1e6db6f3c711495fd5b5601499a951a6e8c90e8efc00bf887671f44",
+      "inputRules": 307182,
+      "blockingRules": 307059,
       "exceptionRules": 123,
-      "convertedRules": 307183,
+      "convertedRules": 307182,
       "upstreamNotices": [
         "# Title: 综合 DNS 过滤（基础＋国内优化）",
-        "# Updated: 2026-10-02T03:55:57+00:00",
+        "# Updated: 2026-10-02T05:29:40+00:00",
         "# Expires: 1 day",
-        "# Rules: 307183",
+        "# Rules: 307182",
         "# Maintainer merges only; upstream rules belong to their authors.",
         "# DNS masks/regex preserved; exact Hosts scope and source exception priority retained.",
         "# Upstream licenses and notices: ../upstream/README.md (in the original repository).",
@@ -49,8 +49,8 @@
           "bucket": "block",
           "behavior": "domain",
           "format": "mrs",
-          "rules": 306537,
-          "sha256": "99c25e51309754d99ebaa7ce070dc31bc4cf0484bba1ca4a839e552512db31fe"
+          "rules": 306536,
+          "sha256": "4b58028da85a835a116a8db7e7aedb4c759b265e9459af7422c40b280886ae56"
         },
         "compiled-combined-block-regex": {
           "file": "combined-regex.txt",
@@ -58,7 +58,7 @@
           "behavior": "classical",
           "format": "text",
           "rules": 523,
-          "sha256": "b4dd3499378e6abc202680ac4168e2a84bb4ea728ef4fba0d9a10d1a4f7158b7"
+          "sha256": "a44ac1ea007e38afb6fd15cb085b8b566ac515cb51af7ed0ae2be028a43f29a5"
         },
         "compiled-combined-allow": {
           "file": "combined-allow.mrs",
@@ -74,12 +74,46 @@
           "behavior": "classical",
           "format": "text",
           "rules": 2,
-          "sha256": "af94a4103072b1d3fdd1e204f783b176bced3b004de66ea876827da0eae2ae6f"
+          "sha256": "2441665dd141de9f9c30deaeaa7d69fd000e13b85b4909baf210102170f488f3"
+        },
+        "compiled-combined-block-important": {
+          "file": "combined-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-combined-block-important-regex": {
+          "file": "combined-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "44f7bea988002c00b28d23482b32107df979dc6071d05a6a6c6aefca86c0e7c8"
+        },
+        "compiled-combined-allow-important": {
+          "file": "combined-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-combined-allow-important-regex": {
+          "file": "combined-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "44f7bea988002c00b28d23482b32107df979dc6071d05a6a6c6aefca86c0e7c8"
         }
       },
       "rules": [
-        "AND,((OR,((RULE-SET,compiled-combined-block),(RULE-SET,compiled-combined-block-regex))),(NOT,((OR,((RULE-SET,compiled-combined-allow),(RULE-SET,compiled-combined-allow-regex)))))),REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-combined-block-important),(RULE-SET,compiled-combined-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-combined-allow-important),(RULE-SET,compiled-combined-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-combined-block),(RULE-SET,compiled-combined-block-regex))),(NOT,((OR,((RULE-SET,compiled-combined-allow),(RULE-SET,compiled-combined-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-combined-allow-important),(RULE-SET,compiled-combined-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "full": {
       "name": "全量 DNS 黑名单（最高档＋全部可用专项）",
@@ -138,17 +172,17 @@
         "https-someonewhocares-org-hosts-hosts-zero-hosts-dfd8da19",
         "https-pgl-yoyo-org-adservers-adservers-serverlist-php-f785075c"
       ],
-      "updatedUtc": "2026-10-02T03:56:58+00:00",
-      "inputSha256": "43d6e8bbe0cdd2b5881e26e4e366eee5a5606011b7f27d4d8e6c793377196037",
-      "inputRules": 2005124,
-      "blockingRules": 2004812,
+      "updatedUtc": "2026-10-02T05:30:17+00:00",
+      "inputSha256": "b39f6839b7f15df88812c1f35e0f85057cb607265481ab6d6f90bedad91f17b2",
+      "inputRules": 2005108,
+      "blockingRules": 2004796,
       "exceptionRules": 312,
-      "convertedRules": 2005124,
+      "convertedRules": 2005108,
       "upstreamNotices": [
         "# Title: 全量 DNS 黑名单（最高档＋全部可用专项）",
-        "# Updated: 2026-10-02T03:56:58+00:00",
+        "# Updated: 2026-10-02T05:30:17+00:00",
         "# Expires: 1 day",
-        "# Rules: 2005124",
+        "# Rules: 2005108",
         "# Maintainer merges only; upstream rules belong to their authors.",
         "# DNS masks/regex preserved; exact Hosts scope and source exception priority retained.",
         "# Upstream licenses and notices: ../upstream/README.md (in the original repository).",
@@ -297,8 +331,8 @@
           "bucket": "block",
           "behavior": "domain",
           "format": "mrs",
-          "rules": 2003963,
-          "sha256": "784dee6709e5d016dbaf92fc94174cd8074f75236f38961fdee7b8fb62069a79"
+          "rules": 2003947,
+          "sha256": "92df2761fe447e8824153d36382d49c8c6b67b6ba259b3ee24a2bd19a483526e"
         },
         "compiled-full-block-regex": {
           "file": "full-regex.txt",
@@ -306,7 +340,7 @@
           "behavior": "classical",
           "format": "text",
           "rules": 849,
-          "sha256": "f56a2f1f8a9ef125e48893660e7302290f4919e201715c4848e0d2920862b969"
+          "sha256": "b155e2d25cf9018058a3f082356e348bdc929fd040bb8a11ff94f9ee37b1c3b1"
         },
         "compiled-full-allow": {
           "file": "full-allow.mrs",
@@ -322,12 +356,46 @@
           "behavior": "classical",
           "format": "text",
           "rules": 2,
-          "sha256": "fed1b0b1caab36e2f8876a6c481ccee00ea355f739517b0cff9465a436603c42"
+          "sha256": "c0286452f1f8fb350e473d111cedce8f1ba3e5c612d7ca44f045f63c6832262f"
+        },
+        "compiled-full-block-important": {
+          "file": "full-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-full-block-important-regex": {
+          "file": "full-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "0186ae3fd373ec4e3a3cabbf0389390bf645d7f5ee1bf5ab7f78d75cac7f3813"
+        },
+        "compiled-full-allow-important": {
+          "file": "full-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-full-allow-important-regex": {
+          "file": "full-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "0186ae3fd373ec4e3a3cabbf0389390bf645d7f5ee1bf5ab7f78d75cac7f3813"
         }
       },
       "rules": [
-        "AND,((OR,((RULE-SET,compiled-full-block),(RULE-SET,compiled-full-block-regex))),(NOT,((OR,((RULE-SET,compiled-full-allow),(RULE-SET,compiled-full-allow-regex)))))),REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-full-block-important),(RULE-SET,compiled-full-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-full-allow-important),(RULE-SET,compiled-full-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-full-block),(RULE-SET,compiled-full-block-regex))),(NOT,((OR,((RULE-SET,compiled-full-allow),(RULE-SET,compiled-full-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-full-allow-important),(RULE-SET,compiled-full-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "balanced": {
       "name": "均衡 DNS 过滤",
@@ -361,11 +429,69 @@
           "format": "mrs",
           "rules": 198941,
           "sha256": "9b51eb7cdeb0048e8e0372f51dae505c80274ad07fa2adb9ce260559dc945407"
+        },
+        "compiled-balanced-block-regex": {
+          "file": "balanced-regex.txt",
+          "bucket": "block",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "c3b7f3cd7aaff50fab227df3e46c971cbf743892559bcaca54c3f454bc8460b4"
+        },
+        "compiled-balanced-allow": {
+          "file": "balanced-allow.mrs",
+          "bucket": "allow",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-balanced-allow-regex": {
+          "file": "balanced-allow-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "c3b7f3cd7aaff50fab227df3e46c971cbf743892559bcaca54c3f454bc8460b4"
+        },
+        "compiled-balanced-block-important": {
+          "file": "balanced-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-balanced-block-important-regex": {
+          "file": "balanced-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "c3b7f3cd7aaff50fab227df3e46c971cbf743892559bcaca54c3f454bc8460b4"
+        },
+        "compiled-balanced-allow-important": {
+          "file": "balanced-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-balanced-allow-important-regex": {
+          "file": "balanced-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "c3b7f3cd7aaff50fab227df3e46c971cbf743892559bcaca54c3f454bc8460b4"
         }
       },
       "rules": [
-        "RULE-SET,compiled-balanced-block,REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-balanced-block-important),(RULE-SET,compiled-balanced-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-balanced-allow-important),(RULE-SET,compiled-balanced-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-balanced-block),(RULE-SET,compiled-balanced-block-regex))),(NOT,((OR,((RULE-SET,compiled-balanced-allow),(RULE-SET,compiled-balanced-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-balanced-allow-important),(RULE-SET,compiled-balanced-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "extended": {
       "name": "扩展 DNS 过滤",
@@ -399,11 +525,69 @@
           "format": "mrs",
           "rules": 227618,
           "sha256": "5196ced32da8327847b1bcf52474d59923e0aa9d3613030f952600e4115e373e"
+        },
+        "compiled-extended-block-regex": {
+          "file": "extended-regex.txt",
+          "bucket": "block",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "62ba1afe40b130a2a269c62c3f88a4723dc2e780ab296b9f277e2c26c84a055e"
+        },
+        "compiled-extended-allow": {
+          "file": "extended-allow.mrs",
+          "bucket": "allow",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-extended-allow-regex": {
+          "file": "extended-allow-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "62ba1afe40b130a2a269c62c3f88a4723dc2e780ab296b9f277e2c26c84a055e"
+        },
+        "compiled-extended-block-important": {
+          "file": "extended-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-extended-block-important-regex": {
+          "file": "extended-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "62ba1afe40b130a2a269c62c3f88a4723dc2e780ab296b9f277e2c26c84a055e"
+        },
+        "compiled-extended-allow-important": {
+          "file": "extended-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-extended-allow-important-regex": {
+          "file": "extended-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "62ba1afe40b130a2a269c62c3f88a4723dc2e780ab296b9f277e2c26c84a055e"
         }
       },
       "rules": [
-        "RULE-SET,compiled-extended-block,REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-extended-block-important),(RULE-SET,compiled-extended-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-extended-allow-important),(RULE-SET,compiled-extended-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-extended-block),(RULE-SET,compiled-extended-block-regex))),(NOT,((OR,((RULE-SET,compiled-extended-allow),(RULE-SET,compiled-extended-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-extended-allow-important),(RULE-SET,compiled-extended-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "aggressive": {
       "name": "激进 DNS 过滤",
@@ -437,11 +621,69 @@
           "format": "mrs",
           "rules": 248284,
           "sha256": "19b58c34401c774c9ae86d2836467e1215ff23a4429f4144ba57ae61d4f16a8e"
+        },
+        "compiled-aggressive-block-regex": {
+          "file": "aggressive-regex.txt",
+          "bucket": "block",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "8c02f0722732685270704887b8c62cfea58d1d86e916dd7663528f3370f9123f"
+        },
+        "compiled-aggressive-allow": {
+          "file": "aggressive-allow.mrs",
+          "bucket": "allow",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-aggressive-allow-regex": {
+          "file": "aggressive-allow-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "8c02f0722732685270704887b8c62cfea58d1d86e916dd7663528f3370f9123f"
+        },
+        "compiled-aggressive-block-important": {
+          "file": "aggressive-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-aggressive-block-important-regex": {
+          "file": "aggressive-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "8c02f0722732685270704887b8c62cfea58d1d86e916dd7663528f3370f9123f"
+        },
+        "compiled-aggressive-allow-important": {
+          "file": "aggressive-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-aggressive-allow-important-regex": {
+          "file": "aggressive-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "8c02f0722732685270704887b8c62cfea58d1d86e916dd7663528f3370f9123f"
         }
       },
       "rules": [
-        "RULE-SET,compiled-aggressive-block,REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-aggressive-block-important),(RULE-SET,compiled-aggressive-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-aggressive-allow-important),(RULE-SET,compiled-aggressive-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-aggressive-block),(RULE-SET,compiled-aggressive-block-regex))),(NOT,((OR,((RULE-SET,compiled-aggressive-allow),(RULE-SET,compiled-aggressive-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-aggressive-allow-important),(RULE-SET,compiled-aggressive-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "maximum": {
       "name": "最强 DNS 过滤",
@@ -475,11 +717,69 @@
           "format": "mrs",
           "rules": 284102,
           "sha256": "67fe2e6551c299894d911e7e3f09b28d85b9b517d3af134ec3d238bdedf59a06"
+        },
+        "compiled-maximum-block-regex": {
+          "file": "maximum-regex.txt",
+          "bucket": "block",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "b51b33ed42615f7e47f04acd70a2272213c485b252f0ea2f35a0339390facb2c"
+        },
+        "compiled-maximum-allow": {
+          "file": "maximum-allow.mrs",
+          "bucket": "allow",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-maximum-allow-regex": {
+          "file": "maximum-allow-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "b51b33ed42615f7e47f04acd70a2272213c485b252f0ea2f35a0339390facb2c"
+        },
+        "compiled-maximum-block-important": {
+          "file": "maximum-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-maximum-block-important-regex": {
+          "file": "maximum-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "b51b33ed42615f7e47f04acd70a2272213c485b252f0ea2f35a0339390facb2c"
+        },
+        "compiled-maximum-allow-important": {
+          "file": "maximum-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-maximum-allow-important-regex": {
+          "file": "maximum-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "b51b33ed42615f7e47f04acd70a2272213c485b252f0ea2f35a0339390facb2c"
         }
       },
       "rules": [
-        "RULE-SET,compiled-maximum-block,REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-maximum-block-important),(RULE-SET,compiled-maximum-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-maximum-allow-important),(RULE-SET,compiled-maximum-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-maximum-block),(RULE-SET,compiled-maximum-block-regex))),(NOT,((OR,((RULE-SET,compiled-maximum-allow),(RULE-SET,compiled-maximum-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-maximum-allow-important),(RULE-SET,compiled-maximum-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "balanced-1hosts": {
       "name": "1Hosts 均衡（替代基础）",
@@ -513,11 +813,69 @@
           "format": "mrs",
           "rules": 102241,
           "sha256": "f9cfdb40d0eb1850ee6a02907901bafa2179734be71d09168ad4b1bff0a8714c"
+        },
+        "compiled-balanced-1hosts-block-regex": {
+          "file": "balanced-1hosts-regex.txt",
+          "bucket": "block",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "d23731a15717bc56b7807376287c80f5dc0042d9f371ea1d0f0180bdfe1ec96b"
+        },
+        "compiled-balanced-1hosts-allow": {
+          "file": "balanced-1hosts-allow.mrs",
+          "bucket": "allow",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-balanced-1hosts-allow-regex": {
+          "file": "balanced-1hosts-allow-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "d23731a15717bc56b7807376287c80f5dc0042d9f371ea1d0f0180bdfe1ec96b"
+        },
+        "compiled-balanced-1hosts-block-important": {
+          "file": "balanced-1hosts-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-balanced-1hosts-block-important-regex": {
+          "file": "balanced-1hosts-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "d23731a15717bc56b7807376287c80f5dc0042d9f371ea1d0f0180bdfe1ec96b"
+        },
+        "compiled-balanced-1hosts-allow-important": {
+          "file": "balanced-1hosts-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-balanced-1hosts-allow-important-regex": {
+          "file": "balanced-1hosts-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "d23731a15717bc56b7807376287c80f5dc0042d9f371ea1d0f0180bdfe1ec96b"
         }
       },
       "rules": [
-        "RULE-SET,compiled-balanced-1hosts-block,REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-balanced-1hosts-block-important),(RULE-SET,compiled-balanced-1hosts-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-balanced-1hosts-allow-important),(RULE-SET,compiled-balanced-1hosts-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-balanced-1hosts-block),(RULE-SET,compiled-balanced-1hosts-block-regex))),(NOT,((OR,((RULE-SET,compiled-balanced-1hosts-allow),(RULE-SET,compiled-balanced-1hosts-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-balanced-1hosts-allow-important),(RULE-SET,compiled-balanced-1hosts-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "aggressive-1hosts": {
       "name": "1Hosts 激进（替代基础）",
@@ -551,11 +909,69 @@
           "format": "mrs",
           "rules": 786132,
           "sha256": "66241ea14a0b1e02096f3774087f32fb0773c7a596e9bb32732a884876765b73"
+        },
+        "compiled-aggressive-1hosts-block-regex": {
+          "file": "aggressive-1hosts-regex.txt",
+          "bucket": "block",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "d6f73c54779a6ae2867bcc87782dabea7f8104f3f00a6091829f9803ad012c90"
+        },
+        "compiled-aggressive-1hosts-allow": {
+          "file": "aggressive-1hosts-allow.mrs",
+          "bucket": "allow",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-aggressive-1hosts-allow-regex": {
+          "file": "aggressive-1hosts-allow-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "d6f73c54779a6ae2867bcc87782dabea7f8104f3f00a6091829f9803ad012c90"
+        },
+        "compiled-aggressive-1hosts-block-important": {
+          "file": "aggressive-1hosts-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-aggressive-1hosts-block-important-regex": {
+          "file": "aggressive-1hosts-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "d6f73c54779a6ae2867bcc87782dabea7f8104f3f00a6091829f9803ad012c90"
+        },
+        "compiled-aggressive-1hosts-allow-important": {
+          "file": "aggressive-1hosts-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-aggressive-1hosts-allow-important-regex": {
+          "file": "aggressive-1hosts-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "d6f73c54779a6ae2867bcc87782dabea7f8104f3f00a6091829f9803ad012c90"
         }
       },
       "rules": [
-        "RULE-SET,compiled-aggressive-1hosts-block,REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-aggressive-1hosts-block-important),(RULE-SET,compiled-aggressive-1hosts-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-aggressive-1hosts-allow-important),(RULE-SET,compiled-aggressive-1hosts-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-aggressive-1hosts-block),(RULE-SET,compiled-aggressive-1hosts-block-regex))),(NOT,((OR,((RULE-SET,compiled-aggressive-1hosts-allow),(RULE-SET,compiled-aggressive-1hosts-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-aggressive-1hosts-allow-important),(RULE-SET,compiled-aggressive-1hosts-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "china": {
       "name": "中国国内优化 DNS 黑名单",
@@ -565,17 +981,17 @@
         "privacy-protection-tools-anti-ad-anti-ad-easylist-txt-9b62e65d",
         "217heidai-adblockfilters-rules-adblockdnslite-txt-99bc0b64"
       ],
-      "updatedUtc": "2026-10-02T03:57:45+00:00",
-      "inputSha256": "a230ef9545e1e770fdddf45ad6fb34cdbbbb71ec38063c1c7a2f34b7db48bb57",
-      "inputRules": 210866,
-      "blockingRules": 210743,
+      "updatedUtc": "2026-10-02T05:30:44+00:00",
+      "inputSha256": "12599b155cdd9415ad4510d085b5aa808b7800ddd314b1e1614121d4574d407a",
+      "inputRules": 210865,
+      "blockingRules": 210742,
       "exceptionRules": 123,
-      "convertedRules": 210866,
+      "convertedRules": 210865,
       "upstreamNotices": [
         "# Title: 中国国内优化 DNS 黑名单",
-        "# Updated: 2026-10-02T03:57:45+00:00",
+        "# Updated: 2026-10-02T05:30:44+00:00",
         "# Expires: 1 day",
-        "# Rules: 210866",
+        "# Rules: 210865",
         "# Maintainer merges only; upstream rules belong to their authors.",
         "# DNS masks/regex preserved; exact Hosts scope and source exception priority retained.",
         "# Upstream licenses and notices: ../upstream/README.md (in the original repository).",
@@ -593,8 +1009,8 @@
           "bucket": "block",
           "behavior": "domain",
           "format": "mrs",
-          "rules": 210224,
-          "sha256": "d59d9a7fd487c64d444d343c08f698cbb7cc18d5e61665b4abfb87d879358807"
+          "rules": 210223,
+          "sha256": "8b6550ef4af8f282cf9a6c8d096de275f88409114f1fcaf263b35c13a982ebca"
         },
         "compiled-china-block-regex": {
           "file": "china-regex.txt",
@@ -602,7 +1018,7 @@
           "behavior": "classical",
           "format": "text",
           "rules": 519,
-          "sha256": "2882efa8a1f03ff2aebbc6cbb03ad59d927569f1a387317bcf15d6d8e93a0dfd"
+          "sha256": "e19387653927cfb232c8b2635e51c8c41b5dbe1a1b0c6165c85024b35829b1f8"
         },
         "compiled-china-allow": {
           "file": "china-allow.mrs",
@@ -618,12 +1034,46 @@
           "behavior": "classical",
           "format": "text",
           "rules": 2,
-          "sha256": "db8bc89b875d834b49c37bd574165164369900eba7eb4ae95e8c70d084722b9a"
+          "sha256": "cec67b10a217a571cf09977419615c7f2731638cf2752366cee4240539bec74d"
+        },
+        "compiled-china-block-important": {
+          "file": "china-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-china-block-important-regex": {
+          "file": "china-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "37229e5093074e11b4e4f43f644f69665d7db43b370d265f87aea2ebbf0b4351"
+        },
+        "compiled-china-allow-important": {
+          "file": "china-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-china-allow-important-regex": {
+          "file": "china-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "37229e5093074e11b4e4f43f644f69665d7db43b370d265f87aea2ebbf0b4351"
         }
       },
       "rules": [
-        "AND,((OR,((RULE-SET,compiled-china-block),(RULE-SET,compiled-china-block-regex))),(NOT,((OR,((RULE-SET,compiled-china-allow),(RULE-SET,compiled-china-allow-regex)))))),REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-china-block-important),(RULE-SET,compiled-china-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-china-allow-important),(RULE-SET,compiled-china-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-china-block),(RULE-SET,compiled-china-block-regex))),(NOT,((OR,((RULE-SET,compiled-china-allow),(RULE-SET,compiled-china-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-china-allow-important),(RULE-SET,compiled-china-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "ads": {
       "name": "广告分类",
@@ -661,11 +1111,69 @@
           "format": "mrs",
           "rules": 143763,
           "sha256": "4184961681df6718f3db74cf1d116409442ef5b0e7637d5a04b34162446d594b"
+        },
+        "compiled-ads-block-regex": {
+          "file": "ads-regex.txt",
+          "bucket": "block",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "8f3eb45b3aff81b7045bf0f04ab907e64098e59828e97b886f5e50c1f253f257"
+        },
+        "compiled-ads-allow": {
+          "file": "ads-allow.mrs",
+          "bucket": "allow",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-ads-allow-regex": {
+          "file": "ads-allow-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "8f3eb45b3aff81b7045bf0f04ab907e64098e59828e97b886f5e50c1f253f257"
+        },
+        "compiled-ads-block-important": {
+          "file": "ads-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-ads-block-important-regex": {
+          "file": "ads-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "8f3eb45b3aff81b7045bf0f04ab907e64098e59828e97b886f5e50c1f253f257"
+        },
+        "compiled-ads-allow-important": {
+          "file": "ads-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-ads-allow-important-regex": {
+          "file": "ads-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "8f3eb45b3aff81b7045bf0f04ab907e64098e59828e97b886f5e50c1f253f257"
         }
       },
       "rules": [
-        "RULE-SET,compiled-ads-block,REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-ads-block-important),(RULE-SET,compiled-ads-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-ads-allow-important),(RULE-SET,compiled-ads-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-ads-block),(RULE-SET,compiled-ads-block-regex))),(NOT,((OR,((RULE-SET,compiled-ads-allow),(RULE-SET,compiled-ads-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-ads-allow-important),(RULE-SET,compiled-ads-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "tracking": {
       "name": "跟踪与遥测分类",
@@ -727,11 +1235,69 @@
           "format": "mrs",
           "rules": 133812,
           "sha256": "52103a13af6798042d0aa2b8867a03f85a3bcddc70700a8c8c48bf0d023098d3"
+        },
+        "compiled-tracking-block-regex": {
+          "file": "tracking-regex.txt",
+          "bucket": "block",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "7432074670aaa63caba24a96169748d40c3d591ad6d460532272f536432987e5"
+        },
+        "compiled-tracking-allow": {
+          "file": "tracking-allow.mrs",
+          "bucket": "allow",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-tracking-allow-regex": {
+          "file": "tracking-allow-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "7432074670aaa63caba24a96169748d40c3d591ad6d460532272f536432987e5"
+        },
+        "compiled-tracking-block-important": {
+          "file": "tracking-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-tracking-block-important-regex": {
+          "file": "tracking-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "7432074670aaa63caba24a96169748d40c3d591ad6d460532272f536432987e5"
+        },
+        "compiled-tracking-allow-important": {
+          "file": "tracking-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-tracking-allow-important-regex": {
+          "file": "tracking-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "7432074670aaa63caba24a96169748d40c3d591ad6d460532272f536432987e5"
         }
       },
       "rules": [
-        "RULE-SET,compiled-tracking-block,REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-tracking-block-important),(RULE-SET,compiled-tracking-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-tracking-allow-important),(RULE-SET,compiled-tracking-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-tracking-block),(RULE-SET,compiled-tracking-block-regex))),(NOT,((OR,((RULE-SET,compiled-tracking-allow),(RULE-SET,compiled-tracking-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-tracking-allow-important),(RULE-SET,compiled-tracking-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "security": {
       "name": "安全分类（威胁与诈骗等）",
@@ -747,17 +1313,17 @@
         "blocklistproject-lists-adguard-fraud-ags-txt-859f4062",
         "blocklistproject-lists-adguard-phishing-ags-txt-6ab23539"
       ],
-      "updatedUtc": "2026-10-01T07:47:25+00:00",
-      "inputSha256": "979c4160bc0a328835969874176545b421e705963f3eb23e06af086c73076ff0",
-      "inputRules": 654800,
-      "blockingRules": 654800,
+      "updatedUtc": "2026-10-02T05:31:02+00:00",
+      "inputSha256": "118dde04e1b701691f41752da4555b30ac5b4eedcb9d65445d01a8ecb32b3cb2",
+      "inputRules": 654793,
+      "blockingRules": 654793,
       "exceptionRules": 0,
-      "convertedRules": 654800,
+      "convertedRules": 654793,
       "upstreamNotices": [
         "# Title: 安全分类（威胁与诈骗等）",
-        "# Updated: 2026-10-01T07:47:25+00:00",
+        "# Updated: 2026-10-02T05:31:02+00:00",
         "# Expires: 1 day",
-        "# Rules: 654800",
+        "# Rules: 654793",
         "# Maintainer merges only; upstream rules belong to their authors.",
         "# DNS masks/regex preserved; exact Hosts scope and source exception priority retained.",
         "# Upstream licenses and notices: ../upstream/README.md (in the original repository).",
@@ -795,8 +1361,8 @@
           "bucket": "block",
           "behavior": "domain",
           "format": "mrs",
-          "rules": 654791,
-          "sha256": "0b558ec8aa4a4a4d209d85b001a62bfce9faa8da98d1c57efeff9a367e4c4c34"
+          "rules": 654784,
+          "sha256": "f5e2d5427c2e2871002360f6391ff0bd647cdd0006278a290c5a910516a6c943"
         },
         "compiled-security-block-regex": {
           "file": "security-regex.txt",
@@ -804,28 +1370,78 @@
           "behavior": "classical",
           "format": "text",
           "rules": 9,
-          "sha256": "3a9202cb8819250cfe90448e1e329044652176717c3d08ca857449a05ee8ff56"
+          "sha256": "78a34541fb4b16b3e24e94491b2c2b6a9e0904ed57711358518d0bf8d9eda785"
+        },
+        "compiled-security-allow": {
+          "file": "security-allow.mrs",
+          "bucket": "allow",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-security-allow-regex": {
+          "file": "security-allow-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "0921f2ce60179b311c6c0fc564e61e7b6196d6d825afb4ef72ac7649e2a9354d"
+        },
+        "compiled-security-block-important": {
+          "file": "security-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-security-block-important-regex": {
+          "file": "security-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "0921f2ce60179b311c6c0fc564e61e7b6196d6d825afb4ef72ac7649e2a9354d"
+        },
+        "compiled-security-allow-important": {
+          "file": "security-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-security-allow-important-regex": {
+          "file": "security-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "0921f2ce60179b311c6c0fc564e61e7b6196d6d825afb4ef72ac7649e2a9354d"
         }
       },
       "rules": [
-        "OR,((RULE-SET,compiled-security-block),(RULE-SET,compiled-security-block-regex)),REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-security-block-important),(RULE-SET,compiled-security-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-security-allow-important),(RULE-SET,compiled-security-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-security-block),(RULE-SET,compiled-security-block-regex))),(NOT,((OR,((RULE-SET,compiled-security-allow),(RULE-SET,compiled-security-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-security-allow-important),(RULE-SET,compiled-security-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "malware": {
-      "name": "恶意网站分类",
+      "name": "被入侵网站补充列表（单一来源）",
       "kind": "blocklist",
       "sourceIds": [
         "mitchellkrogza-the-big-list-of-hacked-malware-web-sites-hacked-domains-list-5df168a2"
       ],
-      "updatedUtc": "2026-09-30T20:58:04+00:00",
-      "inputSha256": "3fbe854d6eecfefd68e56416a9d4f0af85b408e7c13a479c8eb0d4d4be284dcb",
+      "updatedUtc": "2026-10-02T05:31:02+00:00",
+      "inputSha256": "56c74d3455751dcaafb89e5546ada67bfd0d8eb4938275011113967ae99c4a5b",
       "inputRules": 9,
       "blockingRules": 9,
       "exceptionRules": 0,
       "convertedRules": 9,
       "upstreamNotices": [
-        "# Title: 恶意网站分类",
-        "# Updated: 2026-09-30T20:58:04+00:00",
+        "# Title: 被入侵网站补充列表（单一来源）",
+        "# Updated: 2026-10-02T05:31:02+00:00",
         "# Expires: 1 day",
         "# Rules: 9",
         "# Maintainer merges only; upstream rules belong to their authors.",
@@ -843,11 +1459,69 @@
           "format": "mrs",
           "rules": 9,
           "sha256": "85d89eb340ec08890c78420132618a6f708e51571daf9978bc2328b644c0cee7"
+        },
+        "compiled-malware-block-regex": {
+          "file": "malware-regex.txt",
+          "bucket": "block",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "57d75d2b90ffad5afa1f71f0a74eb1525caac0cc3c3bca7d974f3b78118f105c"
+        },
+        "compiled-malware-allow": {
+          "file": "malware-allow.mrs",
+          "bucket": "allow",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-malware-allow-regex": {
+          "file": "malware-allow-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "57d75d2b90ffad5afa1f71f0a74eb1525caac0cc3c3bca7d974f3b78118f105c"
+        },
+        "compiled-malware-block-important": {
+          "file": "malware-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-malware-block-important-regex": {
+          "file": "malware-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "57d75d2b90ffad5afa1f71f0a74eb1525caac0cc3c3bca7d974f3b78118f105c"
+        },
+        "compiled-malware-allow-important": {
+          "file": "malware-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-malware-allow-important-regex": {
+          "file": "malware-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "57d75d2b90ffad5afa1f71f0a74eb1525caac0cc3c3bca7d974f3b78118f105c"
         }
       },
       "rules": [
-        "RULE-SET,compiled-malware-block,REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-malware-block-important),(RULE-SET,compiled-malware-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-malware-allow-important),(RULE-SET,compiled-malware-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-malware-block),(RULE-SET,compiled-malware-block-regex))),(NOT,((OR,((RULE-SET,compiled-malware-allow),(RULE-SET,compiled-malware-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-malware-allow-important),(RULE-SET,compiled-malware-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "scam": {
       "name": "诈骗分类",
@@ -857,17 +1531,17 @@
         "durablenapkin-scamblocklist-adguard-txt-f27041d5",
         "blocklistproject-lists-adguard-fraud-ags-txt-859f4062"
       ],
-      "updatedUtc": "2026-10-01T07:47:30+00:00",
-      "inputSha256": "067f5370092f321fab346290110cd6dbfc3449f0c4de3212254a8475f73cab1f",
-      "inputRules": 157609,
-      "blockingRules": 157609,
+      "updatedUtc": "2026-10-02T05:31:06+00:00",
+      "inputSha256": "615c9b8e279cb2368579837e733f1bede8f460369981db85f2e2775552a86577",
+      "inputRules": 157602,
+      "blockingRules": 157602,
       "exceptionRules": 0,
-      "convertedRules": 157609,
+      "convertedRules": 157602,
       "upstreamNotices": [
         "# Title: 诈骗分类",
-        "# Updated: 2026-10-01T07:47:30+00:00",
+        "# Updated: 2026-10-02T05:31:06+00:00",
         "# Expires: 1 day",
-        "# Rules: 157609",
+        "# Rules: 157602",
         "# Maintainer merges only; upstream rules belong to their authors.",
         "# DNS masks/regex preserved; exact Hosts scope and source exception priority retained.",
         "# Upstream licenses and notices: ../upstream/README.md (in the original repository).",
@@ -887,8 +1561,8 @@
           "bucket": "block",
           "behavior": "domain",
           "format": "mrs",
-          "rules": 157600,
-          "sha256": "6b36e0bf0d1fe903df5e6ae1719d87b449c06cf1087159f713f83f3614e5bc38"
+          "rules": 157593,
+          "sha256": "6d545882b364aa2040298c17d012f10792c5b2a344e542989c340fa69e260bd8"
         },
         "compiled-scam-block-regex": {
           "file": "scam-regex.txt",
@@ -896,12 +1570,62 @@
           "behavior": "classical",
           "format": "text",
           "rules": 9,
-          "sha256": "3cf42983812cae6a72ff8f20366ec561b6fc89389fa58549dd884d9276adf80a"
+          "sha256": "fb986f2f5cd427bcc5817af919cb9a6e4e0d295c9fea9a0787915220d766ba28"
+        },
+        "compiled-scam-allow": {
+          "file": "scam-allow.mrs",
+          "bucket": "allow",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-scam-allow-regex": {
+          "file": "scam-allow-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "2be70cd9ae0d8b52ac2dee2dec5ec8e894f052433b8b7b0c8a5149e1a773f2cf"
+        },
+        "compiled-scam-block-important": {
+          "file": "scam-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-scam-block-important-regex": {
+          "file": "scam-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "2be70cd9ae0d8b52ac2dee2dec5ec8e894f052433b8b7b0c8a5149e1a773f2cf"
+        },
+        "compiled-scam-allow-important": {
+          "file": "scam-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-scam-allow-important-regex": {
+          "file": "scam-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "2be70cd9ae0d8b52ac2dee2dec5ec8e894f052433b8b7b0c8a5149e1a773f2cf"
         }
       },
       "rules": [
-        "OR,((RULE-SET,compiled-scam-block),(RULE-SET,compiled-scam-block-regex)),REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-scam-block-important),(RULE-SET,compiled-scam-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-scam-allow-important),(RULE-SET,compiled-scam-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-scam-block),(RULE-SET,compiled-scam-block-regex))),(NOT,((OR,((RULE-SET,compiled-scam-allow),(RULE-SET,compiled-scam-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-scam-allow-important),(RULE-SET,compiled-scam-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "ransomware": {
       "name": "勒索软件分类",
@@ -935,11 +1659,69 @@
           "format": "mrs",
           "rules": 1903,
           "sha256": "274a0fa46026351ff24266d146881e96f6859e7182c5e905d2babe510a130e5b"
+        },
+        "compiled-ransomware-block-regex": {
+          "file": "ransomware-regex.txt",
+          "bucket": "block",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "cca6036c349f07c2c3723b21d55fcfead4054defebf5996b15851164ce71761c"
+        },
+        "compiled-ransomware-allow": {
+          "file": "ransomware-allow.mrs",
+          "bucket": "allow",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-ransomware-allow-regex": {
+          "file": "ransomware-allow-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "cca6036c349f07c2c3723b21d55fcfead4054defebf5996b15851164ce71761c"
+        },
+        "compiled-ransomware-block-important": {
+          "file": "ransomware-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-ransomware-block-important-regex": {
+          "file": "ransomware-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "cca6036c349f07c2c3723b21d55fcfead4054defebf5996b15851164ce71761c"
+        },
+        "compiled-ransomware-allow-important": {
+          "file": "ransomware-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-ransomware-allow-important-regex": {
+          "file": "ransomware-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "cca6036c349f07c2c3723b21d55fcfead4054defebf5996b15851164ce71761c"
         }
       },
       "rules": [
-        "RULE-SET,compiled-ransomware-block,REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-ransomware-block-important),(RULE-SET,compiled-ransomware-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-ransomware-allow-important),(RULE-SET,compiled-ransomware-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-ransomware-block),(RULE-SET,compiled-ransomware-block-regex))),(NOT,((OR,((RULE-SET,compiled-ransomware-allow),(RULE-SET,compiled-ransomware-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-ransomware-allow-important),(RULE-SET,compiled-ransomware-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "mining": {
       "name": "挖矿分类",
@@ -979,11 +1761,69 @@
           "format": "mrs",
           "rules": 1524,
           "sha256": "3dc8556a41584a097d7d0dc858cb4e529f6d69d2a37477f7a4f5355556919d8a"
+        },
+        "compiled-mining-block-regex": {
+          "file": "mining-regex.txt",
+          "bucket": "block",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "1c1b192a4e9ca2e4c3a917af43cf3f08f94ac4e80b6a5e200447c8cfd97136d9"
+        },
+        "compiled-mining-allow": {
+          "file": "mining-allow.mrs",
+          "bucket": "allow",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-mining-allow-regex": {
+          "file": "mining-allow-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "1c1b192a4e9ca2e4c3a917af43cf3f08f94ac4e80b6a5e200447c8cfd97136d9"
+        },
+        "compiled-mining-block-important": {
+          "file": "mining-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-mining-block-important-regex": {
+          "file": "mining-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "1c1b192a4e9ca2e4c3a917af43cf3f08f94ac4e80b6a5e200447c8cfd97136d9"
+        },
+        "compiled-mining-allow-important": {
+          "file": "mining-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-mining-allow-important-regex": {
+          "file": "mining-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "1c1b192a4e9ca2e4c3a917af43cf3f08f94ac4e80b6a5e200447c8cfd97136d9"
         }
       },
       "rules": [
-        "RULE-SET,compiled-mining-block,REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-mining-block-important),(RULE-SET,compiled-mining-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-mining-allow-important),(RULE-SET,compiled-mining-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-mining-block),(RULE-SET,compiled-mining-block-regex))),(NOT,((OR,((RULE-SET,compiled-mining-allow),(RULE-SET,compiled-mining-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-mining-allow-important),(RULE-SET,compiled-mining-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "smart-tv": {
       "name": "电视分类",
@@ -1037,11 +1877,53 @@
           "format": "mrs",
           "rules": 9,
           "sha256": "0676f5b7cc8a2ef28d6bd904bc67dc6cf663e83cc3661c911fbf404e5f84d8cd"
+        },
+        "compiled-smart-tv-allow-regex": {
+          "file": "smart-tv-allow-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "e58d4060d3b41d01aa516cb44ede4cb51b0e41220f41345b408313a65201a0d4"
+        },
+        "compiled-smart-tv-block-important": {
+          "file": "smart-tv-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-smart-tv-block-important-regex": {
+          "file": "smart-tv-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "e58d4060d3b41d01aa516cb44ede4cb51b0e41220f41345b408313a65201a0d4"
+        },
+        "compiled-smart-tv-allow-important": {
+          "file": "smart-tv-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-smart-tv-allow-important-regex": {
+          "file": "smart-tv-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "e58d4060d3b41d01aa516cb44ede4cb51b0e41220f41345b408313a65201a0d4"
         }
       },
       "rules": [
-        "AND,((OR,((RULE-SET,compiled-smart-tv-block),(RULE-SET,compiled-smart-tv-block-regex))),(NOT,((RULE-SET,compiled-smart-tv-allow)))),REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-smart-tv-block-important),(RULE-SET,compiled-smart-tv-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-smart-tv-allow-important),(RULE-SET,compiled-smart-tv-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-smart-tv-block),(RULE-SET,compiled-smart-tv-block-regex))),(NOT,((OR,((RULE-SET,compiled-smart-tv-allow),(RULE-SET,compiled-smart-tv-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-smart-tv-allow-important),(RULE-SET,compiled-smart-tv-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "game-console": {
       "name": "游戏机分类",
@@ -1083,11 +1965,61 @@
           "format": "text",
           "rules": 5,
           "sha256": "0df05f0e492cca92de7229af955170975f8ea5e462d5abacd4ba571c463e1098"
+        },
+        "compiled-game-console-allow": {
+          "file": "game-console-allow.mrs",
+          "bucket": "allow",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-game-console-allow-regex": {
+          "file": "game-console-allow-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "4a33fc0e428571d3aeea005581e3b0bb0ec288b7a96ec8b984d08d4d50da25ea"
+        },
+        "compiled-game-console-block-important": {
+          "file": "game-console-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-game-console-block-important-regex": {
+          "file": "game-console-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "4a33fc0e428571d3aeea005581e3b0bb0ec288b7a96ec8b984d08d4d50da25ea"
+        },
+        "compiled-game-console-allow-important": {
+          "file": "game-console-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-game-console-allow-important-regex": {
+          "file": "game-console-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "4a33fc0e428571d3aeea005581e3b0bb0ec288b7a96ec8b984d08d4d50da25ea"
         }
       },
       "rules": [
-        "OR,((RULE-SET,compiled-game-console-block),(RULE-SET,compiled-game-console-block-regex)),REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-game-console-block-important),(RULE-SET,compiled-game-console-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-game-console-allow-important),(RULE-SET,compiled-game-console-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-game-console-block),(RULE-SET,compiled-game-console-block-regex))),(NOT,((OR,((RULE-SET,compiled-game-console-allow),(RULE-SET,compiled-game-console-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-game-console-allow-important),(RULE-SET,compiled-game-console-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "windows": {
       "name": "Windows 遥测组件",
@@ -1124,11 +2056,69 @@
           "format": "mrs",
           "rules": 355,
           "sha256": "66bc045569e2ca579f116cec7f1856c0a5a419fc118b9a703f9cb0a7df86de64"
+        },
+        "compiled-windows-block-regex": {
+          "file": "windows-regex.txt",
+          "bucket": "block",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "a413e7fbe0e0088af7cd3947c50437456f76f36edb533179da5c801b623b67ff"
+        },
+        "compiled-windows-allow": {
+          "file": "windows-allow.mrs",
+          "bucket": "allow",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-windows-allow-regex": {
+          "file": "windows-allow-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "a413e7fbe0e0088af7cd3947c50437456f76f36edb533179da5c801b623b67ff"
+        },
+        "compiled-windows-block-important": {
+          "file": "windows-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-windows-block-important-regex": {
+          "file": "windows-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "a413e7fbe0e0088af7cd3947c50437456f76f36edb533179da5c801b623b67ff"
+        },
+        "compiled-windows-allow-important": {
+          "file": "windows-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-windows-allow-important-regex": {
+          "file": "windows-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "a413e7fbe0e0088af7cd3947c50437456f76f36edb533179da5c801b623b67ff"
         }
       },
       "rules": [
-        "RULE-SET,compiled-windows-block,REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-windows-block-important),(RULE-SET,compiled-windows-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-windows-allow-important),(RULE-SET,compiled-windows-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-windows-block),(RULE-SET,compiled-windows-block-regex))),(NOT,((OR,((RULE-SET,compiled-windows-allow),(RULE-SET,compiled-windows-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-windows-allow-important),(RULE-SET,compiled-windows-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "xiaomi": {
       "name": "小米组件",
@@ -1165,11 +2155,69 @@
           "format": "mrs",
           "rules": 278,
           "sha256": "b3684609bea1826a42466d434e50b386417a9ee3fc99130db61f50a7ba8ec556"
+        },
+        "compiled-xiaomi-block-regex": {
+          "file": "xiaomi-regex.txt",
+          "bucket": "block",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "067b4698fabfaf84cf0971014f08e7f2a22e6b31b42a5c52b0c9f5254339016b"
+        },
+        "compiled-xiaomi-allow": {
+          "file": "xiaomi-allow.mrs",
+          "bucket": "allow",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-xiaomi-allow-regex": {
+          "file": "xiaomi-allow-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "067b4698fabfaf84cf0971014f08e7f2a22e6b31b42a5c52b0c9f5254339016b"
+        },
+        "compiled-xiaomi-block-important": {
+          "file": "xiaomi-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-xiaomi-block-important-regex": {
+          "file": "xiaomi-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "067b4698fabfaf84cf0971014f08e7f2a22e6b31b42a5c52b0c9f5254339016b"
+        },
+        "compiled-xiaomi-allow-important": {
+          "file": "xiaomi-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-xiaomi-allow-important-regex": {
+          "file": "xiaomi-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "067b4698fabfaf84cf0971014f08e7f2a22e6b31b42a5c52b0c9f5254339016b"
         }
       },
       "rules": [
-        "RULE-SET,compiled-xiaomi-block,REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-xiaomi-block-important),(RULE-SET,compiled-xiaomi-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-xiaomi-allow-important),(RULE-SET,compiled-xiaomi-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-xiaomi-block),(RULE-SET,compiled-xiaomi-block-regex))),(NOT,((OR,((RULE-SET,compiled-xiaomi-allow),(RULE-SET,compiled-xiaomi-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-xiaomi-allow-important),(RULE-SET,compiled-xiaomi-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "samsung": {
       "name": "三星组件",
@@ -1206,11 +2254,69 @@
           "format": "mrs",
           "rules": 101,
           "sha256": "0e4f719da6bc41eccca9cf78cf117874635425956b935c88aa514bca37d7ec6a"
+        },
+        "compiled-samsung-block-regex": {
+          "file": "samsung-regex.txt",
+          "bucket": "block",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "c555e9aa0a225eed87dd5bcf17325668fddbb9165bb42a41ee197fc63cb2bb1c"
+        },
+        "compiled-samsung-allow": {
+          "file": "samsung-allow.mrs",
+          "bucket": "allow",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-samsung-allow-regex": {
+          "file": "samsung-allow-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "c555e9aa0a225eed87dd5bcf17325668fddbb9165bb42a41ee197fc63cb2bb1c"
+        },
+        "compiled-samsung-block-important": {
+          "file": "samsung-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-samsung-block-important-regex": {
+          "file": "samsung-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "c555e9aa0a225eed87dd5bcf17325668fddbb9165bb42a41ee197fc63cb2bb1c"
+        },
+        "compiled-samsung-allow-important": {
+          "file": "samsung-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-samsung-allow-important-regex": {
+          "file": "samsung-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "c555e9aa0a225eed87dd5bcf17325668fddbb9165bb42a41ee197fc63cb2bb1c"
         }
       },
       "rules": [
-        "RULE-SET,compiled-samsung-block,REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-samsung-block-important),(RULE-SET,compiled-samsung-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-samsung-allow-important),(RULE-SET,compiled-samsung-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-samsung-block),(RULE-SET,compiled-samsung-block-regex))),(NOT,((OR,((RULE-SET,compiled-samsung-allow),(RULE-SET,compiled-samsung-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-samsung-allow-important),(RULE-SET,compiled-samsung-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "spotify": {
       "name": "Spotify 域名拦截组件",
@@ -1244,11 +2350,69 @@
           "format": "mrs",
           "rules": 3780,
           "sha256": "6f97d2f43218822bfca074ca47f81c8073e6029afc2d57eb00c4d96a4d311bad"
+        },
+        "compiled-spotify-block-regex": {
+          "file": "spotify-regex.txt",
+          "bucket": "block",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "c36b867e841b5a2259211f44ea2b747fa465f944fbce94b59030b444d4ca1638"
+        },
+        "compiled-spotify-allow": {
+          "file": "spotify-allow.mrs",
+          "bucket": "allow",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-spotify-allow-regex": {
+          "file": "spotify-allow-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "c36b867e841b5a2259211f44ea2b747fa465f944fbce94b59030b444d4ca1638"
+        },
+        "compiled-spotify-block-important": {
+          "file": "spotify-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-spotify-block-important-regex": {
+          "file": "spotify-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "c36b867e841b5a2259211f44ea2b747fa465f944fbce94b59030b444d4ca1638"
+        },
+        "compiled-spotify-allow-important": {
+          "file": "spotify-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-spotify-allow-important-regex": {
+          "file": "spotify-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "c36b867e841b5a2259211f44ea2b747fa465f944fbce94b59030b444d4ca1638"
         }
       },
       "rules": [
-        "RULE-SET,compiled-spotify-block,REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-spotify-block-important),(RULE-SET,compiled-spotify-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-spotify-allow-important),(RULE-SET,compiled-spotify-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-spotify-block),(RULE-SET,compiled-spotify-block-regex))),(NOT,((OR,((RULE-SET,compiled-spotify-allow),(RULE-SET,compiled-spotify-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-spotify-allow-important),(RULE-SET,compiled-spotify-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "youtube": {
       "name": "YouTube 域名拦截组件",
@@ -1282,11 +2446,69 @@
           "format": "mrs",
           "rules": 97591,
           "sha256": "236dffaf7d15be6c81fb6161c6a5ff536914aefcc2527a6242ec29d8dbf48af4"
+        },
+        "compiled-youtube-block-regex": {
+          "file": "youtube-regex.txt",
+          "bucket": "block",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "44a474b5a8bfd2a229cd1bbed9b75820960dfc729e8eae0a51753ea3292ff157"
+        },
+        "compiled-youtube-allow": {
+          "file": "youtube-allow.mrs",
+          "bucket": "allow",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-youtube-allow-regex": {
+          "file": "youtube-allow-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "44a474b5a8bfd2a229cd1bbed9b75820960dfc729e8eae0a51753ea3292ff157"
+        },
+        "compiled-youtube-block-important": {
+          "file": "youtube-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-youtube-block-important-regex": {
+          "file": "youtube-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "44a474b5a8bfd2a229cd1bbed9b75820960dfc729e8eae0a51753ea3292ff157"
+        },
+        "compiled-youtube-allow-important": {
+          "file": "youtube-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-youtube-allow-important-regex": {
+          "file": "youtube-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "44a474b5a8bfd2a229cd1bbed9b75820960dfc729e8eae0a51753ea3292ff157"
         }
       },
       "rules": [
-        "RULE-SET,compiled-youtube-block,REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-youtube-block-important),(RULE-SET,compiled-youtube-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-youtube-allow-important),(RULE-SET,compiled-youtube-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-youtube-block),(RULE-SET,compiled-youtube-block-regex))),(NOT,((OR,((RULE-SET,compiled-youtube-allow),(RULE-SET,compiled-youtube-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-youtube-allow-important),(RULE-SET,compiled-youtube-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "social": {
       "name": "社交平台限制组件",
@@ -1320,11 +2542,69 @@
           "format": "mrs",
           "rules": 3995,
           "sha256": "46038b5d5b07a90bceb3276ec07d9f95574d1394e03d4f28f539751e31aaedbf"
+        },
+        "compiled-social-block-regex": {
+          "file": "social-regex.txt",
+          "bucket": "block",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "62adb51131d9cc61c1af0dd1fada64cf626d235a5057922e59659b689b58512f"
+        },
+        "compiled-social-allow": {
+          "file": "social-allow.mrs",
+          "bucket": "allow",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-social-allow-regex": {
+          "file": "social-allow-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "62adb51131d9cc61c1af0dd1fada64cf626d235a5057922e59659b689b58512f"
+        },
+        "compiled-social-block-important": {
+          "file": "social-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-social-block-important-regex": {
+          "file": "social-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "62adb51131d9cc61c1af0dd1fada64cf626d235a5057922e59659b689b58512f"
+        },
+        "compiled-social-allow-important": {
+          "file": "social-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-social-allow-important-regex": {
+          "file": "social-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "62adb51131d9cc61c1af0dd1fada64cf626d235a5057922e59659b689b58512f"
         }
       },
       "rules": [
-        "RULE-SET,compiled-social-block,REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-social-block-important),(RULE-SET,compiled-social-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-social-allow-important),(RULE-SET,compiled-social-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-social-block),(RULE-SET,compiled-social-block-regex))),(NOT,((OR,((RULE-SET,compiled-social-allow),(RULE-SET,compiled-social-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-social-allow-important),(RULE-SET,compiled-social-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "shorteners": {
       "name": "短链接服务限制组件",
@@ -1358,11 +2638,69 @@
           "format": "mrs",
           "rules": 9935,
           "sha256": "7fd8e01b7de79b186895537521cdd873843ba465442fe564c9b51e0c291654b6"
+        },
+        "compiled-shorteners-block-regex": {
+          "file": "shorteners-regex.txt",
+          "bucket": "block",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "f8ede3ef5d0801fd9bbdce4d9df1e1d18e5962e941d6b54ff7760f977cf61775"
+        },
+        "compiled-shorteners-allow": {
+          "file": "shorteners-allow.mrs",
+          "bucket": "allow",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-shorteners-allow-regex": {
+          "file": "shorteners-allow-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "f8ede3ef5d0801fd9bbdce4d9df1e1d18e5962e941d6b54ff7760f977cf61775"
+        },
+        "compiled-shorteners-block-important": {
+          "file": "shorteners-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-shorteners-block-important-regex": {
+          "file": "shorteners-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "f8ede3ef5d0801fd9bbdce4d9df1e1d18e5962e941d6b54ff7760f977cf61775"
+        },
+        "compiled-shorteners-allow-important": {
+          "file": "shorteners-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-shorteners-allow-important-regex": {
+          "file": "shorteners-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "f8ede3ef5d0801fd9bbdce4d9df1e1d18e5962e941d6b54ff7760f977cf61775"
         }
       },
       "rules": [
-        "RULE-SET,compiled-shorteners-block,REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-shorteners-block-important),(RULE-SET,compiled-shorteners-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-shorteners-allow-important),(RULE-SET,compiled-shorteners-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-shorteners-block),(RULE-SET,compiled-shorteners-block-regex))),(NOT,((OR,((RULE-SET,compiled-shorteners-allow),(RULE-SET,compiled-shorteners-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-shorteners-allow-important),(RULE-SET,compiled-shorteners-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "dyndns": {
       "name": "动态 DNS 服务限制组件",
@@ -1396,11 +2734,69 @@
           "format": "mrs",
           "rules": 1536,
           "sha256": "740fc7965cfa68bcad5e51cd0d582f51eb144e0d0ada80055e3b06608d6aec85"
+        },
+        "compiled-dyndns-block-regex": {
+          "file": "dyndns-regex.txt",
+          "bucket": "block",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "6952500602b71b827d0f19740a3689ade639563d52f7ee4805c0664f8e8ab85d"
+        },
+        "compiled-dyndns-allow": {
+          "file": "dyndns-allow.mrs",
+          "bucket": "allow",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-dyndns-allow-regex": {
+          "file": "dyndns-allow-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "6952500602b71b827d0f19740a3689ade639563d52f7ee4805c0664f8e8ab85d"
+        },
+        "compiled-dyndns-block-important": {
+          "file": "dyndns-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-dyndns-block-important-regex": {
+          "file": "dyndns-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "6952500602b71b827d0f19740a3689ade639563d52f7ee4805c0664f8e8ab85d"
+        },
+        "compiled-dyndns-allow-important": {
+          "file": "dyndns-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-dyndns-allow-important-regex": {
+          "file": "dyndns-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "6952500602b71b827d0f19740a3689ade639563d52f7ee4805c0664f8e8ab85d"
         }
       },
       "rules": [
-        "RULE-SET,compiled-dyndns-block,REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-dyndns-block-important),(RULE-SET,compiled-dyndns-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-dyndns-allow-important),(RULE-SET,compiled-dyndns-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-dyndns-block),(RULE-SET,compiled-dyndns-block-regex))),(NOT,((OR,((RULE-SET,compiled-dyndns-allow),(RULE-SET,compiled-dyndns-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-dyndns-allow-important),(RULE-SET,compiled-dyndns-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "hosting": {
       "name": "托管服务限制组件",
@@ -1434,11 +2830,69 @@
           "format": "mrs",
           "rules": 1235,
           "sha256": "90780dce2476fd6ccbfb06b9b2e0b2f5c59c80ef5160f8407497e99bf8b2b83c"
+        },
+        "compiled-hosting-block-regex": {
+          "file": "hosting-regex.txt",
+          "bucket": "block",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "cbc42efbc24e13665249b5a8653f30ff882c5e98a437f12cbcebf4a2d596ed9e"
+        },
+        "compiled-hosting-allow": {
+          "file": "hosting-allow.mrs",
+          "bucket": "allow",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-hosting-allow-regex": {
+          "file": "hosting-allow-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "cbc42efbc24e13665249b5a8653f30ff882c5e98a437f12cbcebf4a2d596ed9e"
+        },
+        "compiled-hosting-block-important": {
+          "file": "hosting-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-hosting-block-important-regex": {
+          "file": "hosting-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "cbc42efbc24e13665249b5a8653f30ff882c5e98a437f12cbcebf4a2d596ed9e"
+        },
+        "compiled-hosting-allow-important": {
+          "file": "hosting-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-hosting-allow-important-regex": {
+          "file": "hosting-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "cbc42efbc24e13665249b5a8653f30ff882c5e98a437f12cbcebf4a2d596ed9e"
         }
       },
       "rules": [
-        "RULE-SET,compiled-hosting-block,REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-hosting-block-important),(RULE-SET,compiled-hosting-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-hosting-allow-important),(RULE-SET,compiled-hosting-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-hosting-block),(RULE-SET,compiled-hosting-block-regex))),(NOT,((OR,((RULE-SET,compiled-hosting-allow),(RULE-SET,compiled-hosting-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-hosting-allow-important),(RULE-SET,compiled-hosting-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "allow-referral": {
       "name": "推广跳转放行",
@@ -1465,6 +2919,22 @@
         "# Upstream license: https://github.com/hagezi/dns-blocklists/blob/main/LICENSE"
       ],
       "providers": {
+        "compiled-allow-referral-block": {
+          "file": "allow-referral-block.mrs",
+          "bucket": "block",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-allow-referral-block-regex": {
+          "file": "allow-referral-block-regex.txt",
+          "bucket": "block",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "036b12d3fd33faed083225ade9cb3d206e8e8758688bdfc9254b21665dc80611"
+        },
         "compiled-allow-referral-allow": {
           "file": "allow-referral.mrs",
           "bucket": "allow",
@@ -1480,9 +2950,42 @@
           "format": "text",
           "rules": 69,
           "sha256": "c2f580a218c7287a16ca3a839c6c3c6a31cab4bee004b26d31ba8940290a8379"
+        },
+        "compiled-allow-referral-block-important": {
+          "file": "allow-referral-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-allow-referral-block-important-regex": {
+          "file": "allow-referral-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "036b12d3fd33faed083225ade9cb3d206e8e8758688bdfc9254b21665dc80611"
+        },
+        "compiled-allow-referral-allow-important": {
+          "file": "allow-referral-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-allow-referral-allow-important-regex": {
+          "file": "allow-referral-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "036b12d3fd33faed083225ade9cb3d206e8e8758688bdfc9254b21665dc80611"
         }
       },
-      "rules": []
+      "rules": [],
+      "status": "ready"
     },
     "allow-referral-native": {
       "name": "推广跳转放行（Native）",
@@ -1509,6 +3012,22 @@
         "# Upstream license: https://github.com/hagezi/dns-blocklists/blob/main/LICENSE"
       ],
       "providers": {
+        "compiled-allow-referral-native-block": {
+          "file": "allow-referral-native-block.mrs",
+          "bucket": "block",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-allow-referral-native-block-regex": {
+          "file": "allow-referral-native-block-regex.txt",
+          "bucket": "block",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "acb83842d65972a1cdf48d94ebe40fc86baf3517f3a920cd314779608f18a29f"
+        },
         "compiled-allow-referral-native-allow": {
           "file": "allow-referral-native.mrs",
           "bucket": "allow",
@@ -1516,9 +3035,50 @@
           "format": "mrs",
           "rules": 1611,
           "sha256": "54845f038a777b48a8f1f182bb7e673220288c41badedc46a685ad381c9a5aae"
+        },
+        "compiled-allow-referral-native-allow-regex": {
+          "file": "allow-referral-native-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "acb83842d65972a1cdf48d94ebe40fc86baf3517f3a920cd314779608f18a29f"
+        },
+        "compiled-allow-referral-native-block-important": {
+          "file": "allow-referral-native-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-allow-referral-native-block-important-regex": {
+          "file": "allow-referral-native-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "acb83842d65972a1cdf48d94ebe40fc86baf3517f3a920cd314779608f18a29f"
+        },
+        "compiled-allow-referral-native-allow-important": {
+          "file": "allow-referral-native-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-allow-referral-native-allow-important-regex": {
+          "file": "allow-referral-native-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "acb83842d65972a1cdf48d94ebe40fc86baf3517f3a920cd314779608f18a29f"
         }
       },
-      "rules": []
+      "rules": [],
+      "status": "ready"
     },
     "allow-shorteners": {
       "name": "短链接放行",
@@ -1545,6 +3105,22 @@
         "# Upstream license: https://github.com/hagezi/dns-blocklists/blob/main/LICENSE"
       ],
       "providers": {
+        "compiled-allow-shorteners-block": {
+          "file": "allow-shorteners-block.mrs",
+          "bucket": "block",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-allow-shorteners-block-regex": {
+          "file": "allow-shorteners-block-regex.txt",
+          "bucket": "block",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "236732dcabab29bb9633c3b7ceae2ab8ba3efeb2e6689aa059b65282ebc03e09"
+        },
         "compiled-allow-shorteners-allow": {
           "file": "allow-shorteners.mrs",
           "bucket": "allow",
@@ -1552,9 +3128,50 @@
           "format": "mrs",
           "rules": 9928,
           "sha256": "503bf4bf674c8a5d930a5fbbdfcb4e55dc5c37c49e03f62c605b8fd33e8add83"
+        },
+        "compiled-allow-shorteners-allow-regex": {
+          "file": "allow-shorteners-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "236732dcabab29bb9633c3b7ceae2ab8ba3efeb2e6689aa059b65282ebc03e09"
+        },
+        "compiled-allow-shorteners-block-important": {
+          "file": "allow-shorteners-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-allow-shorteners-block-important-regex": {
+          "file": "allow-shorteners-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "236732dcabab29bb9633c3b7ceae2ab8ba3efeb2e6689aa059b65282ebc03e09"
+        },
+        "compiled-allow-shorteners-allow-important": {
+          "file": "allow-shorteners-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-allow-shorteners-allow-important-regex": {
+          "file": "allow-shorteners-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "236732dcabab29bb9633c3b7ceae2ab8ba3efeb2e6689aa059b65282ebc03e09"
         }
       },
-      "rules": []
+      "rules": [],
+      "status": "ready"
     },
     "native-tracking": {
       "name": "设备原生遥测",
@@ -1608,11 +3225,69 @@
           "format": "mrs",
           "rules": 98,
           "sha256": "ad049f5bc6453ad8d7d4c56b2e0e22482334cf80d847b664f89169f0c17f8f1c"
+        },
+        "compiled-native-tracking-block-regex": {
+          "file": "native-tracking-regex.txt",
+          "bucket": "block",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "c57f63e63546453c7aeed7b16cb36f1d16ab6e375a906dfb27e77d22dd40ca53"
+        },
+        "compiled-native-tracking-allow": {
+          "file": "native-tracking-allow.mrs",
+          "bucket": "allow",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-native-tracking-allow-regex": {
+          "file": "native-tracking-allow-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "c57f63e63546453c7aeed7b16cb36f1d16ab6e375a906dfb27e77d22dd40ca53"
+        },
+        "compiled-native-tracking-block-important": {
+          "file": "native-tracking-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-native-tracking-block-important-regex": {
+          "file": "native-tracking-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "c57f63e63546453c7aeed7b16cb36f1d16ab6e375a906dfb27e77d22dd40ca53"
+        },
+        "compiled-native-tracking-allow-important": {
+          "file": "native-tracking-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-native-tracking-allow-important-regex": {
+          "file": "native-tracking-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "c57f63e63546453c7aeed7b16cb36f1d16ab6e375a906dfb27e77d22dd40ca53"
         }
       },
       "rules": [
-        "RULE-SET,compiled-native-tracking-block,REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-native-tracking-block-important),(RULE-SET,compiled-native-tracking-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-native-tracking-allow-important),(RULE-SET,compiled-native-tracking-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-native-tracking-block),(RULE-SET,compiled-native-tracking-block-regex))),(NOT,((OR,((RULE-SET,compiled-native-tracking-allow),(RULE-SET,compiled-native-tracking-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-native-tracking-allow-important),(RULE-SET,compiled-native-tracking-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "tld-restrictions": {
       "name": "高滥用顶级域名限制",
@@ -1638,6 +3313,14 @@
         "# Repository: https://github.com/hagezi/dns-blocklists | Account: hagezi"
       ],
       "providers": {
+        "compiled-tld-restrictions-block": {
+          "file": "tld-restrictions.mrs",
+          "bucket": "block",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
         "compiled-tld-restrictions-block-regex": {
           "file": "tld-restrictions-regex.txt",
           "bucket": "block",
@@ -1645,11 +3328,61 @@
           "format": "text",
           "rules": 281,
           "sha256": "d6f640f75767349bbebcacc81f0c956c7a5d2783c372d86d1c2b3031c61b0456"
+        },
+        "compiled-tld-restrictions-allow": {
+          "file": "tld-restrictions-allow.mrs",
+          "bucket": "allow",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-tld-restrictions-allow-regex": {
+          "file": "tld-restrictions-allow-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "be0dac301d9bf2425ee3db974e4625f54ae23caa58949ac953c0ee383bcb9899"
+        },
+        "compiled-tld-restrictions-block-important": {
+          "file": "tld-restrictions-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-tld-restrictions-block-important-regex": {
+          "file": "tld-restrictions-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "be0dac301d9bf2425ee3db974e4625f54ae23caa58949ac953c0ee383bcb9899"
+        },
+        "compiled-tld-restrictions-allow-important": {
+          "file": "tld-restrictions-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-tld-restrictions-allow-important-regex": {
+          "file": "tld-restrictions-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "be0dac301d9bf2425ee3db974e4625f54ae23caa58949ac953c0ee383bcb9899"
         }
       },
       "rules": [
-        "RULE-SET,compiled-tld-restrictions-block-regex,REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-tld-restrictions-block-important),(RULE-SET,compiled-tld-restrictions-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-tld-restrictions-allow-important),(RULE-SET,compiled-tld-restrictions-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-tld-restrictions-block),(RULE-SET,compiled-tld-restrictions-block-regex))),(NOT,((OR,((RULE-SET,compiled-tld-restrictions-allow),(RULE-SET,compiled-tld-restrictions-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-tld-restrictions-allow-important),(RULE-SET,compiled-tld-restrictions-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     },
     "phishing": {
       "name": "钓鱼网站分类",
@@ -1683,13 +3416,72 @@
           "format": "mrs",
           "rules": 118066,
           "sha256": "dae13324f0066b8efbeb67bae8054968e4826b1db28dc49cb9d9e7386efa7f7f"
+        },
+        "compiled-phishing-block-regex": {
+          "file": "phishing-regex.txt",
+          "bucket": "block",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "e94081e1e4056ade97d0b39d9f17a7fea478b4e1f41703e725fcd13ba7290673"
+        },
+        "compiled-phishing-allow": {
+          "file": "phishing-allow.mrs",
+          "bucket": "allow",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-phishing-allow-regex": {
+          "file": "phishing-allow-regex.txt",
+          "bucket": "allow",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "e94081e1e4056ade97d0b39d9f17a7fea478b4e1f41703e725fcd13ba7290673"
+        },
+        "compiled-phishing-block-important": {
+          "file": "phishing-block-important.mrs",
+          "bucket": "block-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-phishing-block-important-regex": {
+          "file": "phishing-block-important-regex.txt",
+          "bucket": "block-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "e94081e1e4056ade97d0b39d9f17a7fea478b4e1f41703e725fcd13ba7290673"
+        },
+        "compiled-phishing-allow-important": {
+          "file": "phishing-allow-important.mrs",
+          "bucket": "allow-important",
+          "behavior": "domain",
+          "format": "mrs",
+          "rules": 0,
+          "sha256": "9243216920b9410702b1b8879b7eac5c8ecc612c0a1615fdcd2f96b4474ea0aa"
+        },
+        "compiled-phishing-allow-important-regex": {
+          "file": "phishing-allow-important-regex.txt",
+          "bucket": "allow-important",
+          "behavior": "classical",
+          "format": "text",
+          "rules": 0,
+          "sha256": "e94081e1e4056ade97d0b39d9f17a7fea478b4e1f41703e725fcd13ba7290673"
         }
       },
       "rules": [
-        "RULE-SET,compiled-phishing-block,REJECT"
-      ]
+        "AND,((OR,((RULE-SET,compiled-phishing-block-important),(RULE-SET,compiled-phishing-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-phishing-allow-important),(RULE-SET,compiled-phishing-allow-important-regex)))))),REJECT",
+        "AND,((OR,((RULE-SET,compiled-phishing-block),(RULE-SET,compiled-phishing-block-regex))),(NOT,((OR,((RULE-SET,compiled-phishing-allow),(RULE-SET,compiled-phishing-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-phishing-allow-important),(RULE-SET,compiled-phishing-allow-important-regex)))))),REJECT"
+      ],
+      "status": "ready"
     }
   },
-  "validatedProviders": 48,
-  "sourceManifestSha256": "8d7d108eba6a3b56b50a8e9337e8911eda13809fe47e635106a533bca96a5051"
+  "engine": "mihomo v1.19.32",
+  "validatedProviders": 264,
+  "sourceManifestSha256": "1e000a53cf718d797f02182604ede44d646cedc14cd83727d52a5707f49619f8"
 }

@@ -1,7 +1,7 @@
 ! Title: 诈骗分类
-! Updated: 2026-10-01T07:47:30+00:00
+! Updated: 2026-10-02T05:31:06+00:00
 ! Expires: 1 day
-! Rules: 157609
+! Rules: 157602
 ! Maintainer merges only; upstream rules belong to their authors.
 ! DNS masks/regex preserved; exact Hosts scope and source exception priority retained.
 ! Upstream licenses and notices: ../upstream/README.md (in the original repository).
@@ -568,7 +568,6 @@
 ||1ayss8.rockt.es^
 ||1beb2a44.space^
 ||1bit1.com^
-||1bmo-reactivemyaccount0.com^
 ||1busine55-communication.tk^
 ||1c-helper.ru^
 ||1c-support.net^
@@ -3187,7 +3186,6 @@
 ||a470q.tk^
 ||a5-tech.com^
 ||a6shd.perfectcleanredir.com^
-||a6u.uk^
 ||a8556kiraev2fx2e12rasa4m80.hop.clickbank.net^
 ||a86ea.simpotica.com^
 ||a88.bulehero.in^
@@ -3212,7 +3210,6 @@
 ||aaccount-security.com^
 ||aacipt.com^
 ||aadatasoft.com^
-||aadirone.cc^
 ||aadvocatecloudsupport.com^
 ||aaelectrician.com^
 ||aafoundz.com^
@@ -3712,7 +3709,6 @@
 ||accesssupportcentre.com^
 ||accesssupportinkent.com^
 ||accesstoworksupport.com^
-||accfiverif.com^
 ||acchelp-support.biz^
 ||acchelp-support.club^
 ||acchelp-support.info^
@@ -10472,7 +10468,6 @@
 ||alphatech-live.com^
 ||alphatech.tel^
 ||alphatech365.com^
-||alphatowercompany.in^
 ||alphatrize-software.com^
 ||alphawealthalliance.com^
 ||alphawellness.com.sg^
@@ -12801,7 +12796,6 @@
 ||appcode-server-2.org^
 ||appdle-supportind.com^
 ||appdom.mobi^
-||appdrive.info^
 ||appeal-submmision-created.stmattnc.org^
 ||appealed.stream^
 ||appealer.stream^
@@ -21656,7 +21650,6 @@
 ||bxsupportcenter.com^
 ||bxzpqj.com^
 ||by-anyone.tk^
-||by-emmamuller.de^
 ||by1984.tk^
 ||by2050.tkby2050.tk^
 ||byanshi.net^
@@ -37580,7 +37573,6 @@
 ||discountc.digital^
 ||discountdoorhardware.com^
 ||discounthedges.com^
-||discounthoneywell.com^
 ||discountjimmychooss.com^
 ||discountlinksoflondon.top^
 ||discountmoncler.com^
@@ -49333,7 +49325,6 @@
 ||faze77.com^
 ||faze8.com^
 ||faze9.com^
-||faze91.com^
 ||fazendachia.com.br^
 ||fazendachia.pt^
 ||fazhost.cloud^
@@ -50743,6 +50734,7 @@
 ||fitfully.us^
 ||fitgazette.com^
 ||fitgirl-repacks-site.org^
+||fitgirl-repacks.vip^
 ||fitgoalz.com^
 ||fitgr8.com^
 ||fithubz.com^
@@ -86553,7 +86545,6 @@
 ||navi7.com^
 ||navi72.com^
 ||navi72.ru^
-||navi74.ru^
 ||navi77.com^
 ||navi78.ru^
 ||navi8.com^
@@ -93707,7 +93698,6 @@
 ||paly-google.com^
 ||palzblimzpdk.com^
 ||paman-aini.blogspot.com^
-||pambi.tech^
 ||pamcosupport.com^
 ||pamelao.top^
 ||pammex.net^
@@ -99242,7 +99232,6 @@
 ||pingmesupport.com^
 ||pinindivam.cyou^
 ||piningcheer.host^
-||pinjamanelit.top^
 ||pinjamanrupiah.xyz^
 ||pinjamteman.top^
 ||pinjamuang.top^
@@ -123855,6 +123844,7 @@
 ||tdcdn-verify.com^
 ||tdcoincore.org^
 ||tdfreepdf.site^
+||tdgrop168.vip^
 ||tdgysmmdru.bid^
 ||tdm.com.co^
 ||tdrcjxhcmmgeww.bid^
@@ -130643,6 +130633,7 @@
 ||tokenomics.app^
 ||tokensupport.com^
 ||tokeny.pl^
+||toko999.net^
 ||tokobesibns.com^
 ||tokomarching.site^
 ||toksyk.pl^
@@ -143946,6 +143937,7 @@
 ||whizzes.stream^
 ||whizztcoltd.com^
 ||whkwbllcctfm.com^
+||whliksrvlj.webtool.sk^
 ||whm.serverpower.net^
 ||who-lovedeeply.tk^
 ||who-want.tk^
@@ -144289,6 +144281,7 @@
 ||wincollect.top^
 ||wincomputer-dz.com^
 ||wincriticalupdate.com^
+||wind88.shop^
 ||windbellstore.com^
 ||windbests.com^
 ||windefenderalert.club^

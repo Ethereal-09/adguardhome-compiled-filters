@@ -1,0 +1,24 @@
+# Title: 设备原生遥测
+# Updated: 2026-10-01T14:04:10+00:00
+# Expires: 1 day
+# Rules: 98
+# Maintainer merges only; upstream rules belong to their authors.
+# DNS masks/regex preserved; exact Hosts scope and source exception priority retained.
+# Upstream licenses and notices: ../upstream/README.md (in the original repository).
+# Source: alexa | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/alexa
+# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+# Source: apple | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/apple
+# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+# Source: huawei | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/huawei
+# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+# Source: roku | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/roku
+# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+# Source: samsung | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/samsung
+# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+# Source: sonos | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/sonos
+# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+# Source: windows | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/windows
+# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+# Source: xiaomi | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/xiaomi
+# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
+# mihomo classical provider; preserve companion exception providers.

@@ -11,7 +11,7 @@ import sys
 from build_filters import ROOT, load_plan, parse_dns_line, read_json
 
 
-def audit(output, config_path, registry_path, validator):
+def audit(output, config_path, registry_path, validator, profile_ids=None, check_alias=True):
     config, profiles, sources = load_plan(config_path, registry_path)
     manifest = read_json(output / 'manifest.json')
     if manifest.get('defaultProfile') != config['defaultProfile']:
@@ -19,6 +19,8 @@ def audit(output, config_path, registry_path, validator):
     results = {}
     for profile in profiles:
         pid = profile['id']
+        if profile_ids is not None and pid not in profile_ids:
+            continue
         item = manifest['profiles'][pid]
         if item['status'] != 'ready' or item['sourceIds'] != profile['sourceIds']:
             raise ValueError('Profile is failed/retained or has different sources: ' + pid)
@@ -58,7 +60,7 @@ def audit(output, config_path, registry_path, validator):
         results[pid] = dict(rules=count, sha256=digest, engine=report['engine'], usesCache=item['usesCache'])
         print(f'VALID {pid}: {count} rules', flush=True)
     default = output / (config['defaultProfile'] + '.txt')
-    if (output / 'adguard.txt').read_bytes() != default.read_bytes():
+    if check_alias and (output / 'adguard.txt').read_bytes() != default.read_bytes():
         raise ValueError('Default subscription alias differs from configured profile')
     return dict(status='passed', profiles=results)
 

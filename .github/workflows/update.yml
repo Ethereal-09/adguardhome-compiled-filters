@@ -19,6 +19,7 @@ on:
       - validate_subscriptions.py
       - workflow_status.py
       - export_mihomo.py
+      - publish_filters.py
       - tools/install_mihomo.py
       - tools/engine/**
       - update_rules.py
@@ -67,42 +68,24 @@ jobs:
           path: .cache/sources
           key: dns-sources-${{ github.run_id }}-${{ github.run_attempt }}
           restore-keys: dns-sources-
-      - name: Build and validate classified subscriptions
-        id: build
+      - name: Stage and publish each validated profile and format
+        id: publish
         continue-on-error: true
-        run: python build_filters.py 2>&1 | tee .cache/build.log
-      - name: Audit every generated subscription before publication
-        id: audit
-        if: steps.build.outcome == 'success'
-        continue-on-error: true
-        run: python validate_subscriptions.py --validator "$DNS_RULE_VALIDATOR"
+        run: python publish_filters.py 2>&1 | tee .cache/build.log
       - name: Save validated source cache
-        if: always() && steps.build.outcome != 'skipped' && hashFiles('.cache/sources/*.json') != ''
+        if: always() && steps.publish.outcome != 'skipped' && hashFiles('.cache/sources/*.json') != ''
         uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
           path: .cache/sources
           key: dns-sources-${{ github.run_id }}-${{ github.run_attempt }}
-      - name: Export and validate mihomo providers
-        id: mihomo
-        if: steps.audit.outcome == 'success'
-        continue-on-error: true
-        run: python export_mihomo.py 2>&1 | tee .cache/mihomo-export.log
-      - name: Update README build status and validated rule counts
-        id: readme
-        if: always() && (steps.build.outcome == 'success' || steps.build.outcome == 'failure')
-        env:
-          BUILD_OUTCOME: ${{ steps.build.outcome }}
-          AUDIT_OUTCOME: ${{ steps.audit.outcome == 'success' && steps.mihomo.outcome == 'success' && 'success' || 'failure' }}
-        run: python workflow_status.py --readme README.md --build-outcome "$BUILD_OUTCOME" --audit-outcome "$AUDIT_OUTCOME"
       - name: Commit build status and verified subscriptions
-        if: always() && steps.readme.outcome == 'success'
+        if: always() && (steps.publish.outcome == 'success' || steps.publish.outcome == 'failure')
         shell: bash
         env:
-          BUILD_OUTCOME: ${{ steps.build.outcome }}
-          AUDIT_OUTCOME: ${{ steps.audit.outcome == 'success' && steps.mihomo.outcome == 'success' && 'success' || 'failure' }}
+          PUBLISH_OUTCOME: ${{ steps.publish.outcome }}
         run: |
           git add README.md
-          if [ "$BUILD_OUTCOME" = success ] && [ "$AUDIT_OUTCOME" = success ]; then
+          if [ "$PUBLISH_OUTCOME" = success ]; then
             python workflow_status.py --heartbeat .github/update-heartbeat.json
             git add dist/ .github/update-heartbeat.json
           fi
@@ -123,9 +106,9 @@ jobs:
             .cache/last-run.json
             .cache/publish-audit.json
             .cache/build.log
-            .cache/mihomo-export.log
           if-no-files-found: ignore
           retention-days: 30
-      - name: Report build or audit failure
-        if: always() && (steps.build.outcome == 'failure' || steps.audit.outcome == 'failure' || steps.mihomo.outcome == 'failure')
-        run: exit 1
+      - name: Report partial or failed publication after saving healthy updates
+        if: always() && (steps.publish.outcome == 'success' || steps.publish.outcome == 'failure')
+        run: |
+          python -c "import json; from pathlib import Path; p=Path('.cache/publish-audit.json'); r=json.loads(p.read_text()) if p.exists() else {}; raise SystemExit(0 if r.get('status') == 'success' else 1)"

@@ -10,6 +10,26 @@ import build_filters as app
 
 
 class BuilderTests(unittest.TestCase):
+    def test_personal_exceptions_apply_only_to_selected_profiles(self):
+        with tempfile.TemporaryDirectory() as folder:
+            config, _, args = self.setup_project(Path(folder))
+            config['profiles'][0]['includeCustom'] = True
+            args[0].write_text(json.dumps(config), encoding='utf-8')
+            (args[3] / 'allow.txt').write_text('@@||safe.example^\n', encoding='utf-8')
+            with patch.object(app, 'fetch', return_value=self.rule_body('base')):
+                app.build(*args)
+            self.assertIn('@@||safe.example^$important', (args[2] / 'alpha.txt').read_text())
+            self.assertNotIn('safe.example', (args[2] / 'beta.txt').read_text())
+
+    def test_growth_and_lost_exceptions_are_guarded_but_small_lists_can_change(self):
+        checks = dict(maxGrowthFraction=1, growthMinIncrease=1000,
+                      maxExceptionDropFraction=.3, exceptionMinBaseline=20)
+        with self.assertRaisesRegex(ValueError, 'increased'):
+            app.check_changes(dict(accepted=3001, exceptionRules=30), dict(accepted=1000, exceptionRules=30), checks, 'source')
+        with self.assertRaisesRegex(ValueError, 'Exception'):
+            app.check_changes(dict(totalRules=1000, exceptionRules=20), dict(totalRules=1000, exceptionRules=30), checks, 'profile')
+        app.check_changes(dict(accepted=25, exceptionRules=0), dict(accepted=9, exceptionRules=1), checks, 'small')
+
     def setup_project(self, root):
         custom = root / 'custom'
         custom.mkdir()

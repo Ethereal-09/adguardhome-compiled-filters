@@ -1,15 +1,61 @@
-{
-  "rule-providers": {
-    "compiled-maximum-block": {
-      "type": "http",
-      "behavior": "domain",
-      "format": "mrs",
-      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/maximum.mrs",
-      "path": "./rule_provider/compiled/maximum.mrs",
-      "interval": 86400
-    }
-  },
-  "rules": [
-    "RULE-SET,compiled-maximum-block,REJECT"
-  ]
-}
+# Merge these providers and rules into your existing mihomo configuration.
+rule-providers:
+  compiled-maximum-block:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/maximum.mrs"
+    path: "./rule_provider/compiled/maximum.mrs"
+    interval: 86400
+  compiled-maximum-block-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/maximum-regex.txt"
+    path: "./rule_provider/compiled/maximum-regex.txt"
+    interval: 86400
+  compiled-maximum-allow:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/maximum-allow.mrs"
+    path: "./rule_provider/compiled/maximum-allow.mrs"
+    interval: 86400
+  compiled-maximum-allow-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/maximum-allow-regex.txt"
+    path: "./rule_provider/compiled/maximum-allow-regex.txt"
+    interval: 86400
+  compiled-maximum-block-important:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/maximum-block-important.mrs"
+    path: "./rule_provider/compiled/maximum-block-important.mrs"
+    interval: 86400
+  compiled-maximum-block-important-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/maximum-block-important-regex.txt"
+    path: "./rule_provider/compiled/maximum-block-important-regex.txt"
+    interval: 86400
+  compiled-maximum-allow-important:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/maximum-allow-important.mrs"
+    path: "./rule_provider/compiled/maximum-allow-important.mrs"
+    interval: 86400
+  compiled-maximum-allow-important-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/maximum-allow-important-regex.txt"
+    path: "./rule_provider/compiled/maximum-allow-important-regex.txt"
+    interval: 86400
+rules:
+  - "AND,((OR,((RULE-SET,compiled-maximum-block-important),(RULE-SET,compiled-maximum-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-maximum-allow-important),(RULE-SET,compiled-maximum-allow-important-regex)))))),REJECT"
+  - "AND,((OR,((RULE-SET,compiled-maximum-block),(RULE-SET,compiled-maximum-block-regex))),(NOT,((OR,((RULE-SET,compiled-maximum-allow),(RULE-SET,compiled-maximum-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-maximum-allow-important),(RULE-SET,compiled-maximum-allow-important-regex)))))),REJECT"

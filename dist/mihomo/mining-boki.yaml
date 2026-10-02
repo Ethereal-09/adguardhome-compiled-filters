@@ -1,15 +1,61 @@
-{
-  "rule-providers": {
-    "compiled-mining-block": {
-      "type": "http",
-      "behavior": "domain",
-      "format": "mrs",
-      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/mining.mrs",
-      "path": "./rule_provider/compiled/mining.mrs",
-      "interval": 86400
-    }
-  },
-  "rules": [
-    "RULE-SET,compiled-mining-block,REJECT"
-  ]
-}
+# Merge these providers and rules into your existing mihomo configuration.
+rule-providers:
+  compiled-mining-block:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/mining.mrs"
+    path: "./rule_provider/compiled/mining.mrs"
+    interval: 86400
+  compiled-mining-block-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/mining-regex.txt"
+    path: "./rule_provider/compiled/mining-regex.txt"
+    interval: 86400
+  compiled-mining-allow:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/mining-allow.mrs"
+    path: "./rule_provider/compiled/mining-allow.mrs"
+    interval: 86400
+  compiled-mining-allow-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/mining-allow-regex.txt"
+    path: "./rule_provider/compiled/mining-allow-regex.txt"
+    interval: 86400
+  compiled-mining-block-important:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/mining-block-important.mrs"
+    path: "./rule_provider/compiled/mining-block-important.mrs"
+    interval: 86400
+  compiled-mining-block-important-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/mining-block-important-regex.txt"
+    path: "./rule_provider/compiled/mining-block-important-regex.txt"
+    interval: 86400
+  compiled-mining-allow-important:
+    type: "http"
+    behavior: "domain"
+    format: "mrs"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/mining-allow-important.mrs"
+    path: "./rule_provider/compiled/mining-allow-important.mrs"
+    interval: 86400
+  compiled-mining-allow-important-regex:
+    type: "http"
+    behavior: "classical"
+    format: "text"
+    url: "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/mining-allow-important-regex.txt"
+    path: "./rule_provider/compiled/mining-allow-important-regex.txt"
+    interval: 86400
+rules:
+  - "AND,((OR,((RULE-SET,compiled-mining-block-important),(RULE-SET,compiled-mining-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-mining-allow-important),(RULE-SET,compiled-mining-allow-important-regex)))))),REJECT"
+  - "AND,((OR,((RULE-SET,compiled-mining-block),(RULE-SET,compiled-mining-block-regex))),(NOT,((OR,((RULE-SET,compiled-mining-allow),(RULE-SET,compiled-mining-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-mining-allow-important),(RULE-SET,compiled-mining-allow-important-regex)))))),REJECT"

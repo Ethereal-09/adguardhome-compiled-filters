@@ -1075,7 +1075,7 @@
       "exceptionRules": 0,
       "parsedEntries": 1,
       "duplicates": 0,
-      "unsupported": 76,
+      "unsupported": 77,
       "unsupportedExamples": [
         "/edgemesh.*.js$script,domain=~edgemesh.com|~edgeno.de",
         "||safelinkconverter.com^$script,3p",

@@ -13,6 +13,7 @@
         "217heidai-adblockfilters-rules-adblockdnslite-txt-99bc0b64",
         "sjhgvr-oisd-abp-small-txt-50559e3d"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-10-02T05:29:40+00:00",
       "inputSha256": "35408fccf1e6db6f3c711495fd5b5601499a951a6e8c90e8efc00bf887671f44",
       "inputRules": 307182,
@@ -172,6 +173,7 @@
         "https-someonewhocares-org-hosts-hosts-zero-hosts-dfd8da19",
         "https-pgl-yoyo-org-adservers-adservers-serverlist-php-f785075c"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-10-02T05:30:17+00:00",
       "inputSha256": "b39f6839b7f15df88812c1f35e0f85057cb607265481ab6d6f90bedad91f17b2",
       "inputRules": 2005108,
@@ -403,6 +405,7 @@
       "sourceIds": [
         "hagezi-dns-blocklists-adblock-multi-txt-ce9f678a"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-10-02T02:58:13+00:00",
       "inputSha256": "be52c32b0ba9a3cffdf1b7f0f3cffd65e6885d7c549208da9271b30c36860ec0",
       "inputRules": 198941,
@@ -499,6 +502,7 @@
       "sourceIds": [
         "hagezi-dns-blocklists-adblock-pro-txt-65c8e043"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-10-02T02:58:16+00:00",
       "inputSha256": "71a929dd950024c477761bc8e2f954a7d78c7605339d78b467f4fd039646ed81",
       "inputRules": 227618,
@@ -595,6 +599,7 @@
       "sourceIds": [
         "hagezi-dns-blocklists-adblock-pro-plus-txt-7a87ce26"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-10-02T02:58:19+00:00",
       "inputSha256": "361c158045db89070cbac069ca7098a19be883b8f58dd98827f17beb629c4809",
       "inputRules": 248284,
@@ -691,6 +696,7 @@
       "sourceIds": [
         "hagezi-dns-blocklists-adblock-ultimate-txt-bc290ebd"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-10-02T02:58:23+00:00",
       "inputSha256": "6758037ccf00ed8b9d8ba0a0c62e5b5c9a163d86540e8e9fee7c98de00597529",
       "inputRules": 284102,
@@ -787,6 +793,7 @@
       "sourceIds": [
         "badmojr-1hosts-lite-adblock-txt-6a71fde5"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-09-30T20:57:40+00:00",
       "inputSha256": "bd44a14da9f8ba5e7b3e9a8bbeef2f9bc92ad4bee622994f319145f74ef5bc3d",
       "inputRules": 102241,
@@ -883,6 +890,7 @@
       "sourceIds": [
         "badmojr-1hosts-xtra-adblock-txt-ec275c9c"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-09-30T20:57:49+00:00",
       "inputSha256": "2803bd438ff2d3c5ff713c00df16b044d462c20f1cf39fa460bdfea25f99d058",
       "inputRules": 786132,
@@ -981,6 +989,7 @@
         "privacy-protection-tools-anti-ad-anti-ad-easylist-txt-9b62e65d",
         "217heidai-adblockfilters-rules-adblockdnslite-txt-99bc0b64"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-10-02T05:30:44+00:00",
       "inputSha256": "12599b155cdd9415ad4510d085b5aa808b7800ddd314b1e1614121d4574d407a",
       "inputRules": 210865,
@@ -1082,6 +1091,7 @@
         "blocklistproject-lists-adguard-ads-ags-txt-21a38910",
         "adaway-adaway-github-io-hosts-txt-66566edd"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-09-30T20:57:55+00:00",
       "inputSha256": "8b9161c2fd2a423809324504fc392c0b33b89d267e8782278b2af0c32ea1df45",
       "inputRules": 143763,
@@ -1190,6 +1200,7 @@
         "nextdns-native-tracking-domains-domains-windows-e8dcf707",
         "nextdns-native-tracking-domains-domains-xiaomi-02950f11"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-10-01T14:03:46+00:00",
       "inputSha256": "3fbe85eba449e1a164bbe77a3d96a6ee16b06d8f60adfc7c49dcf7f15490993b",
       "inputRules": 133812,
@@ -1313,6 +1324,7 @@
         "blocklistproject-lists-adguard-fraud-ags-txt-859f4062",
         "blocklistproject-lists-adguard-phishing-ags-txt-6ab23539"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-10-02T05:31:02+00:00",
       "inputSha256": "118dde04e1b701691f41752da4555b30ac5b4eedcb9d65445d01a8ecb32b3cb2",
       "inputRules": 654793,
@@ -1433,6 +1445,7 @@
       "sourceIds": [
         "mitchellkrogza-the-big-list-of-hacked-malware-web-sites-hacked-domains-list-5df168a2"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-10-02T05:31:02+00:00",
       "inputSha256": "56c74d3455751dcaafb89e5546ada67bfd0d8eb4938275011113967ae99c4a5b",
       "inputRules": 9,
@@ -1531,6 +1544,7 @@
         "durablenapkin-scamblocklist-adguard-txt-f27041d5",
         "blocklistproject-lists-adguard-fraud-ags-txt-859f4062"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-10-02T05:31:06+00:00",
       "inputSha256": "615c9b8e279cb2368579837e733f1bede8f460369981db85f2e2775552a86577",
       "inputRules": 157602,
@@ -1633,6 +1647,7 @@
       "sourceIds": [
         "blocklistproject-lists-adguard-ransomware-ags-txt-8f253932"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-09-30T20:58:04+00:00",
       "inputSha256": "5adf6eba16b273d35501dcd4cf82244176e406c5504a3cc8db7afd230b7f78ca",
       "inputRules": 1903,
@@ -1731,6 +1746,7 @@
         "hoshsadiq-adblock-nocoin-list-hosts-txt-35b3f66b",
         "ublockorigin-uassets-filters-resource-abuse-txt-f20d5302"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-10-01T14:04:07+00:00",
       "inputSha256": "f9cd9997dad99bb37206eecf07f009aab86a7d55a4cd74187099fa7b2052abb1",
       "inputRules": 1524,
@@ -1832,6 +1848,7 @@
         "blocklistproject-lists-adguard-smart-tv-ags-txt-92f6ccb6",
         "perflyst-piholeblocklist-smarttv-agh-txt-f3772bac"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-09-30T20:58:04+00:00",
       "inputSha256": "9a194bacdbe279f5c002ac35ce8e8e0a5a23ba3f3c936e5820d442d44022bb28",
       "inputRules": 160,
@@ -1931,6 +1948,7 @@
       "sourceIds": [
         "dandelionsprout-adfilt-gameconsoleadblocklist-txt-2fd8cf2e"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-09-30T20:58:04+00:00",
       "inputSha256": "8e2e4207d58b75b236ca1c3ea639f3f10c6b51601380226e53696a3f2d61c71f",
       "inputRules": 14,
@@ -2028,6 +2046,7 @@
         "crazy-max-windowsspyblocker-data-hosts-spy-txt-a41d8da9",
         "nextdns-native-tracking-domains-domains-windows-e8dcf707"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-10-01T14:04:07+00:00",
       "inputSha256": "1d81783dbfc3644ce290c9cee44d541c6314b2f95c44fd8c847b383010aa13a9",
       "inputRules": 355,
@@ -2127,6 +2146,7 @@
         "jerryn70-goodbyeads-extension-goodbyeads-xiaomi-extension-txt-2ab84d66",
         "nextdns-native-tracking-domains-domains-xiaomi-02950f11"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-10-01T14:04:07+00:00",
       "inputSha256": "b640eaaeab4760dc2fb5a027e456a2dc2833248d6dc9bb316a737e79b9a4000f",
       "inputRules": 278,
@@ -2226,6 +2246,7 @@
         "jerryn70-goodbyeads-extension-goodbyeads-samsung-adblock-txt-10d171b5",
         "nextdns-native-tracking-domains-domains-samsung-4cda1df6"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-10-01T14:04:07+00:00",
       "inputSha256": "9cda202d08bd426f1aa3390da0152463afd451c26a7e7e1f8c2be604a006469e",
       "inputRules": 101,
@@ -2324,6 +2345,7 @@
       "sourceIds": [
         "jerryn70-goodbyeads-extension-goodbyeads-spotify-adblock-txt-4a00db86"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-09-30T20:58:04+00:00",
       "inputSha256": "39afa8b40d27b3c6df647a1df336e16b43020ab09c235a6038b537cb37d9c136",
       "inputRules": 3780,
@@ -2420,6 +2442,7 @@
       "sourceIds": [
         "jerryn70-goodbyeads-formats-goodbyeads-youtube-adblock-filter-txt-992d6a26"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-09-30T20:58:06+00:00",
       "inputSha256": "4bbd0116f99897cfacc26d183cb686450275b5361869f8db2bb94c933ae7e7dd",
       "inputRules": 97591,
@@ -2516,6 +2539,7 @@
       "sourceIds": [
         "anudeepnd-blacklist-facebook-txt-32006df0"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-09-30T20:58:06+00:00",
       "inputSha256": "6d930c9f1200f6e2a7a3f422dad3c14a2fe222db612a3252541a79d196e0ebbc",
       "inputRules": 3995,
@@ -2612,6 +2636,7 @@
       "sourceIds": [
         "hagezi-dns-blocklists-adblock-urlshortener-txt-25500e57"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-10-02T02:59:01+00:00",
       "inputSha256": "54e7dbe110584dd0a49ea8f440802ceec4081065159069cfe71572f5ce7f9f41",
       "inputRules": 9935,
@@ -2708,6 +2733,7 @@
       "sourceIds": [
         "hagezi-dns-blocklists-adblock-dyndns-txt-1d5b17bf"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-10-02T02:59:01+00:00",
       "inputSha256": "3da47a755269ebb2194ab05507f9afe1ed6f4d7294ebb16aab4c63e2a0d8b182",
       "inputRules": 1536,
@@ -2804,6 +2830,7 @@
       "sourceIds": [
         "hagezi-dns-blocklists-adblock-hoster-txt-15f0d4a7"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-10-02T02:59:01+00:00",
       "inputSha256": "f256a572d190ab1c03c874f877e1bb15c1be07ce2f377062ce14c6a33b7262b7",
       "inputRules": 1235,
@@ -2900,6 +2927,7 @@
       "sourceIds": [
         "hagezi-dns-blocklists-adblock-whitelist-referral-txt-da8500f6"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-09-30T20:58:06+00:00",
       "inputSha256": "1b42d134622f05031cf4f87b899fd42ee56846b360bdfef6fb03c1cd8a916328",
       "inputRules": 930,
@@ -2993,6 +3021,7 @@
       "sourceIds": [
         "hagezi-dns-blocklists-adblock-whitelist-referral-native-txt-69481aca"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-10-01T14:04:10+00:00",
       "inputSha256": "85a0dddac1b23e9c6d30767af1a630cdfc733cfece86fc4ae77f7838331ea692",
       "inputRules": 1611,
@@ -3086,6 +3115,7 @@
       "sourceIds": [
         "hagezi-dns-blocklists-adblock-whitelist-urlshortener-txt-c2ee3e5c"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-10-02T02:59:02+00:00",
       "inputSha256": "928957620cc8f0e18ec6db5a385b76ad34514cc79c2d30ca019f8c7bceed11bc",
       "inputRules": 9928,
@@ -3186,6 +3216,7 @@
         "nextdns-native-tracking-domains-domains-windows-e8dcf707",
         "nextdns-native-tracking-domains-domains-xiaomi-02950f11"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-10-01T14:04:10+00:00",
       "inputSha256": "f5a6d3da65862067e1ddf3727c13abf03b155c6581639a9fb2d9b5a73ad09456",
       "inputRules": 98,
@@ -3295,6 +3326,7 @@
       "sourceIds": [
         "hagezi-dns-blocklists-adblock-spam-tlds-txt-ee73a7e1"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-10-01T14:04:10+00:00",
       "inputSha256": "8af2805fceb101b70cd3c527bfe30062305645717c4cbc660a7b06819268b759",
       "inputRules": 281,
@@ -3390,6 +3422,7 @@
       "sourceIds": [
         "blocklistproject-lists-adguard-phishing-ags-txt-6ab23539"
       ],
+      "configVersion": 2,
       "updatedUtc": "2026-10-01T14:04:18+00:00",
       "inputSha256": "1e25e99f94f77dba9fa6685a37a6ddc6a98c3aa477cdad64ef7d7964450ea19b",
       "inputRules": 118066,
@@ -3483,5 +3516,5 @@
   },
   "engine": "mihomo v1.19.32",
   "validatedProviders": 264,
-  "sourceManifestSha256": "1e000a53cf718d797f02182604ede44d646cedc14cd83727d52a5707f49619f8"
+  "sourceManifestSha256": "98d2764a43142d92b09e8cb4fb8ee2a02940f1b19742e96f3fb16832fce90415"
 }

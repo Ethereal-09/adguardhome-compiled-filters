@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "checkedUtc": "2026-10-02T05:32:08+00:00",
+  "checkedUtc": "2026-10-02T05:44:34+00:00",
   "dnsValidated": [
     "combined",
     "full",
@@ -75,11 +75,11 @@
   "changes": {
     "combined": {
       "added": 0,
-      "removed": 1
+      "removed": 0
     },
     "full": {
-      "added": 21,
-      "removed": 37
+      "added": 0,
+      "removed": 0
     },
     "balanced": {
       "added": 0,
@@ -107,7 +107,7 @@
     },
     "china": {
       "added": 0,
-      "removed": 1
+      "removed": 0
     },
     "ads": {
       "added": 0,
@@ -118,16 +118,16 @@
       "removed": 0
     },
     "security": {
-      "added": 5,
-      "removed": 12
+      "added": 0,
+      "removed": 0
     },
     "malware": {
       "added": 0,
       "removed": 0
     },
     "scam": {
-      "added": 5,
-      "removed": 12
+      "added": 0,
+      "removed": 0
     },
     "ransomware": {
       "added": 0,
@@ -209,43 +209,43 @@
   "sourceChanges": {
     "217heidai-adblockfilters-rules-adblockdns-txt-69af1a63": {
       "accepted": {
-        "previous": 215300,
+        "previous": 215444,
         "current": 215444
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 215247,
         "current": 215247
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 197,
         "current": 197
       }
     },
     "217heidai-adblockfilters-rules-adblockdnslite-txt-99bc0b64": {
       "accepted": {
-        "previous": 5323,
+        "previous": 5322,
         "current": 5322
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 5306,
         "current": 5306
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 16,
         "current": 16
       }
     },
     "8680-goodbyeads-data-rules-dns-txt-8e7fb833": {
       "accepted": {
-        "previous": 113772,
+        "previous": 113922,
         "current": 113922
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 113922,
         "current": 113922
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -255,11 +255,11 @@
         "current": 6540
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 6540,
         "current": 6540
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -269,11 +269,11 @@
         "current": 951
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 951,
         "current": 951
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -283,11 +283,11 @@
         "current": 42343
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 42343,
         "current": 42343
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -297,11 +297,11 @@
         "current": 3995
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 3995,
         "current": 3995
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -311,11 +311,11 @@
         "current": 102241
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 102241,
         "current": 102241
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -325,11 +325,11 @@
         "current": 786132
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 786132,
         "current": 786132
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -339,11 +339,11 @@
         "current": 280859
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 280859,
         "current": 280859
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -353,11 +353,11 @@
         "current": 435051
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 435051,
         "current": 435051
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -367,11 +367,11 @@
         "current": 233991
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 233991,
         "current": 233991
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -381,11 +381,11 @@
         "current": 1272
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 1272,
         "current": 1272
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -395,11 +395,11 @@
         "current": 256184
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 256184,
         "current": 256184
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -409,11 +409,11 @@
         "current": 190191
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 190191,
         "current": 190191
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -423,11 +423,11 @@
         "current": 1904
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 1904,
         "current": 1904
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -437,11 +437,11 @@
         "current": 108682
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 108682,
         "current": 108682
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -451,11 +451,11 @@
         "current": 8527
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 8527,
         "current": 8527
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -465,11 +465,11 @@
         "current": 77
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 77,
         "current": 77
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -479,11 +479,11 @@
         "current": 143866
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 143866,
         "current": 143866
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -493,11 +493,11 @@
         "current": 196933
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 196933,
         "current": 196933
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -507,11 +507,11 @@
         "current": 347
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 347,
         "current": 347
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -521,25 +521,25 @@
         "current": 14
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 14,
         "current": 14
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
     "durablenapkin-scamblocklist-adguard-txt-f27041d5": {
       "accepted": {
-        "previous": 957,
+        "previous": 952,
         "current": 952
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 952,
         "current": 952
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -549,11 +549,11 @@
         "current": 1536
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 1536,
         "current": 1536
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -563,11 +563,11 @@
         "current": 1235
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 1235,
         "current": 1235
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -577,11 +577,11 @@
         "current": 198941
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 198941,
         "current": 198941
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -591,11 +591,11 @@
         "current": 248284
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 248284,
         "current": 248284
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -605,11 +605,11 @@
         "current": 227618
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 227618,
         "current": 227618
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -619,11 +619,11 @@
         "current": 281
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 281,
         "current": 281
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -633,11 +633,11 @@
         "current": 284102
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 284102,
         "current": 284102
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -647,11 +647,11 @@
         "current": 9935
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 9935,
         "current": 9935
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -661,11 +661,11 @@
         "current": 1611
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 1611,
         "current": 1611
       }
     },
@@ -675,11 +675,11 @@
         "current": 936
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 936,
         "current": 936
       }
     },
@@ -689,11 +689,11 @@
         "current": 9928
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 9928,
         "current": 9928
       }
     },
@@ -703,11 +703,11 @@
         "current": 312
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 312,
         "current": 312
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -717,11 +717,11 @@
         "current": 3552
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 3552,
         "current": 3552
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -731,11 +731,11 @@
         "current": 13082
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 13082,
         "current": 13082
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -745,11 +745,11 @@
         "current": 1645
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 1645,
         "current": 1645
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -759,11 +759,11 @@
         "current": 101
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 101,
         "current": 101
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -773,11 +773,11 @@
         "current": 3780
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 3780,
         "current": 3780
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -787,11 +787,11 @@
         "current": 278
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 278,
         "current": 278
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -801,11 +801,11 @@
         "current": 277714
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 277714,
         "current": 277714
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -815,11 +815,11 @@
         "current": 97645
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 97645,
         "current": 97645
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -829,11 +829,11 @@
         "current": 9
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 9,
         "current": 9
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -843,11 +843,11 @@
         "current": 3
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 3,
         "current": 3
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -857,11 +857,11 @@
         "current": 19
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 19,
         "current": 19
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -871,11 +871,11 @@
         "current": 37
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 37,
         "current": 37
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -885,11 +885,11 @@
         "current": 1
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 1,
         "current": 1
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -899,11 +899,11 @@
         "current": 4
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 4,
         "current": 4
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -913,11 +913,11 @@
         "current": 2
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 2,
         "current": 2
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -927,11 +927,11 @@
         "current": 23
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 23,
         "current": 23
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -941,11 +941,11 @@
         "current": 9
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 9,
         "current": 9
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -955,11 +955,11 @@
         "current": 154
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 145,
         "current": 145
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 9,
         "current": 9
       }
     },
@@ -969,25 +969,25 @@
         "current": 93908
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 93798,
         "current": 93798
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 110,
         "current": 110
       }
     },
     "sjhgvr-oisd-abp-small-txt-50559e3d": {
       "accepted": {
-        "previous": 57475,
+        "previous": 57474,
         "current": 57474
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 57474,
         "current": 57474
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -997,11 +997,11 @@
         "current": 8140
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 8140,
         "current": 8140
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -1011,11 +1011,11 @@
         "current": 74759
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 74759,
         "current": 74759
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -1025,11 +1025,11 @@
         "current": 962
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 962,
         "current": 962
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     },
@@ -1039,14 +1039,14 @@
         "current": 1
       },
       "blockingRules": {
-        "previous": null,
+        "previous": 1,
         "current": 1
       },
       "exceptionRules": {
-        "previous": null,
+        "previous": 0,
         "current": 0
       }
     }
   },
-  "publishedUtc": "2026-10-02T05:32:08+00:00"
+  "publishedUtc": "2026-10-02T05:44:34+00:00"
 }

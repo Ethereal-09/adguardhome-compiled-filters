@@ -1,5 +1,5 @@
 # Title: 短链接服务限制组件
-# Updated: 2026-10-02T02:59:01+00:00
+# Updated: 2026-10-02T20:39:03+00:00
 # Expires: 1 day
 # Rules: 9935
 # Maintainer merges only; upstream rules belong to their authors.

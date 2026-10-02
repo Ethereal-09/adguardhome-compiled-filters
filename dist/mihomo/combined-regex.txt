@@ -1,7 +1,7 @@
 # Title: 综合 DNS 过滤（基础＋国内优化）
-# Updated: 2026-10-02T05:29:40+00:00
+# Updated: 2026-10-02T20:36:11+00:00
 # Expires: 1 day
-# Rules: 307182
+# Rules: 307432
 # Maintainer merges only; upstream rules belong to their authors.
 # DNS masks/regex preserved; exact Hosts scope and source exception priority retained.
 # Upstream licenses and notices: ../upstream/README.md (in the original repository).

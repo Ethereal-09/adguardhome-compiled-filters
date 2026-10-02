@@ -1,5 +1,5 @@
 ! Title: 短链接服务限制组件
-! Updated: 2026-10-02T02:59:01+00:00
+! Updated: 2026-10-02T20:39:03+00:00
 ! Expires: 1 day
 ! Rules: 9935
 ! Maintainer merges only; upstream rules belong to their authors.
@@ -727,7 +727,6 @@
 ||anetbio.com^
 ||angl.at^
 ||anh.to^
-||animxo.com^
 ||anmeld.biz^
 ||annabelparr.com^
 ||annah.ar^
@@ -809,7 +808,6 @@
 ||ardchk.me^
 ||arebh.com^
 ||aresgacor.info^
-||argunia.com^
 ||ariares-hyperlink-h3ap9l.vercel.app^
 ||ark.gg^
 ||arkinv.st^
@@ -4434,6 +4432,7 @@
 ||linkgo.live^
 ||linkgqq.org^
 ||linkgue.com^
+||linkhd.co^
 ||linkhebat.com^
 ||linkhub.biz^
 ||linkhub.to^
@@ -6028,6 +6027,7 @@
 ||pokoknya.top^
 ||polamax.win^
 ||polbb.eu^
+||polink.co^
 ||politi.co^
 ||polrproject.org^
 ||popden.link^

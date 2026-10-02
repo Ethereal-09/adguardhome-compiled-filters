@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "checkedUtc": "2026-10-02T05:56:57+00:00",
+  "checkedUtc": "2026-10-02T20:40:52+00:00",
   "dnsValidated": [
     "combined",
     "full",
@@ -74,28 +74,28 @@
   "failures": {},
   "changes": {
     "combined": {
-      "added": 0,
-      "removed": 0
+      "added": 455,
+      "removed": 205
     },
     "full": {
-      "added": 0,
-      "removed": 0
+      "added": 3555,
+      "removed": 1819
     },
     "balanced": {
-      "added": 0,
-      "removed": 0
+      "added": 452,
+      "removed": 271
     },
     "extended": {
-      "added": 0,
-      "removed": 0
+      "added": 565,
+      "removed": 611
     },
     "aggressive": {
-      "added": 0,
-      "removed": 0
+      "added": 665,
+      "removed": 712
     },
     "maximum": {
-      "added": 0,
-      "removed": 0
+      "added": 746,
+      "removed": 823
     },
     "balanced-1hosts": {
       "added": 0,
@@ -106,8 +106,8 @@
       "removed": 0
     },
     "china": {
-      "added": 0,
-      "removed": 0
+      "added": 280,
+      "removed": 61
     },
     "ads": {
       "added": 0,
@@ -170,8 +170,8 @@
       "removed": 0
     },
     "shorteners": {
-      "added": 0,
-      "removed": 0
+      "added": 2,
+      "removed": 2
     },
     "dyndns": {
       "added": 0,
@@ -186,12 +186,12 @@
       "removed": 0
     },
     "allow-referral-native": {
-      "added": 0,
-      "removed": 0
+      "added": 4,
+      "removed": 2
     },
     "allow-shorteners": {
-      "added": 0,
-      "removed": 0
+      "added": 2,
+      "removed": 2
     },
     "native-tracking": {
       "added": 0,
@@ -210,11 +210,11 @@
     "217heidai-adblockfilters-rules-adblockdns-txt-69af1a63": {
       "accepted": {
         "previous": 215444,
-        "current": 215444
+        "current": 220079
       },
       "blockingRules": {
         "previous": 215247,
-        "current": 215247
+        "current": 219882
       },
       "exceptionRules": {
         "previous": 197,
@@ -224,11 +224,11 @@
     "217heidai-adblockfilters-rules-adblockdnslite-txt-99bc0b64": {
       "accepted": {
         "previous": 5322,
-        "current": 5322
+        "current": 5388
       },
       "blockingRules": {
         "previous": 5306,
-        "current": 5306
+        "current": 5372
       },
       "exceptionRules": {
         "previous": 16,
@@ -238,11 +238,11 @@
     "8680-goodbyeads-data-rules-dns-txt-8e7fb833": {
       "accepted": {
         "previous": 113922,
-        "current": 113922
+        "current": 114099
       },
       "blockingRules": {
         "previous": 113922,
-        "current": 113922
+        "current": 114099
       },
       "exceptionRules": {
         "previous": 0,
@@ -490,11 +490,11 @@
     "cats-team-adrules-dns-txt-35998f0f": {
       "accepted": {
         "previous": 196933,
-        "current": 196933
+        "current": 197122
       },
       "blockingRules": {
         "previous": 196933,
-        "current": 196933
+        "current": 197122
       },
       "exceptionRules": {
         "previous": 0,
@@ -574,11 +574,11 @@
     "hagezi-dns-blocklists-adblock-multi-txt-ce9f678a": {
       "accepted": {
         "previous": 198941,
-        "current": 198941
+        "current": 199122
       },
       "blockingRules": {
         "previous": 198941,
-        "current": 198941
+        "current": 199122
       },
       "exceptionRules": {
         "previous": 0,
@@ -588,11 +588,11 @@
     "hagezi-dns-blocklists-adblock-pro-plus-txt-7a87ce26": {
       "accepted": {
         "previous": 248284,
-        "current": 248284
+        "current": 248237
       },
       "blockingRules": {
         "previous": 248284,
-        "current": 248284
+        "current": 248237
       },
       "exceptionRules": {
         "previous": 0,
@@ -602,11 +602,11 @@
     "hagezi-dns-blocklists-adblock-pro-txt-65c8e043": {
       "accepted": {
         "previous": 227618,
-        "current": 227618
+        "current": 227572
       },
       "blockingRules": {
         "previous": 227618,
-        "current": 227618
+        "current": 227572
       },
       "exceptionRules": {
         "previous": 0,
@@ -630,11 +630,11 @@
     "hagezi-dns-blocklists-adblock-ultimate-txt-bc290ebd": {
       "accepted": {
         "previous": 284102,
-        "current": 284102
+        "current": 284025
       },
       "blockingRules": {
         "previous": 284102,
-        "current": 284102
+        "current": 284025
       },
       "exceptionRules": {
         "previous": 0,
@@ -658,7 +658,7 @@
     "hagezi-dns-blocklists-adblock-whitelist-referral-native-txt-69481aca": {
       "accepted": {
         "previous": 1611,
-        "current": 1611
+        "current": 1613
       },
       "blockingRules": {
         "previous": 0,
@@ -666,7 +666,7 @@
       },
       "exceptionRules": {
         "previous": 1611,
-        "current": 1611
+        "current": 1613
       }
     },
     "hagezi-dns-blocklists-adblock-whitelist-referral-txt-da8500f6": {
@@ -714,11 +714,11 @@
     "https-pgl-yoyo-org-adservers-adservers-serverlist-php-f785075c": {
       "accepted": {
         "previous": 3552,
-        "current": 3552
+        "current": 3551
       },
       "blockingRules": {
         "previous": 3552,
-        "current": 3552
+        "current": 3551
       },
       "exceptionRules": {
         "previous": 0,
@@ -980,11 +980,11 @@
     "sjhgvr-oisd-abp-small-txt-50559e3d": {
       "accepted": {
         "previous": 57474,
-        "current": 57474
+        "current": 57551
       },
       "blockingRules": {
         "previous": 57474,
-        "current": 57474
+        "current": 57551
       },
       "exceptionRules": {
         "previous": 0,
@@ -1008,11 +1008,11 @@
     "stevenblack-hosts-hosts-603e776c": {
       "accepted": {
         "previous": 74759,
-        "current": 74759
+        "current": 72232
       },
       "blockingRules": {
         "previous": 74759,
-        "current": 74759
+        "current": 72232
       },
       "exceptionRules": {
         "previous": 0,
@@ -1048,5 +1048,5 @@
       }
     }
   },
-  "publishedUtc": "2026-10-02T05:56:57+00:00"
+  "publishedUtc": "2026-10-02T20:40:52+00:00"
 }

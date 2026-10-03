@@ -1,6 +1,6 @@
 {
   "schema": 2,
-  "built_at": "2026-10-03T14:15:11+00:00",
+  "built_at": "2026-10-03T14:41:25+00:00",
   "workbook_sha256": "1dfdd099ee3901cff849674f5eb7508dce712e8f25281483d2928310672044f2",
   "sources": [
     {
@@ -12,9 +12,9 @@
       "author": "Li-Dong-Don/AdGuard-BiliCDN-Rules",
       "license": "未声明",
       "license_url": null,
-      "state": "fresh",
+      "state": "cache-offline",
       "warning": null,
-      "fetched_at": "2026-10-03T14:15:08+00:00",
+      "fetched_at": "2026-10-03T12:55:09+00:00",
       "sha256": "8de23697423351377bac97440c7e7ddedb074d708f0c02a0872328756934c24e",
       "active": 11,
       "upstream_updated": null,
@@ -46,9 +46,9 @@
       "author": "xianhongtao/AdGuard-AntiPCDN-Rules",
       "license": "未声明",
       "license_url": null,
-      "state": "fresh",
+      "state": "cache-offline",
       "warning": null,
-      "fetched_at": "2026-10-03T14:15:08+00:00",
+      "fetched_at": "2026-10-03T12:55:14+00:00",
       "sha256": "33ced7c2daf1e4ced2e605f76d5f3b9d93cac698d601584cc7232a47b3128c4b",
       "active": 34,
       "upstream_updated": null,
@@ -67,77 +67,14 @@
       "author": "TG-Twilight/AWAvenue-Ads-Rule",
       "license": "GPL-3.0",
       "license_url": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE",
-      "state": "fresh",
+      "state": "cache-offline",
       "warning": null,
-      "fetched_at": "2026-10-03T14:15:08+00:00",
+      "fetched_at": "2026-10-03T12:55:10+00:00",
       "sha256": "e63c0ba4d838883a683034f3cbcebe7e00c4d99fb6d10bb130b2283e819976e2",
       "active": 965,
       "upstream_updated": "2026-09-21 21:56:59 UTC+8",
       "dns_candidate": 962,
       "dns_usable": 962,
-      "unsafe_exceptions": 0,
-      "skipped": {},
-      "examples": []
-    },
-    {
-      "id": "awa-ads",
-      "name": "秋风纯广告",
-      "mode": "dns",
-      "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Adguard-Only.Ads.txt",
-      "repository": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule",
-      "author": "TG-Twilight/AWAvenue-Ads-Rule",
-      "license": "GPL-3.0",
-      "license_url": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE",
-      "state": "fresh",
-      "warning": null,
-      "fetched_at": "2026-10-03T14:15:08+00:00",
-      "sha256": "9371fd35f53e3b89ef2ca66d8dc4049bbe0d967e89651d22ddd5774c7b73bdaa",
-      "active": 655,
-      "upstream_updated": "2026-09-21 21:56:59 UTC+8",
-      "dns_candidate": 652,
-      "dns_usable": 652,
-      "unsafe_exceptions": 0,
-      "skipped": {},
-      "examples": []
-    },
-    {
-      "id": "awa-unwelcome",
-      "name": "秋风广告＋不受欢迎",
-      "mode": "dns",
-      "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Adguard-No.Privacy.txt",
-      "repository": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule",
-      "author": "TG-Twilight/AWAvenue-Ads-Rule",
-      "license": "GPL-3.0",
-      "license_url": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE",
-      "state": "fresh",
-      "warning": null,
-      "fetched_at": "2026-10-03T14:15:08+00:00",
-      "sha256": "874460eb101614888637572a8a43517fa26c837d544654ae5acf0004c2307122",
-      "active": 751,
-      "upstream_updated": "2026-09-21 21:56:59 UTC+8",
-      "dns_candidate": 748,
-      "dns_usable": 748,
-      "unsafe_exceptions": 0,
-      "skipped": {},
-      "examples": []
-    },
-    {
-      "id": "awa-privacy",
-      "name": "秋风广告＋隐私",
-      "mode": "dns",
-      "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Adguard-No.Unwelcome.txt",
-      "repository": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule",
-      "author": "TG-Twilight/AWAvenue-Ads-Rule",
-      "license": "GPL-3.0",
-      "license_url": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE",
-      "state": "fresh",
-      "warning": null,
-      "fetched_at": "2026-10-03T14:15:08+00:00",
-      "sha256": "1b007ca1bff9b8d05aeeac684e8b7acd1a40d9f41bba1ecb39538421762ab7bd",
-      "active": 869,
-      "upstream_updated": "2026-09-21 21:56:59 UTC+8",
-      "dns_candidate": 866,
-      "dns_usable": 866,
       "unsafe_exceptions": 0,
       "skipped": {},
       "examples": []
@@ -151,9 +88,9 @@
       "author": "Noyllopa/NoAppDownload",
       "license": "MIT",
       "license_url": "https://github.com/Noyllopa/NoAppDownload/blob/master/LICENSE",
-      "state": "fresh",
+      "state": "cache-offline",
       "warning": null,
-      "fetched_at": "2026-10-03T14:15:08+00:00",
+      "fetched_at": "2026-10-03T12:55:13+00:00",
       "sha256": "53c04421cd37950c512f23b9545640290b97a2943edced5de6dd1f8c24503b2e",
       "active": 877,
       "upstream_updated": "2026/09/18 21:00:00 +0800",
@@ -236,9 +173,9 @@
       "author": "damengzhu/banad",
       "license": "未声明",
       "license_url": null,
-      "state": "fresh",
+      "state": "cache-offline",
       "warning": null,
-      "fetched_at": "2026-10-03T14:15:08+00:00",
+      "fetched_at": "2026-10-03T12:55:21+00:00",
       "sha256": "9e7a7e5f810872bcb4d77981c5305837f2b466e3078070e78e87ae36cb953fd0",
       "active": 5894,
       "upstream_updated": "2026-10-01 21:34:42（北京时间）",
@@ -324,9 +261,9 @@
       "author": "xinggsf/Adblock-Plus-Rule",
       "license": "未声明",
       "license_url": null,
-      "state": "fresh",
+      "state": "cache-offline",
       "warning": null,
-      "fetched_at": "2026-10-03T14:15:08+00:00",
+      "fetched_at": "2026-10-03T12:55:13+00:00",
       "sha256": "1165b91dd489b438c1d99de65c259d15cf5c406b2d8bfcebdb3aa794f129ebf8",
       "active": 134,
       "upstream_updated": null,
@@ -411,9 +348,9 @@
       "author": "xinggsf/Adblock-Plus-Rule",
       "license": "未声明",
       "license_url": null,
-      "state": "fresh",
+      "state": "cache-offline",
       "warning": null,
-      "fetched_at": "2026-10-03T14:15:08+00:00",
+      "fetched_at": "2026-10-03T12:55:14+00:00",
       "sha256": "6b8689841aeac8b2c08082e6f22772c310559a4bfed78e18c0bd3d3a6a07492d",
       "active": 1169,
       "upstream_updated": null,
@@ -498,9 +435,9 @@
       "author": "Stephan van Ruth (sjhgvr)",
       "license": "GPL-3.0",
       "license_url": "https://github.com/sjhgvr/oisd/blob/main/LICENSE",
-      "state": "fresh",
+      "state": "cache-offline",
       "warning": null,
-      "fetched_at": "2026-10-03T14:15:11+00:00",
+      "fetched_at": "2026-10-03T12:55:17+00:00",
       "sha256": "d03ad1e15956c40001cd7444f8094bb3dd1ae21a39b3e54bf125a841a5068f1a",
       "active": 57656,
       "upstream_updated": "2026-10-03T04:06:03+0000",
@@ -513,294 +450,15 @@
   ],
   "profiles": [
     {
-      "id": "ads",
-      "name": "纯广告（最小干预）",
-      "sources": [
-        "awa-ads"
-      ],
-      "description": "国内广告；优先从此版本开始使用。",
-      "rules": 652,
-      "block": 652,
-      "allow": 0,
-      "important": 0,
-      "validation": {
-        "checked": 652,
-        "engine": "AdguardTeam/urlfilter v0.23.4",
-        "errors": [],
-        "invalid": 0
-      },
-      "probes": {
-        "service_probes": 14,
-        "functional_blocks": []
-      },
-      "mihomo": {
-        "files": [
-          "ads-block-domain.txt",
-          "ads-block-classical.txt",
-          "ads-allow-domain.txt",
-          "ads-allow-classical.txt",
-          "ads-block-important-domain.txt",
-          "ads-block-important-classical.txt",
-          "ads-allow-important-domain.txt",
-          "ads-allow-important-classical.txt",
-          "ads.yaml",
-          "ads-boki.yaml",
-          "ads-ghfast.yaml"
-        ],
-        "domain": 648,
-        "classical": 4
-      }
-    },
-    {
-      "id": "china",
-      "name": "国内广告＋隐私",
-      "sources": [
-        "awa-privacy"
-      ],
-      "description": "国内广告、隐私；采用上游 No.Unwelcome 版本。",
-      "rules": 866,
-      "block": 866,
-      "allow": 0,
-      "important": 0,
-      "validation": {
-        "checked": 866,
-        "engine": "AdguardTeam/urlfilter v0.23.4",
-        "errors": [],
-        "invalid": 0
-      },
-      "probes": {
-        "service_probes": 14,
-        "functional_blocks": []
-      },
-      "mihomo": {
-        "files": [
-          "china-block-domain.txt",
-          "china-block-classical.txt",
-          "china-allow-domain.txt",
-          "china-allow-classical.txt",
-          "china-block-important-domain.txt",
-          "china-block-important-classical.txt",
-          "china-allow-important-domain.txt",
-          "china-allow-important-classical.txt",
-          "china.yaml",
-          "china-boki.yaml",
-          "china-ghfast.yaml"
-        ],
-        "domain": 862,
-        "classical": 4
-      }
-    },
-    {
-      "id": "ads-unwelcome",
-      "name": "广告＋不受欢迎",
-      "sources": [
-        "awa-unwelcome"
-      ],
-      "description": "保留统计与遥测；可能限制更新、推送、PCDN 等功能。",
-      "rules": 748,
-      "block": 748,
-      "allow": 0,
-      "important": 0,
-      "validation": {
-        "checked": 748,
-        "engine": "AdguardTeam/urlfilter v0.23.4",
-        "errors": [],
-        "invalid": 0
-      },
-      "probes": {
-        "service_probes": 14,
-        "functional_blocks": []
-      },
-      "mihomo": {
-        "files": [
-          "ads-unwelcome-block-domain.txt",
-          "ads-unwelcome-block-classical.txt",
-          "ads-unwelcome-allow-domain.txt",
-          "ads-unwelcome-allow-classical.txt",
-          "ads-unwelcome-block-important-domain.txt",
-          "ads-unwelcome-block-important-classical.txt",
-          "ads-unwelcome-allow-important-domain.txt",
-          "ads-unwelcome-allow-important-classical.txt",
-          "ads-unwelcome.yaml",
-          "ads-unwelcome-boki.yaml",
-          "ads-unwelcome-ghfast.yaml"
-        ],
-        "domain": 744,
-        "classical": 4
-      }
-    },
-    {
-      "id": "awa-full",
-      "name": "秋风完整",
-      "sources": [
-        "awa-full"
-      ],
-      "description": "采用表格中的秋风完整方案，包含广告、隐私和不受欢迎规则。",
-      "rules": 962,
-      "block": 962,
-      "allow": 0,
-      "important": 0,
-      "validation": {
-        "checked": 962,
-        "engine": "AdguardTeam/urlfilter v0.23.4",
-        "errors": [],
-        "invalid": 0
-      },
-      "probes": {
-        "service_probes": 14,
-        "functional_blocks": []
-      },
-      "mihomo": {
-        "files": [
-          "awa-full-block-domain.txt",
-          "awa-full-block-classical.txt",
-          "awa-full-allow-domain.txt",
-          "awa-full-allow-classical.txt",
-          "awa-full-block-important-domain.txt",
-          "awa-full-block-important-classical.txt",
-          "awa-full-allow-important-domain.txt",
-          "awa-full-allow-important-classical.txt",
-          "awa-full.yaml",
-          "awa-full-boki.yaml",
-          "awa-full-ghfast.yaml"
-        ],
-        "domain": 958,
-        "classical": 4
-      }
-    },
-    {
-      "id": "pcdn",
-      "name": "PCDN（单独可选）",
-      "sources": [
-        "bili-pcdn",
-        "anti-pcdn"
-      ],
-      "description": "两份 PCDN 源合并；可能影响视频加载与节点选择。",
-      "rules": 41,
-      "block": 38,
-      "allow": 3,
-      "important": 41,
-      "validation": {
-        "checked": 41,
-        "engine": "AdguardTeam/urlfilter v0.23.4",
-        "errors": [],
-        "invalid": 0
-      },
-      "probes": {
-        "service_probes": 14,
-        "functional_blocks": [
-          "mcdn.bilivideo.com",
-          "mcdn.bilivideo.cn",
-          "p2pchunk-ws.douyucdn.cn"
-        ]
-      },
-      "mihomo": {
-        "files": [
-          "pcdn-block-domain.txt",
-          "pcdn-block-classical.txt",
-          "pcdn-allow-domain.txt",
-          "pcdn-allow-classical.txt",
-          "pcdn-block-important-domain.txt",
-          "pcdn-block-important-classical.txt",
-          "pcdn-allow-important-domain.txt",
-          "pcdn-allow-important-classical.txt",
-          "pcdn.yaml",
-          "pcdn-boki.yaml",
-          "pcdn-ghfast.yaml"
-        ],
-        "domain": 37,
-        "classical": 4
-      }
-    },
-    {
-      "id": "oisd",
-      "name": "oisd small（单独可选）",
-      "sources": [
-        "oisd-small"
-      ],
-      "description": "原始 oisd small 列表；不按完整 oisd 的描述推断 small 的覆盖范围。",
-      "rules": 57656,
-      "block": 57656,
-      "allow": 0,
-      "important": 0,
-      "validation": {
-        "checked": 57656,
-        "engine": "AdguardTeam/urlfilter v0.23.4",
-        "errors": [],
-        "invalid": 0
-      },
-      "probes": {
-        "service_probes": 14,
-        "functional_blocks": []
-      },
-      "mihomo": {
-        "files": [
-          "oisd-block-domain.txt",
-          "oisd-block-classical.txt",
-          "oisd-allow-domain.txt",
-          "oisd-allow-classical.txt",
-          "oisd-block-important-domain.txt",
-          "oisd-block-important-classical.txt",
-          "oisd-allow-important-domain.txt",
-          "oisd-allow-important-classical.txt",
-          "oisd.yaml",
-          "oisd-boki.yaml",
-          "oisd-ghfast.yaml"
-        ],
-        "domain": 57656,
-        "classical": 0
-      }
-    },
-    {
-      "id": "combined",
-      "name": "综合广告＋隐私",
-      "sources": [
-        "awa-privacy",
-        "oisd-small"
-      ],
-      "description": "秋风广告＋隐私合并 oisd small；不额外加入两份 PCDN 源。",
-      "rules": 57919,
-      "block": 57919,
-      "allow": 0,
-      "important": 0,
-      "validation": {
-        "checked": 57919,
-        "engine": "AdguardTeam/urlfilter v0.23.4",
-        "errors": [],
-        "invalid": 0
-      },
-      "probes": {
-        "service_probes": 14,
-        "functional_blocks": []
-      },
-      "mihomo": {
-        "files": [
-          "combined-block-domain.txt",
-          "combined-block-classical.txt",
-          "combined-allow-domain.txt",
-          "combined-allow-classical.txt",
-          "combined-block-important-domain.txt",
-          "combined-block-important-classical.txt",
-          "combined-allow-important-domain.txt",
-          "combined-allow-important-classical.txt",
-          "combined.yaml",
-          "combined-boki.yaml",
-          "combined-ghfast.yaml"
-        ],
-        "domain": 57915,
-        "classical": 4
-      }
-    },
-    {
       "id": "full",
-      "name": "DNS 全量（按需）",
+      "name": "DNS 合并规则",
       "sources": [
         "awa-full",
         "oisd-small",
         "bili-pcdn",
         "anti-pcdn"
       ],
-      "description": "表格中可安全转换的 DNS 源全量；包含功能拦截，浏览器专用源不计入。",
+      "description": "秋风完整、oisd small 与两份 PCDN 源合并去重，保留放行例外；浏览器专用规则单独输出。",
       "rules": 57969,
       "block": 57966,
       "allow": 3,
@@ -840,50 +498,6 @@
   ],
   "browser_profiles": [
     {
-      "id": "noapp",
-      "name": "去 App 下载提示",
-      "sources": [
-        "noapp"
-      ],
-      "rules": 874,
-      "block": 874,
-      "allow": 0,
-      "important": 0
-    },
-    {
-      "id": "adult-ads",
-      "name": "悬浮广告",
-      "sources": [
-        "adult-ads"
-      ],
-      "rules": 5892,
-      "block": 5860,
-      "allow": 32,
-      "important": 0
-    },
-    {
-      "id": "video",
-      "name": "乘风视频",
-      "sources": [
-        "video"
-      ],
-      "rules": 134,
-      "block": 130,
-      "allow": 4,
-      "important": 0
-    },
-    {
-      "id": "browser-ads",
-      "name": "乘风广告",
-      "sources": [
-        "browser-ads"
-      ],
-      "rules": 1168,
-      "block": 1142,
-      "allow": 26,
-      "important": 0
-    },
-    {
       "id": "combined",
       "name": "浏览器合并",
       "sources": [
@@ -906,107 +520,19 @@
     "service_probe_limit": "sample hostname tests, not real App behavior"
   },
   "files": {
-    "ads-unwelcome.txt": "caa1f98d678c115a15db698e30bc9c34e8cd22605229ebe2fa3bc7401a117506",
-    "ads.txt": "bafad2c2586b6f4b62f9573f744342176a5dea1507f153f8d576c49935fc298c",
-    "awa-full.txt": "e4bdc6f3224c274d56ba97dc7885912ebead1667a0f0a1e21f3c487b167e0380",
-    "browser/adult-ads.txt": "3d8a0ecb1db8169a7b93841def33c12819f7add7f668e8a52a1881e654453ac9",
-    "browser/browser-ads.txt": "dc73d70e9a815e8567ee64ad217188596d89e592c59667cc4ab7a458f10bbac8",
-    "browser/combined.txt": "2f88dee20da3fa4015621730e5810a3ce0037617ceb337e94b814a93d875c3dc",
-    "browser/noapp.txt": "406e9c1acaa90e7ba7e813ac8b3ff1c32901e3b431e7a6227a59514ccc8615ac",
-    "browser/video.txt": "6dd5fa4ed9283c110d1a9e1a8135cde4cd2262fd2ca9b4460ddda3f14f5d01f8",
-    "china.txt": "6a19e24d7f938ffbce2d8e3f6ef13c8ada91b900ea6e65188f5d0884c18b8737",
-    "combined.txt": "380d1e8767ae92fa9401dfdf1af93b7651216f9b827dd469d694004e7c3065b8",
-    "full.txt": "82dcfe1df418badeecc99869422e105e1a8b35ba285dee31ae8255f1ec157d68",
-    "mihomo/ads-allow-classical.txt": "7206f10d71d415dbbb4580714e9c360c6907bec70773037c6250d2183f38b201",
-    "mihomo/ads-allow-domain.txt": "7206f10d71d415dbbb4580714e9c360c6907bec70773037c6250d2183f38b201",
-    "mihomo/ads-allow-important-classical.txt": "7206f10d71d415dbbb4580714e9c360c6907bec70773037c6250d2183f38b201",
-    "mihomo/ads-allow-important-domain.txt": "7206f10d71d415dbbb4580714e9c360c6907bec70773037c6250d2183f38b201",
-    "mihomo/ads-block-classical.txt": "1e04c2fc7fb1cf32750431c21fcaad3298b3ee897a57144239e7276564f4a632",
-    "mihomo/ads-block-domain.txt": "f5e4f88656c3865aca13974eea823a7f0ea742be67db56687e135794a4efa45e",
-    "mihomo/ads-block-important-classical.txt": "7206f10d71d415dbbb4580714e9c360c6907bec70773037c6250d2183f38b201",
-    "mihomo/ads-block-important-domain.txt": "7206f10d71d415dbbb4580714e9c360c6907bec70773037c6250d2183f38b201",
-    "mihomo/ads-boki.yaml": "f8fc74b339f833bc630cbfd06d1d690cea861f5bbaf60b4e1abfae552ec64515",
-    "mihomo/ads-ghfast.yaml": "e5a26f3f9eebb75dbc49fcd74bcf7029006d9c708330addef6dddbcad7f3b827",
-    "mihomo/ads-unwelcome-allow-classical.txt": "939c98cf87f93247387ab6a5cd3341ae8b5aa2a02cd239c424a6a51bc86298f5",
-    "mihomo/ads-unwelcome-allow-domain.txt": "939c98cf87f93247387ab6a5cd3341ae8b5aa2a02cd239c424a6a51bc86298f5",
-    "mihomo/ads-unwelcome-allow-important-classical.txt": "939c98cf87f93247387ab6a5cd3341ae8b5aa2a02cd239c424a6a51bc86298f5",
-    "mihomo/ads-unwelcome-allow-important-domain.txt": "939c98cf87f93247387ab6a5cd3341ae8b5aa2a02cd239c424a6a51bc86298f5",
-    "mihomo/ads-unwelcome-block-classical.txt": "bf42247f1ef083248db341cd13783c534657d83497bd58d453e2bf810c68dbf8",
-    "mihomo/ads-unwelcome-block-domain.txt": "963bb2a740fd6a4488c459e3a9ac61c2b4e7ad58a85a4a7712ce620a90af6567",
-    "mihomo/ads-unwelcome-block-important-classical.txt": "939c98cf87f93247387ab6a5cd3341ae8b5aa2a02cd239c424a6a51bc86298f5",
-    "mihomo/ads-unwelcome-block-important-domain.txt": "939c98cf87f93247387ab6a5cd3341ae8b5aa2a02cd239c424a6a51bc86298f5",
-    "mihomo/ads-unwelcome-boki.yaml": "5a0a8198ae031eb5cc20052ed46d8ac3f37c99ace0ff49dbaceb4ef654ddcade",
-    "mihomo/ads-unwelcome-ghfast.yaml": "174fff03267255f9cd4493c2131794cdcea8c2019b8ead949fb9b3497a864ac5",
-    "mihomo/ads-unwelcome.yaml": "0cc5a684efdefd230c6628f43c1558f8912f30ed2d94149311c70408936915f6",
-    "mihomo/ads.yaml": "404256b20eaf545f4ccc21bf676225dafc0a157e81f89c64159e1d7865eaf298",
-    "mihomo/awa-full-allow-classical.txt": "54a9e6b47e8d23087cb36af6a51a486eca621a6dab176b873daa8e1a7bf359d9",
-    "mihomo/awa-full-allow-domain.txt": "54a9e6b47e8d23087cb36af6a51a486eca621a6dab176b873daa8e1a7bf359d9",
-    "mihomo/awa-full-allow-important-classical.txt": "54a9e6b47e8d23087cb36af6a51a486eca621a6dab176b873daa8e1a7bf359d9",
-    "mihomo/awa-full-allow-important-domain.txt": "54a9e6b47e8d23087cb36af6a51a486eca621a6dab176b873daa8e1a7bf359d9",
-    "mihomo/awa-full-block-classical.txt": "44225f1fc7304b85dd8556dfe1ad9e1f16b225afe0b3391e2556d67a3b8d6b44",
-    "mihomo/awa-full-block-domain.txt": "a9430b35e39cf6b43a073551358bb3ff1b33e70fe4f9f896f5f40aac4fc25fa9",
-    "mihomo/awa-full-block-important-classical.txt": "54a9e6b47e8d23087cb36af6a51a486eca621a6dab176b873daa8e1a7bf359d9",
-    "mihomo/awa-full-block-important-domain.txt": "54a9e6b47e8d23087cb36af6a51a486eca621a6dab176b873daa8e1a7bf359d9",
-    "mihomo/awa-full-boki.yaml": "21a05ffe3e7eceb3bfd3c08d862657db027cd3f1cf7034afa76b236dd39222c1",
-    "mihomo/awa-full-ghfast.yaml": "4f04083f8a0733579eb59c928e7de5df09fce09505dedc36052f614d55bb0889",
-    "mihomo/awa-full.yaml": "3dd8ce2ce5894bc289f80c91989c0427420daf43851ec251ae633036ba37b7be",
-    "mihomo/china-allow-classical.txt": "34f957f97ed74e97c735ee4d7de3df415f6b69bbedfa134097ac43bd2b676673",
-    "mihomo/china-allow-domain.txt": "34f957f97ed74e97c735ee4d7de3df415f6b69bbedfa134097ac43bd2b676673",
-    "mihomo/china-allow-important-classical.txt": "34f957f97ed74e97c735ee4d7de3df415f6b69bbedfa134097ac43bd2b676673",
-    "mihomo/china-allow-important-domain.txt": "34f957f97ed74e97c735ee4d7de3df415f6b69bbedfa134097ac43bd2b676673",
-    "mihomo/china-block-classical.txt": "a521674eb4209d2de2fbfc3b6d926c2ad37bd34a0d6b849e63551a18f6e6d15e",
-    "mihomo/china-block-domain.txt": "434d79a5c916f50b92a22e6a00aeeac788303fa05beb90c18f912d21f061374e",
-    "mihomo/china-block-important-classical.txt": "34f957f97ed74e97c735ee4d7de3df415f6b69bbedfa134097ac43bd2b676673",
-    "mihomo/china-block-important-domain.txt": "34f957f97ed74e97c735ee4d7de3df415f6b69bbedfa134097ac43bd2b676673",
-    "mihomo/china-boki.yaml": "b3d32a19e0bbdb29ccd4b16e125b6c6fccf275d148bc90881d749cd6ff22d4e3",
-    "mihomo/china-ghfast.yaml": "396b62ca82ad7b295db7fa995a03a3496d48090489fbb34ba2bee5a669f33cd5",
-    "mihomo/china.yaml": "6c9bb0917ce8ad26247a6dd2c80b9b26c65448145cc8df697ee009d1dd2e377c",
-    "mihomo/combined-allow-classical.txt": "cecb98c68a9fc41cda87491a037782bfe814a24c5764a96a407ba9900b9676bc",
-    "mihomo/combined-allow-domain.txt": "cecb98c68a9fc41cda87491a037782bfe814a24c5764a96a407ba9900b9676bc",
-    "mihomo/combined-allow-important-classical.txt": "cecb98c68a9fc41cda87491a037782bfe814a24c5764a96a407ba9900b9676bc",
-    "mihomo/combined-allow-important-domain.txt": "cecb98c68a9fc41cda87491a037782bfe814a24c5764a96a407ba9900b9676bc",
-    "mihomo/combined-block-classical.txt": "78ae4702fbf2f6bb677d4f3005dc59f506759b29e1c7ce6e7aaddd6cf8760587",
-    "mihomo/combined-block-domain.txt": "3dcffe76d7a716f562a8e28928874d5250f76c7efdac06709d2129d147633da2",
-    "mihomo/combined-block-important-classical.txt": "cecb98c68a9fc41cda87491a037782bfe814a24c5764a96a407ba9900b9676bc",
-    "mihomo/combined-block-important-domain.txt": "cecb98c68a9fc41cda87491a037782bfe814a24c5764a96a407ba9900b9676bc",
-    "mihomo/combined-boki.yaml": "37d805b94f414121ff9f3425890c2c7668f46916c67b77759520edd393574b53",
-    "mihomo/combined-ghfast.yaml": "44bc5ba57d0837b6eac13b92be6e1a39c474d72fc9ea97175f103a0db1ff3d76",
-    "mihomo/combined.yaml": "fd716a9d995a3ca2a62bf7109c711e8d1af3d03451c0f3c8b9271d64e0b7ea93",
-    "mihomo/full-allow-classical.txt": "113da6e3a55866314c7b7d9a08adc13ca6c2e3444c39074589a959e888735550",
-    "mihomo/full-allow-domain.txt": "113da6e3a55866314c7b7d9a08adc13ca6c2e3444c39074589a959e888735550",
-    "mihomo/full-allow-important-classical.txt": "113da6e3a55866314c7b7d9a08adc13ca6c2e3444c39074589a959e888735550",
-    "mihomo/full-allow-important-domain.txt": "b3d7baec874f2a2e46d471bb59c6808a12aa608ddd377beb5769db9cbb85208f",
-    "mihomo/full-block-classical.txt": "b18ae1399cf77712a6b841ff552375395de16d72bed8876ad961218e6a84369e",
-    "mihomo/full-block-domain.txt": "7ddd339d9b6b13c8c1273e3c21e3a80e6296b49702d07ff14bbb554dd84c68ed",
-    "mihomo/full-block-important-classical.txt": "cd56b27cbb507914b8726c685c64a6c45812c77869e7b939c5a0ea68e90c95db",
-    "mihomo/full-block-important-domain.txt": "4d818cc47839c8c44c8e4c0c2e979e6c88e153529d026351073f901700ed73a6",
+    "browser/combined.txt": "02dac52fb0d9d4b4c265034f57d3d392bb0c1720f7e5b32e3898d7e8f60cc406",
+    "full.txt": "d0e9217f93423b2c9d171a96fb69c88f661ed35c2ce8c103ae68937d48af4fce",
+    "mihomo/full-allow-classical.txt": "8d9f6561433495f4282b64aa8ada5299f5c3eeeb07d6d2a05ad4a8da0c6ae1c5",
+    "mihomo/full-allow-domain.txt": "8d9f6561433495f4282b64aa8ada5299f5c3eeeb07d6d2a05ad4a8da0c6ae1c5",
+    "mihomo/full-allow-important-classical.txt": "8d9f6561433495f4282b64aa8ada5299f5c3eeeb07d6d2a05ad4a8da0c6ae1c5",
+    "mihomo/full-allow-important-domain.txt": "25abe7bffd950d9a07ef2e14819598e7b34adf9f2fc9d5cdab94119ea43ac3b8",
+    "mihomo/full-block-classical.txt": "b06beaf698d6815fef8f3ba3b6bd39e7ae887afa8a3579c08dbc75f67fbbf327",
+    "mihomo/full-block-domain.txt": "2f0ae755cf4ebbc471dfb6be7408d81beae489be3e335315781c6072370fd497",
+    "mihomo/full-block-important-classical.txt": "38bd2ffe2f6111965b2a8577a5b2a977648b99ca790e0f1b65f4d41831080c93",
+    "mihomo/full-block-important-domain.txt": "3f9056c384eb86d40c1dc8a8ffb839b04762fb808b510ff8a701a664460825cd",
     "mihomo/full-boki.yaml": "cfbabca02c7b630c2f5843e33a533cdd242c9c5c1796b5132a15d68a41c0a93d",
     "mihomo/full-ghfast.yaml": "017d94348b9f6b5c3d98824617f09414652e833fc1cf4069df3506687f792704",
     "mihomo/full.yaml": "ca76e0f750d7b8fabe9e69d6679870548f3935fcb97a12b00a010d6b46b99874",
-    "mihomo/oisd-allow-classical.txt": "7a0f886c10f74c4b578e76d8f6a4ba9a162b26c16020c470a15d67150f465362",
-    "mihomo/oisd-allow-domain.txt": "7a0f886c10f74c4b578e76d8f6a4ba9a162b26c16020c470a15d67150f465362",
-    "mihomo/oisd-allow-important-classical.txt": "7a0f886c10f74c4b578e76d8f6a4ba9a162b26c16020c470a15d67150f465362",
-    "mihomo/oisd-allow-important-domain.txt": "7a0f886c10f74c4b578e76d8f6a4ba9a162b26c16020c470a15d67150f465362",
-    "mihomo/oisd-block-classical.txt": "7a0f886c10f74c4b578e76d8f6a4ba9a162b26c16020c470a15d67150f465362",
-    "mihomo/oisd-block-domain.txt": "f32fa5ab52ae9f695611f0a94f55d656c280b4b61fa08cbbeed0ba2d24a952a7",
-    "mihomo/oisd-block-important-classical.txt": "7a0f886c10f74c4b578e76d8f6a4ba9a162b26c16020c470a15d67150f465362",
-    "mihomo/oisd-block-important-domain.txt": "7a0f886c10f74c4b578e76d8f6a4ba9a162b26c16020c470a15d67150f465362",
-    "mihomo/oisd-boki.yaml": "3c6c215e3b1896ca3d2a5092d053e0fc1dbd3bc1f1a3e88404a539476fb45e8f",
-    "mihomo/oisd-ghfast.yaml": "cdbf28871e4be69a2536ef497aef569a3625982e98108fdf47e674ade474d193",
-    "mihomo/oisd.yaml": "dd8c5ae68cd176a12872b4526d54548e1bc00fe127e13dd8a61fd603ce6863ac",
-    "mihomo/pcdn-allow-classical.txt": "1a776fe110d7e55a9ba7ca35968d9876f7475450cb8d82818f686c40e840f1c5",
-    "mihomo/pcdn-allow-domain.txt": "1a776fe110d7e55a9ba7ca35968d9876f7475450cb8d82818f686c40e840f1c5",
-    "mihomo/pcdn-allow-important-classical.txt": "1a776fe110d7e55a9ba7ca35968d9876f7475450cb8d82818f686c40e840f1c5",
-    "mihomo/pcdn-allow-important-domain.txt": "5c55ff1a41271d3366b0445244a6467f0b6ce1f53434923289214c684e2f273d",
-    "mihomo/pcdn-block-classical.txt": "1a776fe110d7e55a9ba7ca35968d9876f7475450cb8d82818f686c40e840f1c5",
-    "mihomo/pcdn-block-domain.txt": "1a776fe110d7e55a9ba7ca35968d9876f7475450cb8d82818f686c40e840f1c5",
-    "mihomo/pcdn-block-important-classical.txt": "d8c2d4637368076e1d5a3058a1ea3ad581f418876d9fcde13dc376c687ad6f9a",
-    "mihomo/pcdn-block-important-domain.txt": "9fdb642c4a23ba55c401086a0beb60ff6d741a211ff24e4e914721cc632ee6f2",
-    "mihomo/pcdn-boki.yaml": "8557d9305cfcd2c9d030c29f9d5eed84aa55ff3ef9bf2f3835e2735d978a9179",
-    "mihomo/pcdn-ghfast.yaml": "a3489f304fe5428ce75842995e3e0b5624657d221ef471743c243be7c3d351ae",
-    "mihomo/pcdn.yaml": "0b8ad0d55f159ba58be86f147243fcff5017684182177918335f8356e02269cf",
-    "oisd.txt": "df6765d33c7f98d91a240b19887916fa1dcf9e2b2bb4b14d62a72a54c41ad000",
-    "pcdn.txt": "9832d020ceaade17d4cf1aebafc6a581e311aa9c8b6001d60bec5e57d4935b5a",
-    "report.json": "bec6c5fd2ea69e672511f08d47c8b6a19896bf585df7e12a4e64883c88b79a51"
+    "report.json": "764321d9c30e4dc5e1eee93cca354601139579f8d61021ab7abae2f08601b382"
   }
 }

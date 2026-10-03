@@ -1,6 +1,6 @@
 [Adblock Plus 2.0]
 ! Title: 浏览器合并
-! Updated: 2026-10-03T14:15:11+00:00
+! Updated: 2026-10-03T14:41:25+00:00
 ! Expires: 1 day
 ! This project only merges upstream rules; original authors retain credit.
 ! Description: 浏览器专用，不能用于 AdGuard Home。

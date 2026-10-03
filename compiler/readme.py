@@ -29,7 +29,7 @@ def subscription_links(repository: str, path: str, mihomo: bool = False) -> str:
     raw = root + path
     boki = root + path.removesuffix(".yaml") + "-boki.yaml" if mihomo else raw
     ghfast = root + path.removesuffix(".yaml") + "-ghfast.yaml" if mihomo else raw
-    return f"[原始]({raw}) / [Boki](https://github.boki.moe/{boki}) / [GHFast](https://ghfast.top/{ghfast})"
+    return f"[订阅]({raw}) | [Boki](https://github.boki.moe/{boki}) | [GHFast](https://ghfast.top/{ghfast})"
 
 
 def readme(catalog: dict, manifest: dict | None, attempt: dict) -> str:
@@ -46,44 +46,71 @@ def readme(catalog: dict, manifest: dict | None, attempt: dict) -> str:
         state = "已构建，部分源使用缓存"
     lines = [
         '<div align="center">', "", "<h1>AdGuard Home 合并规则</h1>", "",
-        "仅合并、去重与格式转换。规则由上游作者维护。", "", "</div>", "",
-        f"**订阅更新：{published}** · 每天 **04:23** 自动构建（北京时间）。",
-        f"[自动构建：{state}]({workflow}) · [构建报告](dist/report.json)", "",
-        "## 订阅", "",
-        "优先选择 **纯广告**。AdGuard Home 添加到「DNS 黑名单」；mihomo 使用对应配置片段。",
-        "", "| 订阅 | 条目数 | 主要内容 | AdGuard Home | mihomo |",
+        "合并上游规则，独立去重，每日自动更新。", "", "</div>", "",
+        f"更新：**{published}**（北京时间） · [构建状态：{state}]({workflow})", "",
+        "## AdGuard Home", "",
+        "推荐从 **纯广告** 开始，添加到「DNS 黑名单」。每个方案已保留上游例外。",
+        "", "| 订阅 | 规则数 | 原始链接 | 加速 1 | 加速 2 |",
         "|---|---:|---|---|---|",
     ]
     for profile in catalog["profiles"]:
         pid = profile["id"]
-        name, purpose = SUMMARY.get(pid, (profile["name"], profile.get("description", "")))
+        name = SUMMARY.get(pid, (profile["name"], ""))[0]
         output = profiles.get(pid)
         count = f"{output['rules']:,}" if output else "未发布"
-        dns = subscription_links(repository, pid + ".txt") if output else "—"
-        mihomo = subscription_links(repository, "mihomo/" + pid + ".yaml", True) if output else "—"
-        lines.append(f"| {name} | {count} | {purpose} | {dns} | {mihomo} |")
+        dns = subscription_links(repository, pid + ".txt") if output else "— | — | —"
+        lines.append(f"| {name} | {count} | {dns} |")
     lines += [
-        "", "数量为去重后的规则行，包含例外；通配符规则不等于一个域名。",
-        "**PCDN、含「不受欢迎」及全量方案可能影响视频、更新或推送，按需使用。**", "",
+        "", "规则数包含拦截与例外。PCDN、含「不受欢迎」及全量方案按需使用，可能影响视频、更新或推送。", "",
+        "<details>", "<summary>mihomo 订阅</summary>", "",
+        "将配置片段中的 `rule-providers` 和 `rules` 合并到现有配置，放在兜底规则前。",
+        "例外继续后续分流，不强制 DIRECT。", "",
+        "| 订阅 | 原始配置 | 加速 1 | 加速 2 |", "|---|---|---|---|",
+    ]
+    for profile in catalog["profiles"]:
+        pid = profile["id"]
+        name = SUMMARY.get(pid, (profile["name"], ""))[0]
+        link = subscription_links(repository, "mihomo/" + pid + ".yaml", True) if pid in profiles else "— | — | —"
+        lines.append(f"| {name} | {link} |")
+    lines += ["", "</details>", "", "<details>", "<summary>规则数量怎么算？</summary>", ""]
+    full = profiles.get("full")
+    if full:
+        inputs = sum(sources[sid]["dns_usable"] for sid in full["sources"])
+        lines += [f"DNS 全量 **{full['rules']:,} 条**，包含 **{full['block']:,} 条拦截**和 **{full['allow']:,} 条例外**。", "",
+                  "| 全量使用的来源 | 原始有效行 | 源内去重后的 DNS 规则 |", "|---|---:|---:|"]
+        for sid in full["sources"]:
+            record = sources[sid]
+            lines.append(f"| {record['name']} | {record['active']:,} | {record['dns_usable']:,} |")
+        lines += ["", f"源内去重后共 **{inputs:,} 条**，再去除 **{inputs - full['rules']:,} 条跨源重复**，发布 **{full['rules']:,} 条**。"]
+    else:
+        lines += ["DNS 全量尚未成功发布。"]
+    browser_full = browsers.get("combined")
+    if browser_full:
+        lines += ["", f"浏览器合并版 **{browser_full['rules']:,} 条**单独统计，保留网页元素、路径、脚本和例外规则。"]
+    lines += ["", "秋风四种方案存在重叠，全量选用完整版本；各订阅之间也有重叠，不能将表中数量直接相加。",
+              "浏览器规则含无法在 DNS 层保留原范围的条件与例外，因此单独输出。"]
+    if full:
+        paths = sum(sources[sid].get("skipped", {}).get("url-path", 0) for sid in full["sources"])
+        if paths:
+            lines += [f"另外跳过了 **{paths} 条带 URL 路径的规则**，保留其原始范围，没有扩大为整站拦截。"]
+    lines += ["", "[完整构建报告](dist/report.json)", "", "</details>", "",
         "<details>", "<summary>使用说明与合并方式</summary>", "",
         "- 每次选择一个主方案；PCDN 可单独加订。秋风的四个版本互不混用。",
         "- AdGuard Home 文件保留 `@@` 例外，无需另加同一份白名单。",
-        "- mihomo 将 `rule-providers` 和 `rules` 合并到现有配置，拦截规则放在兜底规则前。例外继续后续分流，不强制 DIRECT。",
         "- 各订阅独立去重；不裁剪父子域名覆盖关系，不把 URL 路径扩大成整站拦截。",
         "- 下载或校验异常时使用 72 小时内的已校验缓存；缓存不可用则停止发布，保留上一版。",
         "- 语法和样例检查不能保证没有误拦截；加速线路异常时使用原始链接。", "", "</details>", "",
         "<details>", "<summary>浏览器专用规则</summary>", "",
         "仅供浏览器拦截器使用，**不能导入 AdGuard Home**。网页元素、路径、脚本和例外规则均保留。", "",
-        "| 分类 | 条目数 | 订阅 |", "|---|---:|---|",
+        "| 分类 | 规则数 | 原始链接 | 加速 1 | 加速 2 |", "|---|---:|---|---|---|",
     ]
     for profile in catalog["browser_profiles"]:
         output = browsers.get(profile["id"])
         count = f"{output['rules']:,}" if output else "未发布"
-        link = subscription_links(repository, "browser/" + profile["id"] + ".txt") if output else "—"
+        link = subscription_links(repository, "browser/" + profile["id"] + ".txt") if output else "— | — | —"
         lines.append(f"| {profile['name']} | {count} | {link} |")
-    lines += ["", "</details>", "", "## 上游来源", "",
-              f"共 **{len(catalog['sources'])} 个订阅地址**。本项目仅做合并，作者与许可说明保留在输出文件中。", "",
-              "<details>", "<summary>查看全部来源、作者与分类</summary>", "",
+    lines += ["", "</details>", "", "<details>", "<summary>上游来源与作者</summary>", "",
+              f"共 **{len(catalog['sources'])} 个订阅地址**。本项目仅做合并，规则由下列上游作者维护。", "",
               "| 作者 / 项目 | 原始规则 | 分类 | DNS 可用条目 |", "|---|---|---|---:|"]
     for source in catalog["sources"]:
         count = sources.get(source["id"], {}).get("dns_usable")
@@ -97,7 +124,8 @@ def readme(catalog: dict, manifest: dict | None, attempt: dict) -> str:
               "本地使用 Python 3.12、Go 1.27.1；Python 合并程序无需 pip 依赖。", "",
               "```powershell", "python tools/install_engines.py", "python compile_rules.py", "```", "",
               "已登录 GitHub CLI 时，可使用 `python compile_rules.py --github-api` 下载相同上游文件。",
-              "修改来源或分类后，提交 `sources.json` 即可触发自动构建。", "", "</details>", ""]
+              "修改来源或分类后，提交 `sources.json` 即可触发自动构建。每天北京时间 **04:23** 自动更新。",
+              "", "</details>", ""]
     if attempt.get("errors"):
         lines += ["<details>", f"<summary>最近构建问题（{local_time(attempt['attempted_at'])}）</summary>", ""]
         lines += [f"- {sid}: {str(error).replace(chr(10), ' ')[:300]}" for sid, error in attempt["errors"].items()]

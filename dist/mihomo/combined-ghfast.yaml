@@ -1,61 +1,72 @@
-# Merge these providers and rules into your existing mihomo configuration.
-rule-providers:
-  compiled-combined-block:
-    type: "http"
-    behavior: "domain"
-    format: "mrs"
-    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/combined.mrs"
-    path: "./rule_provider/compiled/combined.mrs"
-    interval: 86400
-  compiled-combined-block-regex:
-    type: "http"
-    behavior: "classical"
-    format: "text"
-    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/combined-regex.txt"
-    path: "./rule_provider/compiled/combined-regex.txt"
-    interval: 86400
-  compiled-combined-allow:
-    type: "http"
-    behavior: "domain"
-    format: "mrs"
-    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/combined-allow.mrs"
-    path: "./rule_provider/compiled/combined-allow.mrs"
-    interval: 86400
-  compiled-combined-allow-regex:
-    type: "http"
-    behavior: "classical"
-    format: "text"
-    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/combined-allow-regex.txt"
-    path: "./rule_provider/compiled/combined-allow-regex.txt"
-    interval: 86400
-  compiled-combined-block-important:
-    type: "http"
-    behavior: "domain"
-    format: "mrs"
-    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/combined-block-important.mrs"
-    path: "./rule_provider/compiled/combined-block-important.mrs"
-    interval: 86400
-  compiled-combined-block-important-regex:
-    type: "http"
-    behavior: "classical"
-    format: "text"
-    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/combined-block-important-regex.txt"
-    path: "./rule_provider/compiled/combined-block-important-regex.txt"
-    interval: 86400
-  compiled-combined-allow-important:
-    type: "http"
-    behavior: "domain"
-    format: "mrs"
-    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/combined-allow-important.mrs"
-    path: "./rule_provider/compiled/combined-allow-important.mrs"
-    interval: 86400
-  compiled-combined-allow-important-regex:
-    type: "http"
-    behavior: "classical"
-    format: "text"
-    url: "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/combined-allow-important-regex.txt"
-    path: "./rule_provider/compiled/combined-allow-important-regex.txt"
-    interval: 86400
-rules:
-  - "AND,((OR,((RULE-SET,compiled-combined-block-important),(RULE-SET,compiled-combined-block-important-regex))),(NOT,((OR,((RULE-SET,compiled-combined-allow-important),(RULE-SET,compiled-combined-allow-important-regex)))))),REJECT"
-  - "AND,((OR,((RULE-SET,compiled-combined-block),(RULE-SET,compiled-combined-block-regex))),(NOT,((OR,((RULE-SET,compiled-combined-allow),(RULE-SET,compiled-combined-allow-regex))))),(NOT,((OR,((RULE-SET,compiled-combined-allow-important),(RULE-SET,compiled-combined-allow-important-regex)))))),REJECT"
+{
+  "rule-providers": {
+    "combined-block-domain": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/combined-block-domain.txt",
+      "path": "./rule_provider/excel/combined-block-domain.txt"
+    },
+    "combined-block-classical": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/combined-block-classical.txt",
+      "path": "./rule_provider/excel/combined-block-classical.txt"
+    },
+    "combined-allow-domain": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/combined-allow-domain.txt",
+      "path": "./rule_provider/excel/combined-allow-domain.txt"
+    },
+    "combined-allow-classical": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/combined-allow-classical.txt",
+      "path": "./rule_provider/excel/combined-allow-classical.txt"
+    },
+    "combined-block-important-domain": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/combined-block-important-domain.txt",
+      "path": "./rule_provider/excel/combined-block-important-domain.txt"
+    },
+    "combined-block-important-classical": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/combined-block-important-classical.txt",
+      "path": "./rule_provider/excel/combined-block-important-classical.txt"
+    },
+    "combined-allow-important-domain": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/combined-allow-important-domain.txt",
+      "path": "./rule_provider/excel/combined-allow-important-domain.txt"
+    },
+    "combined-allow-important-classical": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/combined-allow-important-classical.txt",
+      "path": "./rule_provider/excel/combined-allow-important-classical.txt"
+    }
+  },
+  "rules": [
+    "AND,((OR,((RULE-SET,combined-block-important-domain),(RULE-SET,combined-block-important-classical))),(NOT,((OR,((RULE-SET,combined-allow-important-domain),(RULE-SET,combined-allow-important-classical)))))),REJECT",
+    "AND,((OR,((RULE-SET,combined-block-domain),(RULE-SET,combined-block-classical))),(NOT,((OR,((RULE-SET,combined-allow-important-domain),(RULE-SET,combined-allow-important-classical))))),(NOT,((OR,((RULE-SET,combined-allow-domain),(RULE-SET,combined-allow-classical)))))),REJECT"
+  ]
+}

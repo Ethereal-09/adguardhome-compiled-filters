@@ -1,0 +1,72 @@
+{
+  "rule-providers": {
+    "pcdn-block-domain": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/pcdn-block-domain.txt",
+      "path": "./rule_provider/excel/pcdn-block-domain.txt"
+    },
+    "pcdn-block-classical": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/pcdn-block-classical.txt",
+      "path": "./rule_provider/excel/pcdn-block-classical.txt"
+    },
+    "pcdn-allow-domain": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/pcdn-allow-domain.txt",
+      "path": "./rule_provider/excel/pcdn-allow-domain.txt"
+    },
+    "pcdn-allow-classical": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/pcdn-allow-classical.txt",
+      "path": "./rule_provider/excel/pcdn-allow-classical.txt"
+    },
+    "pcdn-block-important-domain": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/pcdn-block-important-domain.txt",
+      "path": "./rule_provider/excel/pcdn-block-important-domain.txt"
+    },
+    "pcdn-block-important-classical": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/pcdn-block-important-classical.txt",
+      "path": "./rule_provider/excel/pcdn-block-important-classical.txt"
+    },
+    "pcdn-allow-important-domain": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/pcdn-allow-important-domain.txt",
+      "path": "./rule_provider/excel/pcdn-allow-important-domain.txt"
+    },
+    "pcdn-allow-important-classical": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/pcdn-allow-important-classical.txt",
+      "path": "./rule_provider/excel/pcdn-allow-important-classical.txt"
+    }
+  },
+  "rules": [
+    "AND,((OR,((RULE-SET,pcdn-block-important-domain),(RULE-SET,pcdn-block-important-classical))),(NOT,((OR,((RULE-SET,pcdn-allow-important-domain),(RULE-SET,pcdn-allow-important-classical)))))),REJECT",
+    "AND,((OR,((RULE-SET,pcdn-block-domain),(RULE-SET,pcdn-block-classical))),(NOT,((OR,((RULE-SET,pcdn-allow-important-domain),(RULE-SET,pcdn-allow-important-classical))))),(NOT,((OR,((RULE-SET,pcdn-allow-domain),(RULE-SET,pcdn-allow-classical)))))),REJECT"
+  ]
+}

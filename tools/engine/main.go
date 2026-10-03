@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-3.0-or-later
-// The version below matches AdGuard Home v0.107.79's filtering dependency.
+// Audit compiled subscriptions with the pinned official AdGuard DNS engine.
 package main
 
 import (
@@ -7,7 +7,6 @@ import (
 	"encoding/json"
 	"flag"
 	"fmt"
-	"io"
 	"os"
 	"regexp"
 	"strings"
@@ -17,110 +16,98 @@ import (
 	"github.com/AdguardTeam/urlfilter/rules"
 )
 
-const engineVersion = "AdguardTeam/urlfilter v0.23.4"
-
-func validate(line string) error {
-	r, err := rules.NewNetworkRule(line, 1)
+func hostRule(text string) error {
+	rule, err := rules.NewNetworkRule(text, 1)
 	if err != nil {
 		return err
 	}
-	if !r.IsHostLevelNetworkRule() {
-		return fmt.Errorf("not a DNS host-level rule")
+	if !rule.IsHostLevelNetworkRule() {
+		return fmt.Errorf("rule has non-DNS scope")
 	}
-	pattern := strings.TrimSuffix(strings.TrimPrefix(line, "@@"), "$important")
+	pattern := strings.TrimSuffix(strings.TrimPrefix(text, "@@"), "$important")
 	if strings.HasPrefix(pattern, "/") && strings.HasSuffix(pattern, "/") {
-		// urlfilter compiles regex lazily and silently makes invalid patterns
-		// non-matching.  Explicitly use the same Go regexp implementation here.
 		_, err = regexp.Compile("(?i)" + pattern[1:len(pattern)-1])
-		return err
 	}
-	return nil
+	return err
 }
 
-func validateInput(input io.Reader) int {
-	scanner := bufio.NewScanner(input)
-	scanner.Buffer(make([]byte, 4096), 1024*1024)
-	count, invalid, number := 0, 0, 0
-	errors := []string{}
-	for scanner.Scan() {
-		number++
-		line := strings.TrimSpace(scanner.Text())
-		if line == "" || strings.HasPrefix(line, "!") || strings.HasPrefix(line, "#") {
-			continue
-		}
-		count++
-		if err := validate(line); err != nil {
-			invalid++
-			if len(errors) < 10 {
-				errors = append(errors, fmt.Sprintf("line %d: %s: %v", number, line, err))
-			}
-		}
-	}
-	if err := scanner.Err(); err != nil {
-		invalid++
-		errors = append(errors, err.Error())
-	}
-	_ = json.NewEncoder(os.Stdout).Encode(map[string]any{
-		"engine": engineVersion, "checked": count, "invalid": invalid, "errors": errors,
-	})
-	if invalid != 0 {
-		return 1
-	}
-	return 0
+type probe struct {
+	Rules []string `json:"rules"`
+	Hosts []string `json:"hosts"`
 }
 
-func decisions(lines, hosts []string) ([]bool, error) {
-	for _, line := range lines {
-		if err := validate(line); err != nil {
+func evaluate(p probe) ([]bool, error) {
+	for _, text := range p.Rules {
+		if err := hostRule(text); err != nil {
 			return nil, err
 		}
 	}
-	list := filterlist.NewString(&filterlist.StringConfig{
-		RulesText: strings.Join(lines, "\n"), ID: 1, IgnoreCosmetic: true,
-	})
+	list := filterlist.NewString(&filterlist.StringConfig{RulesText: strings.Join(p.Rules, "\n"), ID: 1, IgnoreCosmetic: true})
 	storage, err := filterlist.NewRuleStorage([]filterlist.Interface{list})
 	if err != nil {
 		return nil, err
 	}
 	defer storage.Close()
 	engine := urlfilter.NewDNSEngine(storage)
-	result := make([]bool, len(hosts))
-	for i, host := range hosts {
-		res, matched := engine.Match(host)
-		result[i] = matched && res.NetworkRule != nil && !res.NetworkRule.Whitelist
+	output := make([]bool, len(p.Hosts))
+	for index, host := range p.Hosts {
+		result, matched := engine.Match(host)
+		output[index] = matched && result.NetworkRule != nil && !result.NetworkRule.Whitelist
 	}
-	return result, nil
+	return output, nil
 }
 
-type matchCase struct {
-	Rules []string `json:"rules"`
-	Hosts []string `json:"hosts"`
-}
-
-func matchInput() int {
-	var cases []matchCase
-	if err := json.NewDecoder(os.Stdin).Decode(&cases); err != nil {
-		fmt.Fprintln(os.Stderr, err)
-		return 1
+func execute(matching bool) error {
+	if matching {
+		var input []probe
+		if err := json.NewDecoder(os.Stdin).Decode(&input); err != nil {
+			return err
+		}
+		output := make([][]bool, len(input))
+		for i, p := range input {
+			result, err := evaluate(p)
+			if err != nil {
+				return err
+			}
+			output[i] = result
+		}
+		return json.NewEncoder(os.Stdout).Encode(output)
 	}
-	results := make([][]bool, len(cases))
-	for i, c := range cases {
-		var err error
-		results[i], err = decisions(c.Rules, c.Hosts)
-		if err != nil {
-			fmt.Fprintln(os.Stderr, err)
-			return 1
+	scanner := bufio.NewScanner(os.Stdin)
+	scanner.Buffer(make([]byte, 4096), 1024*1024)
+	checked, invalid := 0, 0
+	issues := []string{}
+	for scanner.Scan() {
+		text := strings.TrimSpace(scanner.Text())
+		if text == "" || strings.HasPrefix(text, "!") || strings.HasPrefix(text, "#") {
+			continue
+		}
+		checked++
+		if err := hostRule(text); err != nil {
+			invalid++
+			if len(issues) < 12 {
+				issues = append(issues, text+": "+err.Error())
+			}
 		}
 	}
-	_ = json.NewEncoder(os.Stdout).Encode(results)
-	return 0
+	if err := scanner.Err(); err != nil {
+		return err
+	}
+	report := map[string]any{"engine": "AdguardTeam/urlfilter v0.23.4", "checked": checked, "invalid": invalid, "errors": issues}
+	if err := json.NewEncoder(os.Stdout).Encode(report); err != nil {
+		return err
+	}
+	if invalid != 0 {
+		return fmt.Errorf("%d invalid DNS rules", invalid)
+	}
+	return nil
 }
 
 func main() {
-	match := flag.Bool("match", false, "Evaluate JSON rule/hostname cases using AdGuard DNSEngine")
+	matching := flag.Bool("match", false, "Match JSON arrays of rules and hostnames")
 	flag.Parse()
-	if *match {
-		os.Exit(matchInput())
+	if err := execute(*matching); err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(1)
 	}
-	os.Exit(validateInput(os.Stdin))
 }

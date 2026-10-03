@@ -1,31 +1,31 @@
 package main
 
-import "testing"
+import (
+	"reflect"
+	"testing"
+)
 
-func TestRegexValidation(t *testing.T) {
-	for _, line := range []string{"/[/", "/(?=ads)/", "@@/[/"} {
-		if validate(line) == nil {
-			t.Fatalf("accepted invalid Go regex: %s", line)
-		}
+func TestActualHostScopeAndExceptions(t *testing.T) {
+	p := probe{
+		Rules: []string{"|exact.example.com|", "||ads.example.com^$important", "@@||safe.ads.example.com^$important"},
+		Hosts: []string{"example.com", "exact.example.com", "x.exact.example.com", "ads.example.com", "x.ads.example.com", "safe.ads.example.com"},
 	}
-	for _, line := range []string{"/^ads[0-9]+\\.example$/", "@@||safe.example^$important"} {
-		if err := validate(line); err != nil {
-			t.Fatalf("rejected %s: %v", line, err)
-		}
-	}
-}
-
-func TestSubdomainDoesNotBlockParent(t *testing.T) {
-	result, err := decisions([]string{"||ads.example.com^"}, []string{
-		"example.com", "www.example.com", "ads.example.com", "a.ads.example.com",
-	})
+	result, err := evaluate(p)
 	if err != nil {
 		t.Fatal(err)
 	}
-	expected := []bool{false, false, true, true}
-	for i := range expected {
-		if result[i] != expected[i] {
-			t.Fatalf("decision %d: got %t want %t", i, result[i], expected[i])
+	if !reflect.DeepEqual(result, []bool{false, true, false, true, true, false}) {
+		t.Fatal(result)
+	}
+}
+
+func TestGoRegexCannotFailSilently(t *testing.T) {
+	for _, text := range []string{"/[/", "/(?=ads)/", "@@/[/"} {
+		if hostRule(text) == nil {
+			t.Fatal("accepted invalid regex", text)
 		}
+	}
+	if err := hostRule("/^ads[0-9]+\\.example$/"); err != nil {
+		t.Fatal(err)
 	}
 }

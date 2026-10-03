@@ -1,0 +1,72 @@
+{
+  "rule-providers": {
+    "awa-full-block-domain": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/awa-full-block-domain.txt",
+      "path": "./rule_provider/excel/awa-full-block-domain.txt"
+    },
+    "awa-full-block-classical": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/awa-full-block-classical.txt",
+      "path": "./rule_provider/excel/awa-full-block-classical.txt"
+    },
+    "awa-full-allow-domain": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/awa-full-allow-domain.txt",
+      "path": "./rule_provider/excel/awa-full-allow-domain.txt"
+    },
+    "awa-full-allow-classical": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/awa-full-allow-classical.txt",
+      "path": "./rule_provider/excel/awa-full-allow-classical.txt"
+    },
+    "awa-full-block-important-domain": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/awa-full-block-important-domain.txt",
+      "path": "./rule_provider/excel/awa-full-block-important-domain.txt"
+    },
+    "awa-full-block-important-classical": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/awa-full-block-important-classical.txt",
+      "path": "./rule_provider/excel/awa-full-block-important-classical.txt"
+    },
+    "awa-full-allow-important-domain": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/awa-full-allow-important-domain.txt",
+      "path": "./rule_provider/excel/awa-full-allow-important-domain.txt"
+    },
+    "awa-full-allow-important-classical": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/awa-full-allow-important-classical.txt",
+      "path": "./rule_provider/excel/awa-full-allow-important-classical.txt"
+    }
+  },
+  "rules": [
+    "AND,((OR,((RULE-SET,awa-full-block-important-domain),(RULE-SET,awa-full-block-important-classical))),(NOT,((OR,((RULE-SET,awa-full-allow-important-domain),(RULE-SET,awa-full-allow-important-classical)))))),REJECT",
+    "AND,((OR,((RULE-SET,awa-full-block-domain),(RULE-SET,awa-full-block-classical))),(NOT,((OR,((RULE-SET,awa-full-allow-important-domain),(RULE-SET,awa-full-allow-important-classical))))),(NOT,((OR,((RULE-SET,awa-full-allow-domain),(RULE-SET,awa-full-allow-classical)))))),REJECT"
+  ]
+}

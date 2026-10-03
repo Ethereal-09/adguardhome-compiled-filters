@@ -1,0 +1,350 @@
+{
+  "workbook": "新建 Microsoft Excel 工作表.xlsx",
+  "sha256": "1dfdd099ee3901cff849674f5eb7508dce712e8f25281483d2928310672044f2",
+  "sources": [
+    {
+      "sheet": "Sheet1",
+      "row": 2,
+      "number": "1",
+      "repository": "https://github.com/Li-Dong-Don/AdGuard-BiliCDN-Rules",
+      "url": "https://raw.githubusercontent.com/tonydongguwpi/AdGuard-BiliCDN-Rules/refs/heads/main/adguard.txt",
+      "category": "PCDN",
+      "usage": "屏蔽PCDN域名",
+      "id": "bili-pcdn",
+      "mode": "mixed",
+      "author": "Li-Dong-Don/AdGuard-BiliCDN-Rules",
+      "license": "未声明",
+      "verified_at": "2026-10-03",
+      "file_updated_at": "2025-05-16T14:47:51Z",
+      "license_url": null,
+      "name": "BiliCDN PCDN",
+      "initial_active": 11,
+      "initial_allow": 3
+    },
+    {
+      "sheet": "Sheet1",
+      "row": 3,
+      "number": "2",
+      "repository": "https://github.com/xianhongtao/AdGuard-AntiPCDN-Rules",
+      "url": "https://raw.githubusercontent.com/xianhongtao/AdGuard-AntiPCDN-Rules/refs/heads/main/adguard.txt",
+      "category": "PCDN",
+      "usage": "屏蔽PCDN域名",
+      "id": "anti-pcdn",
+      "mode": "dns",
+      "author": "xianhongtao/AdGuard-AntiPCDN-Rules",
+      "license": "未声明",
+      "verified_at": "2026-10-03",
+      "file_updated_at": "2026-05-05T00:12:58Z",
+      "license_url": null,
+      "name": "AntiPCDN",
+      "initial_active": 34,
+      "initial_allow": 0
+    },
+    {
+      "sheet": "Sheet1",
+      "row": 4,
+      "number": "3",
+      "repository": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule",
+      "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt",
+      "category": "广告＋隐私＋不受欢迎 （不受欢迎指强制更新、P2P/PCDN、推送、云控下发一类）",
+      "usage": "默认完整体验",
+      "id": "awa-full",
+      "mode": "dns",
+      "author": "TG-Twilight/AWAvenue-Ads-Rule",
+      "license": "GPL-3.0",
+      "verified_at": "2026-10-03",
+      "file_updated_at": "2026-09-21T13:57:01Z",
+      "license_url": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE",
+      "name": "秋风完整",
+      "initial_active": 965,
+      "initial_allow": 0
+    },
+    {
+      "sheet": "Sheet1",
+      "row": 5,
+      "number": "4",
+      "repository": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule",
+      "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Adguard-Only.Ads.txt",
+      "category": "仅广告",
+      "usage": "兼容与最小干预优先",
+      "id": "awa-ads",
+      "mode": "dns",
+      "author": "TG-Twilight/AWAvenue-Ads-Rule",
+      "license": "GPL-3.0",
+      "verified_at": "2026-10-03",
+      "file_updated_at": "2026-09-21T13:57:01Z",
+      "license_url": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE",
+      "name": "秋风纯广告",
+      "initial_active": 655,
+      "initial_allow": 0
+    },
+    {
+      "sheet": "Sheet1",
+      "row": 6,
+      "number": "5",
+      "repository": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule",
+      "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Adguard-No.Privacy.txt",
+      "category": "广告＋不受欢迎+不包含隐私规则",
+      "usage": "希望保留统计与遥测",
+      "id": "awa-unwelcome",
+      "mode": "dns",
+      "author": "TG-Twilight/AWAvenue-Ads-Rule",
+      "license": "GPL-3.0",
+      "verified_at": "2026-10-03",
+      "file_updated_at": "2026-09-21T13:57:01Z",
+      "license_url": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE",
+      "name": "秋风广告＋不受欢迎",
+      "initial_active": 751,
+      "initial_allow": 0
+    },
+    {
+      "sheet": "Sheet1",
+      "row": 7,
+      "number": "6",
+      "repository": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule",
+      "url": "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Adguard-No.Unwelcome.txt",
+      "category": "广告＋隐私+不包含不受欢迎规则",
+      "usage": "希望保留更新、推送和相关连接",
+      "id": "awa-privacy",
+      "mode": "dns",
+      "author": "TG-Twilight/AWAvenue-Ads-Rule",
+      "license": "GPL-3.0",
+      "verified_at": "2026-10-03",
+      "file_updated_at": "2026-09-21T13:57:01Z",
+      "license_url": "https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE",
+      "name": "秋风广告＋隐私",
+      "initial_active": 869,
+      "initial_allow": 0
+    },
+    {
+      "sheet": "Sheet1",
+      "row": 8,
+      "number": "7",
+      "repository": "https://github.com/Noyllopa/NoAppDownload",
+      "url": "https://raw.githubusercontent.com/Noyllopa/NoAppDownload/master/NoAppDownload.txt",
+      "category": "去 App 下载提示广告过滤规则",
+      "usage": "",
+      "id": "noapp",
+      "mode": "browser",
+      "author": "Noyllopa/NoAppDownload",
+      "license": "MIT",
+      "verified_at": "2026-10-03",
+      "file_updated_at": "2026-09-18T12:55:54Z",
+      "license_url": "https://github.com/Noyllopa/NoAppDownload/blob/master/LICENSE",
+      "name": "NoAppDownload",
+      "initial_active": 877,
+      "initial_allow": 0
+    },
+    {
+      "sheet": "Sheet1",
+      "row": 9,
+      "number": "8",
+      "repository": "https://github.com/damengzhu/banad",
+      "url": "https://raw.githubusercontent.com/damengzhu/banad/refs/heads/main/jiekouAD.txt",
+      "category": "去除色情悬浮广告",
+      "usage": "",
+      "id": "adult-ads",
+      "mode": "browser",
+      "author": "damengzhu/banad",
+      "license": "未声明",
+      "verified_at": "2026-10-03",
+      "file_updated_at": "2026-10-01T13:34:42Z",
+      "license_url": null,
+      "name": "大萌主悬浮广告",
+      "initial_active": 5894,
+      "initial_allow": 32
+    },
+    {
+      "sheet": "Sheet1",
+      "row": 10,
+      "number": "9",
+      "repository": "https://github.com/xinggsf/Adblock-Plus-Rule",
+      "url": "https://raw.githubusercontent.com/xinggsf/Adblock-Plus-Rule/master/mv.txt",
+      "category": "视频过滤规则",
+      "usage": "",
+      "id": "video",
+      "mode": "browser",
+      "author": "xinggsf/Adblock-Plus-Rule",
+      "license": "未声明",
+      "verified_at": "2026-10-03",
+      "file_updated_at": "2025-12-24T15:45:15Z",
+      "license_url": null,
+      "name": "乘风视频",
+      "initial_active": 134,
+      "initial_allow": 4
+    },
+    {
+      "sheet": "Sheet1",
+      "row": 11,
+      "number": "10",
+      "repository": "https://github.com/xinggsf/Adblock-Plus-Rule",
+      "url": "https://raw.githubusercontent.com/xinggsf/Adblock-Plus-Rule/master/rule.txt",
+      "category": "广告过滤规则",
+      "usage": "",
+      "id": "browser-ads",
+      "mode": "browser",
+      "author": "xinggsf/Adblock-Plus-Rule",
+      "license": "未声明",
+      "verified_at": "2026-10-03",
+      "file_updated_at": "2025-09-08T10:06:34Z",
+      "license_url": null,
+      "name": "乘风广告",
+      "initial_active": 1169,
+      "initial_allow": 26
+    },
+    {
+      "sheet": "Sheet1",
+      "row": 12,
+      "number": "11",
+      "repository": "https://oisd.nl/",
+      "url": "https://small.oisd.nl/",
+      "category": "完整的列表阻止了广告、（移动）应用程序广告、网络钓鱼、恶意广告、恶意软件、间谍软件、勒索软件、加密货币劫持、诈骗 ... 遥测/分析/跟踪（在不需要正常功能的地方）",
+      "usage": "",
+      "id": "oisd-small",
+      "mode": "dns",
+      "author": "Stephan van Ruth (sjhgvr)",
+      "license": "GPL-3.0",
+      "verified_at": "2026-10-03",
+      "file_updated_at": null,
+      "license_url": "https://github.com/sjhgvr/oisd/blob/main/LICENSE",
+      "name": "oisd small",
+      "initial_active": 57656,
+      "initial_allow": 0
+    }
+  ],
+  "blank_rows": [
+    {
+      "sheet": "Sheet1",
+      "row": 13,
+      "number": "12"
+    },
+    {
+      "sheet": "Sheet1",
+      "row": 14,
+      "number": "13"
+    },
+    {
+      "sheet": "Sheet1",
+      "row": 15,
+      "number": "14"
+    },
+    {
+      "sheet": "Sheet1",
+      "row": 16,
+      "number": "15"
+    }
+  ],
+  "schema": 2,
+  "repository": "Ethereal-09/adguardhome-compiled-filters",
+  "profiles": [
+    {
+      "id": "ads",
+      "name": "纯广告（最小干预）",
+      "sources": [
+        "awa-ads"
+      ],
+      "description": "国内广告；优先从此版本开始使用。"
+    },
+    {
+      "id": "china",
+      "name": "国内广告＋隐私",
+      "sources": [
+        "awa-privacy"
+      ],
+      "description": "国内广告、隐私；采用上游 No.Unwelcome 版本。"
+    },
+    {
+      "id": "ads-unwelcome",
+      "name": "广告＋不受欢迎",
+      "sources": [
+        "awa-unwelcome"
+      ],
+      "description": "保留统计与遥测；可能限制更新、推送、PCDN 等功能。"
+    },
+    {
+      "id": "awa-full",
+      "name": "秋风完整",
+      "sources": [
+        "awa-full"
+      ],
+      "description": "采用表格中的秋风完整方案，包含广告、隐私和不受欢迎规则。"
+    },
+    {
+      "id": "pcdn",
+      "name": "PCDN（单独可选）",
+      "sources": [
+        "bili-pcdn",
+        "anti-pcdn"
+      ],
+      "description": "两份 PCDN 源合并；可能影响视频加载与节点选择。"
+    },
+    {
+      "id": "oisd",
+      "name": "oisd small（单独可选）",
+      "sources": [
+        "oisd-small"
+      ],
+      "description": "原始 oisd small 列表；不按完整 oisd 的描述推断 small 的覆盖范围。"
+    },
+    {
+      "id": "combined",
+      "name": "综合广告＋隐私",
+      "sources": [
+        "awa-privacy",
+        "oisd-small"
+      ],
+      "description": "秋风广告＋隐私合并 oisd small；不额外加入两份 PCDN 源。"
+    },
+    {
+      "id": "full",
+      "name": "DNS 全量（按需）",
+      "sources": [
+        "awa-full",
+        "oisd-small",
+        "bili-pcdn",
+        "anti-pcdn"
+      ],
+      "description": "表格中可安全转换的 DNS 源全量；包含功能拦截，浏览器专用源不计入。"
+    }
+  ],
+  "browser_profiles": [
+    {
+      "id": "noapp",
+      "name": "去 App 下载提示",
+      "sources": [
+        "noapp"
+      ]
+    },
+    {
+      "id": "adult-ads",
+      "name": "悬浮广告",
+      "sources": [
+        "adult-ads"
+      ]
+    },
+    {
+      "id": "video",
+      "name": "乘风视频",
+      "sources": [
+        "video"
+      ]
+    },
+    {
+      "id": "browser-ads",
+      "name": "乘风广告",
+      "sources": [
+        "browser-ads"
+      ]
+    },
+    {
+      "id": "combined",
+      "name": "浏览器合并",
+      "sources": [
+        "noapp",
+        "adult-ads",
+        "video",
+        "browser-ads"
+      ]
+    }
+  ]
+}

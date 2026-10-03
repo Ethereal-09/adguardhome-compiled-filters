@@ -1,4 +1,5 @@
-name: Update DNS rules
+name: Compile Excel-selected rules
+
 on:
   workflow_dispatch:
   schedule:
@@ -6,35 +7,26 @@ on:
   push:
     branches: [main]
     paths:
-      - README.md
-      - profiles.json
-      - registry/sources.json
-      - registry/reviewed_sources.json
-      - upstream/**
-      - custom/**
-      - build_filters.py
-      - validate_subscriptions.py
-      - workflow_status.py
-      - export_mihomo.py
-      - publish_filters.py
-      - tools/install_mihomo.py
-      - tools/engine/**
-      - dns_utils.py
-      - refresh_source_registry.py
+      - sources.xlsx
+      - sources.json
+      - compile_rules.py
+      - compiler/**
+      - tools/**
       - tests/**
+      - licenses/**
       - .github/workflows/update.yml
+
 permissions:
   contents: write
+
 concurrency:
-  group: dns-rules-update
+  group: excel-dns-compiler
   cancel-in-progress: false
+
 jobs:
-  update:
+  build:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
-    defaults:
-      run:
-        shell: bash
+    timeout-minutes: 25
     env:
       PYTHONUTF8: '1'
       DNS_RULE_VALIDATOR: ${{ github.workspace }}/.cache/dns-rule-validator
@@ -48,62 +40,49 @@ jobs:
         with:
           go-version: '1.27.1'
           cache-dependency-path: tools/engine/go.sum
-      - name: Build and test the pinned AdGuard DNS engine validator
-        working-directory: tools/engine
-        run: |
-          go test ./...
-          go build -o ../../.cache/dns-rule-validator .
-      - name: Install checksum-pinned official mihomo
-        run: python tools/install_mihomo.py
-      - name: Test
+      - name: Install and test pinned engines
+        run: python tools/install_engines.py
+      - name: Test compiler behavior with actual engines
         run: python -m unittest discover -s tests -p 'test_*.py'
-      - name: Restore validated source cache
+      - name: Restore verified source cache
         uses: actions/cache/restore@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
-          path: .cache/sources
-          key: dns-sources-${{ github.run_id }}-${{ github.run_attempt }}
-          restore-keys: dns-sources-
-      - name: Stage and publish each validated profile and format
-        id: publish
+          path: .cache/excel-sources
+          key: excel-sources-v2-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: excel-sources-v2-
+      - name: Compile, verify, and publish complete generation
+        id: compile
         continue-on-error: true
-        run: python publish_filters.py 2>&1 | tee .cache/build.log
-      - name: Save validated source cache
-        if: always() && steps.publish.outcome != 'skipped' && hashFiles('.cache/sources/*.json') != ''
+        shell: bash
+        run: |
+          set -o pipefail
+          python compile_rules.py 2>&1 | tee .cache/build.log
+      - name: Save verified source cache
+        if: always() && steps.compile.outcome != 'skipped' && hashFiles('.cache/excel-sources/*.json') != ''
         uses: actions/cache/save@0057852bfaa89a56745cba8c7296529d2fc39830 # v4
         with:
-          path: .cache/sources
-          key: dns-sources-${{ github.run_id }}-${{ github.run_attempt }}
-      - name: Commit build status and verified subscriptions
-        if: always() && (steps.publish.outcome == 'success' || steps.publish.outcome == 'failure')
+          path: .cache/excel-sources
+          key: excel-sources-v2-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Commit subscriptions and README build status
+        if: always() && (steps.compile.outcome == 'success' || steps.compile.outcome == 'failure')
         shell: bash
-        env:
-          PUBLISH_OUTCOME: ${{ steps.publish.outcome }}
         run: |
-          git add README.md
-          if [ "$PUBLISH_OUTCOME" = success ]; then
-            python workflow_status.py --heartbeat .github/update-heartbeat.json
-            git add dist/ .github/update-heartbeat.json
-          fi
+          git add README.md dist/
           if git diff --cached --quiet; then exit 0; fi
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git commit -m 'Update build status and verified DNS rules'
+          git commit -m 'Compile Excel-selected subscriptions and update build statistics'
           git push
-      - name: Write run summary
-        if: always()
-        run: python workflow_status.py --summary "$GITHUB_STEP_SUMMARY"
-      - name: Save audit and download logs
+      - name: Save build evidence
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
         with:
-          name: dns-update-${{ github.run_id }}-${{ github.run_attempt }}
+          name: excel-compiler-${{ github.run_id }}-${{ github.run_attempt }}
           path: |
-            .cache/last-run.json
-            .cache/publish-audit.json
+            .cache/build-report.json
             .cache/build.log
           if-no-files-found: ignore
-          retention-days: 30
-      - name: Report partial or failed publication after saving healthy updates
-        if: always() && (steps.publish.outcome == 'success' || steps.publish.outcome == 'failure')
-        run: |
-          python -c "import json; from pathlib import Path; p=Path('.cache/publish-audit.json'); r=json.loads(p.read_text()) if p.exists() else {}; raise SystemExit(0 if r.get('status') == 'success' else 1)"
+          retention-days: 14
+      - name: Signal failure or fallback after saving verified outputs
+        if: always() && steps.compile.outcome == 'failure'
+        run: exit 1

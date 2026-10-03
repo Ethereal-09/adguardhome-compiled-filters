@@ -1,0 +1,72 @@
+{
+  "rule-providers": {
+    "ads-unwelcome-block-domain": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/ads-unwelcome-block-domain.txt",
+      "path": "./rule_provider/excel/ads-unwelcome-block-domain.txt"
+    },
+    "ads-unwelcome-block-classical": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/ads-unwelcome-block-classical.txt",
+      "path": "./rule_provider/excel/ads-unwelcome-block-classical.txt"
+    },
+    "ads-unwelcome-allow-domain": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/ads-unwelcome-allow-domain.txt",
+      "path": "./rule_provider/excel/ads-unwelcome-allow-domain.txt"
+    },
+    "ads-unwelcome-allow-classical": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/ads-unwelcome-allow-classical.txt",
+      "path": "./rule_provider/excel/ads-unwelcome-allow-classical.txt"
+    },
+    "ads-unwelcome-block-important-domain": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/ads-unwelcome-block-important-domain.txt",
+      "path": "./rule_provider/excel/ads-unwelcome-block-important-domain.txt"
+    },
+    "ads-unwelcome-block-important-classical": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/ads-unwelcome-block-important-classical.txt",
+      "path": "./rule_provider/excel/ads-unwelcome-block-important-classical.txt"
+    },
+    "ads-unwelcome-allow-important-domain": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/ads-unwelcome-allow-important-domain.txt",
+      "path": "./rule_provider/excel/ads-unwelcome-allow-important-domain.txt"
+    },
+    "ads-unwelcome-allow-important-classical": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/ads-unwelcome-allow-important-classical.txt",
+      "path": "./rule_provider/excel/ads-unwelcome-allow-important-classical.txt"
+    }
+  },
+  "rules": [
+    "AND,((OR,((RULE-SET,ads-unwelcome-block-important-domain),(RULE-SET,ads-unwelcome-block-important-classical))),(NOT,((OR,((RULE-SET,ads-unwelcome-allow-important-domain),(RULE-SET,ads-unwelcome-allow-important-classical)))))),REJECT",
+    "AND,((OR,((RULE-SET,ads-unwelcome-block-domain),(RULE-SET,ads-unwelcome-block-classical))),(NOT,((OR,((RULE-SET,ads-unwelcome-allow-important-domain),(RULE-SET,ads-unwelcome-allow-important-classical))))),(NOT,((OR,((RULE-SET,ads-unwelcome-allow-domain),(RULE-SET,ads-unwelcome-allow-classical)))))),REJECT"
+  ]
+}

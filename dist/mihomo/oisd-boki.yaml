@@ -1,0 +1,72 @@
+{
+  "rule-providers": {
+    "oisd-block-domain": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/oisd-block-domain.txt",
+      "path": "./rule_provider/excel/oisd-block-domain.txt"
+    },
+    "oisd-block-classical": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/oisd-block-classical.txt",
+      "path": "./rule_provider/excel/oisd-block-classical.txt"
+    },
+    "oisd-allow-domain": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/oisd-allow-domain.txt",
+      "path": "./rule_provider/excel/oisd-allow-domain.txt"
+    },
+    "oisd-allow-classical": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/oisd-allow-classical.txt",
+      "path": "./rule_provider/excel/oisd-allow-classical.txt"
+    },
+    "oisd-block-important-domain": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/oisd-block-important-domain.txt",
+      "path": "./rule_provider/excel/oisd-block-important-domain.txt"
+    },
+    "oisd-block-important-classical": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/oisd-block-important-classical.txt",
+      "path": "./rule_provider/excel/oisd-block-important-classical.txt"
+    },
+    "oisd-allow-important-domain": {
+      "type": "http",
+      "behavior": "domain",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/oisd-allow-important-domain.txt",
+      "path": "./rule_provider/excel/oisd-allow-important-domain.txt"
+    },
+    "oisd-allow-important-classical": {
+      "type": "http",
+      "behavior": "classical",
+      "format": "text",
+      "interval": 86400,
+      "url": "https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/mihomo/oisd-allow-important-classical.txt",
+      "path": "./rule_provider/excel/oisd-allow-important-classical.txt"
+    }
+  },
+  "rules": [
+    "AND,((OR,((RULE-SET,oisd-block-important-domain),(RULE-SET,oisd-block-important-classical))),(NOT,((OR,((RULE-SET,oisd-allow-important-domain),(RULE-SET,oisd-allow-important-classical)))))),REJECT",
+    "AND,((OR,((RULE-SET,oisd-block-domain),(RULE-SET,oisd-block-classical))),(NOT,((OR,((RULE-SET,oisd-allow-important-domain),(RULE-SET,oisd-allow-important-classical))))),(NOT,((OR,((RULE-SET,oisd-allow-domain),(RULE-SET,oisd-allow-classical)))))),REJECT"
+  ]
+}

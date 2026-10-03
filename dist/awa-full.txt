@@ -1,5 +1,5 @@
 ! Title: 秋风完整
-! Updated: 2026-10-03T13:27:41+00:00
+! Updated: 2026-10-03T14:15:11+00:00
 ! Expires: 1 day
 ! This project only merges upstream rules; original authors retain credit.
 ! Description: 采用表格中的秋风完整方案，包含广告、隐私和不受欢迎规则。

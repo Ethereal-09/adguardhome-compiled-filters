@@ -1,5 +1,5 @@
 ! Title: 国内广告＋隐私
-! Updated: 2026-10-03T13:27:41+00:00
+! Updated: 2026-10-03T14:15:11+00:00
 ! Expires: 1 day
 ! This project only merges upstream rules; original authors retain credit.
 ! Description: 国内广告、隐私；采用上游 No.Unwelcome 版本。

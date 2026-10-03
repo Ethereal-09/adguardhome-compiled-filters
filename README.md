@@ -6,7 +6,7 @@
 
 </div>
 
-更新：**2026-10-03 21:27:41**（北京时间） · [构建状态：构建成功](https://github.com/Ethereal-09/adguardhome-compiled-filters/actions/workflows/update.yml)
+更新：**2026-10-03 22:15:11**（北京时间） · [构建状态：构建成功](https://github.com/Ethereal-09/adguardhome-compiled-filters/actions/workflows/update.yml)
 
 ## AdGuard Home
 

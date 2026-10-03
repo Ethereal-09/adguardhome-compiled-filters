@@ -1,6 +1,6 @@
 {
   "status": "success",
-  "checkedUtc": "2026-10-03T09:21:01+00:00",
+  "checkedUtc": "2026-10-03T09:50:07+00:00",
   "dnsValidated": [
     "combined",
     "china",
@@ -154,5 +154,5 @@
     }
   },
   "retiredProfiles": [],
-  "publishedUtc": "2026-10-03T09:21:01+00:00"
+  "publishedUtc": "2026-10-03T09:50:07+00:00"
 }

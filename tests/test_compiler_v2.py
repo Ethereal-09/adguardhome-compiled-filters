@@ -5,6 +5,7 @@ from pathlib import Path
 import re
 import tempfile
 import unittest
+import zipfile
 from unittest.mock import patch
 
 from compiler import pipeline
@@ -126,15 +127,43 @@ class DownloadTests(unittest.TestCase):
 
 
 class WorkbookTests(unittest.TestCase):
-    def test_exact_workbook_urls_and_blank_rows(self):
-        root = Path(__file__).resolve().parents[1]
-        extracted = extract(root / 'sources.xlsx')
-        catalog = pipeline.load_catalog(root / 'sources.json')
-        self.assertEqual(len(extracted['sources']), 11)
-        self.assertEqual(len(extracted['blank_rows']), 4)
-        self.assertEqual([s['url'] for s in extracted['sources']], [s['url'] for s in catalog['sources']])
-        self.assertTrue(extracted['sources'][1]['url'].startswith('https://'))
-        self.assertEqual(extracted['sources'][4]['repository'], 'https://github.com/TG-Twilight/AWAvenue-Ads-Rule')
+    def test_import_hyperlinks_merged_ranges_and_blank_rows(self):
+        # Synthetic fixture: cloud tests never require or publish the user's workbook.
+        ns = 'http://schemas.openxmlformats.org/spreadsheetml/2006/main'
+        rel = 'http://schemas.openxmlformats.org/officeDocument/2006/relationships'
+        package = 'http://schemas.openxmlformats.org/package/2006/relationships'
+        entries = {
+            'xl/workbook.xml': f'<workbook xmlns="{ns}" xmlns:r="{rel}"><sheets><sheet name="Sheet1" sheetId="1" r:id="rId1"/></sheets></workbook>',
+            'xl/_rels/workbook.xml.rels': f'<Relationships xmlns="{package}"><Relationship Id="rId1" Target="worksheets/sheet1.xml"/></Relationships>',
+            'xl/sharedStrings.xml': f'<sst xmlns="{ns}"><si><t>display text</t></si></sst>',
+            'xl/worksheets/sheet1.xml': f'''<worksheet xmlns="{ns}" xmlns:r="{rel}"><sheetData>
+                <row r="2"><c r="A2"><v>1</v></c><c r="B2" t="inlineStr"><is><t>owner/repo</t></is></c><c r="C2" t="s"><v>0</v></c></row>
+                <row r="3"><c r="A3"><v>2</v></c><c r="C3" t="inlineStr"><is><t>example.com/two.txt</t></is></c></row>
+                <row r="4"><c r="A4"><v>3</v></c><c r="C4" t="inlineStr"><is><t>https://example.com/three.txt</t></is></c></row>
+                <row r="5"><c r="A5"><v>4</v></c></row>
+                </sheetData><hyperlinks><hyperlink ref="C2" r:id="rId1"/><hyperlink ref="B3:B4" r:id="rId2"/></hyperlinks></worksheet>''',
+            'xl/worksheets/_rels/sheet1.xml.rels': f'<Relationships xmlns="{package}"><Relationship Id="rId1" Target="https://example.com/one.txt"/><Relationship Id="rId2" Target="https://github.com/owner/other"/></Relationships>',
+        }
+        with tempfile.TemporaryDirectory() as temp:
+            workbook = Path(temp) / 'fixture.xlsx'
+            with zipfile.ZipFile(workbook, 'w') as archive:
+                for name, content in entries.items():
+                    archive.writestr(name, content)
+            extracted = extract(workbook)
+        self.assertEqual([s['url'] for s in extracted['sources']],
+                         ['https://example.com/one.txt', 'https://example.com/two.txt', 'https://example.com/three.txt'])
+        self.assertEqual([s['repository'] for s in extracted['sources']],
+                         ['https://github.com/owner/repo', 'https://github.com/owner/other', 'https://github.com/owner/other'])
+        self.assertEqual(len(extracted['blank_rows']), 1)
+
+    def test_catalog_needs_only_json(self):
+        content = (Path(__file__).resolve().parents[1] / 'sources.json').read_bytes()
+        with tempfile.TemporaryDirectory() as temp:
+            catalog = Path(temp) / 'sources.json'
+            catalog.write_bytes(content)
+            self.assertEqual(pipeline.load_catalog(catalog), json.loads(content))
+            (Path(temp) / 'sources.xlsx').write_bytes(b'private file not used by builds')
+            self.assertEqual(pipeline.load_catalog(catalog), json.loads(content))
 
 
 class PublicationTests(unittest.TestCase):
@@ -191,7 +220,7 @@ class PublicationTests(unittest.TestCase):
             previous = {'schema': 2, 'built_at': '2026-10-01T00:00:00+00:00', 'profiles': [], 'sources': []}
             (root / 'dist/manifest.json').write_text(json_text(previous), encoding='utf8')
             source = {'id': 'missing', 'author': 'author', 'repository': 'https://example.com',
-                      'name': 'missing', 'url': 'https://example.com/rules.txt', 'category': 'test'}
+                      'name': 'missing', 'url': 'https://example.com/rules.txt', 'category': 'test', 'mode': 'dns'}
             catalog = {'schema': 2, 'repository': 'owner/repo', 'sources': [source],
                        'profiles': [], 'browser_profiles': []}
             with patch('compiler.pipeline.load_catalog', return_value=catalog), patch('compiler.pipeline.source_result', side_effect=ValueError('download failed')), patch('compiler.pipeline.publish') as publisher:

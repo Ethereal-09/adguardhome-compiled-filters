@@ -2,7 +2,6 @@
 from __future__ import annotations
 
 from concurrent.futures import ThreadPoolExecutor, as_completed
-from datetime import datetime, timedelta, timezone
 import hashlib
 import json
 import os
@@ -12,6 +11,7 @@ import tempfile
 
 from .engines import export_mihomo, match_dns, validate_dns
 from .network import Cache, atomic, count_guard, json_text, retry_download, timestamp
+from .readme import readme
 from .rules import active_lines, merge, parse, stats
 
 SERVICE_HOSTS = ("www.baidu.com", "www.bilibili.com", "api.bilibili.com", "www.qq.com", "wx.qq.com",
@@ -47,16 +47,6 @@ def load_catalog(path: Path) -> dict:
             # AWA variants are mutually exclusive, not independent source families.
             if sum(sid.startswith("awa-") for sid in p["sources"]) > 1:
                 raise ValueError("Multiple AWA variants in one subscription")
-    workbook = path.parent / "sources.xlsx"
-    if workbook.exists():
-        from tools.import_excel import extract
-        extracted = extract(workbook)
-        if extracted["sha256"] != catalog["sha256"]:
-            raise ValueError("Workbook changed: import and review the new source catalog first")
-        original = {(s["sheet"], s["row"], s["url"]) for s in extracted["sources"]}
-        selected = {(s["sheet"], s["row"], s["url"]) for s in catalog["sources"]}
-        if original != selected:
-            raise ValueError("Source catalog does not exactly match workbook URLs")
     return catalog
 
 
@@ -181,63 +171,6 @@ def publish(stage: Path, dist: Path, manifest: dict) -> None:
         raise
 
 
-def links(repository: str, path: str) -> str:
-    raw = f"https://raw.githubusercontent.com/{repository}/main/dist/{path}"
-    return f"[原始]({raw}) · [加速 1](https://github.boki.moe/{raw}) · [加速 2](https://ghfast.top/{raw})"
-
-
-def readme(catalog: dict, manifest: dict | None, attempt: dict) -> str:
-    repository = catalog["repository"]
-    local = lambda t: datetime.fromisoformat(t).astimezone(timezone(timedelta(hours=8))).strftime("%Y-%m-%d %H:%M:%S UTC+8")
-    state = ("离线缓存构建" if attempt.get("offline") else "完成（部分源使用缓存，见构建报告）" if attempt.get("degraded_sources") else "成功") if attempt["status"] == "success" else "失败，订阅保留上次成功版本"
-    lines = ["# AdGuard Home 合并规则", "", "按提供的 Excel 选源，仅合并与去重。规则由上游作者维护。",
-             "", f"最近构建：**{local(attempt['attempted_at'])}** · {state}。每天北京时间 **04:23** 自动更新。",
-             "", "优先使用「纯广告」；PCDN 和含「不受欢迎」的方案可能影响视频、更新或推送，请按需选用。",
-             "同一份 DNS 全量只选秋风完整版本，四个秋风变体不会混用。", "",
-             "## AdGuard Home", "", "添加到「DNS 黑名单」。文件中的 `@@` 例外已保留，无需另加白名单。",
-             "", "| 订阅 | 拦截 / 例外 | 内容 | 链接 |", "|---|---:|---|---|"]
-    profiles = {p["id"]: p for p in (manifest or {}).get("profiles", [])}
-    for profile in catalog["profiles"]:
-        output = profiles.get(profile["id"])
-        number = f"{output['block']:,} / {output['allow']:,}" if output else "未发布"
-        lines.append(f"| {profile['name']} | {number} | {profile['description']} | {links(repository, profile['id'] + '.txt') if output else '等待成功构建'} |")
-    if manifest:
-        lines += ["", f"订阅实际更新时间：{local(manifest['built_at'])}。数量按最终去重规则行统计，通配符不等于一个域名。"]
-    lines += ["", "## mihomo", "", "使用对应配置片段，将 `rule-providers` 和 `rules` 合并到现有配置；拦截规则放在兜底规则前。",
-              "例外跳过本订阅的拦截并继续后续分流，不强制 DIRECT。原始与两条加速配置均提供。",
-              "", "| 订阅 | 配置片段 |", "|---|---|"]
-    for profile in catalog["profiles"]:
-        pid = profile["id"]
-        raw = f"https://raw.githubusercontent.com/{repository}/main/dist/mihomo/"
-        if pid in profiles:
-            lines.append(f"| {profile['name']} | [原始]({raw}{pid}.yaml) · [加速 1](https://github.boki.moe/{raw}{pid}-boki.yaml) · [加速 2](https://ghfast.top/{raw}{pid}-ghfast.yaml) |")
-    lines += ["", "## 浏览器规则", "", "以下文件保留网页元素、路径、脚本和例外规则，**仅供浏览器拦截器使用，不能导入 AdGuard Home**。",
-              "", "| 分类 | 条目 | 链接 |", "|---|---:|---|"]
-    browsers = {p["id"]: p for p in (manifest or {}).get("browser_profiles", [])}
-    for profile in catalog["browser_profiles"]:
-        output = browsers.get(profile["id"])
-        lines.append(f"| {profile['name']} | {output['rules'] if output else '未发布'} | {links(repository, 'browser/' + profile['id'] + '.txt') if output else '等待成功构建'} |")
-    lines += ["", "<details>", "<summary>上游来源与作者（Excel 中全部 11 个地址）</summary>", "",
-              "| 作者 / 项目 | 规则文件 | 类型 | 有效行 / DNS 可用 |", "|---|---|---|---:|"]
-    sources = {s["id"]: s for s in (manifest or {}).get("sources", [])}
-    for source in catalog["sources"]:
-        record = sources.get(source["id"], {})
-        count = f"{record.get('active', '—')} / {record.get('dns_usable', '—')}"
-        lines.append(f"| [{source['author']}]({source['repository']}) | [{source['name']}]({source['url']}) | {source['category'].replace('|', '/')} | {count} |")
-    lines += ["", "完整来源、许可、跳过原因、缓存状态与功能域名检查见 [构建报告](dist/report.json)。",
-              "上游许可证保存在 [licenses](licenses/)。未声明许可的源按原样注明，不替作者指定许可证。", "", "</details>", "",
-              "## 运行与维护", "", "Python 3.12，合并程序使用标准库，无需 pip 依赖。GitHub Actions 自动安装固定版本的校验引擎并运行测试。",
-              "", "```powershell", "python tools/install_engines.py", "python compile_rules.py", "```", "",
-              "本地需要 Go 1.27.1；Windows 已登录 GitHub CLI 时可用 `python compile_rules.py --github-api` 从相同上游文件的 API 下载。",
-              "[sources.xlsx](sources.xlsx) 保留原始表格，[sources.json](sources.json) 管理分类与组合。修改 Excel 后先提取并审核分类：",
-              "", '```powershell', 'python tools/import_excel.py sources.xlsx --output .cache/new-sources.json', '```', "",
-              "每个订阅独立合并，仅删除完全相同的规范化规则；不进行父子域名覆盖裁剪，不把 URL 路径扩大成整站拦截。",
-              "下载、格式、规则数量突变或引擎校验失败时，优先使用 72 小时内的已校验缓存；缓存也不可用则整次构建停止，保留上一版订阅。",
-              "核心网站样例检查和语法校验不能保证 App 无误拦截。加速线路是第三方服务，异常时请使用原始链接。",
-              "", f"[自动构建记录](https://github.com/{repository}/actions/workflows/update.yml)", ""]
-    if attempt.get("errors"):
-        lines += ["最近构建问题："] + [f"- {sid}: {str(error).replace(chr(10), ' ')[:300]}" for sid, error in attempt["errors"].items()] + [""]
-    return "\n".join(lines)
 
 
 def run(root: Path, offline: bool = False, github_api: bool = False) -> dict:

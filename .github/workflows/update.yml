@@ -1,4 +1,4 @@
-name: Compile Excel-selected rules
+name: Compile rules
 
 on:
   workflow_dispatch:
@@ -7,7 +7,6 @@ on:
   push:
     branches: [main]
     paths:
-      - sources.xlsx
       - sources.json
       - compile_rules.py
       - compiler/**

@@ -183,23 +183,11 @@ def build(config_path: Path, output: Path, custom: Path, allow_large_drop: bool 
     return len(rules)
 
 
-def main() -> int:
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('--config', type=Path, default=ROOT / 'config.json')
-    parser.add_argument('--output', type=Path, default=ROOT / 'dist')
-    parser.add_argument('--custom', type=Path, default=ROOT / 'custom')
-    parser.add_argument('--allow-large-drop', action='store_true')
-    args = parser.parse_args()
-    try:
-        build(args.config, args.output, args.custom, args.allow_large_drop)
-        return 0
-    except KeyboardInterrupt:
-        print('Stopped by user.', file=sys.stderr)
-        return 130
-    except Exception as error:
-        print(f'Update failed: {error}', file=sys.stderr)
-        return 1
+
+def main():
+    from publish_filters import main as current_main
+    return current_main()
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     sys.exit(main())

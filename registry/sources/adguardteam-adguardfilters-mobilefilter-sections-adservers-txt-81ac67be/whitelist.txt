@@ -1,3 +1,0 @@
-! Source: https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/adservers.txt
-! Repository: https://github.com/AdguardTeam/AdguardFilters
-! DNS subset only; original modifiers and source scope are preserved.

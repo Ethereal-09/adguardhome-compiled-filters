@@ -8,12 +8,9 @@ on:
     paths:
       - README.md
       - profiles.json
-      - config.json
       - registry/sources.json
       - registry/reviewed_sources.json
       - upstream/**
-      - github_sources/audit.json
-      - new_sources/audit.json
       - custom/**
       - build_filters.py
       - validate_subscriptions.py

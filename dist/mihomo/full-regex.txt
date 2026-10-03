@@ -1,157 +1,29 @@
-# Title: 全量 DNS 黑名单（最高档＋全部可用专项）
-# Updated: 2026-10-02T20:37:22+00:00
+# Title: 中文源全量（按需）
+# Updated: 2026-10-03T09:14:29+00:00
 # Expires: 1 day
-# Rules: 2006844
+# Rules: 341316
 # Maintainer merges only; upstream rules belong to their authors.
 # DNS masks/regex preserved; exact Hosts scope and source exception priority retained.
 # Upstream licenses and notices: ../upstream/README.md (in the original repository).
-# Source: AdGuard Mobile Ads filter | https://raw.githubusercontent.com/AdguardTeam/AdguardFilters/master/MobileFilter/sections/adservers.txt
-# Repository: https://github.com/AdguardTeam/AdguardFilters | Account: AdguardTeam
-# Upstream license: https://github.com/AdguardTeam/AdguardFilters/blob/master/LICENSE
 # Source: AdRules DNS List | https://raw.githubusercontent.com/Cats-Team/AdRules/main/dns.txt
 # Repository: https://github.com/Cats-Team/AdRules | Account: Cats-Team
 # Upstream license: https://github.com/Cats-Team/AdRules/blob/script/LICENSE
-# Source: AWAvenue Ads Rule | https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
-# Repository: https://github.com/TG-Twilight/AWAvenue-Ads-Rule | Account: TG-Twilight
-# Upstream license: https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE
-# Source: StevenBlack hosts | https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts
-# Repository: https://github.com/StevenBlack/hosts | Account: StevenBlack
-# Upstream license: https://github.com/StevenBlack/hosts/blob/master/license.txt
-# Source: 大圣净化 | https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts
-# Repository: https://github.com/jdlingyu/ad-wars | Account: jdlingyu
-# Upstream license: https://github.com/jdlingyu/ad-wars/blob/master/README.md
-# Source: AdAway default blocklist | https://raw.githubusercontent.com/AdAway/adaway.github.io/master/hosts.txt
-# Repository: https://github.com/AdAway/adaway.github.io | Account: AdAway
-# Upstream license: https://github.com/AdAway/adaway.github.io/blob/master/LICENSE.md
-# Source: Perflyst and Dandelion Sprout's Smart-TV Blocklist | https://raw.githubusercontent.com/Perflyst/PiHoleBlocklist/master/SmartTV-AGH.txt
-# Repository: https://github.com/Perflyst/PiHoleBlocklist | Account: Perflyst
-# Upstream license: https://github.com/Perflyst/PiHoleBlocklist/blob/master/LICENSE
-# Source: Scam Blocklist by DurableNapkin | https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt
-# Repository: https://github.com/durablenapkin/scamblocklist | Account: durablenapkin
-# Upstream license: https://github.com/durablenapkin/scamblocklist/blob/master/LICENSE
-# Source: Game Console Adblock List | https://raw.githubusercontent.com/DandelionSprout/adfilt/master/GameConsoleAdblockList.txt
-# Repository: https://github.com/DandelionSprout/adfilt | Account: DandelionSprout
-# Upstream license: https://github.com/DandelionSprout/adfilt/blob/master/LICENSE.md
-# Source: Spam404 | https://raw.githubusercontent.com/Spam404/lists/master/main-blacklist.txt
-# Repository: https://github.com/Spam404/lists | Account: Spam404
-# Upstream license: https://github.com/Spam404/lists/blob/master/LICENSE.md/LICENSE.md
-# Source: The Big List of Hacked Malware Web Sites | https://raw.githubusercontent.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/master/hacked-domains.list
-# Repository: https://github.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites | Account: mitchellkrogza
-# Upstream license: https://github.com/mitchellkrogza/The-Big-List-of-Hacked-Malware-Web-Sites/blob/master/LICENSE.md
-# Source: HaGeZi Ultimate | https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/ultimate.txt
-# Repository: https://github.com/hagezi/dns-blocklists | Account: hagezi
-# Upstream license: https://github.com/hagezi/dns-blocklists/blob/main/LICENSE
-# Source: HaGeZi Badware Hoster | https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/hoster.txt
-# Repository: https://github.com/hagezi/dns-blocklists | Account: hagezi
-# Upstream license: https://github.com/hagezi/dns-blocklists/blob/main/LICENSE
-# Source: HaGeZi DynDNS | https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/dyndns.txt
-# Repository: https://github.com/hagezi/dns-blocklists | Account: hagezi
-# Upstream license: https://github.com/hagezi/dns-blocklists/blob/main/LICENSE
-# Source: HaGeZi URL Shortener | https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/urlshortener.txt
-# Repository: https://github.com/hagezi/dns-blocklists | Account: hagezi
-# Upstream license: https://github.com/hagezi/dns-blocklists/blob/main/LICENSE
-# Source: 1Hosts Xtra | https://raw.githubusercontent.com/badmojr/1Hosts/master/Xtra/adblock.txt
-# Repository: https://github.com/badmojr/1Hosts | Account: badmojr
-# Upstream license: https://github.com/badmojr/1Hosts/blob/master/LICENSE
-# Source: blocklistproject/Lists / abuse-ags.txt | https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/abuse-ags.txt
-# Repository: https://github.com/blocklistproject/Lists | Account: blocklistproject
-# Upstream license: https://github.com/blocklistproject/Lists/blob/main/LICENSE
-# Source: blocklistproject/Lists / ads-ags.txt | https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/ads-ags.txt
-# Repository: https://github.com/blocklistproject/Lists | Account: blocklistproject
-# Upstream license: https://github.com/blocklistproject/Lists/blob/main/LICENSE
-# Source: blocklistproject/Lists / crypto-ags.txt | https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/crypto-ags.txt
-# Repository: https://github.com/blocklistproject/Lists | Account: blocklistproject
-# Upstream license: https://github.com/blocklistproject/Lists/blob/main/LICENSE
-# Source: blocklistproject/Lists / fraud-ags.txt | https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/fraud-ags.txt
-# Repository: https://github.com/blocklistproject/Lists | Account: blocklistproject
-# Upstream license: https://github.com/blocklistproject/Lists/blob/main/LICENSE
-# Source: blocklistproject/Lists / phishing-ags.txt | https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/phishing-ags.txt
-# Repository: https://github.com/blocklistproject/Lists | Account: blocklistproject
-# Upstream license: https://github.com/blocklistproject/Lists/blob/main/LICENSE
-# Source: blocklistproject/Lists / ransomware-ags.txt | https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/ransomware-ags.txt
-# Repository: https://github.com/blocklistproject/Lists | Account: blocklistproject
-# Upstream license: https://github.com/blocklistproject/Lists/blob/main/LICENSE
-# Source: blocklistproject/Lists / redirect-ags.txt | https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/redirect-ags.txt
-# Repository: https://github.com/blocklistproject/Lists | Account: blocklistproject
-# Upstream license: https://github.com/blocklistproject/Lists/blob/main/LICENSE
-# Source: blocklistproject/Lists / scam-ags.txt | https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/scam-ags.txt
-# Repository: https://github.com/blocklistproject/Lists | Account: blocklistproject
-# Upstream license: https://github.com/blocklistproject/Lists/blob/main/LICENSE
-# Source: blocklistproject/Lists / smart-tv-ags.txt | https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/smart-tv-ags.txt
-# Repository: https://github.com/blocklistproject/Lists | Account: blocklistproject
-# Upstream license: https://github.com/blocklistproject/Lists/blob/main/LICENSE
-# Source: blocklistproject/Lists / tracking-ags.txt | https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/tracking-ags.txt
-# Repository: https://github.com/blocklistproject/Lists | Account: blocklistproject
-# Upstream license: https://github.com/blocklistproject/Lists/blob/main/LICENSE
-# Source: anudeepND/blacklist / adservers.txt | https://raw.githubusercontent.com/anudeepND/blacklist/master/adservers.txt
-# Repository: https://github.com/anudeepND/blacklist | Account: anudeepND
-# Upstream license: https://github.com/anudeepND/blacklist/blob/master/LICENSE
-# Source: anudeepND/blacklist / facebook.txt | https://raw.githubusercontent.com/anudeepND/blacklist/master/facebook.txt
-# Repository: https://github.com/anudeepND/blacklist | Account: anudeepND
-# Upstream license: https://github.com/anudeepND/blacklist/blob/master/LICENSE
-# Source: crazy-max/WindowsSpyBlocker / spy.txt | https://raw.githubusercontent.com/crazy-max/WindowsSpyBlocker/master/data/hosts/spy.txt
-# Repository: https://github.com/crazy-max/WindowsSpyBlocker | Account: crazy-max
-# Upstream license: https://github.com/crazy-max/WindowsSpyBlocker/blob/master/LICENSE
-# Source: jerryn70/GoodbyeAds / GoodbyeAds-AdBlock-Filter.txt | https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Formats/GoodbyeAds-AdBlock-Filter.txt
-# Repository: https://github.com/jerryn70/GoodbyeAds | Account: jerryn70
-# Upstream license: https://github.com/jerryn70/GoodbyeAds/blob/master/LICENSE
-# Source: jerryn70/GoodbyeAds / GoodbyeAds-Xiaomi-Extension.txt | https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Xiaomi-Extension.txt
-# Repository: https://github.com/jerryn70/GoodbyeAds | Account: jerryn70
-# Upstream license: https://github.com/jerryn70/GoodbyeAds/blob/master/LICENSE
-# Source: jerryn70/GoodbyeAds / GoodbyeAds-Samsung-AdBlock.txt | https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Samsung-AdBlock.txt
-# Repository: https://github.com/jerryn70/GoodbyeAds | Account: jerryn70
-# Upstream license: https://github.com/jerryn70/GoodbyeAds/blob/master/LICENSE
-# Source: jerryn70/GoodbyeAds / GoodbyeAds-Spotify-AdBlock.txt | https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Extension/GoodbyeAds-Spotify-AdBlock.txt
-# Repository: https://github.com/jerryn70/GoodbyeAds | Account: jerryn70
-# Upstream license: https://github.com/jerryn70/GoodbyeAds/blob/master/LICENSE
-# Source: jerryn70/GoodbyeAds / GoodbyeAds-YouTube-AdBlock-Filter.txt | https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Formats/GoodbyeAds-YouTube-AdBlock-Filter.txt
-# Repository: https://github.com/jerryn70/GoodbyeAds | Account: jerryn70
-# Upstream license: https://github.com/jerryn70/GoodbyeAds/blob/master/LICENSE
-# Source: OISD Basic | https://raw.githubusercontent.com/sjhgvr/oisd/main/abp_small.txt
-# Repository: https://github.com/sjhgvr/oisd | Account: sjhgvr
-# Source: alexa | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/alexa
-# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
-# Source: apple | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/apple
-# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
-# Source: huawei | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/huawei
-# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
-# Source: roku | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/roku
-# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
-# Source: samsung | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/samsung
-# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
-# Source: sonos | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/sonos
-# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
-# Source: windows | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/windows
-# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
-# Source: xiaomi | https://raw.githubusercontent.com/nextdns/native-tracking-domains/main/domains/xiaomi
-# Repository: https://github.com/nextdns/native-tracking-domains | Account: nextdns
 # Source: Anti-AD | https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-easylist.txt
 # Repository: https://github.com/privacy-protection-tools/anti-AD | Account: privacy-protection-tools
-# Source: HaGeZi Most Abused TLDs | https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/spam-tlds.txt
-# Repository: https://github.com/hagezi/dns-blocklists | Account: hagezi
-# Source: adblock-nocoin-list / hosts.txt | https://raw.githubusercontent.com/hoshsadiq/adblock-nocoin-list/master/hosts.txt
-# Repository: https://github.com/hoshsadiq/adblock-nocoin-list | Account: hoshsadiq
 # Source: ios_rule_script / rule/AdGuard/Advertising/Advertising.txt | https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/AdGuard/Advertising/Advertising.txt
 # Repository: https://github.com/blackmatrix7/ios_rule_script | Account: blackmatrix7
-# Source: uAssets / filters/resource-abuse.txt | https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt
-# Repository: https://github.com/uBlockOrigin/uAssets | Account: uBlockOrigin
 # Source: GOODBYEADS / data/rules/dns.txt | https://raw.githubusercontent.com/8680/GOODBYEADS/master/data/rules/dns.txt
 # Repository: https://github.com/8680/GOODBYEADS | Account: 8680
 # Source: adblockfilters / rules/adblockdns.txt | https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockdns.txt
 # Repository: https://github.com/217heidai/adblockfilters | Account: 217heidai
-# Source: Dan Pollock's List | https://someonewhocares.org/hosts/zero/hosts
-# Repository: https://someonewhocares.org/hosts/ | Account: Dan Pollock
-# Source: Peter Lowe's List | https://pgl.yoyo.org/adservers/serverlist.php?hostformat=adblockplus&showintro=1&mimetype=plaintext
-# Repository: https://pgl.yoyo.org/adservers/ | Account: Peter Lowe
+# Source: 秋风广告与隐私 | https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Adguard-No.Unwelcome.txt
+# Repository: https://github.com/TG-Twilight/AWAvenue-Ads-Rule | Account: TG-Twilight
+# Upstream license: https://github.com/TG-Twilight/AWAvenue-Ads-Rule/blob/main/LICENSE
 # mihomo classical provider; preserve companion exception providers.
 DOMAIN-REGEX,.*\-ad\.sm\.cn.*
 DOMAIN-REGEX,.*\-ad\.video\.yximgs\.com.*
 DOMAIN-REGEX,.*\-ad\.wtzw\.com.*
 DOMAIN-REGEX,.*\-be\-pack\-sign\.pglstatp\-toutiao\.com.*
-DOMAIN-REGEX,.*watson\.events\.data\.microsoft\.com([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,\-adx\-.*\.rayjump\.com([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,\.com\-id.*\.com([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,\.com\-id.*\.info([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\-ad\-sign\.byteimg\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\-ad\.a\.yximgs\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\-analytics.*\.huami\.com([^ a-zA-Z0-9.%_-]|$)
@@ -159,292 +31,11 @@ DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\-applog\.fqnovel\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\-datareceiver\.aki\-game\.net([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\-default\-cn\.rum\.aliyuncs\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\-sdk\.rum\.aliyuncs\.com([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.actor([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.apartments([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.auction([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.autos([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.baby([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.beauty([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.bid([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.bingo([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.black([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.boats([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.bond([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.boston([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.boutique([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.business([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.cam([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.casino([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.ceo([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.cfd([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.channel([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.charity([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.cheap([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.christmas([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.claims([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.clothing([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.co\.com([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.college([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.consulting([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.coupons([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.courses([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.credit([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.dance([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.day([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.diwodiwo\.xyz([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.dpdns\.org([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.edu\.eu([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.engineer([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.enterprises([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.esq([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.exaapi\.com([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.exposed([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.faith([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.family([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.fans([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.financial([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.fishing([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.florist([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.forex([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.forsale([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.fund([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.futbol([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.gives([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.giving([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.golf([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.gq([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.gratis([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.gripe([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.hair([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.immo([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.insure([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.irish([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.jetzt([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.jewelry([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.joburg([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.kim([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.lat([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.lifestyle([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.living([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.llp([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.loan([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.loans([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.locker([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.love([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.luxe([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.management([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.markets([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.mba([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.miami([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.mmstat\.com([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.moda([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.mom([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.motorcycles([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.navy([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.okinawa([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.ong([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.p2p\.huya\.com([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.pink([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.poker([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.promo([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.qpon([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.qzz\.io([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.realtor([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.realty([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.recipes([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.rehab([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.ren([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.repair([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.review([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.reviews([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.rich([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.rodeo([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.ryukyu([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.sa\.com([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.sale([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.sew([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.shopping([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.skin([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.soy([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.srl([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.sydney([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.tattoo([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.tax([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.taxi([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.tel([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.tienda([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.tires([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.tokyo([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.trading([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.us\.com([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.us\.kg([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.us\.org([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.va\.huya\.com([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.vacations([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.vegas([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.ventures([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.vin([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.voto([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.voyage([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.wang([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.webcam([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.wedding([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xin([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-11b4c3d([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-1ck2e1b([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-1qqw23a([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-2scrj9c([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-30rr7y([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-3bst00m([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-3ds443g([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-3e0b707e([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-3hcrj9c([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-3oq18vl8pn36a([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-3pxu8k([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-42c2d9a([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-45br5cyl([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-45brj9c([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-45q11c([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-4gbrim([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-54b7fta0cc([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-55qw42g([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-55qx5d([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-5su34j936bgsg([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-5tzm5g([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-6frz82g([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-6qq986b3xl([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-80adxhks([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-80ao21a([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-80aqecdr1a([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-80asehdb([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-80aswg([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-8y0a063a([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-90a3ac([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-90ae([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-90ais([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-9dbq2a([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-9et52u([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-9krt00a([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-b4w605ferd([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-bck1b9a5dre4c([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-c1avg([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-c2br7g([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-cck2b3b([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-cckwcxetd([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-cg4bki([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-clchc0ea0b2g2a9gcd([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-czr694b([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-czrs0t([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-czru2d([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-d1acj3b([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-d1alf([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-e1a4c([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-eckvdtc9d([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-efvy88h([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-fct429k([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-fhbei([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-fiq228c5hs([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-fiq64b([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-fiqs8s([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-fiqz9s([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-fjq720a([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-flw351e([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-fpcrj9c3d([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-fzc2c9e2c([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-fzys8d69uvgm([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-g2xx48c([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-gckr3f0f([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-gecrj9c([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-gk3at1e([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-h2breg3eve([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-h2brj9c([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-h2brj9c8c([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-hxt814e([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-i1b6b1a6a2e([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-imr513n([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-io0a7i([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-j1aef([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-j1amh([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-j6w193g([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-jlq480n2rg([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-jlq61u9w7b([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-jvr189m([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-kcrx77d1x4a([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-kprw13d([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-kpry57d([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-kput3i([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-l1acc([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-lgbbat1ad8j([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-mgb9awbf([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-mgba3a3ejt([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-mgba3a4f16a([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-mgba7c0bbn0a([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-mgbaakc7dvf([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-mgbaam7a8h([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-mgbab2bd([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-mgbah1a3hjkrd([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-mgbai9azgqp6j([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-mgbayh7gpa([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-mgbbh1a([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-mgbbh1a71e([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-mgbc0a9azcg([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-mgbca7dzdo([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-mgbcpq6gpa1a([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-mgberp4a5d4ar([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-mgbgu82a([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-mgbi4ecexp([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-mgbpl2fh([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-mgbt3dhd([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-mgbtx2b([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-mgbx4cd0ab([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-mix891f([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-mk1bu44c([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-mxtq1m([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-ngbc5azd([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-ngbe9e0a([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-ngbrx([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-node([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-nqv7f([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-nqv7fs00ema([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-nyqy26a([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-o3cw4h([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-ogbpf8fl([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-otu796d([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-p1acf([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-p1ai([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-pgbs0dh([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-pssy2u([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-q7ce6a([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-q9jyb4c([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-qcka1pmc([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-qxa6a([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-qxam([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-rhqv96g([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-rovu88b([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-rvc1e0am3e([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-s9brj9c([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-ses554g([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-t60b56a([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-tckwe([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-tiq49xqyj([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-unup4y([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-vhquv([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-vuq861b([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-w4r85el8fhu5dnra([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-w4rs40l([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-wgbh1c([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-wgbl6a([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-xhq521b([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-xkc2al3hye2a([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-xkc2dl3a5ee0h([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-y9a3aq([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-yfro4i67o([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-ygbi2ammx([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xn\-\-zfr164b([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.xx\.kg([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.yoga([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.you([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*\.za\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*adapt\-beacon\.awsprodops\.movetv\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*cdn\-settings\.appsflyersdk\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?.*conversions\.appsflyersdk\.com([^ a-zA-Z0-9.%_-]|$)
@@ -521,7 +112,6 @@ DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?adsystem.*\..*([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?adv0.*\.msa\.cdn\.mediaset\.net([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?advert.*\.livesportmedia\.eu([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?adwords.*\..*([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?adx\-.*\.dbankcloud\.
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?adx\-.*\.dbankedge\.cn([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?adx\-.*\.op\.dbankcloud\.com\.edgekey\.net([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?aem\-collector\-.*\.kgslb\.com([^ a-zA-Z0-9.%_-]|$)
@@ -553,9 +143,7 @@ DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?api.*\.moengage\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?api16\-access\-ttp.*\.tiktokpangle\-b\.us([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?api\-.*\.hismarttv\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?api\-access\.pangolin\-sdk\-toutiao\-.*\.com([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?api\-ad\-callback\.mobiuspace\.net
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?api\..*\.hismarttv\.com([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?api\.cloudmobi\.net
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?apiproxy\-log\-nlb\-1f304af4d3ac01a4\.elb\.us\-east\-.*\.amazonaws\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?app\-analytics\-.*\.snapchat\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?appanalysis.*\.banggood\.com([^ a-zA-Z0-9.%_-]|$)
@@ -566,8 +154,6 @@ DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?assoc\-amazon\..*([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?at.*\.doubanio\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?attr\-logs\..*\.amazonaws\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?auth\-.*\.hismarttv\.com([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?avito\.avito\.avito\.
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?avito\.avito\.www\.avito\.
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?ax\..*\.ifeng\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?banner\..*\.tccapis\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?bapi\-.*\.moengage\.com([^ a-zA-Z0-9.%_-]|$)
@@ -581,8 +167,6 @@ DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?bi\-eventtracker\-.*\.amazonaws\.com([^ a-zA-Z0
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?bj.*\.9669\.cn([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?bjkedv.*\.xyz([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?bjsvp.*\.space([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?booking\.com\-id.*
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?booklng\.com\-.*
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?browser\-intake\-.*\-datadoghq\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?c.*hit\.zerkalo\.io([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?cas\..*\.criteo\.com([^ a-zA-Z0-9.%_-]|$)
@@ -607,7 +191,6 @@ DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?collector\-.*\.px\-cloud\.net([^ a-zA-Z0-9.%_-]
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?collector\-.*\.pxchk\.net([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?collector\-.*\.tvsquared\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?collector\-.*\.us\.tvsquared\.com([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?config\.appjolt\.com
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?counter.*\-yadro.*\-ru\.unblocked\.lol([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?counter.*\.stat\.ovh([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?creative.*\.bidease\.com([^ a-zA-Z0-9.%_-]|$)
@@ -621,7 +204,6 @@ DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?data\-track.*\.yingxiong\.com([^ a-zA-Z0-9.%_-]
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?datacollect.*\.abtasty\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?datacollector\-.*\.dt\.dbankcloud\.cn([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?datacollector\-.*\.dt\.hicloud\.com([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?deliveryengine\.adswizz\.com
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?device\-metrics\-.*\.amazon\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?device\-metrics\-us.*\.amazon\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?discovery\-ios\-.*\.ertelecom\.ru([^ a-zA-Z0-9.%_-]|$)
@@ -648,7 +230,6 @@ DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?fanpingbi.*\.gaokao\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?faro\-collector\-.*\.grafana\-ops\.net([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?faro\-collector\-prod\-.*\.grafana\.net([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?firebaselogging\-.*\.googleapis\.com([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?fkp\.samsungcloudsolution\.
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?fls\-.*\.amazon\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?flurry\.agentportal\-.*\.yahoodns\.net([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?flurry\.agentportal\..*\.yahoodns\.net([^ a-zA-Z0-9.%_-]|$)
@@ -666,7 +247,6 @@ DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?geoloc.*\.geovisite\.ovh([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?geotargetly\-api\-.*\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?get.*bannerads\-6egeg2u34q\-du\.a\.run\.app([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?gg.*\.miguvideo\.com([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?global\-staticplat\.cdn\.bcebos\.com
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?gostats\..*([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?gscounters\..*\.gigya\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?gtlpa.*\.com([^ a-zA-Z0-9.%_-]|$)
@@ -773,7 +353,6 @@ DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?mtag\-.*\.wedevs\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?n.*adserv\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?n.*adserv\.xyz([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?nelonenmedia\-pmd\-ads\-.*\.nm\-stream\.nelonenmedia\.fi([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?oempprd\.samsungcloudsolution\.
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?omgmta.*\..*([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?omniture.*\..*([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?opnked.*\.xyz([^ a-zA-Z0-9.%_-]|$)
@@ -782,7 +361,6 @@ DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?p.*\-ad\-sign\.byteimg\.com([^ a-zA-Z0-9.%_-]|$
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?p26\.gejulm.*\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?p2pup.*\.gamedl\.qq\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?pangolin\-sdk\-toutiao.*\.com([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?pavoshare\.com
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?pijama\..*\.elasticbeanstalk\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?ping.*\.bidease\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?ping.*\.qq\.com([^ a-zA-Z0-9.%_-]|$)
@@ -810,9 +388,6 @@ DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?qpb.*\.sohu\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?quangcao\-.*\.epicdn\.me([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?query.*\.petametrics\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?reachableads\-av\..*\.amazonaws\.com([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?realtime\-receive\-lp1\.dg\.srv\.nintendo\.net
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?receive\-lp1\.dg\.srv\.nintendo\.net
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?receive\-lp1\.er\.srv\.nintendo\.net
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?report.*\.appmetrica\.webvisor\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?report\..*\.gbqofs\.io([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?report\..*\.qq\.com([^ a-zA-Z0-9.%_-]|$)
@@ -838,7 +413,6 @@ DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?sf.*\-fe\-tos\.pglstatp\-toutiao\.com([^ a-zA-Z
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?sock.*\-goguardian\.pusher\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?sonar.*\.xy\.fbcdn\.net([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?spa\-tracker.*\.spapi\.io([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?sprofile\-lp1\.cdn\.nintendo\.net
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?ssc\.southpark.*([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?ssp.*\.rtb\.beeline\.ru([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?st\-.*\.dynamicyield\.com([^ a-zA-Z0-9.%_-]|$)
@@ -918,9 +492,6 @@ DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?xn\-\-xhq9mt12cf5v\..*([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?xscp0.*xq\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?xy\-.*pcdn\.msstatic\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?ya.*\.dwstatic\.com([^ a-zA-Z0-9.%_-]|$)
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?yandex\.avito\.sber.*
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?yandex\.avito\.www\.
-DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?yandex\.pay\.avito\.
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?yhsfsdv.*\.com([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?ysdm.*\.ys137\.com\.cn([^ a-zA-Z0-9.%_-]|$)
 DOMAIN-REGEX,^(?:[a-z0-9-_.]+\.)?zabdybod.*\.club([^ a-zA-Z0-9.%_-]|$)
@@ -964,7 +535,6 @@ DOMAIN-REGEX,^(\S+\.)?voyage-prive\.[a-z]+(\.uk)?$
 DOMAIN-REGEX,^(\S+\.)?widgets?\.
 DOMAIN-REGEX,^(\S+\.)?xpj[0-9]\.net$
 DOMAIN-REGEX,^(\S+\.)?ylx-[0-9].com$
-DOMAIN-REGEX,^(a|c)\.[0-9a-f]{56}\.com$
 DOMAIN-REGEX,^.+stat\.kugou\.com
 DOMAIN-REGEX,^admarvel\.
 DOMAIN-REGEX,^admaster\.
@@ -982,7 +552,6 @@ DOMAIN-REGEX,^domob\.
 DOMAIN-REGEX,^duomeng\.
 DOMAIN-REGEX,^dwtrack\.
 DOMAIN-REGEX,^guanggao\.
-DOMAIN-REGEX,^https:\/\/(a|c)\.[0-9a-f]{56}\.com$
 DOMAIN-REGEX,^omgmta\.
 DOMAIN-REGEX,^omgmtaw\.
 DOMAIN-REGEX,^omniture\.

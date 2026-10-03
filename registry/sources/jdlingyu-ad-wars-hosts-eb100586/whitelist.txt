@@ -1,3 +1,0 @@
-! Source: https://raw.githubusercontent.com/jdlingyu/ad-wars/master/hosts
-! Repository: https://github.com/jdlingyu/ad-wars
-! DNS subset only; original modifiers and source scope are preserved.

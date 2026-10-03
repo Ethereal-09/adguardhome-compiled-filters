@@ -1,3 +1,0 @@
-! Source: https://raw.githubusercontent.com/jerryn70/GoodbyeAds/master/Formats/GoodbyeAds-AdBlock-Filter.txt
-! Repository: https://github.com/jerryn70/GoodbyeAds
-! DNS subset only; original modifiers and source scope are preserved.

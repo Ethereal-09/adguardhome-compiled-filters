@@ -25,36 +25,6 @@
 
 | 分类 | 拦截条目 | 例外条目 | 原始 | 加速1 | 加速2 |
 | --- | ---: | ---: | --- | --- | --- |
-| 综合 DNS 过滤（基础＋国内优化） | 307,309 | 123 | [combined.yaml](combined.yaml) | [Boki](combined-boki.yaml) | [GHFast](combined-ghfast.yaml) |
-| 全量 DNS 黑名单（最高档＋全部可用专项） | 2,006,532 | 312 | [full.yaml](full.yaml) | [Boki](full-boki.yaml) | [GHFast](full-ghfast.yaml) |
-| 均衡 DNS 过滤 | 199,122 | 0 | [balanced.yaml](balanced.yaml) | [Boki](balanced-boki.yaml) | [GHFast](balanced-ghfast.yaml) |
-| 扩展 DNS 过滤 | 227,572 | 0 | [extended.yaml](extended.yaml) | [Boki](extended-boki.yaml) | [GHFast](extended-ghfast.yaml) |
-| 激进 DNS 过滤 | 248,237 | 0 | [aggressive.yaml](aggressive.yaml) | [Boki](aggressive-boki.yaml) | [GHFast](aggressive-ghfast.yaml) |
-| 最强 DNS 过滤 | 284,025 | 0 | [maximum.yaml](maximum.yaml) | [Boki](maximum-boki.yaml) | [GHFast](maximum-ghfast.yaml) |
-| 1Hosts 均衡（替代基础） | 102,241 | 0 | [balanced-1hosts.yaml](balanced-1hosts.yaml) | [Boki](balanced-1hosts-boki.yaml) | [GHFast](balanced-1hosts-ghfast.yaml) |
-| 1Hosts 激进（替代基础） | 786,132 | 0 | [aggressive-1hosts.yaml](aggressive-1hosts.yaml) | [Boki](aggressive-1hosts-boki.yaml) | [GHFast](aggressive-1hosts-ghfast.yaml) |
-| 中国国内优化 DNS 黑名单 | 210,961 | 123 | [china.yaml](china.yaml) | [Boki](china-boki.yaml) | [GHFast](china-ghfast.yaml) |
-| 广告分类 | 143,763 | 0 | [ads.yaml](ads.yaml) | [Boki](ads-boki.yaml) | [GHFast](ads-ghfast.yaml) |
-| 跟踪与遥测分类 | 133,812 | 0 | [tracking.yaml](tracking.yaml) | [Boki](tracking-boki.yaml) | [GHFast](tracking-ghfast.yaml) |
-| 安全分类（威胁与诈骗等） | 654,793 | 0 | [security.yaml](security.yaml) | [Boki](security-boki.yaml) | [GHFast](security-ghfast.yaml) |
-| 被入侵网站补充列表（单一来源） | 9 | 0 | [malware.yaml](malware.yaml) | [Boki](malware-boki.yaml) | [GHFast](malware-ghfast.yaml) |
-| 诈骗分类 | 157,602 | 0 | [scam.yaml](scam.yaml) | [Boki](scam-boki.yaml) | [GHFast](scam-ghfast.yaml) |
-| 勒索软件分类 | 1,903 | 0 | [ransomware.yaml](ransomware.yaml) | [Boki](ransomware-boki.yaml) | [GHFast](ransomware-ghfast.yaml) |
-| 挖矿分类 | 1,524 | 0 | [mining.yaml](mining.yaml) | [Boki](mining-boki.yaml) | [GHFast](mining-ghfast.yaml) |
-| 电视分类 | 151 | 9 | [smart-tv.yaml](smart-tv.yaml) | [Boki](smart-tv-boki.yaml) | [GHFast](smart-tv-ghfast.yaml) |
-| 游戏机分类 | 14 | 0 | [game-console.yaml](game-console.yaml) | [Boki](game-console-boki.yaml) | [GHFast](game-console-ghfast.yaml) |
-| Windows 遥测组件 | 355 | 0 | [windows.yaml](windows.yaml) | [Boki](windows-boki.yaml) | [GHFast](windows-ghfast.yaml) |
-| 小米组件 | 278 | 0 | [xiaomi.yaml](xiaomi.yaml) | [Boki](xiaomi-boki.yaml) | [GHFast](xiaomi-ghfast.yaml) |
-| 三星组件 | 101 | 0 | [samsung.yaml](samsung.yaml) | [Boki](samsung-boki.yaml) | [GHFast](samsung-ghfast.yaml) |
-| Spotify 域名拦截组件 | 3,780 | 0 | [spotify.yaml](spotify.yaml) | [Boki](spotify-boki.yaml) | [GHFast](spotify-ghfast.yaml) |
-| YouTube 域名拦截组件 | 97,591 | 0 | [youtube.yaml](youtube.yaml) | [Boki](youtube-boki.yaml) | [GHFast](youtube-ghfast.yaml) |
-| 社交平台限制组件 | 3,995 | 0 | [social.yaml](social.yaml) | [Boki](social-boki.yaml) | [GHFast](social-ghfast.yaml) |
-| 短链接服务限制组件 | 9,935 | 0 | [shorteners.yaml](shorteners.yaml) | [Boki](shorteners-boki.yaml) | [GHFast](shorteners-ghfast.yaml) |
-| 动态 DNS 服务限制组件 | 1,536 | 0 | [dyndns.yaml](dyndns.yaml) | [Boki](dyndns-boki.yaml) | [GHFast](dyndns-ghfast.yaml) |
-| 托管服务限制组件 | 1,235 | 0 | [hosting.yaml](hosting.yaml) | [Boki](hosting-boki.yaml) | [GHFast](hosting-ghfast.yaml) |
-| 推广跳转放行 | 0 | 930 | [allow-referral.yaml](allow-referral.yaml) | [Boki](allow-referral-boki.yaml) | [GHFast](allow-referral-ghfast.yaml) |
-| 推广跳转放行（Native） | 0 | 1,613 | [allow-referral-native.yaml](allow-referral-native.yaml) | [Boki](allow-referral-native-boki.yaml) | [GHFast](allow-referral-native-ghfast.yaml) |
-| 短链接放行 | 0 | 9,928 | [allow-shorteners.yaml](allow-shorteners.yaml) | [Boki](allow-shorteners-boki.yaml) | [GHFast](allow-shorteners-ghfast.yaml) |
-| 设备原生遥测 | 98 | 0 | [native-tracking.yaml](native-tracking.yaml) | [Boki](native-tracking-boki.yaml) | [GHFast](native-tracking-ghfast.yaml) |
-| 高滥用顶级域名限制 | 281 | 0 | [tld-restrictions.yaml](tld-restrictions.yaml) | [Boki](tld-restrictions-boki.yaml) | [GHFast](tld-restrictions-ghfast.yaml) |
-| 钓鱼网站分类 | 118,066 | 0 | [phishing.yaml](phishing.yaml) | [Boki](phishing-boki.yaml) | [GHFast](phishing-ghfast.yaml) |
+| 国内精简（推荐） | 5,569 | 16 | [combined.yaml](combined.yaml) | [Boki](combined-boki.yaml) | [GHFast](combined-ghfast.yaml) |
+| 国内增强 | 211,115 | 123 | [china.yaml](china.yaml) | [Boki](china-boki.yaml) | [GHFast](china-ghfast.yaml) |
+| 中文源全量（按需） | 341,013 | 303 | [full.yaml](full.yaml) | [Boki](full-boki.yaml) | [GHFast](full-ghfast.yaml) |

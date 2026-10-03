@@ -1,3 +1,0 @@
-! Source: https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/AWAvenue-Ads-Rule.txt
-! Repository: https://github.com/TG-Twilight/AWAvenue-Ads-Rule
-! DNS subset only; original modifiers and source scope are preserved.

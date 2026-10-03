@@ -21,7 +21,7 @@ class ReadmeStatusTests(unittest.TestCase):
             update_readme(path, dict(checkedUtc='2026-10-02T00:00:00Z'), publication=report, **publication)
             text = path.read_text(encoding='utf-8')
             self.assertIn('最近成功发布：**2026-10-02 08:02:00', text)
-            self.assertIn('全量版（保留旧版） | 1,200', text)
+            self.assertIn('中文源全量（按需）（保留旧版） | 1,200', text)
             self.assertIn('新增用途 | 7', text)
             self.assertIn('部分更新', text)
             update_readme(path, dict(checkedUtc='2026-10-03T00:00:00Z', status='failed'), 'failure', 'failure')
@@ -57,7 +57,7 @@ class ReadmeStatusTests(unittest.TestCase):
             run = dict(checkedUtc='2026-09-30T20:23:00+00:00', status='success')
             update_readme(path, run, 'success', 'success', **publication)
             text = path.read_text(encoding='utf-8')
-            self.assertIn('| 全量版 | 1,200 |', text)
+            self.assertIn('| 中文源全量（按需） | 1,200 |', text)
             self.assertIn('| 新增用途 | 7 |', text)
             self.assertIn('| 测试放行 | 3 |', text)
             self.assertIn('main/dist/adguard.txt', text)
@@ -68,7 +68,7 @@ class ReadmeStatusTests(unittest.TestCase):
             self.assertTrue(text.endswith('## Sources\nkeep credits\n'))
             subscriptions = text.split(SUBSCRIPTIONS_START)[1].split(SUBSCRIPTIONS_END)[0]
             self.assertIn('<summary>其他分类订阅（2 项）', subscriptions)
-            self.assertLess(subscriptions.index('| 全量版 |'), subscriptions.index('<details>'))
+            self.assertLess(subscriptions.index('| 中文源全量（按需） |'), subscriptions.index('<details>'))
             self.assertLess(subscriptions.index('<details>'), subscriptions.index('| 新增用途 |'))
             self.assertLess(subscriptions.index('| 测试放行 |'), subscriptions.index('</details>'))
 
@@ -76,9 +76,9 @@ class ReadmeStatusTests(unittest.TestCase):
             publication['manifest']['sources']['a']['accepted'] = 3300
             update_readme(path, run, 'success', 'success', **publication)
             text = path.read_text(encoding='utf-8')
-            self.assertIn('| 全量版 | 1,600 |', text)
+            self.assertIn('| 中文源全量（按需） | 1,600 |', text)
             self.assertIn(' | 3,300 |', text)
-            self.assertNotIn('| 全量版 | 1,200 |', text)
+            self.assertNotIn('| 中文源全量（按需） | 1,200 |', text)
             self.assertEqual(text.count('<summary>其他分类订阅'), 1)
 
     def test_official_website_attribution_is_not_counted_as_a_github_repository(self):

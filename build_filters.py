@@ -232,6 +232,16 @@ def load_plan(config_path, registry_path):
                 raise ValueError('Unknown source: ' + sid)
             source = sources[sid]
             validate_source_origin(source)
+            if config.get('sourcePolicy', {}).get('mode') == 'chinese-or-china':
+                evidence = source.get('selectionEvidence', {})
+                focus = source.get('regionalFocus', {})
+                chinese = (evidence.get('repositoryLanguage') == 'zh'
+                           and evidence.get('basis') == 'reviewed_repository_documentation'
+                           and evidence.get('evidenceUrl', '').startswith(source['repository'] + '#'))
+                china = (focus.get('value') == 'CN' and focus.get('scope') == 'dns'
+                         and focus.get('basis') == 'repository_documentation')
+                if not source['repository'].startswith('https://github.com/') or not (chinese or china):
+                    raise ValueError('Source does not meet reviewed Chinese/China policy: ' + sid)
             if not source.get('eligibleForSubscription') or source['status'] != 'checked':
                 raise ValueError('Source needs review before selection: ' + sid)
             if (source['role'] == 'independent_allowlist') != (profile['kind'] == 'allowlist'):
@@ -340,8 +350,8 @@ def profile_content(profile, rules, sources, stamp):
 def index_content(profiles, published, default):
     rows = ['# 自动生成的 DNS 分类订阅', '',
             '本项目仅获取、合并与去重，上游规则由各原作者及贡献者维护；所属仓库账号不等于全部原创作者。原始订阅和仓库链接在每个规则文件头部及 manifest.json 中。', '',
-            f'默认入口 [adguard.txt](adguard.txt) 对应 `{default}`。四个强度档位任选一个；国内优化及设备/用途组件按需搭配。综合版的来源含未分级组件，不宣称属于均衡或低误杀档位。', '',
-            '独立白名单保持独立，在 AdGuard Home 的 DNS 白名单按需订阅；不默认加入全部黑名单。设备及服务限制组件不保证去广告效果，可能影响服务功能。', '',
+            f'默认入口 [adguard.txt](adguard.txt) 对应 `{default}` 国内精简版。三档任选一个，无需叠加。', '',
+            '仅采用已核验的中文仓库文档或面向中国 DNS 使用环境的来源；这不代表仅拦截中国域名，也不保证零误杀。保留上游原生放行例外。', '',
             '| 分类 | 类型 | 条目 | 去除重复 | 去除覆盖条目 | 文件 | 状态 |',
             '| --- | --- | ---: | ---: | ---: | --- | --- |']
     for profile in profiles:
@@ -353,7 +363,7 @@ def index_content(profiles, published, default):
         file_link = f"[订阅]({profile['id']}.txt)" if item.get('totalRules') else '—'
         rows.append(f"| {profile['name']} | {kind} | {item.get('totalRules', '—')} | {item.get('duplicatesRemoved', '—')} | {item.get('coveredRemoved', '—')} | {file_link} | {status} |")
     if any(p['id'] == 'full' for p in profiles):
-        rows += ['', '全量版 [full.txt](full.txt) 合并已核验、可兼容的 DNS 拦截来源，同系列强度取最高档、同一来源格式择一，并保留所选来源的原生放行例外和个人规则。包含设备及服务限制组件，独立白名单不并入；选源与排除依据见 [核验清单](../registry/full_selection.json)。']
+        rows += ['', '中文源全量版 [full.txt](full.txt) 只合并当前入选来源，同系列只取一个变体，适合按需使用；选源依据见 [核验清单](../registry/full_selection.json)。']
     rows += ['', '条目数含拦截规则和原生放行例外，不是实际命中次数；统计不证明真实应用的低误杀或去广告效果。', '',
              '优化仅在同一拦截/放行动作、同一 important 优先级内移除被父域覆盖的简单条目；通配符和正则保持原样。Hosts 和纯域名保留精确匹配。', '',
              '完整构建统计与选源见 [manifest.json](manifest.json)。下载检查时间与缓存年龄记录在本地 .cache/last-run.json，不因检查时间变化重复提交相同订阅。']

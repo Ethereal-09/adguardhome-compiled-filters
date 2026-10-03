@@ -64,7 +64,7 @@ def refresh(catalog, registry, cache, validator):
             f"最近核验：{data['generatedUtc']}（UTC）。共 {len(sources)} 个原始文件，{len(accepted)} 个通过完整下载、保守解析和 AdGuard 引擎校验。", '',
             '上游署名、用途、强度、地域和证据保存在 [reviewed_sources.json](reviewed_sources.json)；当前兼容结果见 [sources.json](sources.json)，实际组合见 [profiles.json](../profiles.json)。', '',
             '对浏览器条件、URL 路径和脚本语法不做域名扩大转换。无法保留网络放行例外或 badfilter 的来源整份排除。DNS 黑名单保留其原生例外；独立白名单按用途另行订阅。', '',
-            '旧的 registry/sources/ 是历史拆分快照，本次发布以 dist/ 和 manifest.json 为准。', '',
+            '中文或中国地区依据保存在 selectionEvidence / regionalFocus；语言不等于域名地区，也不保证低误杀。当前订阅以 dist/ 和 manifest.json 为准。', '',
             '| 原始来源 | 分类 | DNS 拦截 | DNS 例外 | 结果 |', '| --- | --- | ---: | ---: | --- |']
         for source in sources:
             state = ('可选；'+source['downloadState']) if source['eligibleForSubscription'] else source['error']

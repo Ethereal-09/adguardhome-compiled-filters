@@ -1,3 +1,0 @@
-! Source: https://raw.githubusercontent.com/blocklistproject/Lists/main/adguard/fraud-ags.txt
-! Repository: https://github.com/blocklistproject/Lists
-! DNS subset only; original modifiers and source scope are preserved.

@@ -3,9 +3,11 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import json
 import os
 from pathlib import Path
 import shutil
+import subprocess
 import sys
 import tempfile
 
@@ -32,13 +34,47 @@ def changes(before, after):
     return dict(added=len(current-previous), removed=len(previous-current))
 
 
+def check_compatibility(path, validator, hosts):
+    """Check configured service samples with the real engine before publication."""
+    if not hosts:
+        return
+    rules = [line for line in path.read_text(encoding='utf-8').splitlines()
+             if line and not line.startswith('!')]
+    result = subprocess.run([str(validator), '-match'],
+        input=json_text([dict(rules=rules, hosts=hosts)]), text=True, encoding='utf-8',
+        capture_output=True, check=True, timeout=120)
+    decisions = json.loads(result.stdout)[0]
+    blocked = [host for host, decision in zip(hosts, decisions, strict=True) if decision]
+    if blocked:
+        raise ValueError('Compatibility samples blocked: ' + ', '.join(blocked))
+
+
+def prune_retired(output, old, old_mihomo, active):
+    """Only remove retired manifest-owned files; preserve unknown user artifacts."""
+    root = output.resolve()
+    retired = set(old.get('profiles', {})) - set(active)
+    for pid in retired:
+        paths = [output / (pid + '.txt')]
+        previous = old_mihomo.get('profiles', {}).get(pid, {})
+        paths += [output / 'mihomo' / p['file'] for p in previous.get('providers', {}).values()]
+        paths += [output / 'mihomo' / (pid + suffix + '.yaml') for suffix in ('', '-boki', '-ghfast')]
+        for path in paths:
+            if not path.resolve().is_relative_to(root):
+                raise ValueError('Retired output escapes publication directory')
+            path.unlink(missing_ok=True)
+    return sorted(retired)
+
+
 def publish(config_path, registry_path, output, custom, cache, validator, binary,
             readme=None, repository=DEFAULT_REPOSITORY, allow_reviewed_changes=False):
     config, profiles, _ = load_plan(config_path, registry_path)
     with build_lock(cache / 'publication'), tempfile.TemporaryDirectory(dir=cache, prefix='publication-') as folder:
         stage = Path(folder) / 'dns'
         if output.exists():
-            shutil.copytree(output, stage, ignore=shutil.ignore_patterns('mihomo'))
+            stage.mkdir()
+            for path in output.iterdir():
+                if path.is_file() and path.suffix in ('.txt', '.json', '.md'):
+                    shutil.copy2(path, stage / path.name)
         else:
             stage.mkdir()
         old = read_optional(output / 'manifest.json')
@@ -54,6 +90,8 @@ def publish(config_path, registry_path, output, custom, cache, validator, binary
                 if item['status'] != 'ready':
                     raise ValueError(item.get('error', 'Profile is not ready'))
                 result = audit(stage, config_path, registry_path, validator, {pid}, check_alias=False)
+                check_compatibility(stage / (pid + '.txt'), validator, config.get('compatibilityHosts', []))
+                result['profiles'][pid]['compatibilityHosts'] = config.get('compatibilityHosts', [])
                 dns_ok[pid] = result['profiles'][pid]
                 deltas[pid] = changes(output / (pid + '.txt'), stage / (pid + '.txt'))
             except Exception as error:
@@ -141,11 +179,14 @@ def publish(config_path, registry_path, output, custom, cache, validator, binary
         write_if_changed(mi_output / 'README.md', mihomo_index(mi_profiles))
         report = dict(status='partial' if failures and (dns_ok or mi_ok) else 'failed' if failures else 'success',
             checkedUtc=utcnow(), dnsValidated=list(dns_ok), mihomoValidated=list(mi_ok),
+            compatibilityHosts=config.get('compatibilityHosts', []),
             failures=failures, changes=deltas, sourceChanges={sid: {
                 key: dict(previous=old.get('sources', {}).get(sid, {}).get(key), current=stats.get(key))
                 for key in ('accepted', 'blockingRules', 'exceptionRules')}
                 for sid, stats in manifest['sources'].items()})
         old_publication = read_optional(output / 'publication.json')
+        if len(dns_ok) == len(profiles) and len(mi_ok) == len(profiles):
+            report['retiredProfiles'] = prune_retired(output, old, old_mihomo, manifest['profiles'])
         if dns_ok or mi_ok:
             report['publishedUtc'] = report['checkedUtc']
         elif old_publication.get('publishedUtc'):

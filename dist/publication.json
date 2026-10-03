@@ -1,207 +1,40 @@
 {
   "status": "success",
-  "checkedUtc": "2026-10-02T20:40:52+00:00",
+  "checkedUtc": "2026-10-03T09:17:15+00:00",
   "dnsValidated": [
     "combined",
-    "full",
-    "balanced",
-    "extended",
-    "aggressive",
-    "maximum",
-    "balanced-1hosts",
-    "aggressive-1hosts",
     "china",
-    "ads",
-    "tracking",
-    "security",
-    "malware",
-    "scam",
-    "ransomware",
-    "mining",
-    "smart-tv",
-    "game-console",
-    "windows",
-    "xiaomi",
-    "samsung",
-    "spotify",
-    "youtube",
-    "social",
-    "shorteners",
-    "dyndns",
-    "hosting",
-    "allow-referral",
-    "allow-referral-native",
-    "allow-shorteners",
-    "native-tracking",
-    "tld-restrictions",
-    "phishing"
+    "full"
   ],
   "mihomoValidated": [
     "combined",
-    "full",
-    "balanced",
-    "extended",
-    "aggressive",
-    "maximum",
-    "balanced-1hosts",
-    "aggressive-1hosts",
     "china",
-    "ads",
-    "tracking",
-    "security",
-    "malware",
-    "scam",
-    "ransomware",
-    "mining",
-    "smart-tv",
-    "game-console",
-    "windows",
-    "xiaomi",
-    "samsung",
-    "spotify",
-    "youtube",
-    "social",
-    "shorteners",
-    "dyndns",
-    "hosting",
-    "allow-referral",
-    "allow-referral-native",
-    "allow-shorteners",
-    "native-tracking",
-    "tld-restrictions",
-    "phishing"
+    "full"
+  ],
+  "compatibilityHosts": [
+    "www.baidu.com",
+    "www.qq.com",
+    "www.bilibili.com",
+    "www.taobao.com",
+    "www.jd.com",
+    "github.com",
+    "login.microsoftonline.com",
+    "bit.ly",
+    "duckdns.org",
+    "example.duckdns.org",
+    "facebook.com"
   ],
   "failures": {},
   "changes": {
     "combined": {
-      "added": 455,
-      "removed": 205
-    },
-    "full": {
-      "added": 3555,
-      "removed": 1819
-    },
-    "balanced": {
-      "added": 452,
-      "removed": 271
-    },
-    "extended": {
-      "added": 565,
-      "removed": 611
-    },
-    "aggressive": {
-      "added": 665,
-      "removed": 712
-    },
-    "maximum": {
-      "added": 746,
-      "removed": 823
-    },
-    "balanced-1hosts": {
-      "added": 0,
-      "removed": 0
-    },
-    "aggressive-1hosts": {
       "added": 0,
       "removed": 0
     },
     "china": {
-      "added": 280,
-      "removed": 61
-    },
-    "ads": {
       "added": 0,
       "removed": 0
     },
-    "tracking": {
-      "added": 0,
-      "removed": 0
-    },
-    "security": {
-      "added": 0,
-      "removed": 0
-    },
-    "malware": {
-      "added": 0,
-      "removed": 0
-    },
-    "scam": {
-      "added": 0,
-      "removed": 0
-    },
-    "ransomware": {
-      "added": 0,
-      "removed": 0
-    },
-    "mining": {
-      "added": 0,
-      "removed": 0
-    },
-    "smart-tv": {
-      "added": 0,
-      "removed": 0
-    },
-    "game-console": {
-      "added": 0,
-      "removed": 0
-    },
-    "windows": {
-      "added": 0,
-      "removed": 0
-    },
-    "xiaomi": {
-      "added": 0,
-      "removed": 0
-    },
-    "samsung": {
-      "added": 0,
-      "removed": 0
-    },
-    "spotify": {
-      "added": 0,
-      "removed": 0
-    },
-    "youtube": {
-      "added": 0,
-      "removed": 0
-    },
-    "social": {
-      "added": 0,
-      "removed": 0
-    },
-    "shorteners": {
-      "added": 2,
-      "removed": 2
-    },
-    "dyndns": {
-      "added": 0,
-      "removed": 0
-    },
-    "hosting": {
-      "added": 0,
-      "removed": 0
-    },
-    "allow-referral": {
-      "added": 0,
-      "removed": 0
-    },
-    "allow-referral-native": {
-      "added": 4,
-      "removed": 2
-    },
-    "allow-shorteners": {
-      "added": 2,
-      "removed": 2
-    },
-    "native-tracking": {
-      "added": 0,
-      "removed": 0
-    },
-    "tld-restrictions": {
-      "added": 0,
-      "removed": 0
-    },
-    "phishing": {
+    "full": {
       "added": 0,
       "removed": 0
     }
@@ -209,12 +42,12 @@
   "sourceChanges": {
     "217heidai-adblockfilters-rules-adblockdns-txt-69af1a63": {
       "accepted": {
-        "previous": 215444,
-        "current": 220079
+        "previous": 219333,
+        "current": 219333
       },
       "blockingRules": {
-        "previous": 215247,
-        "current": 219882
+        "previous": 219136,
+        "current": 219136
       },
       "exceptionRules": {
         "previous": 197,
@@ -223,11 +56,11 @@
     },
     "217heidai-adblockfilters-rules-adblockdnslite-txt-99bc0b64": {
       "accepted": {
-        "previous": 5322,
+        "previous": 5388,
         "current": 5388
       },
       "blockingRules": {
-        "previous": 5306,
+        "previous": 5372,
         "current": 5372
       },
       "exceptionRules": {
@@ -237,96 +70,12 @@
     },
     "8680-goodbyeads-data-rules-dns-txt-8e7fb833": {
       "accepted": {
-        "previous": 113922,
-        "current": 114099
+        "previous": 114252,
+        "current": 114252
       },
       "blockingRules": {
-        "previous": 113922,
-        "current": 114099
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "adaway-adaway-github-io-hosts-txt-66566edd": {
-      "accepted": {
-        "previous": 6540,
-        "current": 6540
-      },
-      "blockingRules": {
-        "previous": 6540,
-        "current": 6540
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "adguardteam-adguardfilters-mobilefilter-sections-adservers-txt-81ac67be": {
-      "accepted": {
-        "previous": 951,
-        "current": 951
-      },
-      "blockingRules": {
-        "previous": 951,
-        "current": 951
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "anudeepnd-blacklist-adservers-txt-e413d034": {
-      "accepted": {
-        "previous": 42343,
-        "current": 42343
-      },
-      "blockingRules": {
-        "previous": 42343,
-        "current": 42343
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "anudeepnd-blacklist-facebook-txt-32006df0": {
-      "accepted": {
-        "previous": 3995,
-        "current": 3995
-      },
-      "blockingRules": {
-        "previous": 3995,
-        "current": 3995
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "badmojr-1hosts-lite-adblock-txt-6a71fde5": {
-      "accepted": {
-        "previous": 102241,
-        "current": 102241
-      },
-      "blockingRules": {
-        "previous": 102241,
-        "current": 102241
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "badmojr-1hosts-xtra-adblock-txt-ec275c9c": {
-      "accepted": {
-        "previous": 786132,
-        "current": 786132
-      },
-      "blockingRules": {
-        "previous": 786132,
-        "current": 786132
+        "previous": 114252,
+        "current": 114252
       },
       "exceptionRules": {
         "previous": 0,
@@ -347,620 +96,18 @@
         "current": 0
       }
     },
-    "blocklistproject-lists-adguard-abuse-ags-txt-69397c3c": {
-      "accepted": {
-        "previous": 435051,
-        "current": 435051
-      },
-      "blockingRules": {
-        "previous": 435051,
-        "current": 435051
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "blocklistproject-lists-adguard-ads-ags-txt-21a38910": {
-      "accepted": {
-        "previous": 233991,
-        "current": 233991
-      },
-      "blockingRules": {
-        "previous": 233991,
-        "current": 233991
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "blocklistproject-lists-adguard-crypto-ags-txt-722f85ae": {
-      "accepted": {
-        "previous": 1272,
-        "current": 1272
-      },
-      "blockingRules": {
-        "previous": 1272,
-        "current": 1272
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "blocklistproject-lists-adguard-fraud-ags-txt-859f4062": {
-      "accepted": {
-        "previous": 256184,
-        "current": 256184
-      },
-      "blockingRules": {
-        "previous": 256184,
-        "current": 256184
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "blocklistproject-lists-adguard-phishing-ags-txt-6ab23539": {
-      "accepted": {
-        "previous": 190191,
-        "current": 190191
-      },
-      "blockingRules": {
-        "previous": 190191,
-        "current": 190191
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "blocklistproject-lists-adguard-ransomware-ags-txt-8f253932": {
-      "accepted": {
-        "previous": 1904,
-        "current": 1904
-      },
-      "blockingRules": {
-        "previous": 1904,
-        "current": 1904
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "blocklistproject-lists-adguard-redirect-ags-txt-6ece472c": {
-      "accepted": {
-        "previous": 108682,
-        "current": 108682
-      },
-      "blockingRules": {
-        "previous": 108682,
-        "current": 108682
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "blocklistproject-lists-adguard-scam-ags-txt-521f7b7c": {
-      "accepted": {
-        "previous": 8527,
-        "current": 8527
-      },
-      "blockingRules": {
-        "previous": 8527,
-        "current": 8527
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "blocklistproject-lists-adguard-smart-tv-ags-txt-92f6ccb6": {
-      "accepted": {
-        "previous": 77,
-        "current": 77
-      },
-      "blockingRules": {
-        "previous": 77,
-        "current": 77
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "blocklistproject-lists-adguard-tracking-ags-txt-06c487dc": {
-      "accepted": {
-        "previous": 143866,
-        "current": 143866
-      },
-      "blockingRules": {
-        "previous": 143866,
-        "current": 143866
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
     "cats-team-adrules-dns-txt-35998f0f": {
       "accepted": {
-        "previous": 196933,
-        "current": 197122
+        "previous": 197268,
+        "current": 197268
       },
       "blockingRules": {
-        "previous": 196933,
-        "current": 197122
+        "previous": 197268,
+        "current": 197268
       },
       "exceptionRules": {
         "previous": 0,
         "current": 0
-      }
-    },
-    "crazy-max-windowsspyblocker-data-hosts-spy-txt-a41d8da9": {
-      "accepted": {
-        "previous": 347,
-        "current": 347
-      },
-      "blockingRules": {
-        "previous": 347,
-        "current": 347
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "dandelionsprout-adfilt-gameconsoleadblocklist-txt-2fd8cf2e": {
-      "accepted": {
-        "previous": 14,
-        "current": 14
-      },
-      "blockingRules": {
-        "previous": 14,
-        "current": 14
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "durablenapkin-scamblocklist-adguard-txt-f27041d5": {
-      "accepted": {
-        "previous": 952,
-        "current": 952
-      },
-      "blockingRules": {
-        "previous": 952,
-        "current": 952
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "hagezi-dns-blocklists-adblock-dyndns-txt-1d5b17bf": {
-      "accepted": {
-        "previous": 1536,
-        "current": 1536
-      },
-      "blockingRules": {
-        "previous": 1536,
-        "current": 1536
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "hagezi-dns-blocklists-adblock-hoster-txt-15f0d4a7": {
-      "accepted": {
-        "previous": 1235,
-        "current": 1235
-      },
-      "blockingRules": {
-        "previous": 1235,
-        "current": 1235
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "hagezi-dns-blocklists-adblock-multi-txt-ce9f678a": {
-      "accepted": {
-        "previous": 198941,
-        "current": 199122
-      },
-      "blockingRules": {
-        "previous": 198941,
-        "current": 199122
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "hagezi-dns-blocklists-adblock-pro-plus-txt-7a87ce26": {
-      "accepted": {
-        "previous": 248284,
-        "current": 248237
-      },
-      "blockingRules": {
-        "previous": 248284,
-        "current": 248237
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "hagezi-dns-blocklists-adblock-pro-txt-65c8e043": {
-      "accepted": {
-        "previous": 227618,
-        "current": 227572
-      },
-      "blockingRules": {
-        "previous": 227618,
-        "current": 227572
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "hagezi-dns-blocklists-adblock-spam-tlds-txt-ee73a7e1": {
-      "accepted": {
-        "previous": 281,
-        "current": 281
-      },
-      "blockingRules": {
-        "previous": 281,
-        "current": 281
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "hagezi-dns-blocklists-adblock-ultimate-txt-bc290ebd": {
-      "accepted": {
-        "previous": 284102,
-        "current": 284025
-      },
-      "blockingRules": {
-        "previous": 284102,
-        "current": 284025
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "hagezi-dns-blocklists-adblock-urlshortener-txt-25500e57": {
-      "accepted": {
-        "previous": 9935,
-        "current": 9935
-      },
-      "blockingRules": {
-        "previous": 9935,
-        "current": 9935
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "hagezi-dns-blocklists-adblock-whitelist-referral-native-txt-69481aca": {
-      "accepted": {
-        "previous": 1611,
-        "current": 1613
-      },
-      "blockingRules": {
-        "previous": 0,
-        "current": 0
-      },
-      "exceptionRules": {
-        "previous": 1611,
-        "current": 1613
-      }
-    },
-    "hagezi-dns-blocklists-adblock-whitelist-referral-txt-da8500f6": {
-      "accepted": {
-        "previous": 936,
-        "current": 936
-      },
-      "blockingRules": {
-        "previous": 0,
-        "current": 0
-      },
-      "exceptionRules": {
-        "previous": 936,
-        "current": 936
-      }
-    },
-    "hagezi-dns-blocklists-adblock-whitelist-urlshortener-txt-c2ee3e5c": {
-      "accepted": {
-        "previous": 9928,
-        "current": 9928
-      },
-      "blockingRules": {
-        "previous": 0,
-        "current": 0
-      },
-      "exceptionRules": {
-        "previous": 9928,
-        "current": 9928
-      }
-    },
-    "hoshsadiq-adblock-nocoin-list-hosts-txt-35b3f66b": {
-      "accepted": {
-        "previous": 312,
-        "current": 312
-      },
-      "blockingRules": {
-        "previous": 312,
-        "current": 312
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "https-pgl-yoyo-org-adservers-adservers-serverlist-php-f785075c": {
-      "accepted": {
-        "previous": 3552,
-        "current": 3551
-      },
-      "blockingRules": {
-        "previous": 3552,
-        "current": 3551
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "https-someonewhocares-org-hosts-hosts-zero-hosts-dfd8da19": {
-      "accepted": {
-        "previous": 13082,
-        "current": 13082
-      },
-      "blockingRules": {
-        "previous": 13082,
-        "current": 13082
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "jdlingyu-ad-wars-hosts-eb100586": {
-      "accepted": {
-        "previous": 1645,
-        "current": 1645
-      },
-      "blockingRules": {
-        "previous": 1645,
-        "current": 1645
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "jerryn70-goodbyeads-extension-goodbyeads-samsung-adblock-txt-10d171b5": {
-      "accepted": {
-        "previous": 101,
-        "current": 101
-      },
-      "blockingRules": {
-        "previous": 101,
-        "current": 101
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "jerryn70-goodbyeads-extension-goodbyeads-spotify-adblock-txt-4a00db86": {
-      "accepted": {
-        "previous": 3780,
-        "current": 3780
-      },
-      "blockingRules": {
-        "previous": 3780,
-        "current": 3780
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "jerryn70-goodbyeads-extension-goodbyeads-xiaomi-extension-txt-2ab84d66": {
-      "accepted": {
-        "previous": 278,
-        "current": 278
-      },
-      "blockingRules": {
-        "previous": 278,
-        "current": 278
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "jerryn70-goodbyeads-formats-goodbyeads-adblock-filter-txt-d11c0acd": {
-      "accepted": {
-        "previous": 277714,
-        "current": 277714
-      },
-      "blockingRules": {
-        "previous": 277714,
-        "current": 277714
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "jerryn70-goodbyeads-formats-goodbyeads-youtube-adblock-filter-txt-992d6a26": {
-      "accepted": {
-        "previous": 97645,
-        "current": 97645
-      },
-      "blockingRules": {
-        "previous": 97645,
-        "current": 97645
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "mitchellkrogza-the-big-list-of-hacked-malware-web-sites-hacked-domains-list-5df168a2": {
-      "accepted": {
-        "previous": 9,
-        "current": 9
-      },
-      "blockingRules": {
-        "previous": 9,
-        "current": 9
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "nextdns-native-tracking-domains-domains-alexa-21182066": {
-      "accepted": {
-        "previous": 3,
-        "current": 3
-      },
-      "blockingRules": {
-        "previous": 3,
-        "current": 3
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "nextdns-native-tracking-domains-domains-apple-ba5b2dca": {
-      "accepted": {
-        "previous": 19,
-        "current": 19
-      },
-      "blockingRules": {
-        "previous": 19,
-        "current": 19
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "nextdns-native-tracking-domains-domains-huawei-45cc6eb5": {
-      "accepted": {
-        "previous": 37,
-        "current": 37
-      },
-      "blockingRules": {
-        "previous": 37,
-        "current": 37
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "nextdns-native-tracking-domains-domains-roku-6edd436b": {
-      "accepted": {
-        "previous": 1,
-        "current": 1
-      },
-      "blockingRules": {
-        "previous": 1,
-        "current": 1
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "nextdns-native-tracking-domains-domains-samsung-4cda1df6": {
-      "accepted": {
-        "previous": 4,
-        "current": 4
-      },
-      "blockingRules": {
-        "previous": 4,
-        "current": 4
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "nextdns-native-tracking-domains-domains-sonos-0c721de8": {
-      "accepted": {
-        "previous": 2,
-        "current": 2
-      },
-      "blockingRules": {
-        "previous": 2,
-        "current": 2
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "nextdns-native-tracking-domains-domains-windows-e8dcf707": {
-      "accepted": {
-        "previous": 23,
-        "current": 23
-      },
-      "blockingRules": {
-        "previous": 23,
-        "current": 23
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "nextdns-native-tracking-domains-domains-xiaomi-02950f11": {
-      "accepted": {
-        "previous": 9,
-        "current": 9
-      },
-      "blockingRules": {
-        "previous": 9,
-        "current": 9
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "perflyst-piholeblocklist-smarttv-agh-txt-f3772bac": {
-      "accepted": {
-        "previous": 154,
-        "current": 154
-      },
-      "blockingRules": {
-        "previous": 145,
-        "current": 145
-      },
-      "exceptionRules": {
-        "previous": 9,
-        "current": 9
       }
     },
     "privacy-protection-tools-anti-ad-anti-ad-easylist-txt-9b62e65d": {
@@ -977,70 +124,28 @@
         "current": 110
       }
     },
-    "sjhgvr-oisd-abp-small-txt-50559e3d": {
+    "tg-twilight-awavenue-ads-rule-filters-awavenue-ads-rule-adguard-no-unwelcome-txt-138d0711": {
       "accepted": {
-        "previous": 57474,
-        "current": 57551
+        "previous": 866,
+        "current": 866
       },
       "blockingRules": {
-        "previous": 57474,
-        "current": 57551
+        "previous": 866,
+        "current": 866
       },
       "exceptionRules": {
         "previous": 0,
         "current": 0
       }
     },
-    "spam404-lists-main-blacklist-txt-694a44a4": {
+    "tg-twilight-awavenue-ads-rule-filters-awavenue-ads-rule-adguard-only-ads-txt-7fe2820a": {
       "accepted": {
-        "previous": 8140,
-        "current": 8140
+        "previous": 652,
+        "current": 652
       },
       "blockingRules": {
-        "previous": 8140,
-        "current": 8140
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "stevenblack-hosts-hosts-603e776c": {
-      "accepted": {
-        "previous": 74759,
-        "current": 72232
-      },
-      "blockingRules": {
-        "previous": 74759,
-        "current": 72232
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "tg-twilight-awavenue-ads-rule-awavenue-ads-rule-txt-594187e3": {
-      "accepted": {
-        "previous": 962,
-        "current": 962
-      },
-      "blockingRules": {
-        "previous": 962,
-        "current": 962
-      },
-      "exceptionRules": {
-        "previous": 0,
-        "current": 0
-      }
-    },
-    "ublockorigin-uassets-filters-resource-abuse-txt-f20d5302": {
-      "accepted": {
-        "previous": 1,
-        "current": 1
-      },
-      "blockingRules": {
-        "previous": 1,
-        "current": 1
+        "previous": 652,
+        "current": 652
       },
       "exceptionRules": {
         "previous": 0,
@@ -1048,5 +153,6 @@
       }
     }
   },
-  "publishedUtc": "2026-10-02T20:40:52+00:00"
+  "retiredProfiles": [],
+  "publishedUtc": "2026-10-03T09:17:15+00:00"
 }

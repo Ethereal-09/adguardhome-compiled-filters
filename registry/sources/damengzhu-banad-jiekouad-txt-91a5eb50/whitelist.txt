@@ -1,7 +1,0 @@
-! Source: https://raw.githubusercontent.com/damengzhu/banad/main/jiekouAD.txt
-! Repository: https://github.com/damengzhu/banad
-! DNS subset only; original modifiers and source scope are preserved.
-@@||manwa.me^
-@@||sobot.com^
-@@||wan.douyu.com^
-@@||x2.ifengimg.com^

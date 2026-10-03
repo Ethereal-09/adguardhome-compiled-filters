@@ -1,3 +1,0 @@
-! Source: https://raw.githubusercontent.com/hagezi/dns-blocklists/main/adblock/multi.txt
-! Repository: https://github.com/hagezi/dns-blocklists
-! DNS subset only; original modifiers and source scope are preserved.

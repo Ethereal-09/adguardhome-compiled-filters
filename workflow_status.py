@@ -36,12 +36,12 @@ def publication_blocks(config, manifest, registry, repository, allow_retained=Fa
     sources = {s['id']: s for s in registry['sources']}
     selected = set()
     groups = {name: [] for name in ('基础订阅', '强度档位', '用途分类', '设备与服务限制', '独立白名单')}
-    labels = {'combined': '综合版', 'full': '全量版', 'china': '国内优化',
+    labels = {'combined': '国内精简（推荐）', 'full': '中文源全量（按需）', 'china': '国内增强',
               'balanced': 'HaGeZi 均衡 · Normal', 'extended': 'HaGeZi 扩展 · Pro',
               'aggressive': 'HaGeZi 激进 · Pro++', 'maximum': 'HaGeZi 最强 · Ultimate',
               'balanced-1hosts': '1Hosts 均衡 · Lite', 'aggressive-1hosts': '1Hosts 激进 · Xtra'}
-    scopes = {'combined': '通用过滤 + 国内优化', 'china': '中国使用环境',
-              'full': '最高档位 + 全部兼容专项（含服务限制）'}
+    scopes = {'combined': '国内 Lite + 秋风纯广告', 'china': '增加隐私与国内 DNS 合集',
+              'full': '当前入选中文/中国地区来源'}
     for profile in profiles:
         pid = profile['id']
         item = manifest['profiles'][pid]
@@ -75,7 +75,7 @@ def publication_blocks(config, manifest, registry, repository, allow_retained=Fa
         groups[group].append((pid, row))
 
     rows = ['## AdGuard Home 订阅', '',
-            '在 AdGuard Home → **过滤器 → DNS 黑名单**添加。日常使用选综合版；国内优化可单独使用。**全量版包含整站和服务限制，可能影响正常使用。**', '']
+            '在 AdGuard Home → **过滤器 → DNS 黑名单**添加，三档任选一个。日常推荐国内精简；增强与全量版覆盖更广，仍可能影响正常功能。', '']
     notes = {'强度档位': '任选一个档位；1Hosts 可作为替代。',
              '用途分类': '按用途单独使用或搭配基础订阅，添加到 DNS 黑名单。',
              '设备与服务限制': '添加到 DNS 黑名单；整站或服务限制可能影响正常功能。',
@@ -104,7 +104,7 @@ def publication_blocks(config, manifest, registry, repository, allow_retained=Fa
     if folded:
         rows += ['</details>', '']
     custom_profiles = [labels.get(p['id'], p['name']) for p in profiles if p.get('includeCustom')]
-    rows += ['个人规则适用：' + '、'.join(custom_profiles) + '；其他分类可通过 `includeCustom` 单独开启。', '']
+    rows += ['三档均保留原生放行例外并应用个人规则；中文文档不代表只包含中国域名。', '']
 
     repositories = {sources[sid]['repository'] for sid in selected}
     github = sum(repo.startswith('https://github.com/') for repo in repositories)
@@ -212,7 +212,7 @@ def mihomo_content(dns_manifest, manifest, repository, allow_stale=False):
             '| 分类 | 拦截条目 | 例外条目 | 原始配置 | Boki 配置 | GHFast 配置 |',
             '| --- | ---: | ---: | --- | --- | --- |']
     def row(pid, item):
-        label = {'combined': '综合版', 'china': '国内优化', 'full': '全量版'}.get(pid, item['name']).replace('|', r'\|')
+        label = {'combined': '国内精简', 'china': '国内增强', 'full': '中文源全量'}.get(pid, item['name']).replace('|', r'\|')
         if item.get('status') == 'retained':
             label += '（保留旧版）'
         if item['inputSha256'] != dns_manifest['profiles'][pid].get('fileSha256'):

@@ -1,3 +1,0 @@
-! Source: https://raw.githubusercontent.com/durablenapkin/scamblocklist/master/adguard.txt
-! Repository: https://github.com/durablenapkin/scamblocklist
-! DNS subset only; original modifiers and source scope are preserved.

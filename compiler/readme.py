@@ -62,31 +62,11 @@ def readme(catalog: dict, manifest: dict | None, attempt: dict) -> str:
         name = profile["name"]
         link = subscription_links(repository, "mihomo/" + pid + ".yaml", True) if pid in profiles else "— | — | —"
         lines.append(f"| {name} | {link} |")
-    lines += ["", "</details>", "", "<details>", "<summary>规则数量怎么算？</summary>", ""]
-    full = profiles.get("full")
-    if full:
-        inputs = sum(sources[sid]["dns_usable"] for sid in full["sources"])
-        lines += [f"DNS 合并版 **{full['rules']:,} 条**，包含 **{full['block']:,} 条拦截**和 **{full['allow']:,} 条例外**。", "",
-                  "| 合并使用的来源 | 原始有效行 | 源内去重后的 DNS 规则 |", "|---|---:|---:|"]
-        for sid in full["sources"]:
-            record = sources[sid]
-            lines.append(f"| {record['name']} | {record['active']:,} | {record['dns_usable']:,} |")
-        lines += ["", f"源内去重后共 **{inputs:,} 条**，再去除 **{inputs - full['rules']:,} 条跨源重复**，发布 **{full['rules']:,} 条**。"]
-    else:
-        lines += ["DNS 合并版尚未成功发布。"]
-    browser_full = browsers.get("combined")
-    if browser_full:
-        lines += ["", f"浏览器合并版 **{browser_full['rules']:,} 条**单独统计，保留网页元素、路径、脚本和例外规则。"]
-    lines += ["", "秋风选用完整版本，其他三个变体不再单独订阅。规则数按去重后的有效行统计，不等于覆盖的域名总数。",
-              "浏览器规则含无法在 DNS 层保留原范围的条件与例外，因此单独输出。"]
-    if full:
-        paths = sum(sources[sid].get("skipped", {}).get("url-path", 0) for sid in full["sources"])
-        if paths:
-            lines += [f"另外跳过了 **{paths} 条带 URL 路径的规则**，保留其原始范围，没有扩大为整站拦截。"]
-    lines += ["", "[完整构建报告](dist/report.json)", "", "</details>", "",
+    lines += ["", "</details>", "",
         "<details>", "<summary>使用说明与合并方式</summary>", "",
         "- AdGuard Home 只需添加一个 `full.txt` 合并订阅，PCDN 已包含在内。",
         "- AdGuard Home 文件保留 `@@` 例外，无需另加同一份白名单。",
+        "- 规则数包含拦截与例外，按去重后的有效行统计，不等于覆盖的域名总数。",
         "- 仅去除标准化后完全相同的规则；不裁剪父子域名覆盖关系，不把 URL 路径扩大成整站拦截。",
         "- 下载或校验异常时使用 72 小时内的已校验缓存；缓存不可用则停止发布，保留上一版。",
         "- 语法和样例检查不能保证没有误拦截；加速线路异常时使用原始链接。", "", "</details>", "",

@@ -160,10 +160,6 @@ def publish(config_path, registry_path, output, custom, cache, validator, binary
         default = config['defaultProfile']
         if default in dns_ok:
             shutil.copy2(stage / (default + '.txt'), output / 'adguard.txt')
-            item = manifest['profiles'][default]
-            write_if_changed(output / 'report.json', json_text(dict(updatedUtc=item['updatedUtc'],
-                totalRules=item['totalRules'], defaultProfile=default,
-                sources=[manifest['sources'][sid] for sid in item['sourceIds']])))
         write_if_changed(output / 'manifest.json', json_text(manifest))
         write_if_changed(output / 'README.md', index_content(profiles, manifest['profiles'], default))
         mi_output = output / 'mihomo'

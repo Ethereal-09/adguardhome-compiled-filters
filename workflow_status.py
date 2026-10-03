@@ -6,7 +6,7 @@ import os
 from pathlib import Path
 import re
 
-from update_rules import atomic_write
+from dns_utils import atomic_write
 
 BUILD_START = '<!-- build-status:start -->'
 BUILD_END = '<!-- build-status:end -->'

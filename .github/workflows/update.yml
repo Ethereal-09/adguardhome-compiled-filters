@@ -19,9 +19,7 @@ on:
       - publish_filters.py
       - tools/install_mihomo.py
       - tools/engine/**
-      - update_rules.py
-      - verify_github_sources.py
-      - organize_repository_rules.py
+      - dns_utils.py
       - refresh_source_registry.py
       - tests/**
       - .github/workflows/update.yml

@@ -1,16 +1,14 @@
-"""Build a DNS-only AdGuard subscription using Python's standard library."""
+"""Shared DNS rule parsing, verified downloads and atomic file writes."""
 from __future__ import annotations
 
-import argparse
 import ipaddress
-import json
 import os
 from pathlib import Path
 import re
 import sys
 import tempfile
 import time
-from datetime import datetime, timezone
+from urllib.parse import urlparse
 from urllib.request import Request, urlopen
 
 ROOT = Path(__file__).resolve().parent
@@ -55,21 +53,6 @@ def parse_line(line: str) -> list[str]:
     # Only whitespace-delimited inline comments; ## is a cosmetic rule.
     name = domain(re.sub(r'\s+#.*$', '', line))
     return [f'|{name}|'] if name else [UNSUPPORTED]
-
-
-def custom_rules(path: Path, allow: bool) -> set[str]:
-    rules = set()
-    for number, line in enumerate(path.read_text(encoding='utf-8-sig').splitlines(), 1):
-        for rule in parse_line(line):
-            if rule == UNSUPPORTED:
-                raise ValueError(f'Unsupported personal rule at {path}:{number}: {line}')
-            if allow:
-                rule = re.sub(r'^@@', '', rule).removesuffix('$important')
-                rule = '@@' + rule + '$important'
-            elif rule.startswith('@@'):
-                raise ValueError(f'Put exceptions in allow.txt: {path}:{number}')
-            rules.add(rule)
-    return rules
 
 
 def fetch(url: str, timeout: int, retries: int) -> str:
@@ -128,66 +111,13 @@ def atomic_write(path: Path, text: str) -> None:
             os.unlink(name)
 
 
-def build(config_path: Path, output: Path, custom: Path, allow_large_drop: bool = False) -> int:
-    config = json.loads(config_path.read_text(encoding='utf-8-sig'))
-    timeout, retries, drop = config['timeoutSeconds'], config['retries'], config['maxDropFraction']
-    if not isinstance(timeout, int) or timeout < 1 or not isinstance(retries, int) or retries < 1 or not 0 <= drop < 1:
-        raise ValueError('Invalid configuration limits')
-    previous_path = output / 'report.json'
-    previous = json.loads(previous_path.read_text(encoding='utf-8-sig')) if previous_path.exists() else {}
-    old_sources = {item['url']: item for item in previous.get('sources', [])}
-    sources = [item for item in config['sources'] if item.get('enabled', False)]
-    if not sources:
-        raise ValueError('No enabled sources')
-    # Validate personal rules before doing any network requests.
-    rules = custom_rules(custom / 'block.txt', False) | custom_rules(custom / 'allow.txt', True)
-    stats = []
-    for source in sources:
-        print(f"Downloading {source['name']}", flush=True)
-        body = fetch(source['url'], timeout, retries)
-        accepted, unsupported = set(), 0
-        for line in body.splitlines():
-            for rule in parse_line(line):
-                if rule == UNSUPPORTED:
-                    unsupported += 1
-                else:
-                    accepted.add(rule)
-        minimum = source['minimumRules']
-        if not isinstance(minimum, int) or minimum < 1 or len(accepted) < minimum:
-            raise ValueError(f"Too few supported rules from {source['name']}: {len(accepted)}")
-        old = old_sources.get(source['url'])
-        if not allow_large_drop and old and len(accepted) < old['accepted'] * (1 - drop):
-            raise ValueError(f"Abnormal decrease from {source['name']}; review before --allow-large-drop")
-        rules.update(accepted)
-        stats.append(dict(name=source['name'], url=source['url'], accepted=len(accepted), unsupported=unsupported))
-        print(f'  Accepted {len(accepted)}, unsupported {unsupported}', flush=True)
-    if not allow_large_drop and previous and len(rules) < previous['totalRules'] * (1 - drop):
-        raise ValueError('Abnormal total decrease; review before --allow-large-drop')
-    target = output / 'adguard.txt'
-    old_rules = {line for line in target.read_text(encoding='utf-8-sig').splitlines() if line and not line.startswith('!')} if target.exists() else None
-    now = datetime.now(timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
-    report = dict(updatedUtc=now, totalRules=len(rules), sources=stats)
-    output.mkdir(parents=True, exist_ok=True)
-    if old_rules == rules:
-        # Update report only when source statistics changed; no timestamp-only commits.
-        if previous.get('sources') != stats or previous.get('totalRules') != len(rules):
-            atomic_write(previous_path, json.dumps(report, ensure_ascii=False, indent=2) + '\n')
-        print(f'No rule changes ({len(rules)} rules).')
-        return len(rules)
-    title = re.sub(r'[\r\n]', ' ', str(config['title']))
-    content = [f'! Title: {title}', f'! Updated: {now}', f'! Rules: {len(rules)}',
-               '! Generated file. Edit custom files or config.json.', *sorted(rules)]
-    atomic_write(target, '\n'.join(content) + '\n')
-    atomic_write(previous_path, json.dumps(report, ensure_ascii=False, indent=2) + '\n')
-    print(f'Published {len(rules)} rules to {target}')
-    return len(rules)
-
-
-
-def main():
-    from publish_filters import main as current_main
-    return current_main()
-
-
-if __name__ == "__main__":
-    sys.exit(main())
+def decode_github(url):
+    parsed = urlparse(url)
+    parts = parsed.path.strip('/').split('/')
+    if parsed.hostname == 'raw.githubusercontent.com' and len(parts) >= 4:
+        return '/'.join(parts[:2]), parts[2], '/'.join(parts[3:])
+    if parsed.hostname and parsed.hostname.endswith('jsdelivr.net') and len(parts) >= 4 and parts[0] == 'gh':
+        repo, separator, ref = parts[2].partition('@')
+        if separator:
+            return parts[1] + '/' + repo, ref, '/'.join(parts[3:])
+    return None

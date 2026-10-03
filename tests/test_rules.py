@@ -1,10 +1,7 @@
-import json
-from pathlib import Path
-import tempfile
 import unittest
 from unittest.mock import patch, MagicMock
 
-import update_rules as app
+import dns_utils as app
 
 
 class RuleTests(unittest.TestCase):
@@ -15,39 +12,6 @@ class RuleTests(unittest.TestCase):
         self.assertEqual(app.parse_line('||example.com^$important'), ['||example.com^$important'])
         self.assertEqual(app.parse_line('||example.com/path^'), [app.UNSUPPORTED])
         self.assertEqual(app.parse_line('127.0.0.1'), [app.UNSUPPORTED])
-
-    def test_build_and_failure_retention(self):
-        with tempfile.TemporaryDirectory() as name:
-            root = Path(name)
-            custom = root / 'custom'
-            custom.mkdir()
-            (custom / 'block.txt').write_text('||ads.example.com^', encoding='utf-8')
-            (custom / 'allow.txt').write_text('@@||api.example.com^', encoding='utf-8')
-            config = root / 'config.json'
-            config.write_text(json.dumps(dict(title='Test', timeoutSeconds=1, retries=1, maxDropFraction=.3,
-                sources=[dict(name='Test', url='https://test.example/rules', enabled=True, minimumRules=1)])))
-            output = root / 'dist'
-            body = '\n'.join(['||ads.example.com^'] * 2 + [f'||domain{i}.example.com^' for i in range(10)] + ['example.com##.ad'])
-            with patch.object(app, 'fetch', return_value=body):
-                self.assertEqual(app.build(config, output, custom), 12)
-                before = (output / 'adguard.txt').read_bytes()
-                report = (output / 'report.json').read_bytes()
-                self.assertIn(b'@@||api.example.com^$important', before)
-                app.build(config, output, custom)
-                self.assertEqual(before, (output / 'adguard.txt').read_bytes())
-                self.assertEqual(report, (output / 'report.json').read_bytes())
-            with patch.object(app, 'fetch', return_value='||one.example.com^'):
-                with self.assertRaisesRegex(ValueError, 'decrease'):
-                    app.build(config, output, custom)
-            with patch.object(app, 'fetch', side_effect=OSError('network down')):
-                with self.assertRaises(OSError):
-                    app.build(config, output, custom)
-            self.assertEqual(before, (output / 'adguard.txt').read_bytes())
-            (custom / 'block.txt').write_text('example.com##.ad', encoding='utf-8')
-            with patch.object(app, 'fetch') as fetch:
-                with self.assertRaisesRegex(ValueError, 'personal rule'):
-                    app.build(config, output, custom)
-                fetch.assert_not_called()
 
     def test_html_rejected(self):
         response = MagicMock()

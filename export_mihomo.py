@@ -267,7 +267,7 @@ def export(source, output, config_path, binary, repository=DEFAULT_REPOSITORY):
     for filename, content in contents.items():
         path = output / filename
         if not path.exists() or path.read_bytes() != content:
-            from update_rules import atomic_write
+            from dns_utils import atomic_write
             if filename.endswith('.mrs'):
                 temporary = path.with_suffix(path.suffix + '.tmp')
                 temporary.write_bytes(content)

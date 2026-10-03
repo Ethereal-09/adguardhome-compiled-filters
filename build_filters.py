@@ -14,8 +14,7 @@ import subprocess
 import sys
 from urllib.parse import urlsplit
 
-from update_rules import ROOT, UNSUPPORTED, atomic_write, domain, fetch, parse_line
-from verify_github_sources import decode_github
+from dns_utils import ROOT, UNSUPPORTED, atomic_write, decode_github, domain, fetch, parse_line
 from workflow_status import update_readme
 
 
@@ -363,7 +362,7 @@ def index_content(profiles, published, default):
         file_link = f"[订阅]({profile['id']}.txt)" if item.get('totalRules') else '—'
         rows.append(f"| {profile['name']} | {kind} | {item.get('totalRules', '—')} | {item.get('duplicatesRemoved', '—')} | {item.get('coveredRemoved', '—')} | {file_link} | {status} |")
     if any(p['id'] == 'full' for p in profiles):
-        rows += ['', '中文源全量版 [full.txt](full.txt) 只合并当前入选来源，同系列只取一个变体，适合按需使用；选源依据见 [核验清单](../registry/full_selection.json)。']
+        rows += ['', '中文源全量版 [full.txt](full.txt) 只合并当前入选来源，同系列只取一个变体，适合按需使用；选源依据见 [核验清单](../registry/CLASSIFICATION.md)。']
     rows += ['', '条目数含拦截规则和原生放行例外，不是实际命中次数；统计不证明真实应用的低误杀或去广告效果。', '',
              '优化仅在同一拦截/放行动作、同一 important 优先级内移除被父域覆盖的简单条目；通配符和正则保持原样。Hosts 和纯域名保留精确匹配。', '',
              '完整构建统计与选源见 [manifest.json](manifest.json)。下载检查时间与缓存年龄记录在本地 .cache/last-run.json，不因检查时间变化重复提交相同订阅。']
@@ -477,9 +476,6 @@ def _build(config_path, registry_path, output, custom, cache, allow_large_drop, 
     default = config['defaultProfile']
     if default in new_contents:
         write_if_changed(output / 'adguard.txt', new_contents[default])
-        summary = dict(updatedUtc=published[default]['updatedUtc'], totalRules=published[default]['totalRules'],
-                       defaultProfile=default, sources=[public_sources[sid] for sid in published[default]['sourceIds']])
-        write_if_changed(output / 'report.json', json_text(summary))
     run = dict(checkedUtc=utcnow(), status='failed' if failed else 'success', profileCount=len(profiles),
                sources=runtime, changedProfiles=changed, failedProfiles=failed,
                cacheSources=[sid for sid, item in runtime.items() if item['status'] == 'cached'])

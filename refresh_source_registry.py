@@ -9,7 +9,6 @@ import os
 
 from build_filters import (ROOT, build_lock, download_source, json_text, read_json,
                            utcnow, validate_source_origin, write_if_changed)
-from organize_repository_rules import make_groups
 
 
 def refresh(catalog, registry, cache, validator):
@@ -57,9 +56,6 @@ def refresh(catalog, registry, cache, validator):
                     excludedSources=reviewed.get('unresolvedLinks', []),
                     countNote='逐来源计数，跨来源重叠；生成订阅由 profiles.json 明确选择。')
         write_if_changed(registry, json_text(data))
-        write_if_changed(registry.parent / 'groups.json', json_text(make_groups(sources)))
-        for name, role in [('blacklist_links.txt', 'filter'), ('whitelist_links.txt', 'independent_allowlist')]:
-            write_if_changed(registry.parent/name, '\n'.join(s['url'] for s in accepted if s['role']==role)+'\n')
         rows = ['# AdGuard Home 来源登记', '',
             f"最近核验：{data['generatedUtc']}（UTC）。共 {len(sources)} 个原始文件，{len(accepted)} 个通过完整下载、保守解析和 AdGuard 引擎校验。", '',
             '上游署名、用途、强度、地域和证据保存在 [reviewed_sources.json](reviewed_sources.json)；当前兼容结果见 [sources.json](sources.json)，实际组合见 [profiles.json](../profiles.json)。', '',

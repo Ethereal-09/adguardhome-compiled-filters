@@ -6,7 +6,7 @@
 
 </div>
 
-**订阅更新：2026-10-03 21:04:52** · 每天 **04:23** 自动构建（北京时间）。
+**订阅更新：2026-10-03 21:27:41** · 每天 **04:23** 自动构建（北京时间）。
 [自动构建：构建成功](https://github.com/Ethereal-09/adguardhome-compiled-filters/actions/workflows/update.yml) · [构建报告](dist/report.json)
 
 ## 订阅

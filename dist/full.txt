@@ -1,5 +1,5 @@
 ! Title: DNS 全量（按需）
-! Updated: 2026-10-03T12:55:21+00:00
+! Updated: 2026-10-03T13:04:52+00:00
 ! Expires: 1 day
 ! This project only merges upstream rules; original authors retain credit.
 ! Description: 表格中可安全转换的 DNS 源全量；包含功能拦截，浏览器专用源不计入。

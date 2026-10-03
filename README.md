@@ -2,7 +2,7 @@
 
 按提供的 Excel 选源，仅合并与去重。规则由上游作者维护。
 
-最近构建：**2026-10-03 20:55:08 UTC+8** · 成功。每天北京时间 **04:23** 自动更新。
+最近构建：**2026-10-03 21:04:48 UTC+8** · 成功。每天北京时间 **04:23** 自动更新。
 
 优先使用「纯广告」；PCDN 和含「不受欢迎」的方案可能影响视频、更新或推送，请按需选用。
 同一份 DNS 全量只选秋风完整版本，四个秋风变体不会混用。
@@ -22,7 +22,7 @@
 | 综合广告＋隐私 | 57,919 / 0 | 秋风广告＋隐私合并 oisd small；不额外加入两份 PCDN 源。 | [原始](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/combined.txt) · [加速 1](https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/combined.txt) · [加速 2](https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/combined.txt) |
 | DNS 全量（按需） | 57,966 / 3 | 表格中可安全转换的 DNS 源全量；包含功能拦截，浏览器专用源不计入。 | [原始](https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/full.txt) · [加速 1](https://github.boki.moe/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/full.txt) · [加速 2](https://ghfast.top/https://raw.githubusercontent.com/Ethereal-09/adguardhome-compiled-filters/main/dist/full.txt) |
 
-订阅实际更新时间：2026-10-03 20:55:21 UTC+8。数量按最终去重规则行统计，通配符不等于一个域名。
+订阅实际更新时间：2026-10-03 21:04:52 UTC+8。数量按最终去重规则行统计，通配符不等于一个域名。
 
 ## mihomo
 

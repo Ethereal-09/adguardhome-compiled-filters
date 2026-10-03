@@ -1,5 +1,5 @@
 ! Title: PCDN（单独可选）
-! Updated: 2026-10-03T12:55:21+00:00
+! Updated: 2026-10-03T13:04:52+00:00
 ! Expires: 1 day
 ! This project only merges upstream rules; original authors retain credit.
 ! Description: 两份 PCDN 源合并；可能影响视频加载与节点选择。
